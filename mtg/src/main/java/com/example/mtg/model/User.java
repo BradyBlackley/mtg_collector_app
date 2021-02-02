@@ -1,5 +1,7 @@
 package com.example.mtg.model;
 
+import org.springframework.lang.NonNull;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -12,15 +14,12 @@ public class User {
 
     @Id
     @GeneratedValue
-    private final int userId;
+    private int userId;
     private String userName;
     private String password;
     private int cardCollectionId;
 
-    public User(int i,
-                String n,
-                String p,
-                int c){
+    public User(int i, String n, String p, int c){
         this.userId = i;
         this.userName = n;
         this.password = p;

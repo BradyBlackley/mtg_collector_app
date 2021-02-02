@@ -28,8 +28,8 @@ public class UserService {
         return repository.findById(id).orElse(null);
     }
 
-    public User getUserByName(String name){
-        return repository.findByName(name);
+    public User getUserByName(String userName){
+        return repository.findByUserName(userName);
     }
 
     public String deleteUser(int id){
