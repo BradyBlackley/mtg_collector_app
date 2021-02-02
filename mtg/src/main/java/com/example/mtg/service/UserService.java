@@ -1,28 +1,48 @@
 package com.example.mtg.service;
 
-import com.example.mtg.dao.UserDao;
+
 import com.example.mtg.model.User;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Service;
+import com.example.mtg.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class UserService {
-
-    private final UserDao userDao;
-
     @Autowired
-    public UserService(@Qualifier("UserDataAccessDao")UserDao userDao) {
-        this.userDao = userDao;
+    private UserRepository repository;
+
+    public User saveUser(User user){
+        return repository.save(user);
+    }
+    public List<User> saveUsers(List<User> users){
+        return repository.saveAll(users);
     }
 
-    public int addUser(User user) {
-        return userDao.insertUser(user);
+    public List<User> getUsers(){
+        return repository.findAll();
     }
 
-    public List<User> getAllUsers() {
-        return userDao.selectAllUsers();
+    public User getUserById(int id){
+        return repository.findById(id).orElse(null);
     }
+
+    public User getUserByName(String name){
+        return repository.findByName(name);
+    }
+
+    public String deleteUser(int id){
+        repository.deleteById(id);
+        return "user " + id + " removed";
+    }
+
+    public User updateUser(User user){
+        User existingUser=repository.findById(user.getUserId()).orElse(null);
+        existingUser.setUserName(user.getUserName());
+        existingUser.setPassword(user.getPassword());
+        existingUser.setCardCollectionId(user.getCardCollectionId());
+        return repository.save(existingUser);
+    }
+
 }
