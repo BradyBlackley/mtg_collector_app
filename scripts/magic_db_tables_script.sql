@@ -30,6 +30,7 @@ CREATE TABLE typeline (
 CREATE TABLE expansion (
 	expansion_id int NOT NULL AUTO_INCREMENT,
     name varchar(255),
+    expansion_code varchar(255),
     year_released DATE,
     PRIMARY KEY (expansion_id)
 );
