@@ -1,6 +1,6 @@
 function Browse() {
     return(
-        <div className="browse">This is the Browse page</div>
+        <div className="browse">This is the browse page</div>
     )
 }
 

@@ -1,6 +1,6 @@
 function MyCollection() {
     return(
-        <div className="myCollection">This is the My Collection page</div>
+        <div className="myCollection">This is the my collection page</div>
     )
 }
 
