@@ -14,18 +14,26 @@ import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import { useState } from "react";
 import background from "./assets/site-images/mana-symbols.jpg";
 
-const backgroundPanelStyle = {
-  backgroundImage : `url(${background})`,
-  backgroundRepeat: "no-repeat",
-  width: "auto",
-  height: "564px",
-  marginTop: "4%",
-  backgroundPosition: "center",
-  opacity: "0.1",
+const containerStyle = {
   position: "relative"
 }
 
-const displayPanelStyle = {
+const imageDivStyle = {
+  width: "100%",
+  height: "100%",
+  position: "absolute",
+  top: "0",
+  left: "0",
+  width: "auto",
+  height: "564px",
+  marginTop: "4%",
+  marginLeft: "31%",
+  opacity: "0.1"
+}
+
+const contentPanelStyle = {
+  width: "100%",
+  height: "100%",
   position: "absolute"
 }
 
@@ -38,19 +46,23 @@ function App() {
       <Header></Header>
       <Router>
       <Nav/>
-        <div className="backgroundPanel" style={backgroundPanelStyle}></div>
-        <div className="displayPanel" style={displayPanelStyle}>
-          <Routes>
-              <Route path="/home" element={<Home />} />
-              <Route path="/browse" element={<Browse />} />
-              <Route path="/myCollection" element={<MyCollection />} />
-              <Route path="/statistics" element={<Statistics />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/support" element={<Support />} />
-              <Route path="/help" element={<Help />} />
-          </Routes>
+        <div className="container" style={containerStyle}>
+          <div className="imageDiv" style={imageDivStyle}>
+            <img src={background}/>
+          </div>
+          <div className="contentPanel" style={contentPanelStyle}>
+            <Routes>
+                <Route path="/home" element={<Home />} />
+                <Route path="/browse" element={<Browse />} />
+                <Route path="/myCollection" element={<MyCollection />} />
+                <Route path="/statistics" element={<Statistics />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/support" element={<Support />} />
+                <Route path="/help" element={<Help />} />
+            </Routes>
+          </div>
         </div>
         <Footer></Footer>
       </Router>
