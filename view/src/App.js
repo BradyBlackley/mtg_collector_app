@@ -14,14 +14,19 @@ import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import { useState } from "react";
 import background from "./assets/site-images/mana-symbols.jpg";
 
-const displayPanelStyle = {
+const backgroundPanelStyle = {
   backgroundImage : `url(${background})`,
   backgroundRepeat: "no-repeat",
   width: "auto",
   height: "564px",
   marginTop: "4%",
   backgroundPosition: "center",
-  opacity: "0.1"
+  opacity: "0.1",
+  position: "relative"
+}
+
+const displayPanelStyle = {
+  position: "absolute"
 }
 
 function App() {
@@ -33,6 +38,7 @@ function App() {
       <Header></Header>
       <Router>
       <Nav/>
+        <div className="backgroundPanel" style={backgroundPanelStyle}></div>
         <div className="displayPanel" style={displayPanelStyle}>
           <Routes>
               <Route path="/home" element={<Home />} />
