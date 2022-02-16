@@ -7,7 +7,11 @@ function Browse() {
     return(
         <div className="browse">
             <div className="searchBar" style={searchBarStyle}>
-                <input type="text" placeholder="Search for a card.."></input>
+                <input type="text" placeholder="Search all cards.."></input>
+            </div>
+            <div className="expansionSelection">
+                Search By Expansion
+                {/* TODO: get all request expansions, for each item create a clickable link */}
             </div>
         </div>
     )

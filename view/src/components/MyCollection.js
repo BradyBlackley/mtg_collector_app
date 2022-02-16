@@ -1,11 +1,21 @@
-const myCollectionStyle = {
+const titleStyle = {
+    textAlign: "center",
+    marginTop: "5px"
+}
+
+const searchBarStyle = {
     textAlign: "center",
     marginTop: "5px"
 }
 
 function MyCollection() {
     return(
-        <div className="myCollection" style={myCollectionStyle}>This is the my collection page</div>
+        <div className="myCollectionContainer">
+            <div className="title" style={titleStyle}><h3>My Collection</h3></div>
+            <div className="searchBar" style={searchBarStyle}>
+                <input type="text" placeholder="Search my collection.."></input>
+            </div>
+        </div>
     )
 }
 
