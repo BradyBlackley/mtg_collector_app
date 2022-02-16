@@ -5,7 +5,7 @@ const divStyle = {
 
 function Home(props) {
     return(
-        <div className="home" style={divStyle}>Welcome {props.username} </div>
+        <div className="home" style={divStyle}><h3>Welcome {props.username}</h3></div>
     )
 }
 
