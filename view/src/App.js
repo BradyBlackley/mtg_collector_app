@@ -52,7 +52,7 @@ function App() {
           </div>
           <div className="contentPanel" style={contentPanelStyle}>
             <Routes>
-                <Route path="/home" element={<Home />} />
+                <Route path="/home" element={<Home>{username}</Home>} />
                 <Route path="/browse" element={<Browse />} />
                 <Route path="/myCollection" element={<MyCollection />} />
                 <Route path="/statistics" element={<Statistics />} />

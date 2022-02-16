@@ -1,6 +1,11 @@
+const supportStyle = {
+    textAlign: "center",
+    marginTop: "5px"
+}
+
 function Support() {
     return(
-        <div className="support">This is the support page</div>
+        <div className="support" style={supportStyle}>This is the support page</div>
     )
 }
 

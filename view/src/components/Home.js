@@ -1,10 +1,11 @@
 const divStyle = {
-    opacity: "1"
+    textAlign: "center",
+    marginTop: "5px"
 }
 
-function Home() {
+function Home(props) {
     return(
-        <div className="home" style={divStyle}>This is the home page</div>
+        <div className="home" style={divStyle}>Welcome {props.username} </div>
     )
 }
 

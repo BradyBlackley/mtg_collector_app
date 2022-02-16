@@ -1,6 +1,11 @@
+const myCollectionStyle = {
+    textAlign: "center",
+    marginTop: "5px"
+}
+
 function MyCollection() {
     return(
-        <div className="myCollection">This is the my collection page</div>
+        <div className="myCollection" style={myCollectionStyle}>This is the my collection page</div>
     )
 }
 
