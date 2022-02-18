@@ -28,9 +28,7 @@ public class User {
         this.password = p;
     }
 
-    public String getUserId() {
-        return userId;
-    }
+    public String getUserId() { return userId; }
 
     public String getUsername() { return username; }
 
