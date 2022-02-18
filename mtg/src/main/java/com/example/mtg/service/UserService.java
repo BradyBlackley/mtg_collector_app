@@ -38,10 +38,9 @@ public class UserService {
     }
 
     public User updateUser(User user){
-        User existingUser=repository.findById(user.getUserId()).orElse(null);
+        User existingUser=repository.findByUserName(user.getUserName());
         existingUser.setUserName(user.getUserName());
         existingUser.setPassword(user.getPassword());
-        existingUser.setCardCollectionId(user.getCardCollectionId());
         return repository.save(existingUser);
     }
 

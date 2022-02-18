@@ -10,13 +10,13 @@ CREATE TABLE keyword (
     PRIMARY KEY (keyword_id)
 );
 
-CREATE TABLE type (
+CREATE TABLE `type` (
 	type_id int NOT NULL AUTO_INCREMENT,
     type_name varchar(255),
     PRIMARY KEY (type_id)
 );
 
-CREATE TABLE expansion (
+CREATE TABLE `expansion` (
 	expansion_id int NOT NULL AUTO_INCREMENT,
     expansion_name varchar(255),
     expansion_code varchar(255),
@@ -24,7 +24,7 @@ CREATE TABLE expansion (
     PRIMARY KEY (expansion_id)
 );
 
-CREATE TABLE user (
+CREATE TABLE `user` (
 	user_id varchar(255) NOT NULL,
     username varchar(255),
     `password` varchar(255),
@@ -49,7 +49,7 @@ CREATE TABLE card (
     expansion_id int,
     text_box longtext,
     PRIMARY KEY (card_id),
-    FOREIGN KEY (expansion_id) REFERENCES expansion(expansion_id)
+    FOREIGN KEY (expansion_id) REFERENCES `expansion`(expansion_id)
 );
 
 CREATE TABLE keyword_list (
@@ -67,14 +67,14 @@ CREATE TABLE typeline (
     card_id varchar(255),
     PRIMARY KEY (typeline_id),
     FOREIGN KEY (card_id) REFERENCES card(card_id),
-    FOREIGN KEY (type_id) REFERENCES type(type_id)
+    FOREIGN KEY (type_id) REFERENCES `type`(type_id)
 );
 
 CREATE TABLE collection (
 	collection_id int NOT NULL AUTO_INCREMENT,
     user_id varchar(255),
     PRIMARY KEY (collection_id),
-    FOREIGN KEY (user_id) REFERENCES user(user_id)
+    FOREIGN KEY (user_id) REFERENCES `user`(user_id)
 );
 
 CREATE TABLE modal (
@@ -152,7 +152,7 @@ CREATE PROCEDURE InsertExpansion(
 )
 BEGIN
 	
-INSERT INTO expansion (expansion_name, expansion_code, released_date)
+INSERT INTO `expansion` (expansion_name, expansion_code, released_date)
  VALUES (input_expansion_name, input_expansion_code, input_released_date);
 
 END$$
@@ -162,14 +162,14 @@ CREATE PROCEDURE InsertType(
 )
 BEGIN
 	
-INSERT INTO type (type_name)
+INSERT INTO `type` (type_name)
  VALUES (input_type_name);
 
 END$$
 
 DELIMITER ;
 ########################################data inserts########################################
-INSERT INTO user VALUES('f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454', 'Test', 'Test');
+INSERT INTO `user` VALUES('f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454', 'Test', 'Test');
 INSERT INTO collection VALUES(1,'f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454');
 INSERT INTO library VALUES(1,'Test Library', 1);
 ###Color
@@ -908,80 +908,81 @@ CALL InsertType('Power-Plant');
 CALL InsertType('Tower');
 ########################################Zendikar Rising Card Inserts########################################
 ### Allied Assault ZNR001
-INSERT INTO card VALUES('ZNR001','Allied Assault','card_images/zendikar_rising/znr-1-allied-assault.jpg','uncommon','Josh Hass','3',null,null,(SELECT expansion_id FROM expansion WHERE expansion_name = 'Zendikar Rising'),'Up to two target creatures each get +X/+X until end of turn, where X is the number of creatures in your party. (Your party consists of up to one each of Cleric, Rogue, Warrior, and Wizard.)');
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Instant'),(SELECT card_id FROM card WHERE card_name='Allied Assault'));
+INSERT INTO card VALUES('ZNR001','Allied Assault','card_images/zendikar_rising/znr-1-allied-assault.jpg','uncommon','Josh Hass','3',null,null,(SELECT expansion_id FROM `expansion` WHERE expansion_name = 'Zendikar Rising'),'Up to two target creatures each get +X/+X until end of turn, where X is the number of creatures in your party. (Your party consists of up to one each of Cleric, Rogue, Warrior, and Wizard.)');
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Instant'),(SELECT card_id FROM card WHERE card_name='Allied Assault'));
 INSERT INTO color_identity (color_id, card_id) VALUES ((SELECT color_id FROM color WHERE color_name = 'white'),(SELECT card_id FROM card WHERE card_name='Allied Assault'));
 ### Angel of Destiny ZNR002
-INSERT INTO card VALUES('ZNR002','Angel of Destiny','card_images/zendikar_rising/znr-2-angel-of-destiny.jpg','mythic','Ryan Pancoast','5','2','6',(SELECT expansion_id FROM expansion WHERE expansion_name = 'Zendikar Rising'),'Flying, double strike Whenever a creature you control deals combat damage to a player, you and that player each gain that much life. At the beginning of your end step, if you have at least 15 life more than your starting life total, each player Angel of Destiny attacked this turn loses the game.');
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Creature'),(SELECT card_id FROM card WHERE card_name='Angel of Destiny'));
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Angel'),(SELECT card_id FROM card WHERE card_name='Angel of Destiny'));
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Cleric'),(SELECT card_id FROM card WHERE card_name='Angel of Destiny'));
+INSERT INTO card VALUES('ZNR002','Angel of Destiny','card_images/zendikar_rising/znr-2-angel-of-destiny.jpg','mythic','Ryan Pancoast','5','2','6',(SELECT expansion_id FROM `expansion` WHERE expansion_name = 'Zendikar Rising'),'Flying, double strike Whenever a creature you control deals combat damage to a player, you and that player each gain that much life. At the beginning of your end step, if you have at least 15 life more than your starting life total, each player Angel of Destiny attacked this turn loses the game.');
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Creature'),(SELECT card_id FROM card WHERE card_name='Angel of Destiny'));
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Angel'),(SELECT card_id FROM card WHERE card_name='Angel of Destiny'));
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Cleric'),(SELECT card_id FROM card WHERE card_name='Angel of Destiny'));
 INSERT INTO keyword_list (keyword_id, card_id) VALUES ((SELECT keyword_id FROM keyword WHERE keyword_name = 'Flying'),(SELECT card_id FROM card WHERE card_name='Angel of Destiny'));
 INSERT INTO keyword_list (keyword_id, card_id) VALUES ((SELECT keyword_id FROM keyword WHERE keyword_name = 'Double Strike'),(SELECT card_id FROM card WHERE card_name='Angel of Destiny'));
 INSERT INTO color_identity (color_id, card_id) VALUES ((SELECT color_id FROM color WHERE color_name = 'white'),(SELECT card_id FROM card WHERE card_name='Angel of Destiny'));
 ### Angelheart Protector ZNR003
-INSERT INTO card VALUES('ZNR003','Angelheart Protector','card_images/zendikar_rising/znr-3-angelheart-protector.jpg','common','Cristi Balanescu','3','3','2',(SELECT expansion_id FROM expansion WHERE expansion_name = 'Zendikar Rising'),'When Angelheart Protector enters the battlefield, target creature you control gains indestructible until end of turn. (Damage and effects that say "destroy" don''t destroy it.)');
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Creature'),(SELECT card_id FROM card WHERE card_name='Angelheart Protector'));
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Human'),(SELECT card_id FROM card WHERE card_name='Angelheart Protector'));
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Cleric'),(SELECT card_id FROM card WHERE card_name='Angelheart Protector'));
+INSERT INTO card VALUES('ZNR003','Angelheart Protector','card_images/zendikar_rising/znr-3-angelheart-protector.jpg','common','Cristi Balanescu','3','3','2',(SELECT expansion_id FROM `expansion` WHERE expansion_name = 'Zendikar Rising'),'When Angelheart Protector enters the battlefield, target creature you control gains indestructible until end of turn. (Damage and effects that say "destroy" don''t destroy it.)');
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Creature'),(SELECT card_id FROM card WHERE card_name='Angelheart Protector'));
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Human'),(SELECT card_id FROM card WHERE card_name='Angelheart Protector'));
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Cleric'),(SELECT card_id FROM card WHERE card_name='Angelheart Protector'));
 INSERT INTO color_identity (color_id, card_id) VALUES ((SELECT color_id FROM color WHERE color_name = 'white'),(SELECT card_id FROM card WHERE card_name='Angelheart Protector'));
 ### Archon of Emeria ZNR004
-INSERT INTO card VALUES('ZNR004','Archon of Emeria','card_images/zendikar_rising/znr-4-archon-of-emeria.jpg','rare','Ryan Pancoast','3','2','3',(SELECT expansion_id FROM expansion WHERE expansion_name = 'Zendikar Rising'),'Flying Each player can''t cast more than one spell each turn. Nonbasic lands your opponents control enter the battlefield tapped.');
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Creature'),(SELECT card_id FROM card WHERE card_name='Archon of Emeria'));
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Archon'),(SELECT card_id FROM card WHERE card_name='Archon of Emeria'));
+INSERT INTO card VALUES('ZNR004','Archon of Emeria','card_images/zendikar_rising/znr-4-archon-of-emeria.jpg','rare','Ryan Pancoast','3','2','3',(SELECT expansion_id FROM `expansion` WHERE expansion_name = 'Zendikar Rising'),'Flying Each player can''t cast more than one spell each turn. Nonbasic lands your opponents control enter the battlefield tapped.');
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Creature'),(SELECT card_id FROM card WHERE card_name='Archon of Emeria'));
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Archon'),(SELECT card_id FROM card WHERE card_name='Archon of Emeria'));
 INSERT INTO keyword_list (keyword_id, card_id) VALUES ((SELECT keyword_id FROM keyword WHERE keyword_name = 'Flying'),(SELECT card_id FROM card WHERE card_name='Archon of Emeria'));
 INSERT INTO color_identity (color_id, card_id) VALUES ((SELECT color_id FROM color WHERE color_name = 'white'),(SELECT card_id FROM card WHERE card_name='Archon of Emeria'));
 ### Archpriest of Iona ZNR005
-INSERT INTO card VALUES('ZNR005','Archpriest of Iona','card_images/zendikar_rising/znr-5-archpriest-of-iona.jpg','rare','Denman Rooke','1','*','2',(SELECT expansion_id FROM expansion WHERE expansion_name = 'Zendikar Rising'),'Archpriest of Iona''s power is equal to the number of creatures in your party. (Your party consists of up to one each of Cleric, Rogue, Warrior, and Wizard.) At the beginning of combat on your turn, if you have a full party, target creature gets +1/+1 and gains flying until end of turn.');
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Creature'),(SELECT card_id FROM card WHERE card_name='Archpriest of Iona'));
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Human'),(SELECT card_id FROM card WHERE card_name='Archpriest of Iona'));
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Cleric'),(SELECT card_id FROM card WHERE card_name='Archpriest of Iona'));
+INSERT INTO card VALUES('ZNR005','Archpriest of Iona','card_images/zendikar_rising/znr-5-archpriest-of-iona.jpg','rare','Denman Rooke','1','*','2',(SELECT expansion_id FROM `expansion` WHERE expansion_name = 'Zendikar Rising'),'Archpriest of Iona''s power is equal to the number of creatures in your party. (Your party consists of up to one each of Cleric, Rogue, Warrior, and Wizard.) At the beginning of combat on your turn, if you have a full party, target creature gets +1/+1 and gains flying until end of turn.');
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Creature'),(SELECT card_id FROM card WHERE card_name='Archpriest of Iona'));
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Human'),(SELECT card_id FROM card WHERE card_name='Archpriest of Iona'));
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Cleric'),(SELECT card_id FROM card WHERE card_name='Archpriest of Iona'));
 INSERT INTO color_identity (color_id, card_id) VALUES ((SELECT color_id FROM color WHERE color_name = 'white'),(SELECT card_id FROM card WHERE card_name='Archpriest of Iona'));
 ### Attended Healer ZNR006
-INSERT INTO card VALUES('ZNR006','Attended Healer','card_images/zendikar_rising/znr-6-attended-healer.jpg','uncommon','Wisnu Tan','4','2','3',(SELECT expansion_id FROM expansion WHERE expansion_name = 'Zendikar Rising'),'Whenever you gain life for the first time each turn, create a 1/1 white Cat creature token. [2 colorless][white]:Another target Cleric gains lifelink until end of turn.');
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Creature'),(SELECT card_id FROM card WHERE card_name='Attended Healer'));
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Kor'),(SELECT card_id FROM card WHERE card_name='Attended Healer'));
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Cleric'),(SELECT card_id FROM card WHERE card_name='Attended Healer'));
+INSERT INTO card VALUES('ZNR006','Attended Healer','card_images/zendikar_rising/znr-6-attended-healer.jpg','uncommon','Wisnu Tan','4','2','3',(SELECT expansion_id FROM `expansion` WHERE expansion_name = 'Zendikar Rising'),'Whenever you gain life for the first time each turn, create a 1/1 white Cat creature token. [2 colorless][white]:Another target Cleric gains lifelink until end of turn.');
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Creature'),(SELECT card_id FROM card WHERE card_name='Attended Healer'));
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Kor'),(SELECT card_id FROM card WHERE card_name='Attended Healer'));
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Cleric'),(SELECT card_id FROM card WHERE card_name='Attended Healer'));
 INSERT INTO color_identity (color_id, card_id) VALUES ((SELECT color_id FROM color WHERE color_name = 'white'),(SELECT card_id FROM card WHERE card_name='Attended Healer'));
 ### Canyon Jerboa ZNR007
-INSERT INTO card VALUES('ZNR007','Canyon Jerboa','card_images/zendikar_rising/znr-7-canyon-jerboa.jpg','uncommon','Antonio José Manzanedo','3','1','2',(SELECT expansion_id FROM expansion WHERE expansion_name = 'Zendikar Rising'),'Landfall - Whenever a land enters the battlefield under your control, creatures you control get +1/+1 until end of turn.');
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Creature'),(SELECT card_id FROM card WHERE card_name='Canyon Jerboa'));
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Mouse'),(SELECT card_id FROM card WHERE card_name='Canyon Jerboa'));
+INSERT INTO card VALUES('ZNR007','Canyon Jerboa','card_images/zendikar_rising/znr-7-canyon-jerboa.jpg','uncommon','Antonio José Manzanedo','3','1','2',(SELECT expansion_id FROM `expansion` WHERE expansion_name = 'Zendikar Rising'),'Landfall - Whenever a land enters the battlefield under your control, creatures you control get +1/+1 until end of turn.');
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Creature'),(SELECT card_id FROM card WHERE card_name='Canyon Jerboa'));
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Mouse'),(SELECT card_id FROM card WHERE card_name='Canyon Jerboa'));
 INSERT INTO keyword_list (keyword_id, card_id) VALUES ((SELECT keyword_id FROM keyword WHERE keyword_name = 'Landfall'),(SELECT card_id FROM card WHERE card_name='Canyon Jerboa'));
 INSERT INTO color_identity (color_id, card_id) VALUES ((SELECT color_id FROM color WHERE color_name = 'white'),(SELECT card_id FROM card WHERE card_name='Canyon Jerboa'));
 ### Cliffhaven Sell-Sword ZNR008
-INSERT INTO card VALUES('ZNR008','Cliffhaven Sell-Sword','card_images/zendikar_rising/znr-8-cliffhaven-sell-sword.jpg','common','Jason Rainville','2','3','1',(SELECT expansion_id FROM expansion WHERE expansion_name = 'Zendikar Rising'),null);
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Creature'),(SELECT card_id FROM card WHERE card_name='Cliffhaven Sell-Sword'));
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Kor'),(SELECT card_id FROM card WHERE card_name='Cliffhaven Sell-Sword'));
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Warrior'),(SELECT card_id FROM card WHERE card_name='Cliffhaven Sell-Sword'));
+INSERT INTO card VALUES('ZNR008','Cliffhaven Sell-Sword','card_images/zendikar_rising/znr-8-cliffhaven-sell-sword.jpg','common','Jason Rainville','2','3','1',(SELECT expansion_id FROM `expansion` WHERE expansion_name = 'Zendikar Rising'),null);
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Creature'),(SELECT card_id FROM card WHERE card_name='Cliffhaven Sell-Sword'));
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Kor'),(SELECT card_id FROM card WHERE card_name='Cliffhaven Sell-Sword'));
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Warrior'),(SELECT card_id FROM card WHERE card_name='Cliffhaven Sell-Sword'));
 INSERT INTO color_identity (color_id, card_id) VALUES ((SELECT color_id FROM color WHERE color_name = 'white'),(SELECT card_id FROM card WHERE card_name='Cliffhaven Sell-Sword'));
 ### Dauntless Unity ZNR009
-INSERT INTO card VALUES('ZNR009','Dauntless Unity','card_images/zendikar_rising/znr-9-dauntless-unity.jpg','common','Josu Hernaiz','2',null,null,(SELECT expansion_id FROM expansion WHERE expansion_name = 'Zendikar Rising'),'Kicker [colorless][white] (You may pay an additional [colorless][white] as you cast this spell.) Creatures you control get a +1/+1 until end of turn. If this spell was kicked, those creatures get +2/+1 until end of turn instead.');
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Instant'),(SELECT card_id FROM card WHERE card_name='Dauntless Unity'));
+INSERT INTO card VALUES('ZNR009','Dauntless Unity','card_images/zendikar_rising/znr-9-dauntless-unity.jpg','common','Josu Hernaiz','2',null,null,(SELECT expansion_id FROM `expansion` WHERE expansion_name = 'Zendikar Rising'),'Kicker [colorless][white] (You may pay an additional [colorless][white] as you cast this spell.) Creatures you control get a +1/+1 until end of turn. If this spell was kicked, those creatures get +2/+1 until end of turn instead.');
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Instant'),(SELECT card_id FROM card WHERE card_name='Dauntless Unity'));
 INSERT INTO keyword_list (keyword_id, card_id) VALUES ((SELECT keyword_id FROM keyword WHERE keyword_name = 'Kicker'),(SELECT card_id FROM card WHERE card_name='Dauntless Unity'));
 INSERT INTO color_identity (color_id, card_id) VALUES ((SELECT color_id FROM color WHERE color_name = 'white'),(SELECT card_id FROM card WHERE card_name='Dauntless Unity'));
 ### Disenchant ZNR010
-INSERT INTO card VALUES('ZNR010','Disenchant','card_images/zendikar_rising/znr-10-disenchant.jpg','common','Colin Boyer','2',null,null,(SELECT expansion_id FROM expansion WHERE expansion_name = 'Zendikar Rising'),'Destroy target artifact or enchantment.');
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Instant'),(SELECT card_id FROM card WHERE card_name='Disenchant'));
+INSERT INTO card VALUES('ZNR010','Disenchant','card_images/zendikar_rising/znr-10-disenchant.jpg','common','Colin Boyer','2',null,null,(SELECT expansion_id FROM `expansion` WHERE expansion_name = 'Zendikar Rising'),'Destroy target artifact or enchantment.');
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Instant'),(SELECT card_id FROM card WHERE card_name='Disenchant'));
 INSERT INTO color_identity (color_id, card_id) VALUES ((SELECT color_id FROM color WHERE color_name = 'white'),(SELECT card_id FROM card WHERE card_name='Disenchant'));
 ### Acquisitions Expert ZNR089
-INSERT INTO card VALUES('ZNR089','Acquisitions Expert','card_images/zendikar_rising/znr-89-acquisitions-expert.jpg','uncommon','Anna Steinbauer','2','1','2',(SELECT expansion_id FROM expansion WHERE expansion_name = 'Zendikar Rising'),'When Acquisitions Expert enters the battlefield, target opponent reveals a number of cards from their hand equal to the number of creatures in your party. You choose one of those cards. That player discards that card. (Your party consists of up to one each of Cleric, Rogue, Warrior, Wizard.)');
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Creature'),(SELECT card_id FROM card WHERE card_name='Acquisitions Expert'));
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Human'),(SELECT card_id FROM card WHERE card_name='Acquisitions Expert'));
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Rogue'),(SELECT card_id FROM card WHERE card_name='Acquisitions Expert'));
+INSERT INTO card VALUES('ZNR089','Acquisitions Expert','card_images/zendikar_rising/znr-89-acquisitions-expert.jpg','uncommon','Anna Steinbauer','2','1','2',(SELECT expansion_id FROM `expansion` WHERE expansion_name = 'Zendikar Rising'),'When Acquisitions Expert enters the battlefield, target opponent reveals a number of cards from their hand equal to the number of creatures in your party. You choose one of those cards. That player discards that card. (Your party consists of up to one each of Cleric, Rogue, Warrior, Wizard.)');
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Creature'),(SELECT card_id FROM card WHERE card_name='Acquisitions Expert'));
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Human'),(SELECT card_id FROM card WHERE card_name='Acquisitions Expert'));
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Rogue'),(SELECT card_id FROM card WHERE card_name='Acquisitions Expert'));
 INSERT INTO color_identity (color_id, card_id) VALUES ((SELECT color_id FROM color WHERE color_name = 'black'),(SELECT card_id FROM card WHERE card_name='Acquisitions Expert'));
-### Adventure Awaits ZNR177
-INSERT INTO card VALUES ('ZNR177','Adventure Awaits','card_images/zendikar_rising/znr-177-adventure-awaits.jpg','common','Billy Christian','2',null,null,(SELECT expansion_id FROM expansion WHERE expansion_name = 'Zendikar Rising'),'Look at the top five cards of your library. You may reveal a creature card from among them and put it into your hand. Put the rest on the bottom of your library in a random order. If you didn''t put a card into your hand this way, draw a card.');
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Sorcery'),(SELECT card_id FROM card WHERE card_name='Adventure Awaits'));
-INSERT INTO color_identity (color_id, card_id) VALUES ((SELECT color_id FROM color WHERE color_name = 'green'),(SELECT card_id FROM card WHERE card_name='Adventure Awaits'));
 ### Agadeem's Awakening/Agadeem, the Undercrypt ZNR090
-INSERT INTO card VALUES ('ZNR090F','Agadeem''s Awakening','card_images/zendikar_rising/znr-90-agadeem-s-awakening.jpg','mythic','Dmitry Burmak','3X',null,null,(SELECT expansion_id FROM expansion WHERE expansion_name = 'Zendikar Rising'),'Return from your graveyard to the battlefield any number of target creature cards that each have a different converted mana cost X or less.');
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Sorcery'),(SELECT card_id FROM card WHERE card_name='Agadeem''s Awakening'));
+INSERT INTO card VALUES ('ZNR090F','Agadeem''s Awakening','card_images/zendikar_rising/znr-90-agadeem-s-awakening.jpg','mythic','Dmitry Burmak','3X',null,null,(SELECT expansion_id FROM `expansion` WHERE expansion_name = 'Zendikar Rising'),'Return from your graveyard to the battlefield any number of target creature cards that each have a different converted mana cost X or less.');
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Sorcery'),(SELECT card_id FROM card WHERE card_name='Agadeem''s Awakening'));
 INSERT INTO color_identity (color_id, card_id) VALUES ((SELECT color_id FROM color WHERE color_name = 'black'),(SELECT card_id FROM card WHERE card_name='Agadeem''s Awakening'));
-INSERT INTO card VALUES ('ZNR090B', 'Agadeem, the Undercrypt','card_images/zendikar_rising/znr-90-agadeem-the-undercrypt.jpg','mythic','Dmitry Burmak',null,null,null,(SELECT expansion_id FROM expansion WHERE expansion_name = 'Zendikar Rising'),'As Agadeem, the Undercrypt enters the battlefield, you may pay 3 life. If you don''t, it enters the battlefield tapped.[tap]:Add [black].');
-INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM type WHERE type_name = 'Land'),(SELECT card_id FROM card WHERE card_name='Agadeem, the Undercrypt'));
+INSERT INTO card VALUES ('ZNR090B', 'Agadeem, the Undercrypt','card_images/zendikar_rising/znr-90-agadeem-the-undercrypt.jpg','mythic','Dmitry Burmak',null,null,null,(SELECT expansion_id FROM `expansion` WHERE expansion_name = 'Zendikar Rising'),'As Agadeem, the Undercrypt enters the battlefield, you may pay 3 life. If you don''t, it enters the battlefield tapped.[tap]:Add [black].');
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Land'),(SELECT card_id FROM card WHERE card_name='Agadeem, the Undercrypt'));
 INSERT INTO color_identity (color_id, card_id) VALUES ((SELECT color_id FROM color WHERE color_name = 'colorless'),(SELECT card_id FROM card WHERE card_name='Agadeem, the Undercrypt'));
 INSERT INTO modal VALUES ('ZNR090', 'ZNR090F', 'ZNR090B');
+### Adventure Awaits ZNR177
+INSERT INTO card VALUES ('ZNR177','Adventure Awaits','card_images/zendikar_rising/znr-177-adventure-awaits.jpg','common','Billy Christian','2',null,null,(SELECT expansion_id FROM `expansion` WHERE expansion_name = 'Zendikar Rising'),'Look at the top five cards of your library. You may reveal a creature card from among them and put it into your hand. Put the rest on the bottom of your library in a random order. If you didn''t put a card into your hand this way, draw a card.');
+INSERT INTO typeline (type_id, card_id) VALUES ((SELECT type_id FROM `type` WHERE type_name = 'Sorcery'),(SELECT card_id FROM card WHERE card_name='Adventure Awaits'));
+INSERT INTO color_identity (color_id, card_id) VALUES ((SELECT color_id FROM color WHERE color_name = 'green'),(SELECT card_id FROM card WHERE card_name='Adventure Awaits'));
+
 
 ########################################Link card copy to test library########################################
 INSERT INTO card_copy (card_id, collection_id) VALUES ((SELECT card_id FROM card WHERE card_name='Acquisitions Expert'), (select collection_id FROM collection where user_id = 'f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454'));
