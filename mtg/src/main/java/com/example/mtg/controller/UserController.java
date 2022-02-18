@@ -15,36 +15,31 @@ public class UserController {
 
     @PostMapping("/addUser")
     public User addUser(@RequestBody User user){
-        return service.saveUser(user);
-    }
-
-    @PostMapping("/addUsers")
-    public List<User> addUsers(@RequestBody List<User> users){
-        return service.saveUsers(users);
+        return service.add(user);
     }
 
     @GetMapping("/users")
-    public List<User> findAllUsers(){
-        return service.getUsers();
+    public List<User> findAll(){
+        return service.findAll();
     }
 
     @GetMapping("/user/{id}")
-    public User findUserById(@PathVariable int id){
-        return service.getUserById(id);
+    public User findById(@PathVariable String id){
+        return service.findById(id);
     }
 
     @GetMapping("/user/{name}")
-    public User findUserByName(@PathVariable String name){
-        return service.getUserByName(name);
+    public User findByName(@PathVariable String name){
+        return service.findByUsername(name);
     }
 
     @PutMapping("/update")
-    public User updateUser(@RequestBody User user){
-        return service.updateUser(user);
+    public User update(@RequestBody User user){
+        return service.update(user);
     }
 
     @DeleteMapping("/delete/{id}")
-    public String deleteUser(@PathVariable int id){
-        return service.deleteUser(id);
+    public String deleteById(@PathVariable String id){
+        return service.delete(id);
     }
 }

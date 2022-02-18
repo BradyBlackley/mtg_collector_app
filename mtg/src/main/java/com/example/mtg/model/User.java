@@ -15,12 +15,16 @@ public class User {
     @Id
     @GeneratedValue
     private String userId;
-    private String userName;
+    private String username;
     private String password;
+
+    public User(){
+
+    }
 
     public User(String i, String n, String p){
         this.userId = i;
-        this.userName = n;
+        this.username = n;
         this.password = p;
     }
 
@@ -28,12 +32,16 @@ public class User {
         return userId;
     }
 
-    public String getUserName() { return userName; }
+    public String getUsername() { return username; }
 
     public String getPassword() { return password; }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public void setPassword(String password) {

@@ -1,6 +1,5 @@
 package com.example.mtg.service;
 
-
 import com.example.mtg.model.User;
 import com.example.mtg.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,35 +12,32 @@ public class UserService {
     @Autowired
     private UserRepository repository;
 
-    public User saveUser(User user){
-        return repository.save(user);
-    }
-    public List<User> saveUsers(List<User> users){
-        return repository.saveAll(users);
+    public User add(User user){
+        return repository.add(user);
     }
 
-    public List<User> getUsers(){
+    public List<User> findAll(){
         return repository.findAll();
     }
 
-    public User getUserById(int id){
-        return repository.findById(id).orElse(null);
+    public User findById(String id){
+        return repository.findById(id);
     }
 
-    public User getUserByName(String userName){
-        return repository.findByUserName(userName);
+    public User findByUsername(String username){
+        return repository.findByUsername(username);
     }
 
-    public String deleteUser(int id){
+    public String delete(String id){
         repository.deleteById(id);
         return "user " + id + " removed";
     }
 
-    public User updateUser(User user){
-        User existingUser=repository.findByUserName(user.getUserName());
-        existingUser.setUserName(user.getUserName());
+    public User update(User user){
+        User existingUser=repository.findByUsername(user.getUsername());
+        existingUser.setUsername(user.getUsername());
         existingUser.setPassword(user.getPassword());
-        return repository.save(existingUser);
+        return repository.add(existingUser);
     }
 
 }
