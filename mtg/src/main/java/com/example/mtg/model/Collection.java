@@ -1,16 +1,7 @@
 package com.example.mtg.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name="collection")
 public class Collection {
 
-    @Id
-    @GeneratedValue
     private int collectionId;
     private String userId;
 

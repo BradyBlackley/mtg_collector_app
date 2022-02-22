@@ -1,19 +1,7 @@
 package com.example.mtg.model;
 
-import org.springframework.lang.NonNull;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "user")
-
 public class User {
 
-    @Id
-    @GeneratedValue
     private String userId;
     private String username;
     private String password;
