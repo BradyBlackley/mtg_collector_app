@@ -3,7 +3,14 @@ package com.example.mtg.model;
 public class Collection {
 
     private int collectionId;
-    private String userId;
+    private User user;
+
+    public Collection() {}
+
+    public Collection(int collectionId, User user) {
+        this.collectionId = collectionId;
+        this.user = user;
+    }
 
     public int getCollectionId() {
         return collectionId;
@@ -13,11 +20,11 @@ public class Collection {
         this.collectionId = collectionId;
     }
 
-    public String getUserId() {
-        return userId;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setUser(User user) {
+        this.user = user;
     }
 }
