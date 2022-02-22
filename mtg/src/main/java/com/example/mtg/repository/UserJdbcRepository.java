@@ -73,9 +73,7 @@ public class UserJdbcRepository implements UserRepository {
     @Override
     public boolean deleteById(String userId) {
 
-        final String sql = "set sql_safe_updates = 0; " +
-                "delete from `user` where user_id = ?; " +
-                "set sql_safe_updates = 1;";
+        final String sql = "delete from `user` where user_id = ?; ";
         return jdbcTemplate.update(sql, userId) > 0;
     }
 }
