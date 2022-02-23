@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @Sql({"classpath:data/Collection.sql"})
 @ContextConfiguration(
-        classes = {UserJdbcRepository.class}
+        classes = {CollectionJdbcRepository.class}
 )
 class CollectionJdbcRepositoryTest extends CommonRepoTest {
 
@@ -18,6 +18,7 @@ class CollectionJdbcRepositoryTest extends CommonRepoTest {
 
     @Test
     void findAll() {
+        assertEquals(repository.findAll().size(), 2);
     }
 
     @Test
