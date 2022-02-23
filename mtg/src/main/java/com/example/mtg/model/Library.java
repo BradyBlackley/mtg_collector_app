@@ -16,6 +16,11 @@ public class Library {
         this.user = user;
     }
 
+    public Library(String libraryName, User user) {
+        this.libraryName = libraryName;
+        this.user = user;
+    }
+
 
     public int getLibraryId() {
         return libraryId;

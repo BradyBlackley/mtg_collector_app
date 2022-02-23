@@ -41,12 +41,23 @@ public class LibraryJdbcRepository implements LibraryRepository {
 
     @Override
     public Library findLibraryByName(String libraryName) {
-        return null;
+        final String sql = "select library_id, library_name, user_id from library where library_name = ?;";
+        Library library = jdbcTemplate.query(sql, new LibraryMapper(), libraryName).stream().findFirst().orElse(null);
+        if(library != null) {
+            addUser(library);
+        }
+        return library;
     }
 
     @Override
     public Library add(Library library) {
-        return null;
+        final String sql = "insert into library (library_name, user_id) values (?,?);";
+        int rowsAffected = jdbcTemplate.update(sql, library.getLibraryName(), library.getUser().getUserId());
+        if(rowsAffected <= 0) {
+            return null;
+        }
+        addUser(library);
+        return library;
     }
 
     @Override
