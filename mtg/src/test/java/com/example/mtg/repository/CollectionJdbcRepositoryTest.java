@@ -17,12 +17,13 @@ class CollectionJdbcRepositoryTest extends CommonRepoTest {
     CollectionJdbcRepository repository;
 
     @Test
-    void findAll() {
-        assertEquals(repository.findAll().size(), 2);
+    void findByCollectionId() {
+        assertNotNull(repository.findByCollectionId());
     }
 
     @Test
-    void findById() {
+    void findByUserId() {
+
     }
 
     @Test

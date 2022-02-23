@@ -6,9 +6,10 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 public interface CollectionRepository {
-    List<Collection> findAll();
 
-    Collection findById(int collectionId);
+    Collection findByCollectionId(int collectionId);
+
+    Collection findByUserId(String userId);
 
     Collection add(Collection collection);
 

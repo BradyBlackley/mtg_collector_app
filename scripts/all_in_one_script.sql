@@ -70,13 +70,6 @@ CREATE TABLE typeline (
     FOREIGN KEY (type_id) REFERENCES `type`(type_id)
 );
 
-CREATE TABLE collection (
-	collection_id int NOT NULL AUTO_INCREMENT,
-    user_id varchar(255),
-    PRIMARY KEY (collection_id),
-    FOREIGN KEY (user_id) REFERENCES `user`(user_id)
-);
-
 CREATE TABLE modal (
 	modal_id varchar(255) NOT NULL,
     front_card_id varchar(255),
@@ -89,18 +82,18 @@ CREATE TABLE modal (
 CREATE TABLE card_copy (
 	card_copy_id int NOT NULL AUTO_INCREMENT,
     card_id varchar(255),
-    collection_id int,
+    user_id varchar(255),
     PRIMARY KEY (card_copy_id),
     FOREIGN KEY (card_id) REFERENCES card(card_id),
-    FOREIGN KEY (collection_id) REFERENCES collection(collection_id)
+    FOREIGN KEY (user_id) REFERENCES `user`(user_id)
 );
 
 CREATE TABLE library (
 	library_id int NOT NULL AUTO_INCREMENT,
     library_name varchar(255),
-    collection_id int,
+    user_id varchar(255),
     PRIMARY KEY (library_id),
-    FOREIGN KEY (collection_id) REFERENCES collection(collection_id)
+    FOREIGN KEY (user_id) REFERENCES `user`(user_id)
 );
 
 CREATE TABLE color_identity (
@@ -170,8 +163,7 @@ END$$
 DELIMITER ;
 ########################################data inserts########################################
 INSERT INTO `user` VALUES('f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454', 'Test', 'Test');
-INSERT INTO collection VALUES(1,'f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454');
-INSERT INTO library VALUES(1,'Test Library', 1);
+INSERT INTO library VALUES(1,'Test Library', 'f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454');
 ###Color
 CALL InsertColor('colorless');
 CALL InsertColor('white');
@@ -985,6 +977,6 @@ INSERT INTO color_identity (color_id, card_id) VALUES ((SELECT color_id FROM col
 
 
 ########################################Link card copy to test library########################################
-INSERT INTO card_copy (card_id, collection_id) VALUES ((SELECT card_id FROM card WHERE card_name='Acquisitions Expert'), (select collection_id FROM collection where user_id = 'f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454'));
+INSERT INTO card_copy (card_id, user_id) VALUES ((SELECT card_id FROM card WHERE card_name='Acquisitions Expert'), (select user_id FROM `user` where user_id = 'f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454'));
 INSERT INTO card_to_library (card_copy_id, library_id) VALUES ((SELECT card_copy_id FROM card_copy cc INNER JOIN card c ON c.card_id = cc.card_id WHERE card_name='Acquisitions Expert' LIMIT 1),
-(SELECT library_id FROM library WHERE collection_id = 1));
+(SELECT library_id FROM library WHERE user_id = 'f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454'));
