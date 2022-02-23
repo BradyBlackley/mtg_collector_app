@@ -18,5 +18,4 @@ public interface UserRepository {
 
     @Transactional
     boolean deleteById(String userId);
-
 }
