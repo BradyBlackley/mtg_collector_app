@@ -19,37 +19,36 @@ class UserJdbcRepositoryTest extends CommonRepoTest {
 
     @Test
     void findAll() {
-        assertEquals(repository.findAll().size(), 2);
+        assertEquals(2, repository.findAll().size());
     }
 
     @Test
     void findByUsername() {
         assertNotNull(repository.findByUsername("TimTheMagicMan"));
-        assertEquals(repository.findByUsername("TimTheMagicMan").getUsername(),
-                "TimTheMagicMan");
-        assertEquals(repository.findByUsername("TimTheMagicMan").getUserId(),
-                "5d209ac0-9102-11ec-b909-0242ac120002");
-        assertEquals(repository.findByUsername("TimTheMagicMan").getPassword(),
-                "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8");
+        assertEquals("TimTheMagicMan",
+                repository.findByUsername("TimTheMagicMan").getUsername());
+        assertEquals("5d209ac0-9102-11ec-b909-0242ac120002",
+                repository.findByUsername("TimTheMagicMan").getUserId());
+        assertEquals("5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+                repository.findByUsername("TimTheMagicMan").getPassword());
     }
 
     @Test
     void findById() {
         assertNull(repository.findById("notarealid123"));
         assertNotNull(repository.findById("9a219974-9102-11ec-b909-0242ac120002"));
-        assertEquals(repository.findById("9a219974-9102-11ec-b909-0242ac120002").getUsername(),
-                "Bobby_LovesPI532");
-        assertEquals(repository.findById("9a219974-9102-11ec-b909-0242ac120002").getPassword(),
-                "d55e52b3e8da93c174bd319178a91f5248d205849e64925fdc76d9fbd62527ca");
+        assertEquals("Bobby_LovesPI532", repository.findById("9a219974-9102-11ec-b909-0242ac120002").getUsername());
+        assertEquals("d55e52b3e8da93c174bd319178a91f5248d205849e64925fdc76d9fbd62527ca",
+                repository.findById("9a219974-9102-11ec-b909-0242ac120002").getPassword());
     }
 
     @Test
     void add() {
         assertNotNull(repository.add(makeUser()));
-        assertEquals(repository.findAll().size(), 3);
+        assertEquals(3, repository.findAll().size());
         assertNotNull(repository.findByUsername("H4rry_P0tter"));
-        assertEquals(repository.findByUsername("H4rry_P0tter").getPassword(),
-                "5f8912b2d920b8e6a4b758de25684ea63ac93c6bf576b41e977298d1c98320bc");
+        assertEquals("5f8912b2d920b8e6a4b758de25684ea63ac93c6bf576b41e977298d1c98320bc",
+                repository.findByUsername("H4rry_P0tter").getPassword());
     }
 
     @Test
@@ -58,8 +57,7 @@ class UserJdbcRepositoryTest extends CommonRepoTest {
         user.setUsername("Bobby_LovesPIZZA532");
         assertTrue(repository.update(user));
         assertNotNull(repository.findByUsername("Bobby_LovesPIZZA532"));
-        assertEquals(repository.findById("9a219974-9102-11ec-b909-0242ac120002").getUsername(),
-                "Bobby_LovesPIZZA532");
+        assertEquals("Bobby_LovesPIZZA532", repository.findById("9a219974-9102-11ec-b909-0242ac120002").getUsername());
     }
 
     @Test

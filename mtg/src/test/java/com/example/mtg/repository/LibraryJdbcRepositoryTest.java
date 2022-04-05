@@ -21,35 +21,22 @@ class LibraryJdbcRepositoryTest extends CommonRepoTest {
     @Test
     void findAllLibrariesByUser() {
         assertTrue(repository.findAllLibrariesByUser("3f0fb9ba-94e2-11ec-b909-0242ac120002").isEmpty());
-        assertEquals(repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002").size(), 2);
-        assertEquals(repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(0).getLibraryId(),
-                1);
-        assertEquals(repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(0).getLibraryName(),
-                "Burn Deck");
-        assertEquals(repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(1).getLibraryName(),
-                "Zombie Deck");
-        assertEquals(repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(0).getUser().getUserId(),
-                "5d209ac0-9102-11ec-b909-0242ac120002");
-        assertEquals(repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(0).getUser().getUsername(),
-                "TimTheMagicMan");
-        assertEquals(repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(0).getUser().getPassword(),
-                "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8");
-    }
-
-    @Test
-    void findLibraryById() {
-        assertNull(repository.findLibraryById(0));
-        assertNotNull(repository.findLibraryById(1));
-        assertEquals(repository.findLibraryById(1).getLibraryName(),
-                "Burn Deck");
-        assertEquals(repository.findLibraryById(2).getLibraryName(),
-                "Zombie Deck");
-        assertEquals(repository.findLibraryById(2).getUser().getUserId(),
-                "5d209ac0-9102-11ec-b909-0242ac120002");
-        assertEquals(repository.findLibraryById(2).getUser().getUsername(),
-                "TimTheMagicMan");
-        assertEquals(repository.findLibraryById(2).getUser().getPassword(),
-                "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8");
+        assertEquals(2, repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002").size());
+        assertEquals("Burn Deck",
+                repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002")
+                        .get(0).getLibraryName());
+        assertEquals("Zombie Deck",
+                repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002")
+                        .get(1).getLibraryName());
+        assertEquals("5d209ac0-9102-11ec-b909-0242ac120002",
+                repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002")
+                        .get(0).getUser().getUserId());
+        assertEquals("TimTheMagicMan",
+                repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002")
+                        .get(0).getUser().getUsername());
+        assertEquals("5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+                repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002")
+                        .get(0).getUser().getPassword());
     }
 
     @Test
@@ -57,16 +44,11 @@ class LibraryJdbcRepositoryTest extends CommonRepoTest {
         assertNull(repository.findLibraryByName("Not a library"));
         assertNotNull(repository.findLibraryByName("Burn Deck"));
         assertNotNull(repository.findLibraryByName("Zombie Deck"));
-        assertEquals(repository.findLibraryByName("Burn Deck").getLibraryId(),
-                1);
-        assertEquals(repository.findLibraryByName("Zombie Deck").getLibraryId(),
-                2);
-        assertEquals(repository.findLibraryByName("Zombie Deck").getUser().getUserId(),
-                "5d209ac0-9102-11ec-b909-0242ac120002");
-        assertEquals(repository.findLibraryByName("Zombie Deck").getUser().getUsername(),
-                "TimTheMagicMan");
-        assertEquals(repository.findLibraryByName("Zombie Deck").getUser().getPassword(),
-                "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8");
+        assertEquals("5d209ac0-9102-11ec-b909-0242ac120002",
+                repository.findLibraryByName("Zombie Deck").getUser().getUserId());
+        assertEquals("TimTheMagicMan",
+                repository.findLibraryByName("Zombie Deck").getUser().getUsername());
+        assertEquals("5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8", repository.findLibraryByName("Zombie Deck").getUser().getPassword());
     }
 
     @Test
@@ -75,24 +57,29 @@ class LibraryJdbcRepositoryTest extends CommonRepoTest {
         Library library = new Library("Dragon Deck", user);
 
         assertNotNull(repository.add(library));
-        assertEquals(repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002").size(), 3);
-        assertEquals(repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002")
+
+        assertEquals("Dragon Deck",
+                repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002")
                         .get(repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002").size() - 1)
-                        .getLibraryName(),
-                "Dragon Deck");
-        assertEquals(repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002")
+                        .getLibraryName());
+        assertEquals("TimTheMagicMan",
+                repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002")
                         .get(repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002").size() - 1)
-                        .getUser().getUsername(),
-                "TimTheMagicMan");
+                        .getUser().getUsername());
     }
 
     @Test
     void update() {
-
+        Library library = repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002")
+                .get(1);
+        library.setLibraryName("Dragon Destruction");
+        assertTrue(repository.update(library));
+        assertEquals("Dragon Destruction",
+                repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(1).getLibraryName());
     }
 
     @Test
-    void deleteById() {
+    void deleteByUserIdAndLibraryName() {
 
     }
 }

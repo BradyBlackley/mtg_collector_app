@@ -8,8 +8,6 @@ import java.util.List;
 public interface LibraryRepository {
     List<Library> findAllLibrariesByUser(String userId);
 
-    Library findLibraryById(int libraryId);
-
     Library findLibraryByName(String libraryName);
 
     Library add(Library library);
@@ -17,5 +15,5 @@ public interface LibraryRepository {
     boolean update(Library library);
 
     @Transactional
-    boolean deleteById(int libraryId);
+    boolean deleteByUserIdAndLibraryName(int libraryId, String libraryName);
 }
