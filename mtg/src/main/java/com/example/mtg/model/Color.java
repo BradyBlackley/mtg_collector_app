@@ -5,6 +5,14 @@ public class Color {
     private int colorId;
     private String colorName;
 
+    public Color() {
+
+    }
+
+    public Color(int colorId) {
+        this.colorId = colorId;
+    }
+
     public Color(int colorId, String colorName) {
         this.colorId = colorId;
         this.colorName = colorName;
