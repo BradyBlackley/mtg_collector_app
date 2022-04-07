@@ -17,5 +17,5 @@ public interface ColorRepository {
     boolean update(Color color);
 
     @Transactional
-    boolean deleteByName(int colorName);
+    boolean deleteByName(String colorName);
 }
