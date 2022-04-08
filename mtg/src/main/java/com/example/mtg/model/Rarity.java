@@ -1,8 +1,14 @@
 package com.example.mtg.model;
 
 public enum Rarity {
-    COMMON,
-    UNCOMMON,
-    RARE,
-    MYTHIC
+    COMMON("common"),
+    UNCOMMON("uncommon"),
+    RARE("rare"),
+    MYTHIC("mythic");
+
+    public final String label;
+
+    private Rarity(String label) {
+        this.label = label;
+    }
 }

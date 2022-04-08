@@ -1,5 +1,7 @@
 package com.example.mtg.model;
 
+import java.util.Objects;
+
 public class Card {
     private String cardId;
     private String cardName;
@@ -11,6 +13,86 @@ public class Card {
     private String toughness;
     private Expansion expansion;
     private String textBox;
+
+    public Card() {
+
+    }
+
+    public Card(String cardId) {
+        this.cardId = cardId;
+    }
+
+    public Card(String cardId, String cardName) {
+        this.cardId = cardId;
+        this.cardName = cardName;
+    }
+
+    public Card(String cardId, String cardName, String imagePath) {
+        this.cardId = cardId;
+        this.cardName = cardName;
+        this.imagePath = imagePath;
+    }
+
+    public Card(String cardId, String cardName, String imagePath, Rarity rarity) {
+        this.cardId = cardId;
+        this.cardName = cardName;
+        this.imagePath = imagePath;
+        this.rarity = rarity;
+    }
+
+    public Card(String cardId, String cardName, String imagePath, Rarity rarity, String artistName) {
+        this.cardId = cardId;
+        this.cardName = cardName;
+        this.imagePath = imagePath;
+        this.rarity = rarity;
+        this.artistName = artistName;
+    }
+
+    public Card(String cardId, String cardName, String imagePath, Rarity rarity, String artistName,
+                String convertedManaCost) {
+        this.cardId = cardId;
+        this.cardName = cardName;
+        this.imagePath = imagePath;
+        this.rarity = rarity;
+        this.artistName = artistName;
+        this.convertedManaCost = convertedManaCost;
+    }
+
+    public Card(String cardId, String cardName, String imagePath, Rarity rarity, String artistName,
+                String convertedManaCost, String power) {
+        this.cardId = cardId;
+        this.cardName = cardName;
+        this.imagePath = imagePath;
+        this.rarity = rarity;
+        this.artistName = artistName;
+        this.convertedManaCost = convertedManaCost;
+        this.power = power;
+    }
+
+    public Card(String cardId, String cardName, String imagePath, Rarity rarity, String artistName,
+                String convertedManaCost, String power, String toughness) {
+        this.cardId = cardId;
+        this.cardName = cardName;
+        this.imagePath = imagePath;
+        this.rarity = rarity;
+        this.artistName = artistName;
+        this.convertedManaCost = convertedManaCost;
+        this.power = power;
+        this.toughness = toughness;
+    }
+
+    public Card(String cardId, String cardName, String imagePath, Rarity rarity, String artistName,
+                String convertedManaCost, String power, String toughness, Expansion expansion) {
+        this.cardId = cardId;
+        this.cardName = cardName;
+        this.imagePath = imagePath;
+        this.rarity = rarity;
+        this.artistName = artistName;
+        this.convertedManaCost = convertedManaCost;
+        this.power = power;
+        this.toughness = toughness;
+        this.expansion = expansion;
+    }
 
     public Card(String cardId, String cardName, String imagePath, Rarity rarity, String artistName,
                 String convertedManaCost, String power, String toughness, Expansion expansion, String textBox) {
@@ -104,5 +186,38 @@ public class Card {
 
     public void setTextBox(String textBox) {
         this.textBox = textBox;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Card card = (Card) o;
+        return cardId.equals(card.cardId) && cardName.equals(card.cardName) && imagePath.equals(card.imagePath)
+                && rarity == card.rarity && artistName.equals(card.artistName)
+                && convertedManaCost.equals(card.convertedManaCost) && power.equals(card.power)
+                && toughness.equals(card.toughness) && expansion.equals(card.expansion) && textBox.equals(card.textBox);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cardId, cardName, imagePath, rarity, artistName, convertedManaCost, power, toughness,
+                expansion, textBox);
+    }
+
+    @Override
+    public String toString() {
+        return "Card{" +
+                "cardId='" + cardId + '\'' +
+                ", cardName='" + cardName + '\'' +
+                ", imagePath='" + imagePath + '\'' +
+                ", rarity=" + rarity +
+                ", artistName='" + artistName + '\'' +
+                ", convertedManaCost='" + convertedManaCost + '\'' +
+                ", power='" + power + '\'' +
+                ", toughness='" + toughness + '\'' +
+                ", expansion=" + expansion +
+                ", textBox='" + textBox + '\'' +
+                '}';
     }
 }
