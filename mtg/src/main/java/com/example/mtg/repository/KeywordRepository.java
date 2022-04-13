@@ -17,5 +17,5 @@ public interface KeywordRepository {
     boolean update(Keyword keyword);
 
     @Transactional
-    boolean deleteByName(String keywordName);
+    boolean deleteByName(Keyword keyword);
 }
