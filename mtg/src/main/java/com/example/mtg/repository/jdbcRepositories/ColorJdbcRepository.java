@@ -1,12 +1,13 @@
-package com.example.mtg.repository;
+package com.example.mtg.repository.jdbcRepositories;
 
 import com.example.mtg.model.Color;
 import com.example.mtg.repository.mappers.ColorMapper;
+import com.example.mtg.repository.repositoryInterfaces.ColorRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.List;
 
-public class ColorJdbcRepository implements ColorRepository{
+public class ColorJdbcRepository implements ColorRepository {
 
     private final JdbcTemplate jdbcTemplate;
 

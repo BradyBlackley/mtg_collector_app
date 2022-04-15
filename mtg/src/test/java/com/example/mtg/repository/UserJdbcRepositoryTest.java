@@ -1,6 +1,7 @@
 package com.example.mtg.repository;
 
 import com.example.mtg.model.User;
+import com.example.mtg.repository.jdbcRepositories.UserJdbcRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;

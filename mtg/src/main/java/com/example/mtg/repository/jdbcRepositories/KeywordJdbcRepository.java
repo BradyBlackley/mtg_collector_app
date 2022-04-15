@@ -1,7 +1,8 @@
-package com.example.mtg.repository;
+package com.example.mtg.repository.jdbcRepositories;
 
 import com.example.mtg.model.Keyword;
 import com.example.mtg.repository.mappers.KeywordMapper;
+import com.example.mtg.repository.repositoryInterfaces.KeywordRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.List;

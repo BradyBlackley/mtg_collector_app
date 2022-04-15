@@ -1,7 +1,8 @@
-package com.example.mtg.repository;
+package com.example.mtg.repository.jdbcRepositories;
 
 import com.example.mtg.model.Expansion;
 import com.example.mtg.repository.mappers.ExpansionMapper;
+import com.example.mtg.repository.repositoryInterfaces.ExpansionRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.List;

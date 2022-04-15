@@ -1,7 +1,7 @@
 package com.example.mtg.service;
 
 import com.example.mtg.model.User;
-import com.example.mtg.repository.UserRepository;
+import com.example.mtg.repository.repositoryInterfaces.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

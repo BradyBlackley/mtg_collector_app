@@ -1,4 +1,4 @@
-package com.example.mtg.repository;
+package com.example.mtg.repository.repositoryInterfaces;
 
 import com.example.mtg.model.Color;
 import org.springframework.transaction.annotation.Transactional;

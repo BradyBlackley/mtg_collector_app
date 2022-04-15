@@ -1,7 +1,8 @@
-package com.example.mtg.repository;
+package com.example.mtg.repository.jdbcRepositories;
 
 import com.example.mtg.model.User;
 import com.example.mtg.repository.mappers.UserMapper;
+import com.example.mtg.repository.repositoryInterfaces.UserRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
