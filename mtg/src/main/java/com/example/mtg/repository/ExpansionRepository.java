@@ -15,5 +15,5 @@ public interface ExpansionRepository {
     boolean update(Expansion expansion);
 
     @Transactional
-    boolean deleteByExpansionCode(Expansion expansion);
+    boolean delete(Expansion expansion);
 }
