@@ -4,51 +4,51 @@ import java.util.Objects;
 
 public class Modal {
 
-    private int modalId;
-    private Card frontCardId;
-    private Card backCardId;
+    private String modalId;
+    private Card frontCard;
+    private Card backCard;
 
     public Modal() {
 
     }
 
-    public Modal(int modalId) {
+    public Modal(String modalId) {
         this.modalId = modalId;
     }
 
-    public Modal(int modalId, Card frontCardId) {
+    public Modal(String modalId, Card frontCard) {
         this.modalId = modalId;
-        this.frontCardId = frontCardId;
+        this.frontCard = frontCard;
     }
 
-    public Modal(int modalId, Card frontCardId, Card backCardId) {
+    public Modal(String modalId, Card frontCard, Card backCard) {
         this.modalId = modalId;
-        this.frontCardId = frontCardId;
-        this.backCardId = backCardId;
+        this.frontCard = frontCard;
+        this.backCard = backCard;
     }
 
-    public int getModalId() {
+    public String getModalId() {
         return modalId;
     }
 
-    public void setModalId(int modalId) {
+    public void setModalId(String modalId) {
         this.modalId = modalId;
     }
 
-    public Card getFrontCardId() {
-        return frontCardId;
+    public Card getfrontCard() {
+        return frontCard;
     }
 
-    public void setFrontCardId(Card frontCardId) {
-        this.frontCardId = frontCardId;
+    public void setfrontCard(Card frontCard) {
+        this.frontCard = frontCard;
     }
 
-    public Card getBackCardId() {
-        return backCardId;
+    public Card getbackCard() {
+        return backCard;
     }
 
-    public void setBackCardId(Card backCardId) {
-        this.backCardId = backCardId;
+    public void setbackCard(Card backCard) {
+        this.backCard = backCard;
     }
 
     @Override
@@ -56,20 +56,20 @@ public class Modal {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Modal modal = (Modal) o;
-        return modalId == modal.modalId && frontCardId.equals(modal.frontCardId) && backCardId.equals(modal.backCardId);
+        return modalId == modal.modalId && frontCard.equals(modal.frontCard) && backCard.equals(modal.backCard);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(modalId, frontCardId, backCardId);
+        return Objects.hash(modalId, frontCard, backCard);
     }
 
     @Override
     public String toString() {
         return "Modal{" +
                 "modalId=" + modalId +
-                ", frontCardId=" + frontCardId +
-                ", backCardId=" + backCardId +
+                ", frontCard=" + frontCard +
+                ", backCard=" + backCard +
                 '}';
     }
 }
