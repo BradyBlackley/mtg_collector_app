@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class CardToLibrary {
 
-    private int cardToLibrary;
+    private int cardToLibraryId;
     private List<CardCopy> cardCopies;
     private Library library;
 
@@ -13,27 +13,27 @@ public class CardToLibrary {
 
     }
 
-    public CardToLibrary(int cardToLibrary) {
-        this.cardToLibrary = cardToLibrary;
+    public CardToLibrary(int cardToLibraryId) {
+        this.cardToLibraryId = cardToLibraryId;
     }
 
-    public CardToLibrary(int cardToLibrary, List<CardCopy> cardCopies) {
-        this.cardToLibrary = cardToLibrary;
+    public CardToLibrary(int cardToLibraryId, List<CardCopy> cardCopies) {
+        this.cardToLibraryId = cardToLibraryId;
         this.cardCopies = cardCopies;
     }
 
-    public CardToLibrary(int cardToLibrary, List<CardCopy> cardCopies, Library library) {
-        this.cardToLibrary = cardToLibrary;
+    public CardToLibrary(int cardToLibraryId, List<CardCopy> cardCopies, Library library) {
+        this.cardToLibraryId = cardToLibraryId;
         this.cardCopies = cardCopies;
         this.library = library;
     }
 
-    public int getCardToLibrary() {
-        return cardToLibrary;
+    public int getCardToLibraryId() {
+        return cardToLibraryId;
     }
 
-    public void setCardToLibrary(int cardToLibrary) {
-        this.cardToLibrary = cardToLibrary;
+    public void setCardToLibraryId(int cardToLibraryId) {
+        this.cardToLibraryId = cardToLibraryId;
     }
 
     public List<CardCopy> getCardCopies() {
@@ -57,18 +57,18 @@ public class CardToLibrary {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CardToLibrary that = (CardToLibrary) o;
-        return cardToLibrary == that.cardToLibrary && cardCopies.equals(that.cardCopies) && library.equals(that.library);
+        return cardToLibraryId == that.cardToLibraryId && cardCopies.equals(that.cardCopies) && library.equals(that.library);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(cardToLibrary, cardCopies, library);
+        return Objects.hash(cardToLibraryId, cardCopies, library);
     }
 
     @Override
     public String toString() {
         return "CardToLibrary{" +
-                "cardToLibrary=" + cardToLibrary +
+                "cardToLibrary=" + cardToLibraryId +
                 ", cardCopies=" + cardCopies +
                 ", library=" + library +
                 '}';
