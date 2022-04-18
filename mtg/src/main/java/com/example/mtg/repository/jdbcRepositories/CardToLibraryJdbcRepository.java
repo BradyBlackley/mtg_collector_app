@@ -58,12 +58,19 @@ public class CardToLibraryJdbcRepository implements CardToLibraryRepository {
 
     @Override
     public boolean update(CardToLibrary cardToLibrary) {
-        return false;
+        final String sql = "update card_to_library set card_copy_id = ?, library_id = ? where card_to_library = ?;";
+        int rowsAffected = 0;
+        for (CardCopy cardCopy : cardToLibrary.getCardCopies()){
+            rowsAffected += jdbcTemplate.update(sql, cardCopy.getCardCopyId(),
+                    cardToLibrary.getLibrary().getLibraryId(), cardToLibrary.getCardToLibraryId());
+        }
+        return rowsAffected > 0;
     }
 
     @Override
     public boolean delete(int cardToLibraryId) {
-        return false;
+        final String sql = "delete from card_to_library where card_to_library_id = ?;";
+        return jdbcTemplate.update(sql, cardToLibraryId) > 0;
     }
 
     private void addCardCopies(CardToLibrary cardToLibrary) {
