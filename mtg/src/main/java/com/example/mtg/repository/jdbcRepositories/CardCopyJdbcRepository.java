@@ -1,6 +1,5 @@
 package com.example.mtg.repository.jdbcRepositories;
 
-import com.example.mtg.model.Card;
 import com.example.mtg.model.CardCopy;
 import com.example.mtg.repository.mappers.CardCopyMapper;
 import com.example.mtg.repository.mappers.CardMapper;
