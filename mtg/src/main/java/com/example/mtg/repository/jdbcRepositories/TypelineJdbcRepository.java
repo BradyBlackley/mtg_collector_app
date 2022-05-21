@@ -82,7 +82,8 @@ public class TypelineJdbcRepository implements TypelineRepository {
 
     @Override
     public boolean delete(int typelineId) {
-        return false;
+        final String sql = "delete from typeline where typeline_id = ?;";
+        return jdbcTemplate.update(sql, typelineId) > 0;
     }
 
     private void addCard(Typeline typeline) {
