@@ -1,6 +1,7 @@
 package com.example.mtg.repository.jdbcRepositories;
 
 import com.example.mtg.model.KeywordList;
+import com.example.mtg.repository.mappers.KeywordListMapper;
 import com.example.mtg.repository.repositoryInterfaces.KeywordListRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -16,12 +17,14 @@ public class KeywordListJdbcRepository implements KeywordListRepository {
 
     @Override
     public List<KeywordList> findAll() {
-        return null;
+        String sql = "select * from keyword_list;";
+        return jdbcTemplate.query(sql, new KeywordListMapper());
     }
 
     @Override
     public KeywordList findByKeywordListId(int keywordListId) {
-        return null;
+        String sql = "select * from keyword_list where keyword_list_id = ?;";
+        return jdbcTemplate.query(sql, new KeywordListMapper(), keywordListId).stream().findFirst().orElse(null);
     }
 
     @Override
