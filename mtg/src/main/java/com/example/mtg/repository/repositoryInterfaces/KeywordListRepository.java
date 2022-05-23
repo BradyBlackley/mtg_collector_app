@@ -9,6 +9,8 @@ public interface KeywordListRepository {
 
     List<KeywordList> findAll();
 
+    KeywordList findByCardId(String cardId);
+
     KeywordList findByKeywordListId(int keywordListId);
 
     KeywordList add(KeywordList keywordList);
