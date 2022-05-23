@@ -84,5 +84,6 @@ class LibraryJdbcRepositoryTest extends CommonRepoTest {
     void delete() {
         Library library = repository.findLibraryByName("Rogue Deck");
         assertTrue(repository.delete(library));
+        assertEquals(2, repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002").size());
     }
 }

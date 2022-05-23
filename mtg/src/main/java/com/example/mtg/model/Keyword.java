@@ -15,6 +15,10 @@ public class Keyword {
         this.keywordId = keywordId;
     }
 
+    public Keyword(String keywordName) {
+        this.keywordName = keywordName;
+    }
+
     public Keyword(int keywordId, String keywordName) {
         this.keywordId = keywordId;
         this.keywordName = keywordName;

@@ -60,11 +60,9 @@ public class LibraryJdbcRepository implements LibraryRepository {
 
     @Override
     public boolean delete(Library library) {
-        final String sql = "delete from card_to_library where library_id = ?;";
-        final String sql2 = "delete from library where user_id = ? and library_name = ?;";
+        final String sql = "delete from library where user_id = ? and library_name = ?;";
         int rowsAffected = 0;
-        rowsAffected += jdbcTemplate.update(sql, library.getLibraryId());
-        rowsAffected += jdbcTemplate.update(sql2, library.getUser().getUserId(), library.getLibraryName());
+        rowsAffected += jdbcTemplate.update(sql, library.getUser().getUserId(), library.getLibraryName());
         return rowsAffected > 0;
     }
 

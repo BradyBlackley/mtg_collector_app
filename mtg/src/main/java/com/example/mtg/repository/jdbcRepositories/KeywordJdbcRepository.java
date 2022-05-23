@@ -46,12 +46,14 @@ public class KeywordJdbcRepository implements KeywordRepository {
     @Override
     public boolean update(Keyword keyword) {
         final String sql = "update keyword set keyword_name = ? where keyword_id = ?;";
-        return jdbcTemplate.update(sql, keyword.getKeywordName()) > 0;
+        return jdbcTemplate.update(sql, keyword.getKeywordName(), keyword.getKeywordId()) > 0;
     }
 
     @Override
     public boolean deleteByName(Keyword keyword) {
-        final String sql = "delete from keyword where keyword_name = ?;";
-        return jdbcTemplate.update(sql, keyword.getKeywordName()) > 0;
+        int rowsAffected = 0;
+        final String sql = "delete from keyword where keyword_id = ?;";
+        rowsAffected += jdbcTemplate.update(sql);
+        return rowsAffected > 0;
     }
 }

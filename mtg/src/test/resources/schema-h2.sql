@@ -48,7 +48,9 @@ CREATE TABLE card (
     expansion_id int,
     text_box longtext,
     PRIMARY KEY (card_id),
-    FOREIGN KEY (expansion_id) REFERENCES `expansion`(expansion_id)
+    FOREIGN KEY (expansion_id)
+		REFERENCES `expansion`(expansion_id)
+        ON DELETE CASCADE
 );
 
 CREATE TABLE keyword_list (
@@ -56,8 +58,12 @@ CREATE TABLE keyword_list (
     keyword_id int,
     card_id varchar(255),
     PRIMARY KEY (keyword_list_id),
-    FOREIGN KEY (card_id) REFERENCES card(card_id),
-    FOREIGN KEY (keyword_id) REFERENCES keyword(keyword_id)
+    FOREIGN KEY (card_id)
+		REFERENCES card(card_id)
+        ON DELETE CASCADE,
+    FOREIGN KEY (keyword_id)
+		REFERENCES keyword(keyword_id)
+        ON DELETE CASCADE
 );
 
 CREATE TABLE typeline (
@@ -65,8 +71,12 @@ CREATE TABLE typeline (
     type_id int,
     card_id varchar(255),
     PRIMARY KEY (typeline_id),
-    FOREIGN KEY (card_id) REFERENCES card(card_id),
-    FOREIGN KEY (type_id) REFERENCES `type`(type_id)
+    FOREIGN KEY (card_id)
+		REFERENCES card(card_id)
+        ON DELETE CASCADE,
+    FOREIGN KEY (type_id)
+		REFERENCES `type`(type_id)
+        ON DELETE CASCADE
 );
 
 CREATE TABLE modal (
@@ -74,8 +84,12 @@ CREATE TABLE modal (
     front_card_id varchar(255),
     back_card_id varchar(255),
     PRIMARY KEY (modal_id),
-    FOREIGN KEY (front_card_id) REFERENCES card(card_id),
-    FOREIGN KEY (back_card_id) REFERENCES card(card_id)
+    FOREIGN KEY (front_card_id)
+		REFERENCES card(card_id)
+        ON DELETE CASCADE,
+    FOREIGN KEY (back_card_id)
+		REFERENCES card(card_id)
+        ON DELETE CASCADE
 );
 
 CREATE TABLE card_copy (
@@ -83,8 +97,12 @@ CREATE TABLE card_copy (
     card_id varchar(255),
     user_id varchar(255),
     PRIMARY KEY (card_copy_id),
-    FOREIGN KEY (card_id) REFERENCES card(card_id),
-    FOREIGN KEY (user_id) REFERENCES `user`(user_id)
+    FOREIGN KEY (card_id)
+		REFERENCES card(card_id)
+        ON DELETE CASCADE,
+    FOREIGN KEY (user_id)
+		REFERENCES `user`(user_id)
+        ON DELETE CASCADE
 );
 
 CREATE TABLE library (
@@ -92,7 +110,9 @@ CREATE TABLE library (
     library_name varchar(255),
     user_id varchar(255),
     PRIMARY KEY (library_id),
-    FOREIGN KEY (user_id) REFERENCES `user`(user_id)
+    FOREIGN KEY (user_id)
+		REFERENCES `user`(user_id)
+        ON DELETE CASCADE
 );
 
 CREATE TABLE color_identity (
@@ -100,8 +120,12 @@ CREATE TABLE color_identity (
     card_id varchar(255),
     color_id int,
     PRIMARY KEY (color_identity_id),
-    FOREIGN KEY (card_id) REFERENCES card(card_id),
-    FOREIGN KEY (color_id) REFERENCES color(color_id)
+    FOREIGN KEY (card_id)
+		REFERENCES card(card_id)
+        ON DELETE CASCADE,
+    FOREIGN KEY (color_id)
+		REFERENCES color(color_id)
+        ON DELETE CASCADE
 );
 
 CREATE TABLE card_to_library (
@@ -109,7 +133,11 @@ CREATE TABLE card_to_library (
     card_copy_id int,
     library_id int,
     PRIMARY KEY (card_to_library_id),
-    FOREIGN KEY (card_copy_id) REFERENCES card_copy(card_copy_id),
-    FOREIGN KEY (library_id) REFERENCES library(library_id)
+    FOREIGN KEY (card_copy_id)
+		REFERENCES card_copy(card_copy_id)
+        ON DELETE CASCADE,
+    FOREIGN KEY (library_id)
+		REFERENCES library(library_id)
+        ON DELETE CASCADE
 );
 
