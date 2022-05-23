@@ -23,7 +23,7 @@ class LibraryJdbcRepositoryTest extends CommonRepoTest {
     @Test
     void findAllLibrariesByUser() {
         assertTrue(repository.findAllLibrariesByUser("3f0fb9ba-94e2-11ec-b909-0242ac120002").isEmpty());
-        assertEquals(2, repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002").size());
+        assertEquals(3, repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002").size());
         assertEquals("Burn Deck",
                 repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002")
                         .get(0).getLibraryName());
@@ -81,7 +81,8 @@ class LibraryJdbcRepositoryTest extends CommonRepoTest {
     }
 
     @Test
-    void deleteByUserIdAndLibraryName() {
-
+    void delete() {
+        Library library = repository.findLibraryByName("Rogue Deck");
+        assertTrue(repository.delete(library));
     }
 }

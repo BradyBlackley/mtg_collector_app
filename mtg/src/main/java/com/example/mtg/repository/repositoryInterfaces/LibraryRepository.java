@@ -15,5 +15,5 @@ public interface LibraryRepository {
     boolean update(Library library);
 
     @Transactional
-    boolean deleteByUserIdAndLibraryName(int libraryId, String libraryName);
+    boolean delete(Library library);
 }

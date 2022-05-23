@@ -15,6 +15,10 @@ public class Color {
         this.colorId = colorId;
     }
 
+    public Color(String colorName) {
+        this.colorName = colorName;
+    }
+
     public Color(int colorId, String colorName) {
         this.colorId = colorId;
         this.colorName = colorName;
