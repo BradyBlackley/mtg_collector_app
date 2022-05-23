@@ -1,7 +1,8 @@
-package com.example.mtg.repository;
+package com.example.mtg.repository.jdbcRepositories;
 
 import com.example.mtg.model.Library;
 import com.example.mtg.model.User;
+import com.example.mtg.repository.CommonRepoTest;
 import com.example.mtg.repository.jdbcRepositories.LibraryJdbcRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
