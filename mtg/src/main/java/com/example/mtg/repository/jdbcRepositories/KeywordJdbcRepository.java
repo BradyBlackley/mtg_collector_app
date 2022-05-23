@@ -50,10 +50,10 @@ public class KeywordJdbcRepository implements KeywordRepository {
     }
 
     @Override
-    public boolean deleteByName(Keyword keyword) {
+    public boolean delete(Keyword keyword) {
         int rowsAffected = 0;
         final String sql = "delete from keyword where keyword_id = ?;";
-        rowsAffected += jdbcTemplate.update(sql);
+        rowsAffected += jdbcTemplate.update(sql, keyword.getKeywordId());
         return rowsAffected > 0;
     }
 }

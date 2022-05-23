@@ -17,5 +17,5 @@ public interface KeywordRepository {
     boolean update(Keyword keyword);
 
     @Transactional
-    boolean deleteByName(Keyword keyword);
+    boolean delete(Keyword keyword);
 }

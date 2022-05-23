@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.jdbc.Sql;
 
+import java.security.Key;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @Sql({"classpath:data/Keyword.sql"})
@@ -57,7 +59,8 @@ class KeywordJdbcRepositoryTest extends CommonRepoTest {
     }
 
     @Test
-    void deleteByName() {
-
+    void delete() {
+        Keyword keyword = repository.findKeywordByName("Flying");
+        assertTrue(repository.delete(keyword));
     }
 }
