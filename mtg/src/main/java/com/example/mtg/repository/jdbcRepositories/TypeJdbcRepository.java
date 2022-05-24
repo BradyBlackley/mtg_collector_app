@@ -40,11 +40,11 @@ public class TypeJdbcRepository implements TypeRepository {
     @Override
     public boolean update(Type type) {
         final String sql = "update type set type_name = ? where type_id = ?;";
-        return jdbcTemplate.update(sql, type.getTypeName()) > 0;
+        return jdbcTemplate.update(sql, type.getTypeName(), type.getTypeId()) > 0;
     }
 
     @Override
-    public boolean deleteByName(Type type) {
+    public boolean delete(Type type) {
         final String sql = "delete from type where type_name = ?";
         return jdbcTemplate.update(sql, type.getTypeName()) > 0;
     }

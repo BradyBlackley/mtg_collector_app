@@ -15,5 +15,5 @@ public interface TypeRepository {
     boolean update(Type type);
 
     @Transactional
-    boolean deleteByName(Type type);
+    boolean delete(Type type);
 }

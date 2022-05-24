@@ -15,6 +15,10 @@ public class Type {
         this.typeId = typeId;
     }
 
+    public Type(String typeName) {
+        this.typeName = typeName;
+    }
+
     public Type(int typeId, String typeName) {
         this.typeId = typeId;
         this.typeName = typeName;
