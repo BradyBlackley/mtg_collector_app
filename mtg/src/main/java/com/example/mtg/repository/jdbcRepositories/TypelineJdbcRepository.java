@@ -32,22 +32,22 @@ public class TypelineJdbcRepository implements TypelineRepository {
     }
 
     @Override
-    public List<Typeline> findByCardId(String cardId) {
+    public Typeline findByCardId(String cardId) {
         final String sql = "select * from typeline where card_id = ?;";
-        List<Typeline> typelines = jdbcTemplate.query(sql, new TypelineMapper(), cardId);
-        for (Typeline typeline : typelines) {
+        Typeline typeline = jdbcTemplate.query(sql,
+                new TypelineMapper(), cardId).stream().findFirst().orElse(null);
             if(typeline != null){
                 addCard(typeline);
                 addTypes(typeline);
             }
-        }
-        return typelines;
+        return typeline;
     }
 
     @Override
     public Typeline findByTypelineId(int typelineId) {
         final String sql = "select * from typeline where typeline_id = ?;";
-        Typeline typeline = jdbcTemplate.query(sql, new TypelineMapper(), typelineId).stream().findFirst().orElse(null);
+        Typeline typeline = jdbcTemplate.query(sql,
+                new TypelineMapper(), typelineId).stream().findFirst().orElse(null);
         if (typeline != null) {
             addCard(typeline);
             addTypes(typeline);
@@ -65,29 +65,28 @@ public class TypelineJdbcRepository implements TypelineRepository {
         if (rowsAffected <= 0) {
             return null;
         }
-        addCard(typeline);
-        addTypes(typeline);
         return typeline;
     }
 
     @Override
     public boolean update(Typeline typeline) {
-        final String sql = "update typeline set type_id = ?, card_id = ? where typeline_id = ?;";
+        final String sql = "update typeline set type_id = ?, card_id = ? where type_id = ? and card_id = ?;";
         int rowsAffected = 0;
         for (Type type : typeline.getTypes()) {
-            rowsAffected += jdbcTemplate.update(sql, type.getTypeId(), typeline.getCard().getCardId(), typeline.getTypelineId());
+            rowsAffected += jdbcTemplate.update(sql, type.getTypeId(), typeline.getCard().getCardId(),
+                    type.getTypeId(), typeline.getCard().getCardId());
         }
         return rowsAffected > 0;
     }
 
     @Override
-    public boolean delete(int typelineId) {
-        final String sql = "delete from typeline where typeline_id = ?;";
-        return jdbcTemplate.update(sql, typelineId) > 0;
+    public boolean delete(int typeId, String cardId) {
+        final String sql = "delete from typeline where type_id = ? and card_id = ?;";
+        return jdbcTemplate.update(sql, typeId, cardId) > 0;
     }
 
     private void addCard(Typeline typeline) {
-        final String sql = "select card_id from typeline where typeline_id = ?;";
+        final String sql = "select * from card c inner join typeline t on c.card_id = t.card_id where typeline_id = ?;";
         typeline.setCard(jdbcTemplate.query(sql, new CardMapper(),
                 typeline.getTypelineId()).stream().findFirst().orElse(null));
 

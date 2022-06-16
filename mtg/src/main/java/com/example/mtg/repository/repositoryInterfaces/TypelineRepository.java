@@ -8,7 +8,7 @@ import java.util.List;
 public interface TypelineRepository {
     List<Typeline> findAll();
 
-    List<Typeline> findByCardId(String cardId);
+    Typeline findByCardId(String cardId);
 
     Typeline findByTypelineId(int typelineId);
 
@@ -17,5 +17,5 @@ public interface TypelineRepository {
     boolean update(Typeline typeline);
 
     @Transactional
-    boolean delete(int typelineId);
+    boolean delete(int typeId, String cardId);
 }
