@@ -32,8 +32,8 @@ class KeywordListJdbcRepositoryTest extends CommonRepoTest {
 
     @Test
     void add() {
-        Keyword flash = new Keyword("Flash");
-        Keyword firstStrike = new Keyword("First-Strike");
+        Keyword flash = new Keyword(1,"Double Strike");
+        Keyword firstStrike = new Keyword(2,"Flying");
         List<Keyword> keywords = new ArrayList<>();
 
         keywords.add(flash);
@@ -45,14 +45,6 @@ class KeywordListJdbcRepositoryTest extends CommonRepoTest {
         keywordList.setCard(makeCard());
 
         assertEquals(keywordList, repository.add(keywordList));
-    }
-
-    @Test
-    void update() {
-    }
-
-    @Test
-    void delete() {
     }
 
     private Card makeCard() {
