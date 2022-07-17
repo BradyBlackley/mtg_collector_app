@@ -5,1011 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbad1684-f930-45d1-8ac4-3e783e22479a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/TypelineJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/TypelineJdbcRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/repositoryInterfaces/TypelineRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/repositoryInterfaces/TypelineRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/mtg/repository/jdbcRepositories/TypelineJdbcRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/mtg/repository/jdbcRepositories/TypelineJdbcRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/Typeline.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/Typeline.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-1-ancestral-katana.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-10-eiganjo-exemplar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-100-inkrise-infiltrator.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-101-invoke-despair.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-102-junji-the-midnight-sky.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-103-kaito-s-pursuit.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-104-kami-of-restless-shadows.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-105-kami-of-terrible-secrets.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-106-leech-gauntlet.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-107-lethal-exploit.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-108-life-of-toshiro-umezawa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-108-memory-of-toshiro.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-109-animus-of-night-s-reach.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-109-the-long-reach-of-night.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-11-era-of-enlightenment.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-11-hand-of-enlightenment.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-110-malicious-malfunction.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-111-march-of-wretched-sorrow.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-112-mukotai-ambusher.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-113-mukotai-soulripper.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-114-nashi-moon-sage-s-scion.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-115-nezumi-bladeblesser.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-116-nezumi-prowler.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-117-nezumi-road-captian.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-117-okiba-reckoner-raid.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-118-okiba-salvage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-119-reckoner-shakedown.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-12-fragment-of-konda.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-12-the-fall-of-lord-konda.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-120-reckoner-s-bargain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-121-return-to-action.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-122-soul-transfer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-123-tatsunari-toad-rider.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-124-echo-of-death-s-wail.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-124-tribute-to-horobi.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-125-twisted-embrace.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-126-undercity-scrounger.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-127-unforgiving-one.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-128-virus-beetle.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-129-you-are-already-dead.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-13-farewell.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-130-akki-ember-keeper.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-131-akki-ronin.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-132-akki-war-paint.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-133-ambitious-assault.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-134-atshui-the-blazing-sky.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-135-bronzeplate-boar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-136-crackling-emergence.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-137-dragonspark-reactor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-138-experimental-synthesizer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-139-explosive-entry.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-14-go-shintai-of-shared-purpose.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-140-explosive-singularity.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-141-fable-of-the-mirror-breaker.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-141-reflection-of-kiki-jiki.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-142-flame-discharge.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-143-gift-of-wrath.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-144-go-shintai-of-ancient-wars.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-145-goro-goro-disciple-of-ryusei.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-146-heiko-yamazaki-the-general.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-147-invoke-calamity.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-148-ironhoof-boar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-149-kami-of-industry.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-15-golden-tail-disciple.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-150-kami-s-flare.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-151-kindled-fury.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-152-etching-of-kumano.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-152-kumano-faces-kakkazan.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-153-lizard-blades.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-154-march-of-reckless-joy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-155-ogre-head-helm.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-156-peerless-samurai.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-157-rabbit-battery.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-158-reinforced-ronin.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-159-scrap-welder.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-16-hotshot-mechanic.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-160-scrapyard-steelbreaker.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-161-seismic-wave.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-162-nameless-conqueror.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-162-the-shattered-states-era.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-163-simian-sling.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-164-sokenzan-smelter.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-165-tempered-in-solitude.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-166-thundering-raiju.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-167-towashi-songshaper.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-168-twinshot-sniper.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-169-unstoppable-ogre.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-17-imperial-oath.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-170-upriser-renegade.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-171-voltage-surge.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-172-azusa-s-many-journeys.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-172-likeness-of-the-seeker.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-173-bamboo-grove-archer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-174-bearer-of-memory.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-175-blossom-prancer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-176-boon-of-boseiju.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-177-boseiju-reaches-skyward.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-177-branch-of-boseiju.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-178-careful-cultivation.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-179-coiling-stalker.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-18-imperial-recovery-unit.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-180-commune-with-spirits.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-181-dragon-kami-s-egg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-181-the-dragon-kami-reborn.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-182-fade-into-antiquity.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-183-fang-of-shigeki.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-184-favor-of-jukai.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-185-generous-visitor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-186-geothermal-kami.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-187-go-shintai-of-boundless-vigor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-188-grafted-growth.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-189-greater-tanuki.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-19-imperial-subduer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-190-harmonious-emergence.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-191-heir-of-the-ancient-fang.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-192-historian-s-wisdom.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-193-invoke-the-ancients.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-194-jugan-defends-the-temple.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-194-remnant-of-the-rising-star.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-195-jukai-preserver.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-196-jukai-trainee.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-197-kami-of-transience.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-198-kappa-tech-wrecker.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-199-kodama-of-the-west-tree.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-2-ao-the-dawn-sky.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-20-intercessor-s-arrest.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-200-kura-the-boundless-sky.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-201-march-of-burgeoning-life.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-202-master-s-rebuke.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-203-orochi-merge-keeper.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-204-roaring-earth.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-205-season-of-renewal.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-206-shigeki-jukai-visionary.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-207-spinning-wheel-kick.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-208-spring-leaf-avenger.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-209-storyweave.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-21-invoke-justice.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-210-seshiro-s-living-legacy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-210-tales-of-master-seshiro.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-211-tamiyo-s-safekeeping.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-212-kirin-touched-orochi.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-212-teachings-of-the-kirin.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-213-weaver-of-harmony.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-214-webspinner-cuff.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-215-asari-captain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-216-colossal-skyturtle.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-217-eiganjo-uprising.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-218-enthusiastic-mechanaut.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-219-gloomshrieker.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-22-kitsune-ace.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-220-greasefang-okiba-boss.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-221-hidetsugu-consumes-all.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-221-vessel-of-the-all-consuming.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-222-hinata-dawn-crowned.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-223-invigorating-hot-spring.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-224-isshin-two-heavens-as-one.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-225-jukai-naturalist.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-226-kaito-shizuki.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-227-o-kagachi-made-manifest.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-227-the-kami-war.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-228-kotose-the-silent-spider.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-229-naomi-pillar-of-order.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-23-kyodai-soul-of-kamigawa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-230-oni-cult-anvil.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-231-prodigy-s-prototype.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-232-raiyuu-storm-s-edge.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-233-risona-asari-commander.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-234-satoru-umezawa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-235-satsuki-the-living-lore.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-236-silver-fur-master.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-237-spirit-sister-s-call.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-238-tamiyo-compleated-sage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-239-automated-artificer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-24-light-the-way.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-240-bronze-cudgels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-241-brute-suit.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-242-circuit-mender.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-243-containment-construct.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-244-dramatist-s-puppet.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-245-eater-of-virtue.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-246-ecologist-s-terrarium.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-247-high-speed-hoverbike.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-248-iron-apprentice.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-249-mechtitan-core.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-25-light-paws-emperor-s-voice.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-250-mirror-box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-251-network-terminal.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-252-ninja-s-kunai.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-253-papercraft-decoy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-254-patchwork-automation.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-255-reckoner-bankbuster.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-256-reito-sentinel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-257-runaway-trash-bot.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-258-searchlight-companion.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-259-shrine-steward.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-26-lion-sash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-260-surgehacker-mech.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-261-thundersteel-colossus.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-262-towashi-guide-bot.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-263-walking-skyscraper.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-264-bloodfell-caves.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-265-blossoming-sands.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-266-boseiju-who-endures.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-267-dismal-backwater.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-268-eiganjo-seat-of-the-empire.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-269-jungle-hollow.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-27-lucky-offering.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-270-mech-hangar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-271-otawara-soaring-city.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-272-roadside-reliquary.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-273-rugged-highlands.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-274-scoured-barrens.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-275-secluded-courtyard.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-276-sokenzan-crucible-of-defiance.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-277-swiftwater-cliffs.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-278-takenuma-abandoned-mire.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-279-thornwood-falls.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-28-march-of-otherworldly-light.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-280-tranquil-cove.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-281-uncharted-haven.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-282-wind-scarred-crag.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-283-plains.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-284-plains.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-285-island.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-286-island.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-287-swamp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-288-swamp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-289-mountain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-29-michiko-s-reign-of-truth.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-29-portrait-of-michiko.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-290-mountain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-291-forest.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-292-forest.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-293-plains.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-294-plains.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-295-island.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-296-island.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-297-swamp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-298-swamp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-299-mountain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-3-banishing-slash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-30-mothrider-patrol.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-300-mountain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-301-forest.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-302-forest.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-303-the-wandering-emperor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-304-tezzeret-betrayer-of-flesh.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-305-kaito-shizuki.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-306-tamiyo-compleated-sage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-307-jin-gitaxias-progress-tyrant.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-308-tamiyo-compleated-sage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-309-eiganjo-exemplar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-31-norika-yamazaki-the-poet.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-310-imperial-subduer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-311-norika-yamazaki-the-poet.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-312-selfless-samurai.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-313-seven-tail-mentor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-314-sky-blessed-samurai.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-315-sunblade-samurai.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-316-the-wandering-emperor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-317-guardians-of-oboro.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-318-nezumi-bladeblesser.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-319-akki-ronin.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-32-regent-s-authority.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-320-goro-goro-disciple-of-ryusei.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-321-heiko-yamazaki-the-general.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-322-peerless-samurai.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-323-reinforced-ronin.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-324-upriser-renegade.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-325-heir-of-the-ancient-fang.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-326-jukai-trainee.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-327-asari-captain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-328-isshin-two-heavens-as-one.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-329-raiyuu-storm-s-edge.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-33-repel-the-vile.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-330-risona-asari-commander.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-331-blade-blizzard-kitsune.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-332-covert-technician.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-333-futurist-operative.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-334-moon-circuit-hacker.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-335-moonsnare-specialist.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-336-prosperous-thief.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-337-thousand-faced-shadow.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-338-biting-palm-ninja.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-339-dokuchi-shadow-walker.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-34-architect-of-restoration.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-34-the-restoration-of-eiganjo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-340-dokuchi-silencer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-341-inkrise-infiltrator.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-342-mukotai-ambusher.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-343-nashi-moon-sage-s-scion.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-344-nezumi-prowler.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-345-tatsunari-toad-rider.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-346-coiling-stalker.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-347-fang-of-shigeki.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-348-kappa-tech-wrecker.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-349-spring-leaf-avenger.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-35-selfless-samurai.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-350-kaito-shizuki.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-351-kotose-the-silent-spider.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-352-satoru-umezawa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-353-silver-fur-master.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-354-architect-of-restoration.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-354-the-restoration-of-eiganjo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-355-inventive-iteration.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-355-living-breakthrough.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-356-echo-of-death-s-wail.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-356-tribute-to-horobi.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-357-fable-of-the-mirror-breaker.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-357-reflection-of-kiki-jiki.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-358-dragon-kami-s-egg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-358-the-dragon-kami-reborn.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-359-jugan-defends-the-temple.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-359-remnant-of-the-rising-star.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-36-seven-tail-mentor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-360-kirin-touched-orochi.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-360-teachings-of-the-kirin.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-361-hidetsugu-consumes-all.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-361-vessel-of-the-all-consuming.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-362-o-kagachi-made-manifest.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-362-the-kami-war.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-363-brilliant-restoration.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-364-cloudsteel-kirin.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-365-farewell.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-366-invoke-justice.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-367-light-paws-emperor-s-voice.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-368-lion-sash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-369-march-of-otherworldly-light.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-37-sky-blessed-samurai.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-370-invoke-the-winds.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-371-jin-gitaxias-progress-tyrant.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-372-march-of-swirling-mist.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-373-mindlink-mech.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-374-the-reality-chip.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-375-tameshi-reality-architect.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-376-tezzeret-betrayer-of-flesh.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-377-blade-of-the-oni.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-378-hidetsugu-devouring-chaos.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-379-invoke-despair.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-38-spirited-companion.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-380-march-of-wretched-sorrow.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-381-mukotai-soulripper.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-382-soul-transfer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-383-explosive-singularity.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-384-invoke-calamity.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-385-lizard-blades.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-386-march-of-reckless-joy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-387-ogre-head-helm.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-388-scrap-welder.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-389-thundering-raiju.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-39-sunblade-samurai.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-390-invoke-the-ancients.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-391-kami-of-transience.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-393-march-of-burgeoning-life.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-394-shigeki-jukai-visionary.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-395-weaver-of-harmony.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-396-eiganjo-uprising.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-397-greasefang-okiba-boss.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-398-hinata-dawn-crowned.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-399-satsuki-the-living-lore.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-4-befriending-the-moths.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-40-touch-the-spirit-realm.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-400-spirit-sister-s-call.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-401-eater-of-virtue.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-402-mechititan-core.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-403-mirror-box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-404-reckoner-bankbuster.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-405-surgehacker-mech.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-406-ao-the-dawn-sky.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-407-kyodai-soul-of-kamigawa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-408-kairi-the-swirling-sky.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-409-junji-the-midnight-sky.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-41-wanderer-s-intervention.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-410-atsushi-the-blazing-sky.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-411-kura-the-boundless-sky.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-412-boseiju-who-endures.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-413-eiganjo-seat-of-the-empire.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-414-otawara-soaring-city.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-415-sokenzan-crucible-of-defiance.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-416-takenuma-abandoned-mire.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-417-farewell.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-417-jin-gitaxias-progress-tyrant.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-418-tamiyo-compleated-sage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-418-the-wandering-emperor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-419-tezzeret-betrayer-of-flesh.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-42-the-wandering-emperor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-420-blade-of-the-oni.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-421-explosive-singularity.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-422-kodama-of-the-west-tree.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-423-kaito-shizuki.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-424-nashi-moon-sage-s-scion.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-425-risona-asari-commander.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-426-satoru-umezawa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-429-hidetsugu-devouring-chaos.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-43-when-we-were-young.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-430-hidetsugu-devouring-chaos.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-431-hidetsugu-devouring-chaos.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-432-hidetsugu-devouring-chaos.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-433-ao-the-dawn-sky.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-434-brilliant-restoration.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-435-cloudsteel-kirin.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-436-farewell.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-437-invoke-justice.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-438-kyodai-soul-of-kamigawa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-439-light-paws-emperor-s-voice.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-44-acquisition-octopus.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-440-lion-sash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-441-march-of-otherworldly-light.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-442-architect-of-restoration.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-442-the-restoration-of-eiganjo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-443-inventive-iteration.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-443-living-breakthrough.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-444-invoke-the-winds.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-445-jin-gitaxias-progress-tyrant.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-446-kairi-the-swirling-sky.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-447-march-of-swirling-mist.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-448-mindlink-mech.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-449-the-reality-chip.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-45-anchor-to-reality.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-450-tameshi-reality-architect.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-451-thousand-faced-shadow.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-452-biting-palm-ninja.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-453-blade-of-the-oni.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-454-hidetsugu-devouring-chaos.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-455-invoke-despair.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-456-junji-the-midnight-sky.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-457-march-of-wretched-sorrow.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-458-mukotai-soulripper.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-459-nashi-moon-sage-s-scion.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-46-armguard-familiar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-460-soul-transfer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-461-tatsunari-toad-rider.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-462-echo-of-death-s-wail.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-462-tribute-to-horobi.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-463-atshui-the-blazing-sky.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-464-explosive-singularity.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-465-fable-of-the-mirror-breaker.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-465-reflection-of-kiki-jiki.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-466-goro-goro-disciple-of-ryusei.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-467-invoke-calamity.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-468-lizard-blades.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-469-march-of-reckless-joy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-47-awakened-awareness.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-470-ogre-head-helm.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-471-scrap-welder.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-472-thundering-raiju.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-473-dragon-kami-s-egg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-473-the-dragon-kami-reborn.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-474-invoke-the-ancients.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-475-jugan-defends-the-temple.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-475-remnant-of-the-rising-star.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-476-kami-of-transience.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-477-kodama-of-the-west-tree.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-478-kura-the-boundless-sky.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-479-march-of-burgeoning-life.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-48-behold-the-unspeakable.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-48-vision-of-the-unspeakable.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-480-shigeki-jukai-visionary.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-481-spring-leaf-avenger.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-482-kirin-touched-orochi.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-482-teachings-of-the-kirin.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-483-weaver-of-harmony.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-484-eiganjo-uprising.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-485-greasefang-okiba-boss.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-486-hidetsugu-consumes-all.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-486-vessel-of-the-all-consuming.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-487-hinata-dawn-crowned.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-488-isshin-two-heavens-as-one.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-489-o-kagachi-made-manifest.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-489-the-kami-war.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-49-covert-technician.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-490-kotose-the-silent-spider.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-491-raiyuu-storm-s-edge.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-492-risona-asari-commander.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-493-satoru-umezawa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-494-satsuki-the-living-lore.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-495-spirit-sister-s-call.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-496-eater-of-virtue.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-497-mechtitan-core.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-498-mirror-box.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-499-reckoner-bankbuster.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-5-blade-blizzard-kitsune.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-50-discover-the-impossible.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-500-surgehacker-mech.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-501-boseiju-who-endures.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-502-eiganjo-seat-of-the-empire.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-503-otawara-city-above-clouds.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-504-sokenzan-crucible-of-defiance.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-505-takenuma-abandoned-mire.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-506-invoke-despair.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-507-satoru-umezawa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-508-spirited-companion.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-509-enthusiastic-mechanaut.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-51-disruption-protocol.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-510-jukai-naturalist.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-511-silver-fur-master.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-512-secluded-courtyard.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-52-essence-capture.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-53-futurist-operative.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-54-futurist-sentinel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-55-go-shintai-of-lost-wisdom.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-56-gardians-of-oboro.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-57-inventive-iteration.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-57-living-breakthrough.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-58-invoke-the-winds.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-59-jin-gitaxias-progress-tyrant.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-6-born-to-drive.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-60-kairi-the-swirling-sky.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-61-march-of-swirling-mist.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-62-mindlink-mech.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-63-mirrorshell-crab.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-64-mnemonic-sphere.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-65-mobilizer-mech.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-66-the-modern-age.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-66-vector-glider.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-67-moon-circuit-hacker.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-68-moonfolk-puzzlemaker.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-69-moonsnare-prototype.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-7-brilliant-restoration.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-70-moonsnare-specialist.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-71-network-disruptor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-72-planar-incision.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-73-prosperous-thief.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-74-the-reality-chip.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-75-reality-heist.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-76-replication-specialist.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-77-siba-trespassers.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-78-short-circuit.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-79-skyswimmer-koi.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-8-cloudsteel-kirin.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-80-spell-pierce.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-81-suit-up.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-82-tameshi-reality-architect.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-83-tamiyo-s-compleation.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-84-tezzeret-betrayer-of-flesh.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-85-thirst-for-knowledge.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-86-thousand-faced-shadow.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-87-assassin-s-ink.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-88-biting-palm-ninja.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-89-blade-of-the-oni.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-9-dragonfly-suit.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-90-chainflail-centipede.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-91-clawing-torment.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-92-debt-to-the-kami.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-93-dockside-chef.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-94-dokuchi-shadow-walker.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-95-dokuchi-silencer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-96-enormous-energy-blade.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-97-go-shintai-of-hidden-cruelty.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-98-gravelighter.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/kamigawa_neon_dynasty/neo-99-hidetsugu-devouring-chaos.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-1-allied-assault.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-10-disenchant.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-100-dreadwurm.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-101-expedition-skulker.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-102-feed-the-swarm.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-103-ghastly-gloomhunter.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-104-guul-draz-mucklord.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-105-hagra-constrictor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-106-hagra-broodpit.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-106-hagra-mauling.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-107-highborn-vampire.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-108-inscription-of-ruin.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-109-lithoform-blight.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-11-emeria-captain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-110-malakir-blood-priest.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-111-malakir-mire.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-111-malakir-rebirth.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-112-marauding-blight-priest.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-113-mind-carver.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-114-mind-drain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-115-nighthawk-scavenger.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-116-nimana-skitter-sneak.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-117-nimana-skydancer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-118-nullpriest-of-oblivion.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-119-oblivion-s-hunger.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-12-emeria-s-call.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-12-emeria-shattered-skyclave.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-120-pelakka-caverns.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-120-pelakka-predation.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-121-scion-of-the-swarm.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-122-scourge-of-the-skyclaves.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-123-shadow-stinger.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-124-shadows-verdict.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-125-skyclave-shade.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-126-skyclave-shadowcat.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-127-soul-shatter.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-128-subtle-strike.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-129-taborax-hope-s-demise.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-13-expedition-healer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-130-thwart-the-grave.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-131-vanquish-the-weak.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-132-zof-bloodbog.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-132-zof-consumption.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-133-akoum-hellhound.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-134-akoum-teeth.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-134-akoum-warrior.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-135-ardent-electromancer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-136-cinderclasm.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-137-cleansing-wildfire.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-138-expedition-champion.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-139-fireblade-charger.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-14-farsight-adept.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-140-fissure-wizard.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-141-goma-fada-vanguard.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-142-grotag-bug-catcher.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-143-grotag-night-runner.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-144-inordinate-rage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-145-kargan-intimidator.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-146-kazuul-s-cliffs.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-146-kazuul-s-fury.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-147-leyline-tyrant.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-148-magmatic-channeler.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-149-molten-blast.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-15-fearless-fledgling.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-150-moraug-fury-of-akoum.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-151-nahiri-s-lithoforming.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-152-pyroclastic-hellion.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-153-relic-robber.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-154-rockslide-sorcerer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-155-roil-eruption.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-156-roiling-vortex.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-157-scavenged-blade.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-158-scorch-rider.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-159-shatterskull-charger.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-16-felidar-retreat.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-160-shatterskull-minotaur.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-161-shatterskull-smashing.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-161-shatterskull-the-hammer-pass.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-162-sizzling-barrage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-163-skyclave-geopede.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-164-sneaking-guide.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-165-song-mad-ruins.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-165-song-mad-treachery.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-166-spikefield-cave.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-166-spikefield-hazard.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-167-spitfire-lagac.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-168-synchronized-spellcraft.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-169-teeterpeak-ambusher.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-17-journey-to-oblivion.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-170-thundering-rebuke.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-171-thundering-sparkmage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-172-tormenting-voice.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-173-tuktuk-rubblefort.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-174-valakut-awakening.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-174-valakut-stoneforge.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-175-valakut-exploration.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-176-wayward-guide-beast.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-177-adventure-awaits.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-178-ancient-greenwarden.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-179-ashaya-soul-of-the-wild.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-18-kabira-outrider.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-180-bala-ged-recovery.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-180-bala-ged-sanctuary.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-181-broken-wings.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-182-canopy-baloth.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-183-cragplate-baloth.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-184-dauntless-survivor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-185-gnarlid-colony.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-186-inscription-of-abundance.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-187-iridescent-hornbeetle.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-188-joraga-visionary.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-189-kazandu-mammoth.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-189-kazandu-valley.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-19-kabira-plateau.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-19-kabira-takedown.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-190-kazandu-nectarpot.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-191-kazandu-stomper.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-192-khalni-ambush.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-192-khalni-territory.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-193-lotus-cobra.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-194-might-of-murasa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-195-murasa-brute.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-196-murasa-sproutling.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-197-nissa-s-zendikon.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-198-oran-rief-ooze.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-199-rabid-bite.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-2-angel-of-destiny.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-20-kitesail-cleric.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-200-reclaim-the-wastes.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-201-roiling-regrowth.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-202-scale-the-heights.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-203-scute-swarm.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-204-skyclave-pick-axe.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-205-springmantle-cleric.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-206-strength-of-solidarity.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-207-swarm-shambler.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-208-tajuru-blightblade.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-209-tajuru-paragon.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-21-kor-blademaster.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-210-tajuru-snarecaster.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-211-tangled-florahedron.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-211-tangled-vale.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-212-taunting-arbormage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-213-territorial-scythecat.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-214-turntimber-ascetic.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-215-turntimber-serpentine-wood.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-215-turntimber-symbiosis.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-216-vastwood-fortification.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-216-vastwood-thicket.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-217-vastwood-surge.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-218-veteran-adventurer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-219-vine-gecko.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-22-kor-celebrant.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-220-akiri-fearless-voyager.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-221-brushfire-elemental.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-222-cleric-of-life-s-bond.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-223-grakmaw-skyclave-ravager.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-224-kargan-warleader.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-225-kaza-roil-chaser.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-226-linvala-shield-of-sea-gate.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-227-lullmage-s-familiar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-228-moss-pit-skeleton.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-229-murasa-rootgrazer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-23-legion-angel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-230-nahiri-heir-of-the-ancients.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-231-nissa-of-shadowed-boughs.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-232-omnath-locus-of-creation.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-233-orah-skyclave-hierophant.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-234-phylath-world-sculptor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-235-ravager-s-mace.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-236-soaring-thought-thief.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-237-spoils-of-adventure.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-238-umara-mystic.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-239-verazol-the-split-current.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-24-luminarch-aspirant.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-240-yasharn-implacable-earth.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-241-zagras-thief-of-heartbeats.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-242-zareth-san-the-trickster.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-243-cliffhaven-kitesail.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-244-forsaken-monument.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-245-lithoform-engine.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-246-myriad-construct.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-247-relic-amulet.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-248-relic-axe.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-249-relic-golem.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-25-makindi-ox.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-250-relic-vial.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-251-sea-gate-colossus.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-252-skyclave-relic.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-253-skyclave-sentinel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-254-spare-supplies.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-255-stonework-packbeast.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-256-utility-knife.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-257-base-camp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-258-boulderloft-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-258-branchloft-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-259-brightclimb-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-259-grimclimb-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-26-makindi-mesas.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-26-makindi-stampede.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-260-clearwater-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-260-murkwater-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-261-cragcrown-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-261-timbercrown-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-262-crawling-barrens.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-263-needleverge-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-263-pillarverge-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-264-lavaglide-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-264-riverglide-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-265-throne-of-makindi.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-266-plains.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-267-plains.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-268-plains.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-269-island.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-27-maul-of-the-skyclaves.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-270-island.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-271-island.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-272-swamp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-273-swamp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-274-swamp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-275-mountain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-276-mountain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-277-mountain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-278-forest.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-279-forest.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-28-mesa-lynx.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-280-forest.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-281-jace-mirror-mage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-282-nahiri-heir-of-the-ancients.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-283-nissa-of-shadowed-boughs.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-284-boulderloft-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-284-branchloft-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-285-brightclimb-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-285-grimclimb-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-286-clearwater-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-286-murkwater-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-287-cragcrown-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-287-timbercrown-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-288-needleverge-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-288-pillarverge-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-288_-needleverge-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-288_-pillarverge-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-289-lavaglide-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-289-riverglide-pathway.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-29-nahiri-s-binding.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-290-canyon-jerboa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-291-fearless-fledgling.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-292-felidar-retreat.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-293-makindi-ox.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-294-prowling-felidar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-295-ruin-crab.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-296-skyclave-squid.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-297-dreadwurm.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-298-skyclave-shade.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-299-akoum-hellhound.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-3-angelheart-protector.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-30-ondu-inversion.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-30-ondu-skyruins.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-300-moraug-fury-of-akoum.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-301-skyclave-geopede.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-302-spitfire-lagac.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-303-valakut-exploration.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-304-canopy-baloth.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-305-kazandu-mammoth.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-305-kazandu-valley.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-306-kazandu-nectarpot.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-307-lotus-cobra.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-308-scute-swarm.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-309-skyclave-pick-axe.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-31-paired-tactician.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-310-territorial-scythecat.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-311-brushfire-elemental.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-312-omnath-locus-of-creation.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-313-phylath-world-sculptor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-314-angel-of-destiny.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-315-archon-of-emeria.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-316-archpriest-of-iona.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-317-emeria-s-call.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-317-emeria-shattered-skyclave.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-318-legion-angel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-319-luminarch-aspirant.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-32-practiced-tactics.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-320-maul-of-the-skyclaves.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-321-ondu-inversion.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-321-ondu-skyruins.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-322-skyclave-apparition.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-323-squad-commander.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-324-tazri-beacon-of-unity.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-325-charix-the-raging-isle.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-326-confounding-conundrum.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-327-coralhelm-chronicler.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-328-glasspool-mimic.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-328-glasspool-shore.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-329-inscription-of-insight.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-33-pressure-point.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-330-maddening-cacophony.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-331-master-of-winds.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-332-nimble-trapfinder.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-333-sea-gate-reborn.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-333-sea-gate-restoration.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-334-sea-gate-stormcaller.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-335-thieving-skydiver.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-336-agadeem-s-awakening.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-336-agadeem-the-undercrypt.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-337-coveted-prize.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-338-drana-the-last-bloodchief.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-339-hagra-broodpit.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-339-hagra-mauling.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-34-prowling-felidar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-340-inscription-of-ruin.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-341-nighthawk-scavenger.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-342-nullpriest-of-oblivion.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-343-scourge-of-the-skyclaves.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-344-shadows-verdict.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-345-soul-shatter.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-346-taborax-hope-s-demise.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-347-kargan-intimidator.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-348-leyline-tyrant.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-349-magmatic-channeler.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-35-resolute-strike.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-350-nahiri-s-lithoforming.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-351-relic-robber.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-352-roiling-vortex.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-353-shatterskull-charger.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-354-shatterskull-smashing.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-354-shatterskull-the-hammer-pass.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-355-valakut-awakening.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-355-valakut-stoneforge.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-356-wayward-guide-beast.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-357-ancient-greenwarden.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-358-ashaya-soul-of-the-wild.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-359-cragplate-baloth.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-36-sea-gate-banneret.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-360-inscription-of-abundance.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-361-oran-rief-ooze.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-362-swarm-shambler.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-363-tajuru-paragon.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-364-turntimber-serpentine-wood.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-364-turntimber-symbiosis.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-365-akiri-fearless-voyager.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-366-grakmaw-skyclave-ravager.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-367-kaza-roil-chaser.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-368-linvala-shield-of-sea-gate.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-369-orah-skyclave-hierophant.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-37-sejiri-glacier.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-37-sejiri-shelter.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-370-verazol-the-split-current.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-371-yasharn-implacable-earth.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-372-zagras-thief-of-heartbeats.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-373-zareth-san-the-trickster.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-374-forsaken-monument.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-375-lithoform-engine.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-376-myriad-construct.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-377-skyclave-relic.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-378-crawling-barrens.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-379-throne-of-makindi.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-38-shepherd-of-heroes.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-380-plains.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-381-island.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-382-swamp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-383-mountain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-384-forest.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-385-orah-skyclave-hierophant.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-386-charix-the-raging-isle.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-387-into-the-roil.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-388-bloodchief-s-thirst.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-389-roil-eruption.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-39-skyclave-apparition.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-390-roiling-regrowth.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-391-kargan-warleader.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-4-archon-of-emeria.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-40-skyclave-basilica.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-40-skyclave-cleric.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-41-squad-commander.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-42-smite-the-monstrous.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-43-tazeem-raptor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-44-tazri-beacon-of-unity.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-45-anticognition.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-46-beyeen-coast.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-46-beyeen-veil.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-47-bubble-snare.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-48-cascade-seer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-49-charix-the-raging-isle.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-5-archpriest-of-iona.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-50-chilling-trap.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-51-cleric-of-chill-depths.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-52-concerted-defense.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-53-confounding-conundrum.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-54-coralhelm-chronicler.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-55-cunning-geysermage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-56-deliberate.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-57-expedition-diviner.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-58-field-research.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-59-glacial-grasp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-6-attended-healer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-60-glasspool-mimic.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-60-glasspool-shore.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-61-inscription-of-insight.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-62-into-the-roil.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-63-jace-mirror-mage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-64-jwari-disruption.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-64-jwari-ruins.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-65-living-tempest.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-66-lullmage-s-domination.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-67-maddening-cacophony.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-68-master-of-winds.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-69-merfolk-falconer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-7-canyon-jerboa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-70-merfolk-windrobber.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-71-negate.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-72-nimble-trapfinder.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-73-risen-riptide.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-74-roost-of-drakes.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-75-ruin-crab.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-76-sea-gate-reborn.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-76-sea-gate-restoration.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-77-sea-gate-stormcaller.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-78-seafloor-stalker.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-79-shell-shield.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-8-cliffhaven-sell-sword.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-80-silundi-isle.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-80-silundi-vision.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-81-skyclave-plunder.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-82-skyclave-squid.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-83-sure-footed-infiltrator.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-84-tazeem-roilmage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-85-thieving-skydiver.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-86-umara-skyfalls.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-86-umara-wizard.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-87-windrider-wizard.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-88-zulaport-duelist.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-89-acquisitions-expert.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-9-dauntless-unity.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-90-agadeem-s-awakening.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-90-agadeem-the-undercrypt.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-91-blackbloom-bog.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-91-blackbloom-rogue.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-92-blood-beckoning.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-93-blood-price.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-94-bloodchief-s-thirst.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-95-coveted-prize.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-96-deadly-alliance.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-97-demon-s-disciple.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-98-drana-the-last-bloodchief.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-99-drana-s-silencer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-A-232-a-omnath-locus-of-creation.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-A-234-a-phylath-world-sculptor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/card-images/zendikar_rising/znr-A-24-a-luminarch-aspirant.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/site-images/mana-crystals-updated.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/assets/site-images/mana-symbols.jpg" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/data/KeywordList.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/repositoryInterfaces/KeywordListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/repositoryInterfaces/KeywordListRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepositoryTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1088,7 +90,7 @@
       <command value="mvn -P dev" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TypelineJdbcRepositoryTest">
+  <component name="RunManager" selected="JUnit.KeywordListJdbcRepositoryTest.add">
     <configuration name="MtgApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <envs>
         <env name="USERNAME" value="root" />
@@ -1107,7 +109,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TypelineJdbcRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="KeywordListJdbcRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mtg" />
       <extension name="coverage">
         <pattern>
@@ -1116,13 +118,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.TypelineJdbcRepositoryTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.KeywordListJdbcRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TypelineJdbcRepositoryTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="KeywordListJdbcRepositoryTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mtg" />
       <extension name="coverage">
         <pattern>
@@ -1131,14 +133,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.TypelineJdbcRepositoryTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.KeywordListJdbcRepositoryTest" />
       <option name="METHOD_NAME" value="add" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TypelineJdbcRepositoryTest.findByCardId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="KeywordListJdbcRepositoryTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mtg" />
       <extension name="coverage">
         <pattern>
@@ -1147,14 +149,30 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.TypelineJdbcRepositoryTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.KeywordListJdbcRepositoryTest" />
+      <option name="METHOD_NAME" value="findAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KeywordListJdbcRepositoryTest.findByCardId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mtg" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.mtg.repository.jdbcRepositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.KeywordListJdbcRepositoryTest" />
       <option name="METHOD_NAME" value="findByCardId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TypelineJdbcRepositoryTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="com.example.mtg.repository.jdbcRepositories in mtg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mtg" />
       <extension name="coverage">
         <pattern>
@@ -1163,22 +181,6 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.TypelineJdbcRepositoryTest" />
-      <option name="METHOD_NAME" value="update" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.example.mtg.repository in mtg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mtg" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.mtg.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.mtg.repository" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -1186,19 +188,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.MtgApplication" />
-      <item itemvalue="JUnit.TypelineJdbcRepositoryTest.findByCardId" />
-      <item itemvalue="JUnit.TypelineJdbcRepositoryTest" />
-      <item itemvalue="JUnit.com.example.mtg.repository in mtg" />
-      <item itemvalue="JUnit.TypelineJdbcRepositoryTest.add" />
-      <item itemvalue="JUnit.TypelineJdbcRepositoryTest.update" />
+      <item itemvalue="JUnit.com.example.mtg.repository.jdbcRepositories in mtg" />
+      <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.findAll" />
+      <item itemvalue="JUnit.KeywordListJdbcRepositoryTest" />
+      <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.findByCardId" />
+      <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.add" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TypelineJdbcRepositoryTest" />
-        <item itemvalue="JUnit.TypelineJdbcRepositoryTest.update" />
-        <item itemvalue="JUnit.TypelineJdbcRepositoryTest.add" />
-        <item itemvalue="JUnit.com.example.mtg.repository in mtg" />
-        <item itemvalue="JUnit.TypelineJdbcRepositoryTest.findByCardId" />
+        <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.add" />
+        <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.findByCardId" />
+        <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.findAll" />
+        <item itemvalue="JUnit.KeywordListJdbcRepositoryTest" />
+        <item itemvalue="JUnit.com.example.mtg.repository.jdbcRepositories in mtg" />
       </list>
     </recent_temporary>
   </component>
@@ -1236,10 +238,10 @@
     <SUITE FILE_PATH="coverage/mtg$com_example_mtg_repository_in_mtg.ic" NAME="com.example.mtg.repository in mtg Coverage Results" MODIFIED="1655396516472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.mtg.repository.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/mtg$com_example_mtg_repository_jdbcRepositories_in_mtg.ic" NAME="com.example.mtg.repository.jdbcRepositories in mtg Coverage Results" MODIFIED="1653419487637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/mtg$com_example_mtg_repository_jdbcRepositories_in_mtg.ic" NAME="com.example.mtg.repository.jdbcRepositories in mtg Coverage Results" MODIFIED="1655398801393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.mtg.repository.jdbcRepositories.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/mtg$TypelineJdbcRepositoryTest.ic" NAME="TypelineJdbcRepositoryTest Coverage Results" MODIFIED="1655397650195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/mtg$TypelineJdbcRepositoryTest.ic" NAME="TypelineJdbcRepositoryTest Coverage Results" MODIFIED="1655398151587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.mtg.repository.jdbcRepositories.*</FILTER>
     </SUITE>
   </component>

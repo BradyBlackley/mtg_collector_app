@@ -8,8 +8,6 @@ import com.example.mtg.repository.mappers.KeywordMapper;
 import com.example.mtg.repository.repositoryInterfaces.KeywordListRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import java.util.List;
-
 public class KeywordListJdbcRepository implements KeywordListRepository {
 
     private final JdbcTemplate jdbcTemplate;
@@ -19,33 +17,10 @@ public class KeywordListJdbcRepository implements KeywordListRepository {
     }
 
     @Override
-    public List<KeywordList> findAll() {
-        String sql = "select * from keyword_list;";
-        List<KeywordList> keywordLists = jdbcTemplate.query(sql, new KeywordListMapper());
-        for (KeywordList keywordList : keywordLists) {
-            addCard(keywordList);
-            addKeywords(keywordList);
-        }
-        return keywordLists;
-    }
-
-    @Override
     public KeywordList findByCardId(String cardId) {
         String sql = "select * from keyword_list where card_id = ?;";
         KeywordList keywordList = jdbcTemplate.query(sql, new KeywordListMapper(),
                 cardId).stream().findFirst().orElse(null);
-        if(keywordList != null) {
-            addCard(keywordList);
-            addKeywords(keywordList);
-        }
-        return keywordList;
-    }
-
-    @Override
-    public KeywordList findByKeywordListId(int keywordListId) {
-        String sql = "select * from keyword_list where keyword_list_id = ?;";
-        KeywordList keywordList = jdbcTemplate.query(sql, new KeywordListMapper(),
-                keywordListId).stream().findFirst().orElse(null);
         if(keywordList != null) {
             addCard(keywordList);
             addKeywords(keywordList);
@@ -90,7 +65,8 @@ public class KeywordListJdbcRepository implements KeywordListRepository {
     }
 
     private void addKeywords(KeywordList keywordList) {
-        String sql = "select * from keyword_list where card_id = ?;";
+        String sql =
+                "select * from keyword k inner join keyword_list kl on k.keyword_id = kl.keyword_id where kl.card_id = ?;";
         keywordList.setKeywords(jdbcTemplate.query(sql, new KeywordMapper(),
                 keywordList.getCard().getCardId()));
     }
