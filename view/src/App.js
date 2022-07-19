@@ -12,7 +12,7 @@ import Support from "./components/Support";
 import Help from "./components/Help";
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import { useState } from "react";
-import background from "./assets/site-images/mana-symbols.jpg";
+import background from "./assets/site_images/mana-symbols.jpg";
 
 const containerStyle = {
   position: "relative"

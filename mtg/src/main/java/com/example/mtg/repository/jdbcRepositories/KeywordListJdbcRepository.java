@@ -41,6 +41,14 @@ public class KeywordListJdbcRepository implements KeywordListRepository {
         return keywordList;
     }
 
+    @Override
+    public boolean delete(KeywordList keywordList) {
+        String sql = "delete from keyword_list where keyword_id = ? and card_id = ?;";
+        int rowsAffected = 0;
+        rowsAffected += jdbcTemplate.update(sql, keywordList.getKeywords().get(0).getKeywordId(), keywordList.getCard().getCardId());
+        return rowsAffected > 0;
+    }
+
     private void addCard(KeywordList keywordList) {
         String sql = "select * from card c inner join keyword_list kl on c.card_id = kl.card_id where " +
                 "kl.keyword_list_id = ?;";
