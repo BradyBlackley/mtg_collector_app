@@ -11,7 +11,9 @@ import About from "./components/About";
 import Support from "./components/Support";
 import Help from "./components/Help";
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { useState } from "react";
+import { ProvideAuth } from "./auth/use-auth.js";
 import background from "./assets/site_images/mana-symbols.jpg";
 
 const containerStyle = {
@@ -38,12 +40,13 @@ const contentPanelStyle = {
 }
 
 function App() {
-  const [username, setUsername] = useState(null);
+  const [user, setUser] = useState(null);
   const [userId, setUserId] = useState(null);
 
   return (
     <div className="App">
       <Header></Header>
+      <ProvideAuth>
       <Router>
       <Nav/>
         <div className="container" style={containerStyle}>
@@ -52,22 +55,35 @@ function App() {
           </div>
           <div className="contentPanel" style={contentPanelStyle}>
             <Routes>
-                <Route path="/home" element={<Home username={username}/>} />
+                <Route path="/home" element={user ? <Navigate to="/home"/> : <Navigate to="/login" />} />  
                 <Route path="/browse" element={<Browse />} />
-                <Route path="/myCollection" element={<MyCollection />} />
-                <Route path="/statistics" element={<Statistics />} />
+                <Route path="/myCollection" element={user ? <Navigate to="/myCollection"/> : <Navigate to="/login" />} />
+                <Route path="/statistics" element={user ? <Navigate to="/statistics"/> : <Navigate to="/login" />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/support" element={<Support />} />
-                <Route path="/help" element={<Help />} />
+                <Route path="/help" element={<Help />} />   
             </Routes>
           </div>
         </div>
         <Footer></Footer>
       </Router>
+      </ProvideAuth>
     </div>
   );
 }
+
+const fakeAuth = {
+  isAuthenticated: false,
+  signin(cb) {
+    fakeAuth.isAuthenticated = true;
+    setTimeout(cb, 100);
+  },
+  signout(cb) {
+    fakeAuth.isAuthenticated = false;
+    setTimeout(cb, 100);
+  }
+};
 
 export default App;

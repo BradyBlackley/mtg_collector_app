@@ -42,6 +42,18 @@ public class ColorIdentityJdbcRepository implements ColorIdentityRepository {
     }
 
     @Override
+    public ColorIdentity findByCardId(String cardId) {
+        final String sql = "select * from color_identity where card_id = ?;";
+        ColorIdentity colorIdentity = jdbcTemplate.query(sql, new ColorIdentityMapper(),
+                cardId).stream().findFirst().orElse(null);
+        if(colorIdentity != null) {
+            addCard(colorIdentity);
+            addColors(colorIdentity);
+        }
+        return  colorIdentity;
+    }
+
+    @Override
     public ColorIdentity add(ColorIdentity colorIdentity) {
         final String sql = "insert into color_identity (card_id, color_id) values (card_id = ?, color_id = ?)" +
                 " where color_identity_id = ?;";

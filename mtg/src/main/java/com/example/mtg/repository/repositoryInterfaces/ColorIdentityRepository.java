@@ -11,6 +11,8 @@ public interface ColorIdentityRepository {
 
     ColorIdentity findByColorIdentityId(int colorIdentityId);
 
+    ColorIdentity findByCardId(String cardId);
+
     ColorIdentity add(ColorIdentity colorIdentity);
 
     boolean update(ColorIdentity colorIdentity);

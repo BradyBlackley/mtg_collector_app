@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useAuth } from "../auth/use-auth.js"
 
 const divStyle = {
     padding: "25px",
@@ -12,6 +13,15 @@ function Login() {
 
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
+    let history = useNavigate();
+    let location = useLocation();
+    let auth = useAuth();
+    let { from } = location.state || { from: { pathname: "/" } };
+    let login = () => {
+      auth.signin(() => {
+        history.replace(from);
+      });
+    };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
