@@ -5,7 +5,6 @@ import java.util.Objects;
 
 public class KeywordList {
 
-    private int keywordListId;
     private List<Keyword> keywords;
     private Card card;
 
@@ -13,27 +12,13 @@ public class KeywordList {
 
     }
 
-    public KeywordList(int keywordListId) {
-        this.keywordListId = keywordListId;
-    }
-
-    public KeywordList(int keywordListId, List<Keyword> keywords) {
-        this.keywordListId = keywordListId;
+    public KeywordList(List<Keyword> keywords) {
         this.keywords = keywords;
     }
 
-    public KeywordList(int keywordListId, List<Keyword> keywords, Card card) {
-        this.keywordListId = keywordListId;
+    public KeywordList(List<Keyword> keywords, Card card) {
         this.keywords = keywords;
         this.card = card;
-    }
-
-    public int getKeywordListId() {
-        return keywordListId;
-    }
-
-    public void setKeywordListId(int keywordListId) {
-        this.keywordListId = keywordListId;
     }
 
     public List<Keyword> getKeywords() {
@@ -57,19 +42,18 @@ public class KeywordList {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         KeywordList that = (KeywordList) o;
-        return keywordListId == that.keywordListId && keywords.equals(that.keywords) && card.equals(that.card);
+        return keywords.equals(that.keywords) && card.equals(that.card);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(keywordListId, keywords, card);
+        return Objects.hash(keywords, card);
     }
 
     @Override
     public String toString() {
         return "KeywordList{" +
-                "keywordListId=" + keywordListId +
-                ", keywords=" + keywords +
+                "keywords=" + keywords +
                 ", card=" + card +
                 '}';
     }
