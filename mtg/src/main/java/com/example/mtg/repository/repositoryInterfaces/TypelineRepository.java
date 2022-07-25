@@ -6,11 +6,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 public interface TypelineRepository {
-    List<Typeline> findAll();
 
     Typeline findByCardId(String cardId);
-
-    Typeline findByTypelineId(int typelineId);
 
     Typeline add(Typeline typeline);
 

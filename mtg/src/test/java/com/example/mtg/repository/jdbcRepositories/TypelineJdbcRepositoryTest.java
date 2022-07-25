@@ -23,18 +23,8 @@ class TypelineJdbcRepositoryTest extends CommonRepoTest {
     TypelineJdbcRepository repository;
 
     @Test
-    void findAll() {
-        assertEquals(4, repository.findAll().size());
-    }
-
-    @Test
     void findByCardId() {
         assertEquals("ZNR150", repository.findByCardId("ZNR150").getCard().getCardId());
-    }
-
-    @Test
-    void findByTypelineId() {
-        assertEquals("ZNR150", repository.findByTypelineId(1).getCard().getCardId());
     }
 
     @Test
@@ -50,9 +40,6 @@ class TypelineJdbcRepositoryTest extends CommonRepoTest {
         typeline.setTypes(types);
 
         assertNotNull(repository.add(typeline));
-        //we should assert 8 typeline rows are added to the DB even though when pulled from the db they are treated as
-        //the same typeline
-        assertEquals(8, repository.findAll().size());
     }
 
     @Test

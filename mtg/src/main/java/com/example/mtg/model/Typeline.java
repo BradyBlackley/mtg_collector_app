@@ -5,7 +5,6 @@ import java.util.Objects;
 
 public class Typeline {
 
-    private int typelineId;
     private List<Type> types;
     private Card card;
 
@@ -13,27 +12,13 @@ public class Typeline {
 
     }
 
-    public Typeline(int typelineId) {
-        this.typelineId = typelineId;
-    }
-
     public Typeline(int typelineId, List<Type> types) {
-        this.typelineId = typelineId;
         this.types = types;
     }
 
-    public Typeline(int typelineId, List<Type> types, Card card) {
-        this.typelineId = typelineId;
+    public Typeline(List<Type> types, Card card) {
         this.types = types;
         this.card = card;
-    }
-
-    public int getTypelineId() {
-        return typelineId;
-    }
-
-    public void setTypelineId(int typelineId) {
-        this.typelineId = typelineId;
     }
 
     public List<Type> getTypes() {
@@ -57,19 +42,18 @@ public class Typeline {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Typeline typeline = (Typeline) o;
-        return typelineId == typeline.typelineId && Objects.equals(types, typeline.types) && Objects.equals(card, typeline.card);
+        return Objects.equals(types, typeline.types) && Objects.equals(card, typeline.card);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(typelineId, types, card);
+        return Objects.hash(types, card);
     }
 
     @Override
     public String toString() {
         return "Typeline{" +
-                "typelineId=" + typelineId +
-                ", types=" + types +
+                "types=" + types +
                 ", card=" + card +
                 '}';
     }

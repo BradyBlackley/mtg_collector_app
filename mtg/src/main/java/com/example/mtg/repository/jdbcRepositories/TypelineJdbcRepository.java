@@ -3,12 +3,9 @@ package com.example.mtg.repository.jdbcRepositories;
 import com.example.mtg.model.Type;
 import com.example.mtg.model.Typeline;
 import com.example.mtg.repository.mappers.CardMapper;
-import com.example.mtg.repository.mappers.TypeMapper;
 import com.example.mtg.repository.mappers.TypelineMapper;
 import com.example.mtg.repository.repositoryInterfaces.TypelineRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
-
-import java.util.List;
 
 public class TypelineJdbcRepository implements TypelineRepository {
 
@@ -19,38 +16,17 @@ public class TypelineJdbcRepository implements TypelineRepository {
     }
 
     @Override
-    public List<Typeline> findAll() {
-        final String sql = "select * from typeline;";
-        List<Typeline> typelines = jdbcTemplate.query(sql, new TypelineMapper());
-        for (Typeline typeline : typelines) {
-            if(typeline != null) {
-                addCard(typeline);
-                addTypes(typeline);
-            }
-        }
-        return typelines;
-    }
-
-    @Override
     public Typeline findByCardId(String cardId) {
-        final String sql = "select * from typeline where card_id = ?;";
+        final String sql =
+                "select tl.typeline_id, t.type_id, tl.card_id, t.type_name " +
+                "from typeline tl " +
+                "inner join `type` t " +
+                "on tl.type_id = t.type_id " +
+                "where card_id = ?;";
         Typeline typeline = jdbcTemplate.query(sql,
-                new TypelineMapper(), cardId).stream().findFirst().orElse(null);
-            if(typeline != null){
-                addCard(typeline);
-                addTypes(typeline);
-            }
-        return typeline;
-    }
-
-    @Override
-    public Typeline findByTypelineId(int typelineId) {
-        final String sql = "select * from typeline where typeline_id = ?;";
-        Typeline typeline = jdbcTemplate.query(sql,
-                new TypelineMapper(), typelineId).stream().findFirst().orElse(null);
-        if (typeline != null) {
+                new TypelineMapper(), cardId);
+        if(typeline != null) {
             addCard(typeline);
-            addTypes(typeline);
         }
         return typeline;
     }
@@ -86,18 +62,13 @@ public class TypelineJdbcRepository implements TypelineRepository {
     }
 
     private void addCard(Typeline typeline) {
-        final String sql = "select * from card c inner join typeline t on c.card_id = t.card_id where typeline_id = ?;";
+        final String sql = 
+                "select * " +
+                "from card c " +
+                "where c.card_id = ?;";
         typeline.setCard(jdbcTemplate.query(sql, new CardMapper(),
-                typeline.getTypelineId()).stream().findFirst().orElse(null));
+                typeline.getCard().getCardId()).stream().findFirst().orElse(null));
 
     }
-
-    private void addTypes(Typeline typeline) {
-        final String sql = "select * from type t inner join typeline tl on t.type_id =" +
-                " tl.type_id where card_id = ?;";
-        typeline.setTypes(jdbcTemplate.query(sql, new TypeMapper(),
-                typeline.getCard().getCardId()));
-    }
-
 
 }
