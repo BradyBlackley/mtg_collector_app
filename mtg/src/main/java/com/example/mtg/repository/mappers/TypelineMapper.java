@@ -15,18 +15,21 @@ import java.util.List;
 public class TypelineMapper implements ResultSetExtractor<Typeline> {
     @Override
     public Typeline extractData(ResultSet rs) throws SQLException, DataAccessException {
+        if(!rs.next()){
+            return null;
+        }
         Typeline typeline = new Typeline();
         List<Type> types = new ArrayList<Type>();
 
         Card card = new Card();
 
-        while(rs.next()) {
+        do {
             Type type = new Type();
             type.setTypeId(rs.getInt("type_id"));
             type.setTypeName(rs.getString("type_name"));
             types.add(type);
             card.setCardId(rs.getString("card_id"));
-        }
+        }while(rs.next());
 
         typeline.setTypes(types);
         typeline.setCard(card);

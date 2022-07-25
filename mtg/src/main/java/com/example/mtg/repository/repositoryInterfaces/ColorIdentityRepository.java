@@ -7,10 +7,6 @@ import java.util.List;
 
 public interface ColorIdentityRepository {
 
-    List<ColorIdentity> findAll();
-
-    ColorIdentity findByColorIdentityId(int colorIdentityId);
-
     ColorIdentity findByCardId(String cardId);
 
     ColorIdentity add(ColorIdentity colorIdentity);

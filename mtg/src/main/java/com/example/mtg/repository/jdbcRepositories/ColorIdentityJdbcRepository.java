@@ -19,36 +19,16 @@ public class ColorIdentityJdbcRepository implements ColorIdentityRepository {
     }
 
     @Override
-    public List<ColorIdentity> findAll() {
-        final String sql = "select * from color_identity;";
-        List<ColorIdentity> colorIdentities = jdbcTemplate.query(sql, new ColorIdentityMapper());
-        for (ColorIdentity colorIdentity : colorIdentities) {
-            addCard(colorIdentity);
-            addColors(colorIdentity);
-        }
-        return colorIdentities;
-    }
-
-    @Override
-    public ColorIdentity findByColorIdentityId(int colorIdentityId) {
-        final String sql = "select * from color_identity where color_identity_id = ?;";
-        ColorIdentity colorIdentity = jdbcTemplate.query(sql, new ColorIdentityMapper(),
-                colorIdentityId).stream().findFirst().orElse(null);
-        if(colorIdentity != null) {
-            addCard(colorIdentity);
-            addColors(colorIdentity);
-        }
-        return  colorIdentity;
-    }
-
-    @Override
     public ColorIdentity findByCardId(String cardId) {
-        final String sql = "select * from color_identity where card_id = ?;";
+        final String sql = "select ci.color_identity_id, ci.card_id, c.color_id, c.color_name " +
+                "from color_identity ci " +
+                "inner join color c " +
+                "on ci.color_id = c.color_id " +
+                "where card_id = ?;";
         ColorIdentity colorIdentity = jdbcTemplate.query(sql, new ColorIdentityMapper(),
-                cardId).stream().findFirst().orElse(null);
+                cardId);
         if(colorIdentity != null) {
             addCard(colorIdentity);
-            addColors(colorIdentity);
         }
         return  colorIdentity;
     }
@@ -87,11 +67,5 @@ public class ColorIdentityJdbcRepository implements ColorIdentityRepository {
         final String sql = "select * from card where card_id = ?;";
         colorIdentity.setCard(jdbcTemplate.query(sql, new CardMapper(),
                 colorIdentity.getCard().getCardId()).stream().findFirst().orElse(null));
-    }
-
-    private void addColors(ColorIdentity colorIdentity) {
-        final String sql = "select * from color_identity ci inner join color c on ci.color_id =" +
-                " c.color_id where ci.card_id = ?;";
-        colorIdentity.setColors(jdbcTemplate.query(sql, new ColorMapper(), colorIdentity.getCard().getCardId()));
     }
 }

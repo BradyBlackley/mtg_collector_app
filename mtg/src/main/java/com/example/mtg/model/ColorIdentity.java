@@ -4,8 +4,6 @@ import java.util.List;
 import java.util.Objects;
 
 public class ColorIdentity {
-
-    private int colorIdentityId;
     private Card card;
     private List<Color> colors;
 
@@ -13,27 +11,13 @@ public class ColorIdentity {
 
     }
 
-    public ColorIdentity(int colorIdentityId) {
-        this.colorIdentityId = colorIdentityId;
-    }
-
-    public ColorIdentity(int colorIdentityId, Card card) {
-        this.colorIdentityId = colorIdentityId;
+    public ColorIdentity(Card card) {
         this.card = card;
     }
 
-    public ColorIdentity(int colorIdentityId, Card card, List<Color> colors) {
-        this.colorIdentityId = colorIdentityId;
+    public ColorIdentity(Card card, List<Color> colors) {
         this.card = card;
         this.colors = colors;
-    }
-
-    public int getColorIdentityId() {
-        return colorIdentityId;
-    }
-
-    public void setColorIdentityId(int colorIdentityId) {
-        this.colorIdentityId = colorIdentityId;
     }
 
     public Card getCard() {
@@ -57,19 +41,18 @@ public class ColorIdentity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ColorIdentity that = (ColorIdentity) o;
-        return colorIdentityId == that.colorIdentityId && card.equals(that.card) && colors.equals(that.colors);
+        return card.equals(that.card) && colors.equals(that.colors);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(colorIdentityId, card, colors);
+        return Objects.hash(card, colors);
     }
 
     @Override
     public String toString() {
         return "ColorIdentity{" +
-                "colorIdentityId=" + colorIdentityId +
-                ", card=" + card +
+                "card=" + card +
                 ", colors=" + colors +
                 '}';
     }

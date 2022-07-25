@@ -23,19 +23,10 @@ class ColorIdentityJdbcRepositoryTest extends CommonRepoTest {
     ColorIdentityJdbcRepository repository;
 
     @Test
-    void findAll() {
-        assertEquals(2, repository.findAll().size());
-    }
-
-    @Test
-    void findByColorIdentityId() {
-        assertEquals("ZNR150", repository.findByColorIdentityId(1).getCard().getCardId());
-        assertEquals("black", repository.findByColorIdentityId(1).getColors().get(0).getColorName());
-    }
-
-    @Test
     void findByCardId() {
+        assertEquals(2, repository.findByCardId("ZNR150").getColors().size());
         assertEquals("black", repository.findByCardId("ZNR150").getColors().get(0).getColorName());
+        assertEquals("green", repository.findByCardId("ZNR150").getColors().get(1).getColorName());
     }
 
     @Test
@@ -51,8 +42,7 @@ class ColorIdentityJdbcRepositoryTest extends CommonRepoTest {
         colorIdentity.setColors(colors);
         colorIdentity.setCard(repository.findByCardId("ZNR150").getCard());
 
-        repository.add(colorIdentity);
-        assertEquals(5, repository.findAll().size());
+        assertNotNull(repository.add(colorIdentity));
     }
 
     @Test
