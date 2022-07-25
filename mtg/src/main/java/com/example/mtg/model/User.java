@@ -64,7 +64,7 @@ public class User {
         return "User{" +
                 "userId='" + userId + '\'' +
                 ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
+                ", password='" + password.hashCode() + '\'' +
                 '}';
     }
 }
