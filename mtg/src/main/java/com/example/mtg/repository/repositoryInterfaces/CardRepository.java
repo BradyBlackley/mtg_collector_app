@@ -23,7 +23,7 @@ public interface CardRepository {
 
     List<Card> findCardsByToughness(String toughness);
 
-    List<Card> findCardsByExpansion(Expansion expansion);
+    List<Card> findCardsByExpansionCode(String expansionId);
 
     List<Card> findCardsByTextBox(String text);
 
@@ -34,5 +34,5 @@ public interface CardRepository {
     boolean update(Card card);
 
     @Transactional
-    boolean delete(Card card);
+    boolean delete(String cardId);
 }
