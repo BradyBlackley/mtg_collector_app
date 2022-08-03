@@ -7,20 +7,16 @@ import java.util.List;
 
 public interface ModalRepository {
 
-    List<Modal> findAll();
-
     Modal findByFrontCardId(String cardId);
 
     Modal findByBackCardId(String cardId);
 
-    Modal findByFrontOrBackCardName(String cardName);
-
-    Modal findById(String modalId);
+    Modal findByModalId(String modalId);
 
     Modal add(Modal modal);
 
     boolean update(Modal modal);
 
     @Transactional
-    boolean delete(Modal modal);
+    boolean delete(String modalId);
 }

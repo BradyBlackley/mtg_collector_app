@@ -34,12 +34,8 @@ public class TypelineJdbcRepository implements TypelineRepository {
     @Override
     public Typeline add(Typeline typeline) {
         final String sql = "insert into typeline (type_id, card_id) values (?,?);";
-        int rowsAffected = 0;
         for (Type type : typeline.getTypes()) {
-            rowsAffected += jdbcTemplate.update(sql, type.getTypeId(), typeline.getCard().getCardId());
-        }
-        if (rowsAffected <= 0) {
-            return null;
+            jdbcTemplate.update(sql, type.getTypeId(), typeline.getCard().getCardId());
         }
         return typeline;
     }

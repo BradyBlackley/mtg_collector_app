@@ -36,12 +36,8 @@ public class ColorIdentityJdbcRepository implements ColorIdentityRepository {
     @Override
     public ColorIdentity add(ColorIdentity colorIdentity) {
         final String sql = "insert into color_identity (card_id, color_id) values (?,?);";
-        int rowsAffected = 0;
         for (Color color : colorIdentity.getColors()){
-            rowsAffected += jdbcTemplate.update(sql, colorIdentity.getCard().getCardId(), color.getColorId());
-        }
-        if (rowsAffected <= 0) {
-            return null;
+            jdbcTemplate.update(sql, colorIdentity.getCard().getCardId(), color.getColorId());
         }
         return colorIdentity;
     }

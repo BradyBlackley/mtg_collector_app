@@ -58,6 +58,11 @@ class KeywordListJdbcRepositoryTest extends CommonRepoTest {
         assertTrue(repository.delete(keywordList));
     }
 
+    @Test
+    void rsIs0() {
+        assertNull(repository.findByCardId(""));
+    }
+
     private Card makeCard() {
         Expansion expansion = new Expansion();
         expansion.setExpansionId(1);

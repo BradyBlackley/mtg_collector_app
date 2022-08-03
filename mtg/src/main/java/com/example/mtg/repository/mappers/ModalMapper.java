@@ -12,9 +12,9 @@ public class ModalMapper implements RowMapper<Modal> {
     @Override
     public Modal mapRow(ResultSet rs, int i) throws SQLException {
         Modal modal = new Modal();
-        modal.setModalId(rs.getString("modal_id"));
         Card frontCard = new Card();
         Card backCard = new Card();
+        modal.setModalId(rs.getString("modal_id"));
         frontCard.setCardId(rs.getString("front_card_id"));
         backCard.setCardId(rs.getString("back_card_id"));
         modal.setfrontCard(frontCard);

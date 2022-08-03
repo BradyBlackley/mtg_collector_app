@@ -44,9 +44,6 @@ public class LibraryJdbcRepository implements LibraryRepository {
     public Library add(Library library) {
         final String sql = "insert into library (library_name, user_id) values (?,?);";
         int rowsAffected = jdbcTemplate.update(sql, library.getLibraryName(), library.getUser().getUserId());
-        if(rowsAffected <= 0) {
-            return null;
-        }
         addUser(library);
         return library;
     }

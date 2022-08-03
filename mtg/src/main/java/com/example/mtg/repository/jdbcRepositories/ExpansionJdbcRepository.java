@@ -30,11 +30,8 @@ public class ExpansionJdbcRepository implements ExpansionRepository {
     @Override
     public Expansion add(Expansion expansion) {
         final String sql = "insert into expansion (expansion_name, expansion_code, released_date) values (?,?,?);";
-        int rowsAffected = jdbcTemplate.update(sql, expansion.getExpansionName(), expansion.getExpansionCode(),
+        jdbcTemplate.update(sql, expansion.getExpansionName(), expansion.getExpansionCode(),
                 expansion.getReleasedDate());
-        if(rowsAffected <= 0) {
-            return null;
-        }
         return expansion;
     }
 

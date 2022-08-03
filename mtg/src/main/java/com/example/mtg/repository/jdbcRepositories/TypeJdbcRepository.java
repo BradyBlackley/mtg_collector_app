@@ -30,10 +30,7 @@ public class TypeJdbcRepository implements TypeRepository {
     @Override
     public Type add(Type type) {
         final String sql = "insert into type (type_name) values (?);";
-        int rowsAffected = jdbcTemplate.update(sql, type.getTypeName());
-        if(rowsAffected <= 0) {
-            return null;
-        }
+        jdbcTemplate.update(sql, type.getTypeName());
         return type;
     }
 

@@ -36,12 +36,8 @@ public class KeywordListJdbcRepository implements KeywordListRepository {
         String sql =
                 "insert into keyword_list (keyword_id, card_id)" +
                 " values (?,?);";
-        int rowsAffected = 0;
         for(Keyword keyword : keywordList.getKeywords()){
-            rowsAffected += jdbcTemplate.update(sql, keyword.getKeywordId(), keywordList.getCard().getCardId());
-        }
-        if (rowsAffected <= 0) {
-            return null;
+            jdbcTemplate.update(sql, keyword.getKeywordId(), keywordList.getCard().getCardId());
         }
         return keywordList;
     }

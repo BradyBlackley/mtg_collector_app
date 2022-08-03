@@ -55,6 +55,11 @@ class TypelineJdbcRepositoryTest extends CommonRepoTest {
         assertTrue(repository.delete(1, "ZNR150"));
     }
 
+    @Test
+    void rsIs0(){
+        assertNull(repository.findByCardId(""));
+    }
+
     private Card makeCard() {
         Expansion expansion = new Expansion();
         expansion.setExpansionId(1);

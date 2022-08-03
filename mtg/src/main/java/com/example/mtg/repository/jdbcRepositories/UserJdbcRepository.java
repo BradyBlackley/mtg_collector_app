@@ -45,14 +45,7 @@ public class UserJdbcRepository implements UserRepository {
         final String sql = "insert into `user` (user_id, username, `password`)" +
                 " values (?,?,?);";
 
-        int rowsAffected = jdbcTemplate.update(sql,
-                user.getUserId(),
-                user.getUsername(),
-                user.getPassword());
-
-        if (rowsAffected <= 0) {
-            return null;
-        }
+        jdbcTemplate.update(sql, user.getUserId(), user.getUsername(), user.getPassword());
 
         return user;
     }

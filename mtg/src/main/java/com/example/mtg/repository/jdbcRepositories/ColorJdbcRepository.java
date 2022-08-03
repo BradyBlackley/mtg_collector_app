@@ -36,10 +36,7 @@ public class ColorJdbcRepository implements ColorRepository {
     @Override
     public Color add(Color color) {
         final String sql = "insert into color (color_name) values (?);";
-        int rowsAffected = jdbcTemplate.update(sql, color.getColorName());
-        if(rowsAffected <= 0) {
-            return null;
-        }
+        jdbcTemplate.update(sql, color.getColorName());
         return color;
     }
 

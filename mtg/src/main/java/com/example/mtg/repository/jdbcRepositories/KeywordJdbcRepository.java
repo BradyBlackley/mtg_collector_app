@@ -36,10 +36,7 @@ public class KeywordJdbcRepository implements KeywordRepository {
     @Override
     public Keyword add(Keyword keyword) {
         final String sql = "insert into keyword (keyword_name) values (?);";
-        int rowsAffected = jdbcTemplate.update(sql, keyword.getKeywordName());
-        if(rowsAffected <= 0) {
-            return null;
-        }
+        jdbcTemplate.update(sql, keyword.getKeywordName());
         return keyword;
     }
 
