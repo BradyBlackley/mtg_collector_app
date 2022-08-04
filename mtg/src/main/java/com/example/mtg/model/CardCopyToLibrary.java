@@ -3,26 +3,26 @@ package com.example.mtg.model;
 import java.util.List;
 import java.util.Objects;
 
-public class CardToLibrary {
+public class CardCopyToLibrary {
 
     private int cardToLibraryId;
     private List<CardCopy> cardCopies;
     private Library library;
 
-    public CardToLibrary() {
+    public CardCopyToLibrary() {
 
     }
 
-    public CardToLibrary(int cardToLibraryId) {
+    public CardCopyToLibrary(int cardToLibraryId) {
         this.cardToLibraryId = cardToLibraryId;
     }
 
-    public CardToLibrary(int cardToLibraryId, List<CardCopy> cardCopies) {
+    public CardCopyToLibrary(int cardToLibraryId, List<CardCopy> cardCopies) {
         this.cardToLibraryId = cardToLibraryId;
         this.cardCopies = cardCopies;
     }
 
-    public CardToLibrary(int cardToLibraryId, List<CardCopy> cardCopies, Library library) {
+    public CardCopyToLibrary(int cardToLibraryId, List<CardCopy> cardCopies, Library library) {
         this.cardToLibraryId = cardToLibraryId;
         this.cardCopies = cardCopies;
         this.library = library;
@@ -56,7 +56,7 @@ public class CardToLibrary {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        CardToLibrary that = (CardToLibrary) o;
+        CardCopyToLibrary that = (CardCopyToLibrary) o;
         return cardToLibraryId == that.cardToLibraryId && cardCopies.equals(that.cardCopies) && library.equals(that.library);
     }
 
