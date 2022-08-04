@@ -1,10 +1,17 @@
 package com.example.mtg.repository.jdbcRepositories;
 
+import com.example.mtg.repository.CommonRepoTest;
 import org.junit.jupiter.api.Test;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.jdbc.Sql;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CardToLibraryJdbcRepositoryTest {
+@Sql({"classpath:data/CardToLibrary.sql"})
+@ContextConfiguration(
+        classes = {CardCopyJdbcRepository.class}
+)
+class CardToLibraryJdbcRepositoryTest extends CommonRepoTest {
 
     @Test
     void findAll() {
