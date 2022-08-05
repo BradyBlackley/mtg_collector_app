@@ -12,8 +12,8 @@ public class User {
 
     }
 
-    public User(String i) {
-        this.userId = i;
+    public User(String userId) {
+        this.userId = userId;
     }
 
 
@@ -22,10 +22,10 @@ public class User {
         this.username = username;
     }
 
-    public User(String i, String n, String p){
-        this.userId = i;
-        this.username = n;
-        this.password = p;
+    public User(String userId, String username, String password){
+        this.userId = userId;
+        this.username = username;
+        this.password = password;
     }
 
     public String getUserId() { return userId; }
@@ -62,7 +62,7 @@ public class User {
     @Override
     public String toString() {
         return  "{" +
-                "\"userId\":" + userId + '\"' +
+                "\"userId\":\"" + userId + '\"' +
                 ", \"username\":\"" + username + '\"' +
                 ", \"password\":\"" + password + '\"' +
                 '}';

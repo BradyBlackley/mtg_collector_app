@@ -12,7 +12,7 @@ public class Typeline {
 
     }
 
-    public Typeline(int typelineId, List<Type> types) {
+    public Typeline(List<Type> types) {
         this.types = types;
     }
 
@@ -52,9 +52,9 @@ public class Typeline {
 
     @Override
     public String toString() {
-        return "Typeline{" +
-                "types=" + types +
-                ", card=" + card +
+        return "{" +
+                "\"types\":" + types +
+                ", \"card\":" + card +
                 '}';
     }
 }

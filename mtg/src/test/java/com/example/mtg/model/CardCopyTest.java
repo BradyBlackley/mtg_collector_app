@@ -231,7 +231,7 @@ class CardCopyTest {
                         "each time it has attacked this turn. Landfall - Whenever a land enters the battlefield under " +
                         "your control, if it''s your main phase, there''s an additional combat phase after this phase. " +
                         "At the beginning of that combat, untap all creatures you control.\"}, " +
-                        "\"user\":{\"userId\":5d209ac0-9102-11ec-b909-0242ac120002\", \"username\":\"TimTheMagicMan\", " +
+                        "\"user\":{\"userId\":\"5d209ac0-9102-11ec-b909-0242ac120002\", \"username\":\"TimTheMagicMan\", " +
                         "\"password\":\"5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8\"}}",
                 cardCopy.toString());
     }
