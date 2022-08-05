@@ -66,10 +66,10 @@ public class CardCopy {
 
     @Override
     public String toString() {
-        return "CardCopy{" +
-                "cardCopyId=" + cardCopyId +
-                ", card=" + card +
-                ", user=" + user +
+        return "{" +
+                "\"cardCopyId\":" + cardCopyId +
+                ", \"card\":" + card +
+                ", \"user\":" + user +
                 '}';
     }
 }

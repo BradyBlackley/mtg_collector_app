@@ -61,10 +61,10 @@ public class User {
 
     @Override
     public String toString() {
-        return  "User{" +
-                "userId='" + userId + '\'' +
-                ", username='" + username + '\'' +
-                ", password='" + password.hashCode() + '\'' +
+        return  "{" +
+                "\"userId\":" + userId + '\"' +
+                ", \"username\":\"" + username + '\"' +
+                ", \"password\":\"" + password + '\"' +
                 '}';
     }
 }

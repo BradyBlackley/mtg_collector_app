@@ -55,9 +55,9 @@ public class Color {
 
     @Override
     public String toString() {
-        return "Color{" +
-                "colorId=" + colorId +
-                ", colorName='" + colorName + '\'' +
+        return "{" +
+                "\"colorId\":" + colorId +
+                ", \"colorName\":\"" + colorName + '\"' +
                 '}';
     }
 }
