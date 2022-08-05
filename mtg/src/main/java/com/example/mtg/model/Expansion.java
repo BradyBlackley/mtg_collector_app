@@ -84,11 +84,11 @@ public class Expansion {
 
     @Override
     public String toString() {
-        return "Expansion{" +
-                "expansionId=" + expansionId +
-                ", expansionName='" + expansionName + '\'' +
-                ", expansionCode='" + expansionCode + '\'' +
-                ", releasedDate=" + releasedDate +
+        return "{" +
+                "\"expansionId\":" + expansionId +
+                ", \"expansionName\":\"" + expansionName + '\"' +
+                ", \"expansionCode\":\"" + expansionCode + '\"' +
+                ", \"releasedDate\":\"" + releasedDate + '\"' +
                 '}';
     }
 }

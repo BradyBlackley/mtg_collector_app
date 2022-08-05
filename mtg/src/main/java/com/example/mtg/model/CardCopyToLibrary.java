@@ -4,36 +4,19 @@ import java.util.List;
 import java.util.Objects;
 
 public class CardCopyToLibrary {
-
-    private int cardToLibraryId;
     private List<CardCopy> cardCopies;
     private Library library;
-
     public CardCopyToLibrary() {
 
     }
 
-    public CardCopyToLibrary(int cardToLibraryId) {
-        this.cardToLibraryId = cardToLibraryId;
-    }
-
-    public CardCopyToLibrary(int cardToLibraryId, List<CardCopy> cardCopies) {
-        this.cardToLibraryId = cardToLibraryId;
+    public CardCopyToLibrary(List<CardCopy> cardCopies) {
         this.cardCopies = cardCopies;
     }
 
-    public CardCopyToLibrary(int cardToLibraryId, List<CardCopy> cardCopies, Library library) {
-        this.cardToLibraryId = cardToLibraryId;
+    public CardCopyToLibrary(List<CardCopy> cardCopies, Library library) {
         this.cardCopies = cardCopies;
         this.library = library;
-    }
-
-    public int getCardToLibraryId() {
-        return cardToLibraryId;
-    }
-
-    public void setCardToLibraryId(int cardToLibraryId) {
-        this.cardToLibraryId = cardToLibraryId;
     }
 
     public List<CardCopy> getCardCopies() {
@@ -57,20 +40,19 @@ public class CardCopyToLibrary {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CardCopyToLibrary that = (CardCopyToLibrary) o;
-        return cardToLibraryId == that.cardToLibraryId && cardCopies.equals(that.cardCopies) && library.equals(that.library);
+        return cardCopies.equals(that.cardCopies) && library.equals(that.library);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(cardToLibraryId, cardCopies, library);
+        return Objects.hash(cardCopies, library);
     }
 
     @Override
     public String toString() {
-        return "CardToLibrary{" +
-                "cardToLibrary=" + cardToLibraryId +
-                ", cardCopies=" + cardCopies +
-                ", library=" + library +
+        return "CardCopyToLibrary{" +
+                "cardCopies=" + cardCopies + '\'' +
+                ", library=" + library + '\'' +
                 '}';
     }
 }

@@ -7,9 +7,7 @@ import java.util.List;
 
 public interface CardCopyToLibraryRepository {
 
-    List<CardCopyToLibrary> findAll();
-
-    CardCopyToLibrary findById(int cardToLibraryId);
+    CardCopyToLibrary findByLibraryId(int cardToLibraryId);
 
     CardCopyToLibrary add(CardCopyToLibrary cardCopyToLibrary);
 

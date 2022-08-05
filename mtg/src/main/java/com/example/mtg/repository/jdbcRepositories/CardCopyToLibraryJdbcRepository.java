@@ -2,7 +2,6 @@ package com.example.mtg.repository.jdbcRepositories;
 
 import com.example.mtg.model.CardCopy;
 import com.example.mtg.model.CardCopyToLibrary;
-import com.example.mtg.repository.mappers.CardCopyMapper;
 import com.example.mtg.repository.mappers.CardCopyToLibraryMapper;
 import com.example.mtg.repository.repositoryInterfaces.CardCopyToLibraryRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -18,37 +17,23 @@ public class CardCopyToLibraryJdbcRepository implements CardCopyToLibraryReposit
     }
 
     @Override
-    public List<CardCopyToLibrary> findAll() {
+    public CardCopyToLibrary findByLibraryId(int libraryId) {
         final String sql =
-                "select * " +
-                "from card_to_library;";
-        List<CardCopyToLibrary> cardCopyToLibraryList = jdbcTemplate.query(sql, new CardCopyToLibraryMapper());
-        for (CardCopyToLibrary cardCopyToLibrary : cardCopyToLibraryList) {
-            if(cardCopyToLibrary != null) {
-                addCardCopies(cardCopyToLibrary);
-            }
-        }
-        return cardCopyToLibraryList;
-    }
-
-    @Override
-    public CardCopyToLibrary findById(int cardToLibraryId) {
-        final String sql =
-                "select * " +
-                "from card_to_library " +
-                "where card_to_library_id = ?;";
-        CardCopyToLibrary cardCopyToLibrary = jdbcTemplate.query(sql,new CardCopyToLibraryMapper(),
-                cardToLibraryId).stream().findFirst().orElse(null);
-        if(cardCopyToLibrary != null) {
-            addCardCopies(cardCopyToLibrary);
-        }
-        return cardCopyToLibrary;
+                "select cctl.card_copy_to_library_id, cctl.card_copy_id, cctl.library_id, cc.card_id, cc.user_id, l.library_name, l.user_id " +
+                "from card_copy_to_library cctl " +
+                "inner join card_copy cc " +
+                "on cctl.card_copy_id = cc.card_copy_id " +
+                "inner join library l  " +
+                "on l.library_id = cctl.library_id " +
+                "where cctl.library_id = ?;";
+        return jdbcTemplate.query(sql,new CardCopyToLibraryMapper(),
+                libraryId);
     }
 
     @Override
     public CardCopyToLibrary add(CardCopyToLibrary cardCopyToLibrary) {
         final String sql =
-                "insert into card_to_library (card_copy_id, library_id) " +
+                "insert into card_copy_to_library (card_copy_id, library_id) " +
                 "values (?,?)";
         for (CardCopy cardCopy : cardCopyToLibrary.getCardCopies()){
             jdbcTemplate.update(sql, cardCopy.getCardCopyId(),
@@ -66,7 +51,7 @@ public class CardCopyToLibraryJdbcRepository implements CardCopyToLibraryReposit
         int rowsAffected = 0;
         for (CardCopy cardCopy : cardCopyToLibrary.getCardCopies()){
             rowsAffected += jdbcTemplate.update(sql, cardCopy.getCardCopyId(),
-                    cardCopyToLibrary.getLibrary().getLibraryId(), cardCopyToLibrary.getCardToLibraryId());
+                    cardCopyToLibrary.getLibrary().getLibraryId());
         }
         return rowsAffected > 0;
     }
@@ -77,15 +62,5 @@ public class CardCopyToLibraryJdbcRepository implements CardCopyToLibraryReposit
                 "delete from card_to_library " +
                 "where card_to_library_id = ?;";
         return jdbcTemplate.update(sql, cardToLibraryId) > 0;
-    }
-
-    private void addCardCopies(CardCopyToLibrary cardCopyToLibrary) {
-        final String sql =
-                "select * " +
-                "from card_copy cc " +
-                "inner join card_to_library ctl " +
-                "on cc.card_copy_id = ctl.card_copy_id " +
-                "where ctl.card_to_library_id = ?;";
-        cardCopyToLibrary.setCardCopies(jdbcTemplate.query(sql, new CardCopyMapper(), cardCopyToLibrary.getCardToLibraryId()));
     }
 }

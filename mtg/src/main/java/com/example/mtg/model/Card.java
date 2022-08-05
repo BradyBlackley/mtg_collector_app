@@ -207,17 +207,17 @@ public class Card {
 
     @Override
     public String toString() {
-        return "Card{" +
-                "cardId='" + cardId + '\'' +
-                ", cardName='" + cardName + '\'' +
-                ", imagePath='" + imagePath + '\'' +
-                ", rarity=" + rarity +
-                ", artistName='" + artistName + '\'' +
-                ", convertedManaCost='" + convertedManaCost + '\'' +
-                ", power='" + power + '\'' +
-                ", toughness='" + toughness + '\'' +
-                ", expansion=" + expansion +
-                ", textBox='" + textBox + '\'' +
+        return "{" +
+                "\"cardId\":\"" + cardId + '\"' +
+                ", \"cardName\":\"" + cardName + '\"' +
+                ", \"imagePath\":\"" + imagePath + '\"' +
+                ", \"rarity\":\"" + rarity.label + '\"' +
+                ", \"artistName\":\"" + artistName + '\"' +
+                ", \"convertedManaCost\":\"" + convertedManaCost + '\"' +
+                ", \"power\":\"" + power + '\"' +
+                ", \"toughness\":\"" + toughness + '\"' +
+                ", \"expansion\":" + expansion +
+                ", \"textBox\":\"" + textBox + '\"' +
                 '}';
     }
 }

@@ -128,11 +128,11 @@ CREATE TABLE color_identity (
         ON DELETE CASCADE
 );
 
-CREATE TABLE card_to_library (
-	card_to_library_id int NOT NULL AUTO_INCREMENT,
+CREATE TABLE card_copy_to_library (
+	card_copy_to_library_id int NOT NULL AUTO_INCREMENT,
     card_copy_id int,
     library_id int,
-    PRIMARY KEY (card_to_library_id),
+    PRIMARY KEY (card_copy_to_library_id),
     FOREIGN KEY (card_copy_id)
 		REFERENCES card_copy(card_copy_id)
         ON DELETE CASCADE,

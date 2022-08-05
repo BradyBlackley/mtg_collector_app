@@ -129,11 +129,11 @@ CREATE TABLE color_identity (
         ON DELETE CASCADE
 );
 
-CREATE TABLE card_to_library (
-	card_to_library_id int NOT NULL AUTO_INCREMENT,
+CREATE TABLE card_copy_to_library (
+	card_copy_to_library_id int NOT NULL AUTO_INCREMENT,
     card_copy_id int,
     library_id int,
-    PRIMARY KEY (card_to_library_id),
+    PRIMARY KEY (card_copy_to_library_id),
     FOREIGN KEY (card_copy_id) 
 		REFERENCES card_copy(card_copy_id)
         ON DELETE CASCADE,
@@ -1006,5 +1006,5 @@ INSERT INTO color_identity (color_id, card_id) VALUES ((SELECT color_id FROM col
 
 ########################################Link card copy to test library########################################
 INSERT INTO card_copy (card_id, user_id) VALUES ((SELECT card_id FROM card WHERE card_name='Acquisitions Expert'), (select user_id FROM `user` where user_id = 'f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454'));
-INSERT INTO card_to_library (card_copy_id, library_id) VALUES ((SELECT card_copy_id FROM card_copy cc INNER JOIN card c ON c.card_id = cc.card_id WHERE card_name='Acquisitions Expert' LIMIT 1),
+INSERT INTO card_copy_to_library (card_copy_id, library_id) VALUES ((SELECT card_copy_id FROM card_copy cc INNER JOIN card c ON c.card_id = cc.card_id WHERE card_name='Acquisitions Expert' LIMIT 1),
 (SELECT library_id FROM library WHERE user_id = 'f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454'));
