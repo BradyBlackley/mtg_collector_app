@@ -52,9 +52,9 @@ public class KeywordList {
 
     @Override
     public String toString() {
-        return "KeywordList{" +
-                "keywords=" + keywords +
-                ", card=" + card +
+        return "{" +
+                "\"keywords\":" + keywords +
+                ", \"card\":" + card +
                 '}';
     }
 }

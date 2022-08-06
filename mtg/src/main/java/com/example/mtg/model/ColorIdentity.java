@@ -51,9 +51,9 @@ public class ColorIdentity {
 
     @Override
     public String toString() {
-        return "ColorIdentity{" +
-                "card=" + card +
-                ", colors=" + colors +
+        return "{" +
+                "\"card\":" + card +
+                ", \"colors\":" + colors +
                 '}';
     }
 }

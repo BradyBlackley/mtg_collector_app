@@ -55,9 +55,9 @@ public class Keyword {
 
     @Override
     public String toString() {
-        return "Keyword{" +
-                "keywordId=" + keywordId +
-                ", keywordName='" + keywordName + '\'' +
+        return "{" +
+                "\"keywordId\":" + keywordId +
+                ", \"keywordName\":\"" + keywordName + '\"' +
                 '}';
     }
 }
