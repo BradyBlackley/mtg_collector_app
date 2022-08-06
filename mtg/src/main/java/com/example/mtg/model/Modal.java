@@ -56,7 +56,7 @@ public class Modal {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Modal modal = (Modal) o;
-        return modalId == modal.modalId && frontCard.equals(modal.frontCard) && backCard.equals(modal.backCard);
+        return Objects.equals(modalId, modal.modalId) && frontCard.equals(modal.frontCard) && backCard.equals(modal.backCard);
     }
 
     @Override
@@ -66,10 +66,10 @@ public class Modal {
 
     @Override
     public String toString() {
-        return "Modal{" +
-                "modalId=" + modalId +
-                ", frontCard=" + frontCard +
-                ", backCard=" + backCard +
+        return "{" +
+                "\"modalId\":\"" + modalId + "\"" +
+                ", \"frontCard\":" + frontCard +
+                ", \"backCard\":" + backCard +
                 '}';
     }
 }

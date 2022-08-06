@@ -50,9 +50,9 @@ public class CardCopyToLibrary {
 
     @Override
     public String toString() {
-        return "CardCopyToLibrary{" +
-                "cardCopies=" + cardCopies + '\'' +
-                ", library=" + library + '\'' +
+        return "{" +
+                "cardCopies:" + cardCopies +
+                ", library:" + library +
                 '}';
     }
 }

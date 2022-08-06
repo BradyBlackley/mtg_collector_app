@@ -67,10 +67,10 @@ public class Library {
 
     @Override
     public String toString() {
-        return "Library{" +
-                "libraryId=" + libraryId + '\'' +
-                ", libraryName='" + libraryName + '\'' +
-                ", user=" + user + '\'' +
+        return "{" +
+                "\"libraryId\":" + libraryId +
+                ", \"libraryName\":\"" + libraryName + '\"' +
+                ", \"user\":" + user +
                 '}';
     }
 }
