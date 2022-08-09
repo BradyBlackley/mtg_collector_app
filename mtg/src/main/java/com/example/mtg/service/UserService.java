@@ -12,10 +12,6 @@ public class UserService {
     @Autowired
     private UserRepository repository;
 
-    public User add(User user){
-        return repository.add(user);
-    }
-
     public List<User> findAll(){
         return repository.findAll();
     }
@@ -28,9 +24,8 @@ public class UserService {
         return repository.findByUsername(username);
     }
 
-    public String delete(String id){
-        repository.deleteById(id);
-        return "user " + id + " removed";
+    public User add(User user){
+        return repository.add(user);
     }
 
     public User update(User user){
@@ -38,6 +33,11 @@ public class UserService {
         existingUser.setUsername(user.getUsername());
         existingUser.setPassword(user.getPassword());
         return repository.add(existingUser);
+    }
+
+    public String delete(String id){
+        repository.deleteById(id);
+        return "user " + id + " removed";
     }
 
 }
