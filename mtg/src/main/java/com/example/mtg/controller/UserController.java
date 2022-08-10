@@ -15,31 +15,37 @@ public class UserController {
 
     @PostMapping("/addUser")
     public User addUser(@RequestBody User user){
-        return service.add(user);
+        //return service.add(user);
+        return null;
     }
 
     @GetMapping("/users")
     public List<User> findAll(){
-        return service.findAll();
+        //return service.findAll();
+        return null;
     }
 
     @GetMapping("/user/{id}")
     public User findById(@PathVariable String id){
-        return service.findById(id);
+        //return service.findById(id);
+        return null;
     }
 
     @GetMapping("/user/{name}")
     public User findByName(@PathVariable String name){
-        return service.findByUsername(name);
+        //return service.findByUsername(name);
+        return null;
     }
 
     @PutMapping("/update")
     public User update(@RequestBody User user){
-        return service.update(user);
+        //return service.update(user);
+        return null;
     }
 
     @DeleteMapping("/delete/{id}")
     public String deleteById(@PathVariable String id){
-        return service.delete(id);
+        //return service.delete(id);
+        return null;
     }
 }

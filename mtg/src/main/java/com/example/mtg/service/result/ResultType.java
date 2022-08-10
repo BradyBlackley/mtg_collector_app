@@ -3,7 +3,8 @@ package com.example.mtg.service.result;
 public enum ResultType {
     SUCCESS("success"),
     INVALID("invalid"),
-    NOT_FOUND("not_found");
+    NOT_FOUND("not found"),
+    ERROR("error");
 
     public final String label;
 
