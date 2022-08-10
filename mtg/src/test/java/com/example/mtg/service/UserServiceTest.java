@@ -1,36 +1,14 @@
 package com.example.mtg.service;
 
+import com.example.mtg.repository.jdbcRepositories.UserJdbcRepository;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class UserServiceTest {
 
-    @Test
-    void saveUser() {
-    }
+    @Mock
+    UserJdbcRepository repository;
 
-    @Test
-    void saveUsers() {
-    }
-
-    @Test
-    void getUsers() {
-    }
-
-    @Test
-    void getUserById() {
-    }
-
-    @Test
-    void getUserByName() {
-    }
-
-    @Test
-    void deleteUser() {
-    }
-
-    @Test
-    void updateUser() {
-    }
 }
