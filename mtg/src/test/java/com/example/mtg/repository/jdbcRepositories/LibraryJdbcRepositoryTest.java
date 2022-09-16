@@ -43,19 +43,27 @@ class LibraryJdbcRepositoryTest extends CommonRepoTest {
 
     @Test
     void findLibraryByName() {
-        assertNull(repository.findLibraryByName("Not a library"));
-        assertNotNull(repository.findLibraryByName("Burn Deck"));
-        assertNotNull(repository.findLibraryByName("Zombie Deck"));
+        assertNull(repository.findLibraryByName("Not a library",
+                "5d209ac0-9102-11ec-b909-0242ac120002"));
+        assertNotNull(repository.findLibraryByName("Burn Deck",
+                "5d209ac0-9102-11ec-b909-0242ac120002"));
+        assertNotNull(repository.findLibraryByName("Zombie Deck",
+                "5d209ac0-9102-11ec-b909-0242ac120002"));
         assertEquals("5d209ac0-9102-11ec-b909-0242ac120002",
-                repository.findLibraryByName("Zombie Deck").getUser().getUserId());
+                repository.findLibraryByName("Zombie Deck",
+                        "5d209ac0-9102-11ec-b909-0242ac120002").getUser().getUserId());
         assertEquals("TimTheMagicMan",
-                repository.findLibraryByName("Zombie Deck").getUser().getUsername());
-        assertEquals("5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8", repository.findLibraryByName("Zombie Deck").getUser().getPassword());
+                repository.findLibraryByName("Zombie Deck",
+                        "5d209ac0-9102-11ec-b909-0242ac120002").getUser().getUsername());
+        assertEquals("5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+                repository.findLibraryByName("Zombie Deck",
+                        "5d209ac0-9102-11ec-b909-0242ac120002").getUser().getPassword());
     }
 
     @Test
     void add() {
-        User user = repository.findLibraryByName("Zombie Deck").getUser();
+        User user = repository.findLibraryByName("Zombie Deck",
+                "5d209ac0-9102-11ec-b909-0242ac120002").getUser();
         Library library = new Library("Dragon Deck", user);
 
         assertNotNull(repository.add(library));
@@ -82,7 +90,8 @@ class LibraryJdbcRepositoryTest extends CommonRepoTest {
 
     @Test
     void delete() {
-        Library library = repository.findLibraryByName("Rogue Deck");
+        Library library = repository.findLibraryByName("Rogue Deck",
+                "5d209ac0-9102-11ec-b909-0242ac120002");
         assertTrue(repository.delete(library));
         assertEquals(2, repository.findAllLibrariesByUser("5d209ac0-9102-11ec-b909-0242ac120002").size());
     }

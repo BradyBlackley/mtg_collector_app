@@ -31,9 +31,10 @@ public class LibraryJdbcRepository implements LibraryRepository {
     }
 
     @Override
-    public Library findLibraryByName(String libraryName) {
-        final String sql = "select library_id, library_name, user_id from library where library_name = ?;";
-        Library library = jdbcTemplate.query(sql, new LibraryMapper(), libraryName).stream().findFirst().orElse(null);
+    public Library findLibraryByName(String libraryName, String userid) {
+        final String sql = "select library_id, library_name, user_id from library where library_name = ? and user_id = ?;";
+        Library library = jdbcTemplate.query(sql, new LibraryMapper(), libraryName,
+                userid).stream().findFirst().orElse(null);
         if(library != null) {
             addUser(library);
         }
@@ -43,7 +44,7 @@ public class LibraryJdbcRepository implements LibraryRepository {
     @Override
     public Library add(Library library) {
         final String sql = "insert into library (library_name, user_id) values (?,?);";
-        int rowsAffected = jdbcTemplate.update(sql, library.getLibraryName(), library.getUser().getUserId());
+        jdbcTemplate.update(sql, library.getLibraryName(), library.getUser().getUserId());
         addUser(library);
         return library;
     }

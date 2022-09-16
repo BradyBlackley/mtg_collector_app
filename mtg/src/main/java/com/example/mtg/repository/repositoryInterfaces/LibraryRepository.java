@@ -8,7 +8,7 @@ import java.util.List;
 public interface LibraryRepository {
     List<Library> findAllLibrariesByUser(String userId);
 
-    Library findLibraryByName(String libraryName);
+    Library findLibraryByName(String libraryName, String userId);
 
     Library add(Library library);
 

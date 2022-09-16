@@ -18,12 +18,12 @@ public class UserService {
 
     public Result<List<User>> findAll(){
         Result<List<User>> result = new Result<>();
-        List<User> user = repository.findAll();
+        List<User> users = repository.findAll();
 
-        result.setPayload(user);
+        result.setPayload(users);
 
-        if (user.size() <= 0) {
-            result.addMessage("Error: users " + ResultType.NOT_FOUND, ResultType.NOT_FOUND);
+        if (users.size() <= 0) {
+            result.addMessage("Error: users " + ResultType.NOT_FOUND.label, ResultType.NOT_FOUND);
         } else {
             result.addMessage(ResultType.SUCCESS.label, ResultType.SUCCESS);
         }
@@ -82,6 +82,10 @@ public class UserService {
             result.addMessage("The provided user password is " + ResultType.INVALID.label +
                     ". Password must contain an uppercase, lowercase, number, special character (!@#$%^&*), and a " +
                     "minimum of 8 characters", ResultType.INVALID);
+        } else if (repository.findByUsername(user.getUsername()) != null) {
+            result.addMessage("Username " + user.getUsername() + " is already taken", ResultType.INVALID);
+        } else if (repository.findById(user.getUserId()) != null) {
+            result.addMessage("User with id " + user.getUserId() + " already exists", ResultType.INVALID);
         } else {
             result.setPayload(repository.add(user));
             result.addMessage(ResultType.SUCCESS.label, ResultType.SUCCESS);
@@ -104,6 +108,8 @@ public class UserService {
             result.addMessage("The provided user password is " + ResultType.INVALID.label +
                     ". Password must contain an uppercase, lowercase, number, special character (!@#$%^&*), and a " +
                     "minimum of 8 characters", ResultType.INVALID);
+        } else if (repository.findByUsername(user.getUsername()) == null) {
+            result.addMessage("Provided user does not exist ", ResultType.NOT_FOUND);
         } else if (!repository.update(user)) {
             result.addMessage("Failed to update provided user " + user.getUserId() + " " + user.getUsername(),
                     ResultType.ERROR);
@@ -121,9 +127,10 @@ public class UserService {
         if (!validateUserId(id)) {
             result.addMessage("The provided user id " + id + " is " + ResultType.INVALID.label,
                     ResultType.INVALID);
+        } else if (repository.findById(id) == null) {
+            result.addMessage("User with provided user id " + id + " does not exist", ResultType.NOT_FOUND);
         } else if (!repository.deleteById(id)) {
-            result.addMessage("Failed to delete provided user " + id,
-                    ResultType.ERROR);
+            result.addMessage("Failed to delete provided user " + id, ResultType.ERROR);
         } else {
             result.setPayload(true);
             result.addMessage(ResultType.SUCCESS.label, ResultType.SUCCESS);
@@ -140,7 +147,7 @@ public class UserService {
     }
 
     private boolean validateUsername(String username) {
-        Pattern pattern = Pattern.compile("^[a-z0-9_-]{3,15}$");
+        Pattern pattern = Pattern.compile("^[a-zA-Z0-9_-]{3,15}$");
         Matcher matcher = pattern.matcher(username);
         return matcher.matches();
     }
