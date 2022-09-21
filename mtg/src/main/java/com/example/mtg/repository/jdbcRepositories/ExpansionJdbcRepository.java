@@ -22,9 +22,21 @@ public class ExpansionJdbcRepository implements ExpansionRepository {
     }
 
     @Override
+    public Expansion findExpansionById(int expansionId) {
+        final String sql = "select * from expansion where expansion_id = ?;";
+        return jdbcTemplate.query(sql, new ExpansionMapper(), expansionId).stream().findFirst().orElse(null);
+    }
+
+    @Override
     public Expansion findExpansionByName(String expansionName) {
         final String sql = "select * from expansion where expansion_name = ?;";
         return jdbcTemplate.query(sql, new ExpansionMapper(), expansionName).stream().findFirst().orElse(null);
+    }
+
+    @Override
+    public Expansion findExpansionByCode(String expansionCode) {
+        final String sql = "select * from expansion where expansion_code = ?;";
+        return jdbcTemplate.query(sql, new ExpansionMapper(), expansionCode).stream().findFirst().orElse(null);
     }
 
     @Override

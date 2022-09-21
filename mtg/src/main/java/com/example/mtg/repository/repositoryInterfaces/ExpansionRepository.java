@@ -8,7 +8,11 @@ import java.util.List;
 public interface ExpansionRepository {
     List<Expansion> findAllExpansions();
 
+    Expansion findExpansionById(int expansionId);
+
     Expansion findExpansionByName(String expansionName);
+
+    Expansion findExpansionByCode(String expansionCode);
 
     Expansion add(Expansion expansion);
 

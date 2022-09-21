@@ -26,6 +26,16 @@ class ExpansionJdbcRepositoryTest extends CommonRepoTest {
     }
 
     @Test
+    void findExpansionById() {
+        assertEquals("IKO",
+                repository.findExpansionById(3).getExpansionCode());
+        assertEquals(3,
+                repository.findExpansionById(3).getExpansionId());
+        assertEquals(Date.valueOf("2020-04-01"),
+                repository.findExpansionById(3).getReleasedDate());
+    }
+
+    @Test
     void findExpansionByName() {
         assertEquals("IKO",
                 repository.findExpansionByName("Ikoria: Lair of Behemoths").getExpansionCode());
@@ -33,6 +43,15 @@ class ExpansionJdbcRepositoryTest extends CommonRepoTest {
                 repository.findExpansionByName("Ikoria: Lair of Behemoths").getExpansionId());
         assertEquals(Date.valueOf("2020-04-01"),
                 repository.findExpansionByName("Ikoria: Lair of Behemoths").getReleasedDate());
+    }
+
+    @Test
+    void findExpansionByCode() {
+        assertEquals("Zendikar Rising", repository.findExpansionByCode("ZNR").getExpansionName());
+        assertEquals("Ikoria: Lair of Behemoths",
+                repository.findExpansionByCode("IKO").getExpansionName());
+        assertEquals("Innistrad: Crimson Vow",
+                repository.findExpansionByCode("VOW").getExpansionName());
     }
 
     @Test

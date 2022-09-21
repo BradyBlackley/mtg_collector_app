@@ -15,3 +15,15 @@ Business Rules:
     - Library name may only contain alphanumeric characters with the exception of spaces
     - Library name may not be empty
     - Library user must exist
+
+    Color
+    - Don't need this as a repository - refactor as an Enum somehow
+
+    Expansion (Rename to Set?)
+    - Cannot add a duplicate set name, check if it already exists in db
+    - Magic the Gathering started in August of 1993, so Expansion.releasedDate cannot have a date earlier than that
+    - Sets are announced some time in advance so it's reasonable to enter a released date that's a few years in the future,
+      but to prevent bad data from entering the db, we'll make it a rule that the releasedDate can be no more than two 
+      years into the future
+    - Set names cannot contain special characters other than :
+    - All set codes must be a unique combination of exactly 3 alphanumeric characters, (can't add a duplicate set code)
