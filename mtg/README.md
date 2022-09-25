@@ -27,3 +27,10 @@ Business Rules:
       years into the future
     - Set names cannot contain special characters other than :
     - All set codes must be a unique combination of exactly 3 alphanumeric characters, (can't add a duplicate set code)
+
+    Type
+    - Type names are usually not much longer than 5-10 characters so 25 characters should be a safe bet, anything beyond
+      that is probably a bad record
+    - A type must be unique when being added, a duplicate record cannot exist with the same type name
+    - Type names can only contain alphabetic characters (no numbers, special chars)
+    - Type must already exist before attempting to update, in order to fail early
