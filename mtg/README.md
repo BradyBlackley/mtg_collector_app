@@ -33,4 +33,11 @@ Business Rules:
       that is probably a bad record
     - A type must be unique when being added, a duplicate record cannot exist with the same type name
     - Type names can only contain alphabetic characters (no numbers, special chars)
-    - Type must already exist before attempting to update, in order to fail early
+    - Type must already exist before attempting to update or delete, in order to fail early
+
+    Keyword (Keyword Ability)
+    - Keyword abilities are usually not much longer than 5-10 characters so 25 characters should be a safe bet, anything beyond
+      that is probably a bad record
+    - A keyword ability must be unique when being added, a duplicate record cannot exist with the same keyword ability name
+    - Keyword ability names can only contain alphabetic characters (no numbers, special chars)
+    - Keyword ability must already exist before attempting to update or delete, in order to fail early
