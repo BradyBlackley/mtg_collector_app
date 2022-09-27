@@ -41,3 +41,8 @@ Business Rules:
     - A keyword ability must be unique when being added, a duplicate record cannot exist with the same keyword ability name
     - Keyword ability names can only contain alphabetic characters (no numbers, special chars)
     - Keyword ability must already exist before attempting to update or delete, in order to fail early
+
+    Card
+    - Card find methods must return message if no records are found
+    - Card add/update methods must validate 
+    - Card delete must verify that the record exists before attempting to delete
