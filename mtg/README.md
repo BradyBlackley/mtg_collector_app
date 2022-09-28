@@ -44,5 +44,6 @@ Business Rules:
 
     Card
     - Card find methods must return message if no records are found
-    - Card add/update methods must validate 
+    - Card add/update methods must validate card values
+    - Card add method must validate expansion must already exist
     - Card delete must verify that the record exists before attempting to delete

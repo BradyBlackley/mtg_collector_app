@@ -208,12 +208,137 @@ class CardServiceTest {
     }
 
     @Test
+    void addFail1() {
+
+    }
+
+    @Test
+    void addFail2() {
+
+    }
+
+    @Test
+    void addFail3() {
+
+    }
+
+    @Test
+    void addFail4() {
+
+    }
+
+    @Test
+    void addFail5() {
+
+    }
+
+    @Test
+    void addFail6() {
+
+    }
+
+    @Test
+    void addFail7() {
+
+    }
+
+    @Test
+    void addFail8() {
+
+    }
+
+    @Test
+    void addFail9() {
+
+    }
+
+    @Test
+    void addFail10() {
+
+    }
+
+    @Test
+    void addFail11() {
+
+    }
+
+    @Test
     void update() {
 
     }
 
     @Test
+    void update1() {
+
+    }
+
+    @Test
+    void update2() {
+
+    }
+
+    @Test
+    void update3() {
+
+    }
+
+    @Test
+    void update4() {
+
+    }
+
+    @Test
+    void update5() {
+
+    }
+
+    @Test
+    void update6() {
+
+    }
+
+    @Test
+    void update7() {
+
+    }
+
+    @Test
+    void update8() {
+
+    }
+
+    @Test
+    void update9() {
+
+    }
+
+    @Test
+    void update10() {
+
+    }
+
+    @Test
+    void update11() {
+
+    }
+
+    @Test
     void delete() {
+
+    }
+
+    @Test
+    void delete1() {
+
+    }
+
+    @Test
+    void delete2() {
+
+    }
+
+    @Test
+    void delete3() {
 
     }
 }

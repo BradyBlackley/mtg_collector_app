@@ -1,6 +1,7 @@
 package com.example.mtg.service;
 
 import com.example.mtg.model.Card;
+import com.example.mtg.model.Expansion;
 import com.example.mtg.model.Rarity;
 import com.example.mtg.repository.jdbcRepositories.CardJdbcRepository;
 import com.example.mtg.service.result.Result;
@@ -9,11 +10,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Service
 public class CardService {
     @Autowired
     private CardJdbcRepository repository;
+    @Autowired
+    private ExpansionService expansionService;
 
     public Result<List<Card>> findAllCards() {
         Result<List<Card>> result = new Result<>();
@@ -125,20 +130,162 @@ public class CardService {
         return result;
     }
 
-    //TODO: Second half
-    public Result<Card> add() {
+    public Result<Card> add(Card card) {
+        Result<Card> result = new Result<>();
+        Result<Expansion> expansionResult =
+                expansionService.findExpansionByCode(card.getExpansion().getExpansionCode());
 
-        return null;
+        if(!validateCardId(card.getCardId())) {
+            result.addMessage("The given card id " + card.getCardId() + " is invalid", ResultType.INVALID);
+        } else if (!validateCardName(card.getCardName())) {
+            result.addMessage("The given card name " + card.getCardName() + " is invalid", ResultType.INVALID);
+        } else if (!validateCardImagePath(card.getImagePath())) {
+            result.addMessage("The given card image path " + card.getImagePath() + " is invalid",
+                    ResultType.INVALID);
+        } else if (!validateCardRarity(card.getRarity())) {
+            result.addMessage("The given card rarity " + card.getRarity().label + " is invalid",
+                    ResultType.INVALID);
+        } else if (!validateCardArtistName(card.getArtistName())) {
+            result.addMessage("The given card artist name " + card.getArtistName() + " is invalid",
+                    ResultType.INVALID);
+        } else if (!validateCardConvertedManaCost(card.getConvertedManaCost())) {
+            result.addMessage("The given card converted mana cost " + card.getConvertedManaCost() + " is invalid",
+                    ResultType.INVALID);
+        } else if (!validateCardPower(card.getPower())) {
+            result.addMessage("The given card power " + card.getPower() + " is invalid",
+                    ResultType.INVALID);
+        } else if (!validateCardToughness(card.getToughness())) {
+            result.addMessage("The given card toughness " + card.getToughness() + " is invalid",
+                    ResultType.INVALID);
+        } else if (expansionResult.getPayload() == null || !expansionResult.isSuccess()) {
+            result.addMessage(expansionResult.getMessages().get(0), expansionResult.getType());
+            result.addMessage("The given expansion " + card.getExpansion() + " associated with card "
+                    + card + " is invalid", ResultType.INVALID);
+        } else {
+            result.setPayload(repository.add(card));
+            if(result.getPayload() == null) {
+                result.addMessage("Failed to add given card " + card, ResultType.ERROR);
+            } else {
+                result.addMessage(ResultType.SUCCESS.label, ResultType.SUCCESS);
+            }
+        }
+        return result;
     }
 
-    public Result<Boolean> update() {
+    public Result<Boolean> update(Card card) {
+        Result<Boolean> result = new Result<>();
+        result.setPayload(false);
+        Result<Expansion> expansionResult =
+                expansionService.findExpansionByCode(card.getExpansion().getExpansionCode());
 
-        return null;
+        if(!validateCardId(card.getCardId())) {
+            result.addMessage("The given card id " + card.getCardId() + " is invalid", ResultType.INVALID);
+        } else if (!validateCardName(card.getCardName())) {
+            result.addMessage("The given card name " + card.getCardName() + " is invalid", ResultType.INVALID);
+        } else if (!validateCardImagePath(card.getImagePath())) {
+            result.addMessage("The given card image path " + card.getImagePath() + " is invalid",
+                    ResultType.INVALID);
+        } else if (!validateCardRarity(card.getRarity())) {
+            result.addMessage("The given card rarity " + card.getRarity().label + " is invalid",
+                    ResultType.INVALID);
+        } else if (!validateCardArtistName(card.getArtistName())) {
+            result.addMessage("The given card artist name " + card.getArtistName() + " is invalid",
+                    ResultType.INVALID);
+        } else if (!validateCardConvertedManaCost(card.getConvertedManaCost())) {
+            result.addMessage("The given card converted mana cost " + card.getConvertedManaCost() + " is invalid",
+                    ResultType.INVALID);
+        } else if (!validateCardPower(card.getPower())) {
+            result.addMessage("The given card power " + card.getPower() + " is invalid",
+                    ResultType.INVALID);
+        } else if (!validateCardToughness(card.getToughness())) {
+            result.addMessage("The given card toughness " + card.getToughness() + " is invalid",
+                    ResultType.INVALID);
+        } else if (expansionResult.getPayload() == null || !expansionResult.isSuccess()) {
+            result.addMessage(expansionResult.getMessages().get(0), expansionResult.getType());
+            result.addMessage("The given expansion " + card.getExpansion() + " associated with card "
+                    + card + " is invalid", ResultType.INVALID);
+        } else if (repository.findCardById(card.getCardId()) == null) {
+            result.addMessage("The given card " + card + " is not found",
+                    ResultType.INVALID);
+        } else {
+            result.setPayload(repository.update(card));
+            if(result.getPayload() == null) {
+                result.addMessage("Failed to update given card " + card, ResultType.ERROR);
+            } else {
+                result.addMessage(ResultType.SUCCESS.label, ResultType.SUCCESS);
+                result.setPayload(true);
+            }
+        }
+        return result;
     }
 
-    public Result<Boolean> delete() {
+    public Result<Boolean> delete(Card card) {
+        Result<Boolean> result = new Result<>();
+        result.setPayload(false);
 
-        return null;
+        if(!validateCardId(card.getCardId())) {
+            result.addMessage("The given card id " + card.getCardId() + " is invalid", ResultType.INVALID);
+        } else if (repository.findCardById(card.getCardId()) == null) {
+            result.addMessage("The given card " + card + " is not found",
+                    ResultType.INVALID);
+        } else {
+            result.setPayload(repository.delete(card.getCardId()));
+            if(result.getPayload() == null) {
+                result.addMessage("Failed to delete given card " + card, ResultType.ERROR);
+            } else {
+                result.addMessage(ResultType.SUCCESS.label, ResultType.SUCCESS);
+                result.setPayload(true);
+            }
+        }
+        return result;
+    }
+
+    private boolean validateCardId(String cardId) {
+        Pattern pattern = Pattern.compile("^[A-Z\\d]{3}\\d{3}$");
+        Matcher matcher = pattern.matcher(cardId);
+        return matcher.matches();
+    }
+
+    private boolean validateCardName(String cardName) {
+        Pattern pattern = Pattern.compile("^[a-zA-Z:,\\d\\s]*$");
+        Matcher matcher = pattern.matcher(cardName);
+        return matcher.matches();
+    }
+
+    private boolean validateCardImagePath(String imagePath) {
+        Pattern pattern = Pattern.compile("^[[a-zA-Z-_.]*\\[a-zA-Z-_.]*\\[a-zA-Z0-9-_.]*[.jpg]$");
+        Matcher matcher = pattern.matcher(imagePath);
+        return matcher.matches();
+    }
+
+    private boolean validateCardRarity(Rarity rarity) {
+        Pattern pattern = Pattern.compile("^mythic|rare|uncommon|common$");
+        Matcher matcher = pattern.matcher(rarity.label);
+        return matcher.matches();
+    }
+
+    private boolean validateCardArtistName(String artistName) {
+        Pattern pattern = Pattern.compile("^[a-zA-z\\s]*$");
+        Matcher matcher = pattern.matcher(artistName);
+        return matcher.matches();
+    }
+
+    private boolean validateCardConvertedManaCost(String convertedManaCost) {
+        Pattern pattern = Pattern.compile("^[0-9X]*$");
+        Matcher matcher = pattern.matcher(convertedManaCost);
+        return matcher.matches();
+    }
+
+    private boolean validateCardPower(String power) {
+        Pattern pattern = Pattern.compile("^[0-9X]*$");
+        Matcher matcher = pattern.matcher(power);
+        return matcher.matches();
+    }
+
+    private boolean validateCardToughness(String toughness) {
+        Pattern pattern = Pattern.compile("^[0-9X]*$");
+        Matcher matcher = pattern.matcher(toughness);
+        return matcher.matches();
     }
 
 }
