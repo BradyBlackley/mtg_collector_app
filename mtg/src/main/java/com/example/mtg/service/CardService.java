@@ -161,6 +161,9 @@ public class CardService {
             result.addMessage(expansionResult.getMessages().get(0), expansionResult.getType());
             result.addMessage("The given expansion " + card.getExpansion() + " associated with card "
                     + card + " is invalid", ResultType.INVALID);
+        } else if (repository.findCardById(card.getCardId()) != null) {
+            result.addMessage("The given card " + card + " already exists",
+                    ResultType.INVALID);
         } else {
             result.setPayload(repository.add(card));
             if(result.getPayload() == null) {
@@ -253,7 +256,7 @@ public class CardService {
     }
 
     private boolean validateCardImagePath(String imagePath) {
-        Pattern pattern = Pattern.compile("^[[a-zA-Z-_.]*\\[a-zA-Z-_.]*\\[a-zA-Z0-9-_.]*[.jpg]$");
+        Pattern pattern = Pattern.compile("^card_images\\\\[a-z-_]*\\\\[a-z\\d-_]*\\.jpg$");
         Matcher matcher = pattern.matcher(imagePath);
         return matcher.matches();
     }
@@ -265,7 +268,7 @@ public class CardService {
     }
 
     private boolean validateCardArtistName(String artistName) {
-        Pattern pattern = Pattern.compile("^[a-zA-z\\s]*$");
+        Pattern pattern = Pattern.compile("^[a-zA-Z\\s]*$");
         Matcher matcher = pattern.matcher(artistName);
         return matcher.matches();
     }

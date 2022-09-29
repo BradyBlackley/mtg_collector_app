@@ -4,6 +4,8 @@ import com.example.mtg.model.Card;
 import com.example.mtg.model.Expansion;
 import com.example.mtg.model.Rarity;
 import com.example.mtg.repository.jdbcRepositories.CardJdbcRepository;
+import com.example.mtg.service.result.Result;
+import com.example.mtg.service.result.ResultType;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -22,12 +24,13 @@ class CardServiceTest {
 
     @InjectMocks
     CardService service;
-
     @Mock
     CardJdbcRepository repository;
+    @Mock
+    ExpansionService expansionService;
 
     public Card validCard = new Card("ZNR150", "Moraug, Fury of Akoum",
-            "card_images/zendikar_rising/znr-150-moraug-fury-of-akoum.jpg", Rarity.MYTHIC,
+            "card_images\\zendikar_rising\\znr-150-moraug-fury-of-akoum.jpg", Rarity.MYTHIC,
             "Rudy Siswanto", "6", "6", "6", new Expansion(1,
             "Zendikar Rising", "ZNR", Date.valueOf("2020-09-01")),
             "Each creature you control gets +1/+0 for each time it has attacked this turn. Landfall -" +
@@ -35,7 +38,7 @@ class CardServiceTest {
                     " additional combat phase after this phase. At the beginning of that combat, untap all creatures" +
                     " you control.");
     public Card validCard1 = new Card("ZNR063", "Jace, Mirror Mage",
-            "card_images/zendikar_rising/znr-63-jace-mirror-mage.jpg", Rarity.MYTHIC,
+            "card_images\\zendikar_rising\\znr-63-jace-mirror-mage.jpg", Rarity.MYTHIC,
             "Tyler Jacobson", "3", null, null, new Expansion(1,
             "Zendikar Rising", "ZNR", Date.valueOf("2020-09-01")),
             "Kicker [2 colorless] When Jace, Mirror Mage enters the battlefield, if Jace was kicked, create " +
@@ -49,6 +52,13 @@ class CardServiceTest {
         cardList.add(validCard1);
 
         return cardList;
+    }
+
+    public Result<Expansion> getValidExpansionResult() {
+        Result<Expansion> result = new Result<>();
+        result.setPayload(validCard.getExpansion());
+        result.addMessage("success", ResultType.SUCCESS);
+        return result;
     }
 
     @Test
@@ -204,61 +214,77 @@ class CardServiceTest {
 
     @Test
     void add() {
+        Mockito.when(expansionService.findExpansionByCode(
+                validCard.getExpansion().getExpansionCode())).thenReturn(getValidExpansionResult());
+        Mockito.when(repository.findCardById(validCard.getCardId())).thenReturn(null);
+        Mockito.when(repository.add(validCard)).thenReturn(validCard);
+
+        assertTrue(service.add(validCard).isSuccess());
+        assertEquals("success", service.add(validCard).getMessages().get(0));
+    }
+
+    @Test
+    void addFailInvalidCardId() {
+        Card temp = validCard;
+        temp.setCardId("Z$R150");
+        Result<Card> result = service.add(temp);
+
+        assertFalse(result.isSuccess());
+        assertEquals("The given card id " + temp.getCardId() + " is invalid", result.getMessages().get(0));
+    }
+
+    @Test
+    void addFailInvalidCardName() {
+        Card temp = validCard;
+        temp.setCardName("Moraug,_F8ry_of Ak00m");
+        Result<Card> result = service.add(temp);
+
+        assertFalse(result.isSuccess());
+        assertEquals("The given card name " + temp.getCardName() + " is invalid", result.getMessages().get(0));
+    }
+
+    @Test
+    void addFailInvalidImagePath() {
 
     }
 
     @Test
-    void addFail1() {
+    void addFailInvalidRarity() {
 
     }
 
     @Test
-    void addFail2() {
+    void addFailInvalidArtistName() {
 
     }
 
     @Test
-    void addFail3() {
+    void addFailInvalidConvertedManaCost() {
 
     }
 
     @Test
-    void addFail4() {
+    void addFailInvalidPower() {
 
     }
 
     @Test
-    void addFail5() {
+    void addFailInvalidToughness() {
 
     }
 
     @Test
-    void addFail6() {
+    void addFailInvalidExpansion() {
 
     }
 
     @Test
-    void addFail7() {
+    void addFailCardAlreadyExists() {
 
     }
 
     @Test
-    void addFail8() {
-
-    }
-
-    @Test
-    void addFail9() {
-
-    }
-
-    @Test
-    void addFail10() {
-
-    }
-
-    @Test
-    void addFail11() {
+    void addFailedToAdd() {
 
     }
 
