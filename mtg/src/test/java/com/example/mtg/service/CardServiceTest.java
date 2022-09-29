@@ -341,7 +341,7 @@ class CardServiceTest {
 
         Result<Card> result = service.add(validCard);
 
-        //assertFalse(result.isSuccess());
+        assertFalse(result.isSuccess());
         assertEquals("Failed to add given card " + validCard, result.getMessages().get(0));
     }
 

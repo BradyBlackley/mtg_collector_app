@@ -47,3 +47,10 @@ Business Rules:
     - Card add/update methods must validate card values
     - Card add method must validate expansion must already exist
     - Card delete must verify that the record exists before attempting to delete
+
+    CardCopy
+    - Card copies must be unique
+    - Card that a card copy references must already exist and be valid
+    - User that owns the card copy must exist and be valid
+    - Card copy must not already exist when being added
+    - Card copy must already exist when attempting to update or delete it
