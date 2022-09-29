@@ -142,9 +142,6 @@ public class CardService {
         } else if (!validateCardImagePath(card.getImagePath())) {
             result.addMessage("The given card image path " + card.getImagePath() + " is invalid",
                     ResultType.INVALID);
-        } else if (!validateCardRarity(card.getRarity())) {
-            result.addMessage("The given card rarity " + card.getRarity().label + " is invalid",
-                    ResultType.INVALID);
         } else if (!validateCardArtistName(card.getArtistName())) {
             result.addMessage("The given card artist name " + card.getArtistName() + " is invalid",
                     ResultType.INVALID);
@@ -188,9 +185,6 @@ public class CardService {
         } else if (!validateCardImagePath(card.getImagePath())) {
             result.addMessage("The given card image path " + card.getImagePath() + " is invalid",
                     ResultType.INVALID);
-        } else if (!validateCardRarity(card.getRarity())) {
-            result.addMessage("The given card rarity " + card.getRarity().label + " is invalid",
-                    ResultType.INVALID);
         } else if (!validateCardArtistName(card.getArtistName())) {
             result.addMessage("The given card artist name " + card.getArtistName() + " is invalid",
                     ResultType.INVALID);
@@ -212,19 +206,15 @@ public class CardService {
                     ResultType.INVALID);
         } else {
             result.setPayload(repository.update(card));
-            if(result.getPayload() == null) {
-                result.addMessage("Failed to update given card " + card, ResultType.ERROR);
-            } else {
-                result.addMessage(ResultType.SUCCESS.label, ResultType.SUCCESS);
-                result.setPayload(true);
-            }
+            result.addMessage(ResultType.SUCCESS.label, ResultType.SUCCESS);
+            result.setPayload(true);
+
         }
         return result;
     }
 
     public Result<Boolean> delete(Card card) {
         Result<Boolean> result = new Result<>();
-        result.setPayload(false);
 
         if(!validateCardId(card.getCardId())) {
             result.addMessage("The given card id " + card.getCardId() + " is invalid", ResultType.INVALID);
@@ -233,7 +223,7 @@ public class CardService {
                     ResultType.INVALID);
         } else {
             result.setPayload(repository.delete(card.getCardId()));
-            if(result.getPayload() == null) {
+            if(!result.getPayload()) {
                 result.addMessage("Failed to delete given card " + card, ResultType.ERROR);
             } else {
                 result.addMessage(ResultType.SUCCESS.label, ResultType.SUCCESS);
@@ -258,12 +248,6 @@ public class CardService {
     private boolean validateCardImagePath(String imagePath) {
         Pattern pattern = Pattern.compile("^card_images\\\\[a-z-_]*\\\\[a-z\\d-_]*\\.jpg$");
         Matcher matcher = pattern.matcher(imagePath);
-        return matcher.matches();
-    }
-
-    private boolean validateCardRarity(Rarity rarity) {
-        Pattern pattern = Pattern.compile("^mythic|rare|uncommon|common$");
-        Matcher matcher = pattern.matcher(rarity.label);
         return matcher.matches();
     }
 

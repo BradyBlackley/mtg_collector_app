@@ -46,6 +46,8 @@ class CardServiceTest {
                     "[+1 Loyalty]: Scry 2. [+0 Loyalty]: Draw a card and reveal it. Remove a number of loyalty counters " +
                     "equal to that card's converted mana cost from Jace, Mirror Mage.");
 
+    public Expansion invalidExpansion = new Expansion(2, "Non exi$tent", "NEX", Date.valueOf("2022-12-22"));
+
     public List<Card> getCardsList() {
         List<Card> cardList = new ArrayList<>();
         cardList.add(validCard);
@@ -58,6 +60,13 @@ class CardServiceTest {
         Result<Expansion> result = new Result<>();
         result.setPayload(validCard.getExpansion());
         result.addMessage("success", ResultType.SUCCESS);
+        return result;
+    }
+
+    public Result<Expansion> getInvalidExpansionResult() {
+        Result<Expansion> result = new Result<>();
+        result.setPayload(invalidExpansion);
+        result.addMessage("The given expansion name " + invalidExpansion.getExpansionName() + " is invalid", ResultType.INVALID);
         return result;
     }
 
@@ -245,126 +254,238 @@ class CardServiceTest {
 
     @Test
     void addFailInvalidImagePath() {
+        Card temp = validCard;
+        temp.setImagePath("/card-Images/zendiker-ri$ing/card-image.png");
+        Result<Card> result = service.add(temp);
 
-    }
-
-    @Test
-    void addFailInvalidRarity() {
-
+        assertFalse(result.isSuccess());
+        assertEquals("The given card image path " + temp.getImagePath()
+                + " is invalid", result.getMessages().get(0));
     }
 
     @Test
     void addFailInvalidArtistName() {
+        Card temp = validCard;
+        temp.setArtistName("Leonard0 D@VinCi");
+        Result<Card> result = service.add(temp);
 
+        assertFalse(result.isSuccess());
+        assertEquals("The given card artist name " + temp.getArtistName()
+                + " is invalid", result.getMessages().get(0));
     }
 
     @Test
     void addFailInvalidConvertedManaCost() {
+        Card temp = validCard;
+        temp.setConvertedManaCost("$$");
+        Result<Card> result = service.add(temp);
 
+        assertFalse(result.isSuccess());
+        assertEquals("The given card converted mana cost " + temp.getConvertedManaCost() + " is invalid",
+                result.getMessages().get(0));
     }
 
     @Test
     void addFailInvalidPower() {
+        Card temp = validCard;
+        temp.setPower("A");
+        Result<Card> result = service.add(temp);
 
+        assertFalse(result.isSuccess());
+        assertEquals("The given card power " + temp.getPower() + " is invalid", result.getMessages().get(0));
     }
 
     @Test
     void addFailInvalidToughness() {
+        Card temp = validCard;
+        temp.setToughness("#5");
+        Result<Card> result = service.add(temp);
 
+        assertFalse(result.isSuccess());
+        assertEquals("The given card toughness " + temp.getToughness() + " is invalid", result.getMessages().get(0));
     }
 
     @Test
     void addFailInvalidExpansion() {
+        Mockito.when(expansionService.findExpansionByCode(
+                invalidExpansion.getExpansionCode())).thenReturn(getInvalidExpansionResult());
 
+        Card temp = validCard;
+        temp.setExpansion(invalidExpansion);
+        Result<Card> result = service.add(temp);
+
+        assertFalse(result.isSuccess());
+        assertEquals("The given expansion " + temp.getExpansion() + " associated with card "
+                + temp + " is invalid", result.getMessages().get(result.getMessages().size()-1));
     }
 
     @Test
     void addFailCardAlreadyExists() {
+        Mockito.when(expansionService.findExpansionByCode(
+                validCard.getExpansion().getExpansionCode())).thenReturn(getValidExpansionResult());
+        Mockito.when(repository.findCardById(validCard.getCardId())).thenReturn(validCard);
 
+        Card temp = validCard;
+        Result<Card> result = service.add(temp);
+
+        assertFalse(result.isSuccess());
+        assertEquals("The given card " + temp + " already exists", result.getMessages().get(0));
     }
 
     @Test
     void addFailedToAdd() {
+        Mockito.when(expansionService.findExpansionByCode(
+                validCard.getExpansion().getExpansionCode())).thenReturn(getValidExpansionResult());
+        Mockito.when(repository.findCardById(validCard.getCardId())).thenReturn(null);
+        Mockito.when(repository.add(validCard)).thenReturn(null);
 
+        Result<Card> result = service.add(validCard);
+
+        //assertFalse(result.isSuccess());
+        assertEquals("Failed to add given card " + validCard, result.getMessages().get(0));
     }
 
     @Test
     void update() {
+        Mockito.when(expansionService.findExpansionByCode(
+                validCard.getExpansion().getExpansionCode())).thenReturn(getValidExpansionResult());
+        Mockito.when(repository.findCardById(validCard.getCardId())).thenReturn(validCard);
+        Mockito.when(repository.update(validCard)).thenReturn(true);
 
+        assertTrue(service.update(validCard).isSuccess());
+        assertEquals("success", service.update(validCard).getMessages().get(0));
     }
 
     @Test
-    void update1() {
+    void updateFailInvalidCardId() {
+        Card temp = validCard;
+        temp.setCardId("Z$R150");
+        Result<Boolean> result = service.update(temp);
 
+        assertFalse(result.isSuccess());
+        assertEquals("The given card id " + temp.getCardId() + " is invalid", result.getMessages().get(0));
     }
 
     @Test
-    void update2() {
+    void updateFailInvalidCardName() {
+        Card temp = validCard;
+        temp.setCardName("Moraug,_F8ry_of Ak00m");
+        Result<Boolean> result = service.update(temp);
 
+        assertFalse(result.isSuccess());
+        assertEquals("The given card name " + temp.getCardName() + " is invalid", result.getMessages().get(0));
     }
 
     @Test
-    void update3() {
+    void updateFailInvalidImagePath() {
+        Card temp = validCard;
+        temp.setImagePath("/card-Images/zendiker-ri$ing/card-image.png");
+        Result<Boolean> result = service.update(temp);
 
+        assertFalse(result.isSuccess());
+        assertEquals("The given card image path " + temp.getImagePath()
+                + " is invalid", result.getMessages().get(0));
     }
 
     @Test
-    void update4() {
+    void updateFailInvalidArtistName() {
+        Card temp = validCard;
+        temp.setArtistName("Leonard0 D@VinCi");
+        Result<Boolean> result = service.update(temp);
 
+        assertFalse(result.isSuccess());
+        assertEquals("The given card artist name " + temp.getArtistName()
+                + " is invalid", result.getMessages().get(0));
     }
 
     @Test
-    void update5() {
+    void updateFailInvalidConvertedManaCost() {
+        Card temp = validCard;
+        temp.setConvertedManaCost("$$");
+        Result<Boolean> result = service.update(temp);
 
+        assertFalse(result.isSuccess());
+        assertEquals("The given card converted mana cost " + temp.getConvertedManaCost() + " is invalid",
+                result.getMessages().get(0));
     }
 
     @Test
-    void update6() {
+    void updateFailInvalidPower() {
+        Card temp = validCard;
+        temp.setPower("A");
+        Result<Boolean> result = service.update(temp);
 
+        assertFalse(result.isSuccess());
+        assertEquals("The given card power " + temp.getPower() + " is invalid", result.getMessages().get(0));
     }
 
     @Test
-    void update7() {
+    void updateFailInvalidToughness() {
+        Card temp = validCard;
+        temp.setToughness("#5");
+        Result<Boolean> result = service.update(temp);
 
+        assertFalse(result.isSuccess());
+        assertEquals("The given card toughness " + temp.getToughness() + " is invalid", result.getMessages().get(0));
     }
 
     @Test
-    void update8() {
+    void updateFailInvalidExpansion() {
+        Mockito.when(expansionService.findExpansionByCode(
+                invalidExpansion.getExpansionCode())).thenReturn(getInvalidExpansionResult());
 
+        Card temp = validCard;
+        temp.setExpansion(invalidExpansion);
+        Result<Boolean> result = service.update(temp);
+
+        assertFalse(result.isSuccess());
+        assertEquals("The given expansion " + temp.getExpansion() + " associated with card "
+                + temp + " is invalid", result.getMessages().get(result.getMessages().size()-1));
     }
 
     @Test
-    void update9() {
+    void updateFailCardDoesNotExist() {
+        Mockito.when(expansionService.findExpansionByCode(
+                validCard.getExpansion().getExpansionCode())).thenReturn(getValidExpansionResult());
+        Mockito.when(repository.findCardById(validCard.getCardId())).thenReturn(null);
 
-    }
+        Card temp = validCard;
+        Result<Boolean> result = service.update(temp);
 
-    @Test
-    void update10() {
-
-    }
-
-    @Test
-    void update11() {
-
+        assertFalse(result.isSuccess());
+        assertEquals("The given card " + validCard + " is not found", result.getMessages().get(0));
     }
 
     @Test
     void delete() {
+        Mockito.when(repository.findCardById(validCard.getCardId())).thenReturn(validCard);
+        Mockito.when(repository.delete(validCard.getCardId())).thenReturn(true);
 
+        assertTrue(service.delete(validCard).isSuccess());
+        assertEquals("success", service.delete(validCard).getMessages().get(0));
     }
 
     @Test
-    void delete1() {
+    void deleteInvalidCardId() {
+        Card temp = validCard;
+        temp.setCardId("$%^");
 
+        assertFalse(service.delete(temp).isSuccess());
+        assertEquals("The given card id " + temp.getCardId() + " is invalid", service.delete(temp).getMessages().get(0));
     }
 
     @Test
-    void delete2() {
-
+    void deleteCardNotFound() {
+        assertFalse(service.delete(validCard).isSuccess());
+        assertEquals("The given card " + validCard + " is not found", service.delete(validCard).getMessages().get(0));
     }
 
     @Test
-    void delete3() {
+    void deleteFailed() {
+        Mockito.when(repository.findCardById(validCard.getCardId())).thenReturn(validCard);
+        Mockito.when(repository.delete(validCard.getCardId())).thenReturn(false);
 
+        assertFalse(service.delete(validCard).isSuccess());
+        assertEquals("Failed to delete given card " + validCard, service.delete(validCard).getMessages().get(0));
     }
 }
