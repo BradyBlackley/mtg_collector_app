@@ -46,7 +46,8 @@ public class CardCopyService {
         Result<CardCopy> result = new Result<>();
         result.setPayload(repository.findByCardCopyId(cardCopyId));
         if(result.getPayload() == null) {
-            result.addMessage("No card copy found associated with given card copy id " + cardCopyId, ResultType.NOT_FOUND);
+            result.addMessage("No card copy found associated with given card copy id " + cardCopyId,
+                    ResultType.NOT_FOUND);
         } else {
             result.addMessage(ResultType.SUCCESS.label, ResultType.SUCCESS);
         }
@@ -59,27 +60,23 @@ public class CardCopyService {
         Result<User> userResult = userService.findById(cardCopy.getUser().getUserId());
 
         if(cardCopy.getCardCopyId() < 0) {
-            result.addMessage("The given card copy id " + cardCopy.getCardCopyId() + " is invalid", ResultType.INVALID);
+            result.addMessage("The given card copy id " + cardCopy.getCardCopyId() + " is invalid",
+                    ResultType.INVALID);
         } else if (repository.findByCardCopyId(cardCopy.getCardCopyId()) != null) {
-            result.addMessage("The given card copy id " + cardCopy.getCardCopyId() + " already exists", ResultType.INVALID);
-        } else if (cardService.findCardById(cardCopy.getCard().getCardId()) == null) {
-            result.addMessage("The given card " + cardCopy.getCard() + " associated with card copy "
-                    + cardCopy + " is not found", ResultType.NOT_FOUND);
-        } else if (userService.findById(cardCopy.getUser().getUserId()) == null) {
-            result.addMessage("The given user " + cardCopy.getUser() + " associated with card copy "
-                    + cardCopy + " is not found", ResultType.NOT_FOUND);
-        } else if (cardResult.getPayload() == null || !cardResult.isSuccess()) {
+            result.addMessage("The given card copy id " + cardCopy.getCardCopyId() + " already exists",
+                    ResultType.INVALID);
+        } else if (!cardResult.isSuccess()) {
             result.addMessage(cardResult.getMessages().get(0), cardResult.getType());
             result.addMessage("The given card " + cardCopy.getCard() + " associated with card copy "
                     + cardCopy + " is invalid", ResultType.INVALID);
-        } else if (userResult.getPayload() == null || !userResult.isSuccess()) {
+        } else if (!userResult.isSuccess()) {
             result.addMessage(userResult.getMessages().get(0), userResult.getType());
             result.addMessage("The given user " + cardCopy.getUser() + " associated with card copy "
                     + cardCopy + " is invalid", ResultType.INVALID);
         } else {
             result.setPayload(repository.add(cardCopy));
             if(result.getPayload() == null) {
-                result.addMessage("Failed to add given card copy" + cardCopy, ResultType.ERROR);
+                result.addMessage("Failed to add given card copy " + cardCopy, ResultType.ERROR);
             } else {
                 result.addMessage(ResultType.SUCCESS.label, ResultType.SUCCESS);
             }
@@ -93,15 +90,11 @@ public class CardCopyService {
         Result<User> userResult = userService.findById(cardCopy.getUser().getUserId());
 
         if(cardCopy.getCardCopyId() < 0) {
-            result.addMessage("The given card copy id " + cardCopy.getCardCopyId() + " is invalid", ResultType.INVALID);
+            result.addMessage("The given card copy id " + cardCopy.getCardCopyId() + " is invalid",
+                    ResultType.INVALID);
         } else if (repository.findByCardCopyId(cardCopy.getCardCopyId()) == null) {
-            result.addMessage("The given card copy id " + cardCopy.getCardCopyId() + " is not found", ResultType.NOT_FOUND);
-        } else if (cardService.findCardById(cardCopy.getCard().getCardId()) == null) {
-            result.addMessage("The given card " + cardCopy.getCard() + " associated with card copy "
-                    + cardCopy + " is not found", ResultType.NOT_FOUND);
-        } else if (userService.findById(cardCopy.getUser().getUserId()) == null) {
-            result.addMessage("The given user " + cardCopy.getUser() + " associated with card copy "
-                    + cardCopy + " is not found", ResultType.NOT_FOUND);
+            result.addMessage("The given card copy id " + cardCopy.getCardCopyId() + " is not found",
+                    ResultType.NOT_FOUND);
         } else if (cardResult.getPayload() == null || !cardResult.isSuccess()) {
             result.addMessage(cardResult.getMessages().get(0), cardResult.getType());
             result.addMessage("The given card " + cardCopy.getCard() + " associated with card copy "
@@ -112,8 +105,8 @@ public class CardCopyService {
                     + cardCopy + " is invalid", ResultType.INVALID);
         } else {
             result.setPayload(repository.update(cardCopy));
-            if(result.getPayload() == null) {
-                result.addMessage("Failed to update given card copy" + cardCopy, ResultType.ERROR);
+            if(!result.getPayload()) {
+                result.addMessage("Failed to update given card copy " + cardCopy, ResultType.ERROR);
             } else {
                 result.addMessage(ResultType.SUCCESS.label, ResultType.SUCCESS);
             }
@@ -127,15 +120,11 @@ public class CardCopyService {
         Result<User> userResult = userService.findById(cardCopy.getUser().getUserId());
 
         if(cardCopy.getCardCopyId() < 0) {
-            result.addMessage("The given card copy id " + cardCopy.getCardCopyId() + " is invalid", ResultType.INVALID);
+            result.addMessage("The given card copy id " + cardCopy.getCardCopyId() + " is invalid",
+                    ResultType.INVALID);
         } else if (repository.findByCardCopyId(cardCopy.getCardCopyId()) == null) {
-            result.addMessage("The given card copy id " + cardCopy.getCardCopyId() + " is not found", ResultType.NOT_FOUND);
-        } else if (cardService.findCardById(cardCopy.getCard().getCardId()) == null) {
-            result.addMessage("The given card " + cardCopy.getCard() + " associated with card copy "
-                    + cardCopy + " is not found", ResultType.NOT_FOUND);
-        } else if (userService.findById(cardCopy.getUser().getUserId()) == null) {
-            result.addMessage("The given user " + cardCopy.getUser() + " associated with card copy "
-                    + cardCopy + " is not found", ResultType.NOT_FOUND);
+            result.addMessage("The given card copy id " + cardCopy.getCardCopyId() + " is not found",
+                    ResultType.NOT_FOUND);
         } else if (cardResult.getPayload() == null || !cardResult.isSuccess()) {
             result.addMessage(cardResult.getMessages().get(0), cardResult.getType());
             result.addMessage("The given card " + cardCopy.getCard() + " associated with card copy "
@@ -146,8 +135,8 @@ public class CardCopyService {
                     + cardCopy + " is invalid", ResultType.INVALID);
         } else {
             result.setPayload(repository.delete(cardCopy.getCardCopyId()));
-            if(result.getPayload() == null) {
-                result.addMessage("Failed to delete given card copy" + cardCopy, ResultType.ERROR);
+            if(!result.getPayload()) {
+                result.addMessage("Failed to delete given card copy " + cardCopy, ResultType.ERROR);
             } else {
                 result.addMessage(ResultType.SUCCESS.label, ResultType.SUCCESS);
             }
