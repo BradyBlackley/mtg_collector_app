@@ -12,17 +12,17 @@ class ColorIdentityTest {
 
     @Test
     void constructorTests() {
-        Color green = new Color();
-        green.setColorId(1);
-        green.setColorName("green");
-
-        Color red = new Color();
-        red.setColorId(2);
-        red.setColorName("red");
+//        Color green = new Color();
+//        green.setColorId(1);
+//        green.setColorName("green");
+//
+//        Color red = new Color();
+//        red.setColorId(2);
+//        red.setColorName("red");
 
         List<Color> colors = new ArrayList<>();
-        colors.add(green);
-        colors.add(red);
+        colors.add(Color.GREEN);
+        colors.add(Color.RED);
 
         Card card = new Card();
         Expansion expansion = new Expansion();
@@ -88,17 +88,17 @@ class ColorIdentityTest {
 
     @Test
     void getSetColors() {
-        Color green = new Color();
-        green.setColorId(1);
-        green.setColorName("green");
-
-        Color red = new Color();
-        red.setColorId(2);
-        red.setColorName("red");
+//        Color green = new Color();
+//        green.setColorId(1);
+//        green.setColorName("green");
+//
+//        Color red = new Color();
+//        red.setColorId(2);
+//        red.setColorName("red");
 
         List<Color> colors = new ArrayList<>();
-        colors.add(green);
-        colors.add(red);
+        colors.add(Color.GREEN);
+        colors.add(Color.RED);
 
         ColorIdentity colorIdentity = new ColorIdentity();
         colorIdentity.setColors(colors);
@@ -108,29 +108,29 @@ class ColorIdentityTest {
 
     @Test
     void testEquals() {
-        Color green = new Color();
-        green.setColorId(1);
-        green.setColorName("green");
-
-        Color red = new Color();
-        red.setColorId(2);
-        red.setColorName("red");
+//        Color green = new Color();
+//        green.setColorId(1);
+//        green.setColorName("green");
+//
+//        Color red = new Color();
+//        red.setColorId(2);
+//        red.setColorName("red");
 
         List<Color> colors = new ArrayList<>();
-        colors.add(green);
-        colors.add(red);
+        colors.add(Color.GREEN);
+        colors.add(Color.RED);
 
-        Color black = new Color();
-        black.setColorId(3);
-        black.setColorName("black");
-
-        Color blue = new Color();
-        blue.setColorId(2);
-        blue.setColorName("blue");
+//        Color black = new Color();
+//        black.setColorId(3);
+//        black.setColorName("black");
+//
+//        Color blue = new Color();
+//        blue.setColorId(2);
+//        blue.setColorName("blue");
 
         List<Color> differentColors = new ArrayList<>();
-        differentColors.add(black);
-        differentColors.add(blue);
+        differentColors.add(Color.BLACK);
+        differentColors.add(Color.BLUE);
 
         Card card = new Card();
         Expansion expansion = new Expansion();
@@ -171,17 +171,17 @@ class ColorIdentityTest {
 
     @Test
     void testHashCode() {
-        Color green = new Color();
-        green.setColorId(1);
-        green.setColorName("green");
-
-        Color red = new Color();
-        red.setColorId(2);
-        red.setColorName("red");
+//        Color green = new Color();
+//        green.setColorId(1);
+//        green.setColorName("green");
+//
+//        Color red = new Color();
+//        red.setColorId(2);
+//        red.setColorName("red");
 
         List<Color> colors = new ArrayList<>();
-        colors.add(green);
-        colors.add(red);
+        colors.add(Color.GREEN);
+        colors.add(Color.RED);
 
         Card card = new Card();
         Expansion expansion = new Expansion();
@@ -213,17 +213,17 @@ class ColorIdentityTest {
 
     @Test
     void testToString() {
-        Color green = new Color();
-        green.setColorId(1);
-        green.setColorName("green");
-
-        Color red = new Color();
-        red.setColorId(2);
-        red.setColorName("red");
+//        Color green = new Color();
+//        green.setColorId(1);
+//        green.setColorName("green");
+//
+//        Color red = new Color();
+//        red.setColorId(2);
+//        red.setColorName("red");
 
         List<Color> colors = new ArrayList<>();
-        colors.add(green);
-        colors.add(red);
+        colors.add(Color.GREEN);
+        colors.add(Color.RED);
 
         Card card = new Card();
         Expansion expansion = new Expansion();
@@ -255,7 +255,7 @@ class ColorIdentityTest {
                 " \"artistName\":\"Rudy Siswanto\", \"convertedManaCost\":\"6\", \"power\":\"6\", \"toughness\":\"6\"," +
                 " \"expansion\":{\"expansionId\":242, \"expansionName\":\"Zendikar Rising\", \"expansionCode\":\"ZNR\"," +
                 " \"releasedDate\":\"2020-09-01\"}, \"textBox\":\"Each creature you control gets +1/+0 for each time it has attacked this turn. Landfall - Whenever a land enters the battlefield under your control, if it''s your main phase, there''s an additional combat phase after this phase. At the beginning of that combat, untap all creatures you control.\"}," +
-                " \"colors\":[{\"colorId\":1, \"colorName\":\"green\"}, {\"colorId\":2, \"colorName\":\"red\"}]}",
+                " \"colors\":[{\"colorId\":6, \"colorName\":\"green\"}, {\"colorId\":5, \"colorName\":\"red\"}]}",
                 colorIdentity.toString());
     }
 }

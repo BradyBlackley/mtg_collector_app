@@ -25,19 +25,16 @@ class ColorIdentityJdbcRepositoryTest extends CommonRepoTest {
     @Test
     void findByCardId() {
         assertEquals(2, repository.findByCardId("ZNR150").getColors().size());
-        assertEquals("black", repository.findByCardId("ZNR150").getColors().get(0).getColorName());
-        assertEquals("green", repository.findByCardId("ZNR150").getColors().get(1).getColorName());
+        assertEquals("red", repository.findByCardId("ZNR150").getColors().get(0).label);
+        assertEquals("green", repository.findByCardId("ZNR150").getColors().get(1).label);
     }
 
     @Test
     void add() {
-        Color red = new Color(3,"red");
-        Color white = new Color(4,"white");
-        Color blue = new Color(5,"blue");
         List<Color> colors = new ArrayList();
-        colors.add(red);
-        colors.add(white);
-        colors.add(blue);
+        colors.add(Color.RED);
+        colors.add(Color.WHITE);
+        colors.add(Color.BLUE);
         ColorIdentity colorIdentity = new ColorIdentity();
         colorIdentity.setColors(colors);
         colorIdentity.setCard(repository.findByCardId("ZNR150").getCard());

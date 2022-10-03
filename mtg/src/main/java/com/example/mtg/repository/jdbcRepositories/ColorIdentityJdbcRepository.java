@@ -4,11 +4,8 @@ import com.example.mtg.model.Color;
 import com.example.mtg.model.ColorIdentity;
 import com.example.mtg.repository.mappers.CardMapper;
 import com.example.mtg.repository.mappers.ColorIdentityMapper;
-import com.example.mtg.repository.mappers.ColorMapper;
 import com.example.mtg.repository.repositoryInterfaces.ColorIdentityRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
-
-import java.util.List;
 
 public class ColorIdentityJdbcRepository implements ColorIdentityRepository {
 
@@ -37,7 +34,7 @@ public class ColorIdentityJdbcRepository implements ColorIdentityRepository {
     public ColorIdentity add(ColorIdentity colorIdentity) {
         final String sql = "insert into color_identity (card_id, color_id) values (?,?);";
         for (Color color : colorIdentity.getColors()){
-            jdbcTemplate.update(sql, colorIdentity.getCard().getCardId(), color.getColorId());
+            jdbcTemplate.update(sql, colorIdentity.getCard().getCardId(), color.id);
         }
         return colorIdentity;
     }
@@ -48,7 +45,7 @@ public class ColorIdentityJdbcRepository implements ColorIdentityRepository {
         int rowsAffected = 0;
         for (Color color : colorIdentity.getColors()){
             rowsAffected += jdbcTemplate.update(sql, newCardId, newColorId,
-                    colorIdentity.getCard().getCardId(), color.getColorId());
+                    colorIdentity.getCard().getCardId(), color.id);
         }
         return rowsAffected > 0;
     }
