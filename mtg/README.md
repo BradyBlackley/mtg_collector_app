@@ -54,3 +54,9 @@ Business Rules:
     - User that owns the card copy must exist and be valid
     - Card copy must not already exist when being added
     - Card copy must already exist when attempting to update or delete it
+
+    Typeline
+    - Typelines must be unique and must not already exist if being added
+    - Typelines must already exist if being updated/deleted
+    - Typeline types must each already exist, and be valid (from TypeService) 
+    - Typeline card must already exist, and be valid (from CardService)
