@@ -98,6 +98,10 @@ public class TypeService {
         return result;
     }
 
+    public boolean validateType(Type type) {
+        return validateTypeName(type.getTypeName());
+    }
+
     private boolean validateTypeName(String typeName) {
         Pattern pattern = Pattern.compile("^[a-zA-Z]{2,25}$");
         Matcher matcher = pattern.matcher(typeName);

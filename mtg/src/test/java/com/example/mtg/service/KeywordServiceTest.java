@@ -181,4 +181,10 @@ public class KeywordServiceTest {
         assertEquals("Failed to delete given keyword " + validKeyword.getKeywordName(),
                 result.getMessages().get(0));
     }
+
+    @Test
+    void validateKeyword() {
+        assertTrue(service.validateKeyword(validKeyword));
+        assertFalse(service.validateKeyword(invalidKeywordName));
+    }
 }

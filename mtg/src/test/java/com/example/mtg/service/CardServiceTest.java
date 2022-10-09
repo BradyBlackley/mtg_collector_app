@@ -46,6 +46,15 @@ class CardServiceTest {
                     "[+1 Loyalty]: Scry 2. [+0 Loyalty]: Draw a card and reveal it. Remove a number of loyalty counters " +
                     "equal to that card's converted mana cost from Jace, Mirror Mage.");
 
+    public Card invalidCard = new Card("ZNR1", "Jace, M1rror M4ge$",
+            "card_images\\zendikar_rising\\znr-63-jace-mirror-mage.jpg", Rarity.MYTHIC,
+            "Tyler Jacobson", "3", null, null, new Expansion(1,
+            "Zendikar Rising", "ZNR", Date.valueOf("2020-09-01")),
+            "Kicker [2 colorless] When Jace, Mirror Mage enters the battlefield, if Jace was kicked, create " +
+                    "a token that's a copy of Jace, Mirror Mage, except it's not legendary and it's starting loyalty is 1. " +
+                    "[+1 Loyalty]: Scry 2. [+0 Loyalty]: Draw a card and reveal it. Remove a number of loyalty counters " +
+                    "equal to that card's converted mana cost from Jace, Mirror Mage.");
+
     public Expansion invalidExpansion = new Expansion(2, "Non exi$tent", "NEX", Date.valueOf("2022-12-22"));
 
     public List<Card> getCardsList() {
@@ -487,5 +496,11 @@ class CardServiceTest {
 
         assertFalse(service.delete(validCard).isSuccess());
         assertEquals("Failed to delete given card " + validCard, service.delete(validCard).getMessages().get(0));
+    }
+
+    @Test
+    void validateCard() {
+        assertTrue(service.validateCard(validCard));
+        assertFalse(service.validateCard(invalidCard));
     }
 }

@@ -130,6 +130,12 @@ public class ExpansionService {
         return result;
     }
 
+    public boolean validateExpansion(Expansion expansion) {
+        return validateExpansionName(expansion.getExpansionName())
+            && validateExpansionCode(expansion.getExpansionCode())
+            && validateExpansionReleasedDate(expansion.getReleasedDate());
+    }
+
     private boolean validateExpansionName(String expansionName) {
         Pattern pattern = Pattern.compile("^[a-zA-Z\\d\\s:]*$");
         Matcher matcher = pattern.matcher(expansionName);

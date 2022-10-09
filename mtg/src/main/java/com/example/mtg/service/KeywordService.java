@@ -111,6 +111,10 @@ public class KeywordService {
         return result;
     }
 
+    public boolean validateKeyword(Keyword keyword) {
+        return validateKeywordName(keyword.getKeywordName());
+    }
+
     private boolean validateKeywordName(String KeywordName) {
         Pattern pattern = Pattern.compile("^[a-zA-Z ]{2,25}$");
         Matcher matcher = pattern.matcher(KeywordName);

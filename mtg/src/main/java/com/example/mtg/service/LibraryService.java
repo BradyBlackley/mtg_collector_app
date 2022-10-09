@@ -1,8 +1,7 @@
 package com.example.mtg.service;
 
 import com.example.mtg.model.Library;
-import com.example.mtg.repository.jdbcRepositories.LibraryJdbcRepository;
-import com.example.mtg.repository.jdbcRepositories.UserJdbcRepository;
+import com.example.mtg.repository.repositoryInterfaces.LibraryRepository;
 import com.example.mtg.service.result.Result;
 import com.example.mtg.service.result.ResultType;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +15,9 @@ import java.util.regex.Pattern;
 public class LibraryService {
 
     @Autowired
-    LibraryJdbcRepository libraryRepository;
+    LibraryRepository libraryRepository;
     @Autowired
-    UserJdbcRepository userRepository;
+    UserService userService;
 
     public Result<List<Library>> findAllLibrariesByUser(String userid) {
         Result<List<Library>> result = new Result<>();
@@ -58,7 +57,7 @@ public class LibraryService {
         } else if (libraryRepository.findLibraryByName(library.getLibraryName(), library.getUser().getUserId()) != null) {
             result.addMessage("The provided library name " + library.getLibraryName() + " is already in use",
                     ResultType.ERROR);
-        } else if (userRepository.findById(library.getUser().getUserId()) == null) {
+        } else if (userService.findById(library.getUser().getUserId()) == null) {
             result.addMessage("User " + library.getUser().getUserId() + " associated with the provided library is "
                             + ResultType.NOT_FOUND.label, ResultType.NOT_FOUND);
         } else {
@@ -103,7 +102,7 @@ public class LibraryService {
         } else if (libraryRepository.findLibraryByName(library.getLibraryName(), library.getUser().getUserId()) == null) {
             result.addMessage("The provided library " + library.getLibraryName() + " is " + ResultType.NOT_FOUND.label,
                     ResultType.NOT_FOUND);
-        } else if (userRepository.findById(library.getUser().getUserId()) == null) {
+        } else if (userService.findById(library.getUser().getUserId()) == null) {
             result.addMessage("User " + library.getUser().getUserId() + " associated with the provided library is "
                     + ResultType.NOT_FOUND.label, ResultType.NOT_FOUND);
         } else if (!libraryRepository.delete(library)) {
@@ -115,6 +114,11 @@ public class LibraryService {
         }
 
         return result;
+    }
+
+    public boolean validateLibrary(Library library) {
+        return validateLibraryName(library.getLibraryName())
+            && userService.validateUser(library.getUser());
     }
 
     private boolean validateLibraryName(String libraryName) {

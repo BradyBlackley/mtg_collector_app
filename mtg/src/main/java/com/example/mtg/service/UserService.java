@@ -139,6 +139,15 @@ public class UserService {
         return result;
     }
 
+    public boolean validateUser(User user) {
+        System.out.println(validateUserId(user.getUserId()) +
+                " + " + validateUsername(user.getUsername()) +
+                " + " + validatePassword(user.getPassword()));
+        return validateUserId(user.getUserId())
+            && validateUsername(user.getUsername())
+            && validatePassword(user.getPassword());
+    }
+
     private boolean validateUserId(String id) {
         Pattern pattern = Pattern.compile(
                 "^[0-9a-fA-F]{8}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{12}$");

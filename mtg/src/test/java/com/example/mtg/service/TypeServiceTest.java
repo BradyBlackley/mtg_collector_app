@@ -164,4 +164,10 @@ public class TypeServiceTest {
         assertEquals("Failed to delete given type " + validType.getTypeName(),
                 result.getMessages().get(0));
     }
+
+    @Test
+    void validateType() {
+        assertTrue(service.validateType(validType));
+        assertFalse(service.validateType(invalidTypeName));
+    }
 }

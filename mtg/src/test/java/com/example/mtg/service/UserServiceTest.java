@@ -253,4 +253,12 @@ class UserServiceTest {
         assertEquals("Failed to delete provided user " + validUser2.getUserId(),
                 service.delete(validUser2.getUserId()).getMessages().get(0));
     }
+
+    @Test
+    void validateUser() {
+        assertTrue(service.validateUser(validUser1));
+        assertFalse(service.validateUser(invalidPasswordUser));
+        assertFalse(service.validateUser(invalidUserIdUser));
+        assertFalse(service.validateUser(invalidUsernameUser));
+    }
 }

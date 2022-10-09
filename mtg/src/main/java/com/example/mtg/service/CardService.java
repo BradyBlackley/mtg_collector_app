@@ -233,6 +233,16 @@ public class CardService {
         return result;
     }
 
+    public boolean validateCard(Card card) {
+        return validateCardId(card.getCardId())
+                && validateCardName(card.getCardName())
+                && validateCardImagePath(card.getImagePath())
+                && validateCardArtistName(card.getArtistName())
+                && validateCardConvertedManaCost(card.getConvertedManaCost())
+                && validateCardPower(card.getPower())
+                && validateCardToughness(card.getToughness());
+    }
+
     private boolean validateCardId(String cardId) {
         Pattern pattern = Pattern.compile("^[A-Z\\d]{3}\\d{3}$");
         Matcher matcher = pattern.matcher(cardId);

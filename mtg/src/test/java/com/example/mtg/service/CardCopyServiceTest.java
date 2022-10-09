@@ -341,4 +341,12 @@ class CardCopyServiceTest {
         assertEquals("Failed to delete given card copy " + validCardCopy,
                 service.delete(validCardCopy).getMessages().get(0));
     }
+
+    @Test
+    void validateCardCopy() {
+        Mockito.when(cardService.validateCard(validCardCopy.getCard())).thenReturn(true);
+        Mockito.when(userService.validateUser(validCardCopy.getUser())).thenReturn(true);
+        assertTrue(service.validateCardCopy(validCardCopy));
+        assertFalse(service.validateCardCopy(invalidCardCopy));
+    }
 }

@@ -239,4 +239,12 @@ public class ExpansionServiceTest {
         assertEquals("Failed to update given expansion " + validExpansion,
                 service.delete(validExpansion).getMessages().get(0));
     }
+
+    @Test
+    void validateExpansion() {
+        assertTrue(service.validateExpansion(validExpansion));
+        assertFalse(service.validateExpansion(invalidNameExpansion));
+        assertFalse(service.validateExpansion(invalidCodeExpansion));
+        assertFalse(service.validateExpansion(invalidReleasedDateExpansion));
+    }
 }

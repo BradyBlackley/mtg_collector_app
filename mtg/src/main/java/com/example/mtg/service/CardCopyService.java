@@ -144,4 +144,9 @@ public class CardCopyService {
         return result;
     }
 
+    public boolean validateCardCopy(CardCopy cardCopy) {
+        return cardService.validateCard(cardCopy.getCard())
+            && userService.validateUser(cardCopy.getUser());
+    }
+
 }
