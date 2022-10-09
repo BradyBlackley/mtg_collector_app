@@ -52,7 +52,7 @@ class TypelineJdbcRepositoryTest extends CommonRepoTest {
 
     @Test
     void delete() {
-        assertTrue(repository.delete(1, "ZNR150"));
+        assertTrue(repository.delete(repository.findByCardId("ZNR150")));
     }
 
     @Test

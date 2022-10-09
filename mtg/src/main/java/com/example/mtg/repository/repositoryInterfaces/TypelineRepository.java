@@ -14,5 +14,5 @@ public interface TypelineRepository {
     boolean update(Typeline typeline);
 
     @Transactional
-    boolean delete(int typeId, String cardId);
+    boolean delete(Typeline typeline);
 }

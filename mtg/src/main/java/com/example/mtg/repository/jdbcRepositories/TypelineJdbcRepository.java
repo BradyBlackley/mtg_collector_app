@@ -52,9 +52,13 @@ public class TypelineJdbcRepository implements TypelineRepository {
     }
 
     @Override
-    public boolean delete(int typeId, String cardId) {
+    public boolean delete(Typeline typeline) {
         final String sql = "delete from typeline where type_id = ? and card_id = ?;";
-        return jdbcTemplate.update(sql, typeId, cardId) > 0;
+        int rowsAffected = 0;
+        for (Type type : typeline.getTypes()) {
+            rowsAffected += jdbcTemplate.update(sql, type.getTypeId(), typeline.getCard().getCardId());
+        }
+        return rowsAffected > 0;
     }
 
     private void addCard(Typeline typeline) {
