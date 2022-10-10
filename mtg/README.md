@@ -60,3 +60,9 @@ Business Rules:
     - Typelines must already exist if being updated/deleted
     - Typeline types must each already exist, and be valid (from TypeService) 
     - Typeline card must already exist, and be valid (from CardService)
+
+    ColorIdentity
+    - A color identity must not already exist when being added (i.e. only one color identity per card)
+    - A color identity must already exist when being updated
+    - A color identity must reference a valid and existing card when being added or updated
+    - Since color enums are already in an expected format there is no need to validate each color in the color list

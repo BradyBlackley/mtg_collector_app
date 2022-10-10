@@ -11,7 +11,7 @@ public interface ColorIdentityRepository {
 
     ColorIdentity add(ColorIdentity colorIdentity);
 
-    boolean update(ColorIdentity colorIdentity, String newCardId, int newColorId);
+    boolean update(ColorIdentity colorIdentity);
 
     @Transactional
     boolean delete(ColorIdentity colorIdentity);

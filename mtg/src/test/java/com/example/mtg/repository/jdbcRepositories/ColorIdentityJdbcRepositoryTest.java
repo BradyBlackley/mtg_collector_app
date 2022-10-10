@@ -44,7 +44,7 @@ class ColorIdentityJdbcRepositoryTest extends CommonRepoTest {
 
     @Test
     void update() {
-        assertTrue(repository.update(repository.findByCardId("ZNR150"), "ZNR150", 6));
+        assertTrue(repository.update(repository.findByCardId("ZNR150")));
     }
 
     @Test
