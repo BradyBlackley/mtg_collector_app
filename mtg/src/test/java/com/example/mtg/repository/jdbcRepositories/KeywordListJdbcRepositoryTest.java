@@ -48,6 +48,16 @@ class KeywordListJdbcRepositoryTest extends CommonRepoTest {
     }
 
     @Test
+    void update() {
+        KeywordList keywordList = repository.findByCardId("ZNR150");
+        List<Keyword> updatedKeywords = keywordList.getKeywords();
+        updatedKeywords.add(new Keyword(3, "Vigilance"));
+        keywordList.setKeywords(updatedKeywords);
+
+        assertTrue(repository.update(keywordList));
+    }
+
+    @Test
     void delete() {
         Keyword doubleStrike = new Keyword(1,"Double Strike");
         List<Keyword> keywords = new ArrayList<>();

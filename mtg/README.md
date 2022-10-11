@@ -64,5 +64,11 @@ Business Rules:
     ColorIdentity
     - A color identity must not already exist when being added (i.e. only one color identity per card)
     - A color identity must already exist when being updated
-    - A color identity must reference a valid and existing card when being added or updated
+    - A color identity must reference a valid and existing card
     - Since color enums are already in an expected format there is no need to validate each color in the color list
+
+    KeywordList
+    - A keyword list must not already exist when being added
+    - A keyword list must already exist when being updated
+    - A keyword list must reference a valid and existing card
+    - A keyword list keyword must each already exist, and be valid (from KeywordService)

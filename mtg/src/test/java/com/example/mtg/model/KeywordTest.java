@@ -50,8 +50,8 @@ class KeywordTest {
         different.setKeywordId(1);
         different.setKeywordName("Flash");
 
-        assertFalse(keyword.equals(different));
-        assertTrue(keyword.equals(keyword1));
+        assertNotEquals(keyword, different);
+        assertEquals(keyword, keyword1);
     }
 
     @Test

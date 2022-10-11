@@ -11,6 +11,8 @@ public interface KeywordListRepository {
 
     KeywordList add(KeywordList keywordList);
 
+    boolean update(KeywordList kewordList);
+
     @Transactional
     boolean delete(KeywordList keywordList);
 }
