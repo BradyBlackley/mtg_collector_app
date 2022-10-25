@@ -6,7 +6,9 @@ import com.example.mtg.repository.mappers.CardMapper;
 import com.example.mtg.repository.mappers.TypelineMapper;
 import com.example.mtg.repository.repositoryInterfaces.TypelineRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class TypelineJdbcRepository implements TypelineRepository {
 
     private final JdbcTemplate jdbcTemplate;

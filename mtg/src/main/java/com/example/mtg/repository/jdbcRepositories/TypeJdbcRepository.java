@@ -4,9 +4,11 @@ import com.example.mtg.model.Type;
 import com.example.mtg.repository.mappers.TypeMapper;
 import com.example.mtg.repository.repositoryInterfaces.TypeRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public class TypeJdbcRepository implements TypeRepository {
 
     private final JdbcTemplate jdbcTemplate;

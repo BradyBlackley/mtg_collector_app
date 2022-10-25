@@ -5,7 +5,9 @@ import com.example.mtg.repository.mappers.CardMapper;
 import com.example.mtg.repository.mappers.ModalMapper;
 import com.example.mtg.repository.repositoryInterfaces.ModalRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class ModalJdbcRepository implements ModalRepository {
 
     private final JdbcTemplate jdbcTemplate;

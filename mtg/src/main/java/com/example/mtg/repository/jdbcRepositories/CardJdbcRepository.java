@@ -6,9 +6,11 @@ import com.example.mtg.repository.mappers.CardMapper;
 import com.example.mtg.repository.mappers.ExpansionMapper;
 import com.example.mtg.repository.repositoryInterfaces.CardRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public class CardJdbcRepository implements CardRepository {
 
     private final JdbcTemplate jdbcTemplate;

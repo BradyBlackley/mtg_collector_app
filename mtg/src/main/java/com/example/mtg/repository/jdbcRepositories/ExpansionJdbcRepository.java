@@ -4,9 +4,11 @@ import com.example.mtg.model.Expansion;
 import com.example.mtg.repository.mappers.ExpansionMapper;
 import com.example.mtg.repository.repositoryInterfaces.ExpansionRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public class ExpansionJdbcRepository implements ExpansionRepository {
 
     private final JdbcTemplate jdbcTemplate;

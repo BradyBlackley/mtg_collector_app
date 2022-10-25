@@ -3,7 +3,7 @@ package com.example.mtg.service;
 import com.example.mtg.model.Card;
 import com.example.mtg.model.CardCopy;
 import com.example.mtg.model.User;
-import com.example.mtg.repository.jdbcRepositories.CardCopyJdbcRepository;
+import com.example.mtg.repository.repositoryInterfaces.CardCopyRepository;
 import com.example.mtg.service.result.Result;
 import com.example.mtg.service.result.ResultType;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import java.util.List;
 @Service
 public class CardCopyService {
     @Autowired
-    private CardCopyJdbcRepository repository;
+    private CardCopyRepository repository;
     @Autowired
     private CardService cardService;
     @Autowired

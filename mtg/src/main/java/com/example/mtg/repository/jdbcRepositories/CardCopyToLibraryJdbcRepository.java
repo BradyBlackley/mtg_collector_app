@@ -5,9 +5,9 @@ import com.example.mtg.model.CardCopyToLibrary;
 import com.example.mtg.repository.mappers.CardCopyToLibraryMapper;
 import com.example.mtg.repository.repositoryInterfaces.CardCopyToLibraryRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
+@Repository
 public class CardCopyToLibraryJdbcRepository implements CardCopyToLibraryRepository {
 
     private final JdbcTemplate jdbcTemplate;

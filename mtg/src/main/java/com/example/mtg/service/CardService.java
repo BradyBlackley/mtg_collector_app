@@ -3,7 +3,7 @@ package com.example.mtg.service;
 import com.example.mtg.model.Card;
 import com.example.mtg.model.Expansion;
 import com.example.mtg.model.Rarity;
-import com.example.mtg.repository.jdbcRepositories.CardJdbcRepository;
+import com.example.mtg.repository.repositoryInterfaces.CardRepository;
 import com.example.mtg.service.result.Result;
 import com.example.mtg.service.result.ResultType;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
 @Service
 public class CardService {
     @Autowired
-    private CardJdbcRepository repository;
+    private CardRepository repository;
     @Autowired
     private ExpansionService expansionService;
 

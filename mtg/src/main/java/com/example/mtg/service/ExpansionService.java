@@ -1,7 +1,7 @@
 package com.example.mtg.service;
 
 import com.example.mtg.model.Expansion;
-import com.example.mtg.repository.jdbcRepositories.ExpansionJdbcRepository;
+import com.example.mtg.repository.repositoryInterfaces.ExpansionRepository;
 import com.example.mtg.service.result.Result;
 import com.example.mtg.service.result.ResultType;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
 @Service
 public class ExpansionService {
     @Autowired
-    private ExpansionJdbcRepository repository;
+    private ExpansionRepository repository;
 
     public Result<List<Expansion>> findAllExpansions() {
         Result<List<Expansion>> result = new Result<>();

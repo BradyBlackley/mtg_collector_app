@@ -2,12 +2,13 @@ package com.example.mtg.repository.jdbcRepositories;
 
 import com.example.mtg.model.Keyword;
 import com.example.mtg.model.KeywordList;
-import com.example.mtg.model.Type;
 import com.example.mtg.repository.mappers.CardMapper;
 import com.example.mtg.repository.mappers.KeywordListMapper;
 import com.example.mtg.repository.repositoryInterfaces.KeywordListRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class KeywordListJdbcRepository implements KeywordListRepository {
 
     private final JdbcTemplate jdbcTemplate;

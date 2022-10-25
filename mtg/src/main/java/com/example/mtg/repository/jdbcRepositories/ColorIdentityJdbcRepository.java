@@ -6,7 +6,9 @@ import com.example.mtg.repository.mappers.CardMapper;
 import com.example.mtg.repository.mappers.ColorIdentityMapper;
 import com.example.mtg.repository.repositoryInterfaces.ColorIdentityRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class ColorIdentityJdbcRepository implements ColorIdentityRepository {
 
     private final JdbcTemplate jdbcTemplate;

@@ -4,9 +4,11 @@ import com.example.mtg.model.Keyword;
 import com.example.mtg.repository.mappers.KeywordMapper;
 import com.example.mtg.repository.repositoryInterfaces.KeywordRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public class KeywordJdbcRepository implements KeywordRepository {
 
     private final JdbcTemplate jdbcTemplate;
