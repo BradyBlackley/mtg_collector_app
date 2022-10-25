@@ -12,4 +12,7 @@ public interface CardCopyToLibraryRepository {
     CardCopyToLibrary add(CardCopyToLibrary cardCopyToLibrary);
 
     boolean update(CardCopyToLibrary cardCopyToLibrary);
+
+    @Transactional
+    boolean delete(CardCopyToLibrary cardCopyToLibrary);
 }

@@ -65,4 +65,15 @@ public class CardCopyToLibraryJdbcRepository implements CardCopyToLibraryReposit
         }
         return rowsAffected > 0;
     }
+
+    @Override
+    public boolean delete(CardCopyToLibrary cardCopyToLibrary) {
+        final String sql =
+                "";
+        int rowsAffected = 0;
+        for (CardCopy cardCopy : cardCopyToLibrary.getCardCopies()){
+            rowsAffected += jdbcTemplate.update(sql);
+        }
+        return rowsAffected > 0;
+    }
 }
