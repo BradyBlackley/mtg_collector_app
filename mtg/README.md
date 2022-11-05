@@ -72,3 +72,9 @@ Business Rules:
     - A keyword list must already exist when being updated
     - A keyword list must reference a valid and existing card
     - A keyword list keyword must each already exist, and be valid (from KeywordService)
+
+    CardCopyToLibrary
+    - A card copy to library must not already exist when being added
+    - A card copy to library must already exist when being updated
+    - A card copy to library must reference a valid and existing card copy
+    - A card copy to library must reference a valid and exisiting library
