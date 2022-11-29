@@ -2,7 +2,7 @@ package com.example.mtg.model;
 
 import java.util.Objects;
 
-public class Modal {
+public class Modal extends Card {
 
     private String modalId;
     private Card frontCard;

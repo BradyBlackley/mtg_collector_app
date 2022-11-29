@@ -68,27 +68,51 @@ public class ModalService {
         return result;
     }
 
+    public Result<Boolean> update(Modal modal) {
+        Result<Boolean> result = new Result<>();
+
+        if(!validateModal(modal)) {
+            result.addMessage("The given modal " + modal + " is invalid", ResultType.INVALID);
+        } else if (repository.findByModalId(modal.getModalId()) == null) {
+            result.addMessage("The given modal " + modal + " doesn't exist", ResultType.INVALID);
+        } else {
+            result.setPayload(repository.update(modal));
+            if(!result.getPayload()) {
+                result.addMessage("Failed to update given modal " + modal, ResultType.ERROR);
+            } else {
+                result.addMessage(ResultType.SUCCESS.label, ResultType.SUCCESS);
+            }
+        }
+        return result;
+    }
+
+    public Result<Boolean> delete(Modal modal) {
+        Result<Boolean> result = new Result<>();
+
+        if(!validateModal(modal)) {
+            result.addMessage("The given modal " + modal + " is invalid", ResultType.INVALID);
+        } else if (repository.findByModalId(modal.getModalId()) == null) {
+            result.addMessage("The given modal " + modal + " doesn't exist", ResultType.INVALID);
+        } else {
+            result.setPayload(repository.delete(modal.getModalId()));
+            if(!result.getPayload()) {
+                result.addMessage("Failed to delete given modal " + modal, ResultType.ERROR);
+            } else {
+                result.addMessage(ResultType.SUCCESS.label, ResultType.SUCCESS);
+            }
+        }
+        return result;
+    }
+
     public boolean validateModal(Modal modal) {
         return validateModalId(modal.getModalId())
-                && validateFrontCardId(modal.getfrontCard().getCardId())
-                && validateBackCardId(modal.getbackCard().getCardId());
+                && cardService.validateCard(modal.getfrontCard())
+                && cardService.validateCard(modal.getbackCard());
     }
 
     private boolean validateModalId(String modalId) {
         Pattern pattern = Pattern.compile("^[A-Z\\d]{3}\\d{3}$");
         Matcher matcher = pattern.matcher(modalId);
-        return matcher.matches();
-    }
-
-    private boolean validateFrontCardId(String cardId) {
-        Pattern pattern = Pattern.compile("^[A-Z\\d]{3}\\d{3}[FB]$");
-        Matcher matcher = pattern.matcher(cardId);
-        return matcher.matches();
-    }
-
-    private boolean validateBackCardId(String cardId) {
-        Pattern pattern = Pattern.compile("^[A-Z\\d]{3}\\d{3}[FB]$");
-        Matcher matcher = pattern.matcher(cardId);
         return matcher.matches();
     }
 

@@ -107,6 +107,9 @@ class ModalServiceTest {
     @Test
     void add() {
         Mockito.when(repository.add(validModal)).thenReturn(validModal);
+        Mockito.when(cardService.validateCard(validModal.getfrontCard())).thenReturn(true);
+        Mockito.when(cardService.validateCard(validModal.getfrontCard())).thenReturn(true);
+        Mockito.when(service.validateModal(validModal)).thenReturn(true);
         assertTrue(service.add(validModal).isSuccess());
         assertEquals("success", service.add(validModal).getMessages().get(0));
     }
@@ -121,6 +124,9 @@ class ModalServiceTest {
     @Test
     void add_ModalAlreadyExists() {
         Mockito.when(repository.findByModalId(validModal.getModalId())).thenReturn(validModal);
+        Mockito.when(cardService.validateCard(validModal.getfrontCard())).thenReturn(true);
+        Mockito.when(cardService.validateCard(validModal.getfrontCard())).thenReturn(true);
+        Mockito.when(service.validateModal(validModal)).thenReturn(true);
         assertFalse(service.add(validModal).isSuccess());
         assertEquals("The given modal " + validModal + " already exists",
                 service.add(validModal).getMessages().get(0));
@@ -128,10 +134,94 @@ class ModalServiceTest {
 
     @Test
     void add_Failed() {
-        Mockito.when(repository.findByModalId(validModal.getModalId())).thenReturn(validModal);
-        Mockito.when(service.add(validModal)).thenReturn(null);
+        Mockito.when(repository.findByModalId(validModal.getModalId())).thenReturn(null);
+        Mockito.when(cardService.validateCard(validModal.getfrontCard())).thenReturn(true);
+        Mockito.when(cardService.validateCard(validModal.getfrontCard())).thenReturn(true);
+        Mockito.when(service.validateModal(validModal)).thenReturn(true);
         assertFalse(service.add(validModal).isSuccess());
         assertEquals("Failed to add given modal " + validModal,
                 service.add(validModal).getMessages().get(0));
+    }
+
+    @Test
+    void update() {
+        Mockito.when(repository.findByModalId(validModal.getModalId())).thenReturn(validModal);
+        Mockito.when(repository.update(validModal)).thenReturn(true);
+        Mockito.when(cardService.validateCard(validModal.getfrontCard())).thenReturn(true);
+        Mockito.when(cardService.validateCard(validModal.getfrontCard())).thenReturn(true);
+        Mockito.when(service.validateModal(validModal)).thenReturn(true);
+        assertTrue(service.update(validModal).isSuccess());
+        assertEquals("success", service.update(validModal).getMessages().get(0));
+    }
+
+    @Test
+    void update_InvalidModal() {
+        assertFalse(service.update(invalidModal).isSuccess());
+        assertEquals("The given modal " + invalidModal + " is invalid",
+                service.update(invalidModal).getMessages().get(0));
+    }
+
+    @Test
+    void update_ModalDoesNotExist() {
+        Mockito.when(repository.findByModalId(validModal.getModalId())).thenReturn(null);
+        Mockito.when(cardService.validateCard(validModal.getfrontCard())).thenReturn(true);
+        Mockito.when(cardService.validateCard(validModal.getfrontCard())).thenReturn(true);
+        Mockito.when(service.validateModal(validModal)).thenReturn(true);
+        assertFalse(service.update(validModal).isSuccess());
+        assertEquals("The given modal " + validModal + " doesn't exist",
+                service.update(validModal).getMessages().get(0));
+    }
+
+    @Test
+    void update_Failed() {
+        Mockito.when(repository.findByModalId(validModal.getModalId())).thenReturn(validModal);
+        Mockito.when(cardService.validateCard(validModal.getfrontCard())).thenReturn(true);
+        Mockito.when(cardService.validateCard(validModal.getfrontCard())).thenReturn(true);
+        Mockito.when(service.validateModal(validModal)).thenReturn(true);
+        Mockito.when(repository.update(validModal)).thenReturn(false);
+        assertFalse(service.update(validModal).isSuccess());
+        assertEquals("Failed to update given modal " + validModal,
+                service.update(validModal).getMessages().get(0));
+    }
+
+    @Test
+    void delete() {
+        Mockito.when(repository.findByModalId(validModal.getModalId())).thenReturn(validModal);
+        Mockito.when(repository.delete(validModal.getModalId())).thenReturn(true);
+        Mockito.when(cardService.validateCard(validModal.getfrontCard())).thenReturn(true);
+        Mockito.when(cardService.validateCard(validModal.getfrontCard())).thenReturn(true);
+        Mockito.when(service.validateModal(validModal)).thenReturn(true);
+        assertTrue(service.delete(validModal).isSuccess());
+        assertEquals("success", service.delete(validModal).getMessages().get(0));
+    }
+
+    @Test
+    void delete_InvalidModal() {
+        assertFalse(service.delete(invalidModal).isSuccess());
+        assertEquals("The given modal " + invalidModal + " is invalid",
+                service.delete(invalidModal).getMessages().get(0));
+    }
+
+    @Test
+    void delete_ModalDoesNotExist() {
+        Mockito.when(repository.findByModalId(validModal.getModalId())).thenReturn(null);
+        Mockito.when(cardService.validateCard(validModal.getfrontCard())).thenReturn(true);
+        Mockito.when(cardService.validateCard(validModal.getfrontCard())).thenReturn(true);
+        Mockito.when(service.validateModal(validModal)).thenReturn(true);
+        assertFalse(service.delete(validModal).isSuccess());
+        assertEquals("The given modal " + validModal + " doesn't exist",
+                service.delete(validModal).getMessages().get(0));
+    }
+
+    @Test
+    void delete_Failed() {
+        Mockito.when(repository.findByModalId(validModal.getModalId())).thenReturn(validModal);
+        Mockito.when(cardService.validateCard(validModal.getfrontCard())).thenReturn(true);
+        Mockito.when(cardService.validateCard(validModal.getfrontCard())).thenReturn(true);
+        Mockito.when(service.validateModal(validModal)).thenReturn(true);
+        Mockito.when(repository.delete(validModal.getModalId())).thenReturn(false);
+        assertFalse(service.delete(validModal).isSuccess());
+        assertEquals("Failed to delete given modal " + validModal,
+                service.delete(validModal).getMessages().get(0));
     }
 }

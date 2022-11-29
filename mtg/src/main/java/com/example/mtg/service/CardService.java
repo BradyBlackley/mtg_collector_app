@@ -244,7 +244,7 @@ public class CardService {
     }
 
     private boolean validateCardId(String cardId) {
-        Pattern pattern = Pattern.compile("^[A-Z\\d]{3}\\d{3}$");
+        Pattern pattern = Pattern.compile("^[A-Z\\d]{3}\\d{3}[FB]?$");
         Matcher matcher = pattern.matcher(cardId);
         return matcher.matches();
     }
