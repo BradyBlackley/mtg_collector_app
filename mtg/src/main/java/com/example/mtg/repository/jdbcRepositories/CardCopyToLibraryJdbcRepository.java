@@ -69,10 +69,12 @@ public class CardCopyToLibraryJdbcRepository implements CardCopyToLibraryReposit
     @Override
     public boolean delete(CardCopyToLibrary cardCopyToLibrary) {
         final String sql =
-                "";
+                "delete from card_copy_to_library " +
+                "where card_copy_id = ? and library_id = ?";
         int rowsAffected = 0;
         for (CardCopy cardCopy : cardCopyToLibrary.getCardCopies()){
-            rowsAffected += jdbcTemplate.update(sql);
+            rowsAffected += jdbcTemplate.update(sql, cardCopy.getCardCopyId(),
+                    cardCopyToLibrary.getLibrary().getLibraryId());
         }
         return rowsAffected > 0;
     }

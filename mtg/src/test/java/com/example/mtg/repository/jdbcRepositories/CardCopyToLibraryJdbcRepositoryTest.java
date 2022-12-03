@@ -60,4 +60,10 @@ class CardCopyToLibraryJdbcRepositoryTest extends CommonRepoTest {
 
         assertTrue(repository.update(cardCopyToLibrary));
     }
+
+    @Test
+    void delete() {
+        CardCopyToLibrary cardCopyToLibrary = repository.findByLibraryId(1);
+        assertTrue(repository.delete(cardCopyToLibrary));
+    }
 }

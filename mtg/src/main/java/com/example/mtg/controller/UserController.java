@@ -2,12 +2,14 @@ package com.example.mtg.controller;
 
 import com.example.mtg.model.User;
 import com.example.mtg.service.UserService;
+import com.example.mtg.service.result.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@RequestMapping("/api/users")
 public class UserController {
 
     @Autowired
@@ -20,9 +22,8 @@ public class UserController {
     }
 
     @GetMapping("/users")
-    public List<User> findAll(){
-        //return service.findAll();
-        return null;
+    public Result<List<User>> findAll(){
+        return service.findAll();
     }
 
     @GetMapping("/user/{id}")
