@@ -163,7 +163,6 @@ class UserServiceTest {
 
     @Test
     void update() {
-        Mockito.when(repository.findByUsername(validUser1.getUsername())).thenReturn(validUser1);
         Mockito.when(repository.update(validUser1)).thenReturn(true);
 
         assertTrue(service.update(validUser1).isSuccess());
@@ -196,15 +195,7 @@ class UserServiceTest {
     }
 
     @Test
-    void updateUserDoesNotExist() {
-        assertFalse(service.update(validUser2).isSuccess());
-        assertEquals("Provided user does not exist ",
-                service.update(validUser2).getMessages().get(0));
-    }
-
-    @Test
     void updateUserFailedToUpdate() {
-        Mockito.when(repository.findByUsername(validUser2.getUsername())).thenReturn(validUser2);
         Mockito.when(repository.update(validUser2)).thenReturn(false);
 
         assertFalse(service.update(validUser2).isSuccess());

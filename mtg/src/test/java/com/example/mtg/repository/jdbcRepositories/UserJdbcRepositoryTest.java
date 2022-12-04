@@ -49,7 +49,7 @@ class UserJdbcRepositoryTest extends CommonRepoTest {
         assertNotNull(repository.add(makeUser()));
         assertEquals(3, repository.findAll().size());
         assertNotNull(repository.findByUsername("H4rry_P0tter"));
-        assertEquals("5f8912b2d920b8e6a4b758de25684ea63ac93c6bf576b41e977298d1c98320bc",
+        assertEquals("-758576035",
                 repository.findByUsername("H4rry_P0tter").getPassword());
     }
 

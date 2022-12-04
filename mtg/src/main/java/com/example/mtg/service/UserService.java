@@ -105,8 +105,6 @@ public class UserService {
             result.addMessage("The provided user password is " + ResultType.INVALID.label +
                     ". Password must contain an uppercase, lowercase, number, special character (!@#$%^&*), and a " +
                     "minimum of 8 characters", ResultType.INVALID);
-        } else if (repository.findByUsername(user.getUsername()) == null) {
-            result.addMessage("Provided user does not exist ", ResultType.NOT_FOUND);
         } else if (!repository.update(user)) {
             result.addMessage("Failed to update provided user " + user.getUserId() + " " + user.getUsername(),
                     ResultType.ERROR);

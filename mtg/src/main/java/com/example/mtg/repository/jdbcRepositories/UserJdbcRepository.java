@@ -41,6 +41,7 @@ public class UserJdbcRepository implements UserRepository {
     public User add(User user) {
 
         user.setUserId(java.util.UUID.randomUUID().toString());
+        user.setPassword(String.valueOf(user.getPassword().hashCode()));
 
         final String sql = "insert into `user` (user_id, username, `password`)" +
                 " values (?,?,?);";
@@ -52,6 +53,8 @@ public class UserJdbcRepository implements UserRepository {
 
     @Override
     public boolean update(User user) {
+
+        user.setPassword(String.valueOf(user.getPassword().hashCode()));
 
         final String sql = "update user set " +
                 "username = ?, " +
