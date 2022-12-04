@@ -90,6 +90,6 @@ class UserTest {
         user.setPassword("d55e52b3e8da93c174bd319178a91f5248d205849e64925fdc76d9fbd62527ca");
 
         assertEquals("{\"userId\":\"5d209ac0-9102-11ec-b909-0242ac120002\", \"username\":\"TimTheMagicMan\"," +
-                " \"password\":\"d55e52b3e8da93c174bd319178a91f5248d205849e64925fdc76d9fbd62527ca\"}", user.toString());
+                " \"password\":\"1622071445\"}", user.toString());
     }
 }

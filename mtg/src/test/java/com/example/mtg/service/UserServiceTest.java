@@ -124,13 +124,6 @@ class UserServiceTest {
         assertEquals("success", service.add(validUser2).getMessages().get(0));
     }
 
-    @Test
-    void addInvalidUserId() {
-        assertFalse(service.add(invalidUserIdUser).isSuccess());
-        assertEquals("The provided user id " + invalidUserIdUser.getUserId() + " is " + ResultType.INVALID.label,
-                service.add(invalidUserIdUser).getMessages().get(0));
-    }
-
 
     @Test
     void addInvalidUsernameUser() {

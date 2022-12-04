@@ -15,38 +15,33 @@ public class UserController {
     @Autowired
     private UserService service;
 
-    @PostMapping("/addUser")
-    public User addUser(@RequestBody User user){
-        //return service.add(user);
-        return null;
-    }
-
     @GetMapping("/users")
     public Result<List<User>> findAll(){
         return service.findAll();
     }
 
-    @GetMapping("/user/{id}")
-    public User findById(@PathVariable String id){
-        //return service.findById(id);
-        return null;
+    @GetMapping("/userId/{id}")
+    public Result<User> findById(@PathVariable String id){
+        return service.findById(id);
     }
 
-    @GetMapping("/user/{name}")
-    public User findByName(@PathVariable String name){
-        //return service.findByUsername(name);
-        return null;
+    @GetMapping("/userName/{name}")
+    public Result<User> findByName(@PathVariable String name){
+        return service.findByUsername(name);
     }
 
-    @PutMapping("/update")
-    public User update(@RequestBody User user){
-        //return service.update(user);
-        return null;
+    @PostMapping("/addUser")
+    public Result<User> addUser(@RequestBody User user){
+        return service.add(user);
     }
 
-    @DeleteMapping("/delete/{id}")
-    public String deleteById(@PathVariable String id){
-        //return service.delete(id);
-        return null;
+    @PutMapping("/updateUser")
+    public Result<User> update(@RequestBody User user){
+        return service.update(user);
+    }
+
+    @DeleteMapping("/deleteUser/{id}")
+    public Result<Boolean> deleteById(@PathVariable String id){
+        return service.delete(id);
     }
 }

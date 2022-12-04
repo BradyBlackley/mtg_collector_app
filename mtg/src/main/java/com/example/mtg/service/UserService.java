@@ -72,10 +72,7 @@ public class UserService {
         Result<User> result = new Result<>();
         result.setPayload(user);
 
-        if (!validateUserId(user.getUserId())) {
-            result.addMessage("The provided user id " + user.getUserId() + " is " + ResultType.INVALID.label,
-                    ResultType.INVALID);
-        } else if (!validateUsername(user.getUsername())) {
+          if (!validateUsername(user.getUsername())) {
             result.addMessage("The provided username " + user.getUsername() + " is " + ResultType.INVALID.label +
                     ". Username must be greater than 3 characters and less than 16 characters", ResultType.INVALID);
         } else if (!validatePassword(user.getPassword())) {
