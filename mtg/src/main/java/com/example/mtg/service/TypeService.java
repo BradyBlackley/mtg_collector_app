@@ -44,7 +44,6 @@ public class TypeService {
 
     public Result<Type> add(Type type) {
         Result<Type> result = new Result<>();
-        result.setPayload(repository.add(type));
 
         if(!validateTypeName(type.getTypeName())) {
             result.addMessage("The provided type name " + type.getTypeName() + " is " + ResultType.INVALID.label,
@@ -53,6 +52,7 @@ public class TypeService {
             result.addMessage("The provided type name " + type.getTypeName() + " is already in use",
                     ResultType.INVALID);
         } else {
+            result.setPayload(repository.add(type));
             result.addMessage("success", ResultType.SUCCESS);
         }
 

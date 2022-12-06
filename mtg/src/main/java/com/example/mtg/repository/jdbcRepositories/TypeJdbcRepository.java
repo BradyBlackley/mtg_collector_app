@@ -4,8 +4,13 @@ import com.example.mtg.model.Type;
 import com.example.mtg.repository.mappers.TypeMapper;
 import com.example.mtg.repository.repositoryInterfaces.TypeRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.stereotype.Repository;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.List;
 
 @Repository
