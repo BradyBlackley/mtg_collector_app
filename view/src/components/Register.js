@@ -19,7 +19,7 @@ function Register() {
     const [password, setPassword] = useState("");
     const [confirmPass, setConfirmPass] = useState("");
     const [errors, setErrors] = useState([]);
-    const [response, setResponse] = useState();
+    const [responseMessage, setResponseMessage] = useState();
 
     const onSubmit = evt => {
         if(password !== confirmPass) {
@@ -35,7 +35,7 @@ function Register() {
             
             addUser(user)
             .then(response => response.json())
-            .then(message => setResponse(message))
+            .then(message => setResponseMessage(message))
         }
     };
 
@@ -73,6 +73,7 @@ function Register() {
                         </div>
                     </div>
                     { <Errors errors={errors} /> }
+                    { <ResponseMessage responseMessage={responseMessage} /> }
                 </div>
             </div>
         </form>

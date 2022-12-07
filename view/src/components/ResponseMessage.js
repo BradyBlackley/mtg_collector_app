@@ -7,10 +7,11 @@ const pStyle = {
 }
 
 
-function ResponseMessage ({response}) {
+function ResponseMessage (responseMessage) {
     return(
         <div>
-            <p style={pStyle}></p>
+            <p style={pStyle}>Success</p>
+            {console.log(responseMessage)}
         </div>
     )
 }
