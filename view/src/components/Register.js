@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { addUser } from '../services/user-services';
 import Errors from './Errors';
+import ResponseMessage from './ResponseMessage';
 
 const divStyle = {
     padding: "25px",
@@ -18,6 +19,7 @@ function Register() {
     const [password, setPassword] = useState("");
     const [confirmPass, setConfirmPass] = useState("");
     const [errors, setErrors] = useState([]);
+    const [response, setResponse] = useState();
 
     const onSubmit = evt => {
         if(password !== confirmPass) {
@@ -25,16 +27,15 @@ function Register() {
              setErrors(["Passwords do not match"]);
         } else {
             evt.preventDefault();
-                evt.preventDefault();
                 
-                const user = {
-                    "username": username,
-                    "password": password
-                };
-                
-                addUser(user)
-                .then()
-                .catch(err => setErrors);
+            const user = {
+                "username": username,
+                "password": password
+            };
+            
+            addUser(user)
+            .then(response => response.json())
+            .then(message => setResponse(message))
         }
     };
 
