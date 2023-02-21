@@ -15,6 +15,7 @@ import { Navigate } from "react-router-dom";
 import { useState } from "react";
 import { ProvideAuth } from "./auth/use-auth.js";
 import background from "./assets/site_images/mana-symbols.jpg";
+import Admin from "./components/Admin";
 
 const containerStyle = {
   position: "relative"
@@ -61,6 +62,7 @@ function App() {
                 <Route path="/statistics" element={user ? <Navigate to="/statistics"/> : <Navigate to="/login" />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
+                <Route path="/admin" element={<Admin />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/support" element={<Support />} />
                 <Route path="/help" element={<Help />} />   

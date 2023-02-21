@@ -1,4 +1,7 @@
-const pStyle = {
+import React from 'react';
+import { useState } from "react";
+
+const messageStyle = {
     backgroundColor: "#99ff99",
     border: "solid",
     borderRadius: "10px",
@@ -7,11 +10,11 @@ const pStyle = {
 }
 
 
-function ResponseMessage (responseMessage) {
+function ResponseMessage ({responseMessage}) {
+
     return(
         <div>
-            <p style={pStyle}>Success</p>
-            {console.log(responseMessage)}
+            <p style={messageStyle}>{responseMessage?.messages}</p>
         </div>
     )
 }

@@ -31,6 +31,7 @@ function Nav() {
                 <li style={liStyle}><Link to="/browse" style={aStyle}>Browse</Link></li>
                 <li style={liStyle}><Link to="/myCollection" style={aStyle}>My Collection</Link></li>
                 <li style={liStyle}><Link to="/statistics" style={aStyle}>Statistics</Link></li>
+                <li style={liStyle}><Link to="/admin" style={aStyle}>Admin</Link></li>
             </ul>
         </div>
     )
