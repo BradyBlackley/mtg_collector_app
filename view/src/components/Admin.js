@@ -16,10 +16,10 @@ function Admin() {
         <div className="admin">
             <AdminNav />
             <Routes>
-                <Route path="/admin/addCard" element={<AddCard/>} />
-                <Route path="/admin/addType" element={<AddType/>} />
-                <Route path="/admin/addExpansion" element={<AddExpansion/>} />
-                <Route path="/admin/addKeyword" element={<AddKeyword/>} />
+                <Route path="/addCard" element={<AddCard/>} />
+                <Route path="/addType" element={<AddType/>} />
+                <Route path="/addExpansion" element={<AddExpansion/>} />
+                <Route path="/addKeyword" element={<AddKeyword/>} />
             </Routes>
         </div>
     )

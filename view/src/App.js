@@ -62,7 +62,7 @@ function App() {
                 <Route path="/statistics" element={user ? <Navigate to="/statistics"/> : <Navigate to="/login" />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
-                <Route path="/admin" element={<Admin />} />
+                <Route path="/admin/*" element={<Admin />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/support" element={<Support />} />
                 <Route path="/help" element={<Help />} />   

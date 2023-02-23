@@ -16,7 +16,7 @@ public class TypeController {
     @Autowired
     private TypeService service;
 
-    @GetMapping("/types")
+    @GetMapping("/allTypes")
     public Result<List<Type>> findAllTypes() {
         return service.findAllTypes();
     }

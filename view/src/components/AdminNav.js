@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 const navStyle = {
-    
 }
 
 const ulStyle = {
@@ -9,7 +8,7 @@ const ulStyle = {
     margin: "0",
     padding: "0",
     overflow: "hidden",
-    backgroundColor: "#333333"
+    backgroundColor : "grey"
 }
 
 const liStyle = {
