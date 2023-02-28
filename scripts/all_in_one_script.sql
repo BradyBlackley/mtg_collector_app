@@ -642,7 +642,7 @@ CALL InsertType('Creature');
 CALL InsertType('Dungeon');
 CALL InsertType('Enchantment');
 CALL InsertType('Instant');
-CALL InsertType('Basic Land');
+CALL InsertType('Basic');
 CALL InsertType('Land');
 CALL InsertType('Phenomenon');
 CALL InsertType('Plane');
