@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from "react";
+import { useEffect } from "react";
 import { getAllTypes } from "../services/type-services";
 import { useState } from "react";
 
@@ -32,10 +32,7 @@ function AddType() {
                     </input>
                 <ul>
                     {types.filter(t => t.typeName.includes(filter) || filter === '')
-                    .map(t => <li key={t.typeName}>{t.typeName}</li>)}
-                    {/* {types.map((type) => (
-                        <li id={type.typeName} style={liStyle}>{type.typeName}</li>
-                    ))}                                              */}
+                    .map(t => <li key={t.typeName} style={liStyle}>{t.typeName}</li>)}
                 </ul>
             </div>
         </div>
