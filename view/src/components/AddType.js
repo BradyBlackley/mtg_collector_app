@@ -10,6 +10,7 @@ function AddType() {
 
     const [types, setTypes] = useState([]);
     const [responseMessage, setResponseMessage] = useState();
+    const [filter, setFilter] = useState('');
 
     useEffect(() => {
         getAllTypes()
@@ -17,35 +18,24 @@ function AddType() {
         .then(response => setTypes(response.payload))
     }, []);
 
-    // const filterFunction = useEffect (() => {
-    //         var input, filter, ul, li, i, div, txtValue;
-    //         input = document.getElementById("myInput");
-    //         console.log(input);
-    //         filter = input.value.toUpperCase();
-    //         div = document.getElementById("myDropdown");
-    //         ul = div.getElementsByTagName("ul");
-    //         for (i = 0; i < ul.length; i++) {
-    //           txtValue = ul[i].textContent || ul[i].innerText;
-    //           if (txtValue.toUpperCase().indexOf(filter) > -1) {
-    //             li[i].style.display = "";
-    //           } else {
-    //             li[i].style.display = "none";
-    //           }
-    //         }
-    //     }, []);
-
     if (!types) return <div>Loading...</div>;
     
     return(
         <div className="add-type">
-            {console.log(types)}
-            {console.log(responseMessage)}
             <div id="myDropdown" className="dropdown-content">
+                    <input 
+                    type="text" 
+                    placeholder="Search.." 
+                    id="myInput" 
+                    value={filter}
+                    onChange={event => setFilter(event.target.value)}>
+                    </input>
                 <ul>
-                    <input type="text" placeholder="Search.." id="myInput" onKeyUp=""></input>
-                    {types.map((type) => (
+                    {types.filter(t => t.typeName.includes(filter) || filter === '')
+                    .map(t => <li key={t.typeName}>{t.typeName}</li>)}
+                    {/* {types.map((type) => (
                         <li id={type.typeName} style={liStyle}>{type.typeName}</li>
-                    ))}
+                    ))}                                              */}
                 </ul>
             </div>
         </div>
