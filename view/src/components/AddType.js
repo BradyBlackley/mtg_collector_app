@@ -84,7 +84,7 @@ function AddType() {
                         <img src={searchIcon} style={searchIconStyle} width="35px" height="35px" alt="search icon"/>
                         <input 
                         type="text" 
-                        placeholder="Type" 
+                        placeholder="Add type" 
                         id="myInput" 
                         value={filter}
                         onChange={event => setFilter(event.target.value)}
