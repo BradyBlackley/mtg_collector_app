@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbad1684-f930-45d1-8ac4-3e783e22479a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/data/KeywordList.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/repositoryInterfaces/KeywordListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/repositoryInterfaces/KeywordListRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepositoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../view/src/components/AddType.js" beforeDir="false" afterPath="$PROJECT_DIR$/../view/src/components/AddType.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,16 +54,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/brady/IdeaProjects/mtg_collector_app/mtg",
+    "settings.editor.selected.configurable": "vcs.Git"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -90,11 +83,11 @@
       <command value="mvn -P dev" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.KeywordListJdbcRepositoryTest.add">
+  <component name="RunManager" selected="Application.MtgApplication">
     <configuration name="MtgApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <envs>
         <env name="USERNAME" value="root" />
-        <env name="PASSWORD" value="Bb1181051$" />
+        <env name="PASSWORD" value="Bb1181051" />
       </envs>
       <option name="MAIN_CLASS_NAME" value="com.example.mtg.MtgApplication" />
       <module name="mtg" />
@@ -238,10 +231,10 @@
     <SUITE FILE_PATH="coverage/mtg$com_example_mtg_repository_in_mtg.ic" NAME="com.example.mtg.repository in mtg Coverage Results" MODIFIED="1655396516472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.mtg.repository.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/mtg$com_example_mtg_repository_jdbcRepositories_in_mtg.ic" NAME="com.example.mtg.repository.jdbcRepositories in mtg Coverage Results" MODIFIED="1655398801393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/mtg$TypelineJdbcRepositoryTest.ic" NAME="TypelineJdbcRepositoryTest Coverage Results" MODIFIED="1655398151587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.mtg.repository.jdbcRepositories.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/mtg$TypelineJdbcRepositoryTest.ic" NAME="TypelineJdbcRepositoryTest Coverage Results" MODIFIED="1655398151587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/mtg$com_example_mtg_repository_jdbcRepositories_in_mtg.ic" NAME="com.example.mtg.repository.jdbcRepositories in mtg Coverage Results" MODIFIED="1655398801393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.mtg.repository.jdbcRepositories.*</FILTER>
     </SUITE>
   </component>
