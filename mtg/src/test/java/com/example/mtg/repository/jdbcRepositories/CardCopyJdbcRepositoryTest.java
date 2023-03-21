@@ -81,6 +81,8 @@ class CardCopyJdbcRepositoryTest extends CommonRepoTest {
     void add() {
         assertEquals(2, repository.findAllByUser("9a219974-9102-11ec-b909-0242ac120002").size());
         assertNotNull(repository.add(makeCardCopy()));
+        assertTrue(repository.findAllByCardId("ZNR150",
+                "9a219974-9102-11ec-b909-0242ac120002").get(0).getCardCopyId() > 0);
         assertEquals(3, repository.findAllByUser("9a219974-9102-11ec-b909-0242ac120002").size());
     }
 
@@ -103,6 +105,7 @@ class CardCopyJdbcRepositoryTest extends CommonRepoTest {
 
     private CardCopy makeCardCopy() {
         CardCopy cardCopy = new CardCopy();
+        cardCopy.setCardCopyId(-1);
         cardCopy.setCard(new Card("ZNR150"));
         cardCopy.setUser(new User("9a219974-9102-11ec-b909-0242ac120002"));
         return cardCopy;

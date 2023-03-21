@@ -9,6 +9,7 @@ import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
 import java.sql.PreparedStatement;
+import java.sql.Statement;
 import java.util.List;
 
 @Repository
@@ -68,7 +69,7 @@ public class CardCopyJdbcRepository implements CardCopyRepository {
                 "values (?,?);";
         jdbcTemplate.update(connection -> {
             PreparedStatement ps = connection
-                    .prepareStatement(sql);
+                    .prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, cardCopy.getCard().getCardId());
             ps.setString(2, cardCopy.getUser().getUserId());
             return ps;

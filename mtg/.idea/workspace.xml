@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bbad1684-f930-45d1-8ac4-3e783e22479a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/model/Rarity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/model/Rarity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/CardCopyJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/CardCopyJdbcRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/CardCopyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/CardCopyMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/mtg/repository/jdbcRepositories/CardCopyJdbcRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/mtg/repository/jdbcRepositories/CardCopyJdbcRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/jdbcRepositories/CardCopyJdbcRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/jdbcRepositories/CardCopyJdbcRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,15 +218,6 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/CardCopyJdbcRepository.java</url>
-          <line>71</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="listeners" />
