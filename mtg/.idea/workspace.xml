@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbad1684-f930-45d1-8ac4-3e783e22479a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/model/CardEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/mtg/service/TypeServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/mtg/service/TypeServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/model/Rarity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/model/Rarity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/CardCopyJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/CardCopyJdbcRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/CardCopyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/CardCopyMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,14 +56,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/brady/IdeaProjects/mtg_collector_app/mtg&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/brady/IdeaProjects/mtg_collector_app/mtg",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -84,7 +88,7 @@
       <command value="mvn -P dev" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in mtg">
+  <component name="RunManager" selected="JUnit.CardCopyJdbcRepositoryTest">
     <configuration name="MtgApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <envs>
         <env name="USERNAME" value="root" />
@@ -111,7 +115,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KeywordListJdbcRepositoryTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardCopyJdbcRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mtg" />
       <extension name="coverage">
         <pattern>
@@ -120,14 +124,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.KeywordListJdbcRepositoryTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.CardCopyJdbcRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardCopyJdbcRepositoryTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mtg" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.mtg.repository.jdbcRepositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.CardCopyJdbcRepositoryTest" />
       <option name="METHOD_NAME" value="add" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KeywordListJdbcRepositoryTest.findByCardId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardCopyJdbcRepositoryTest.findAllByUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mtg" />
       <extension name="coverage">
         <pattern>
@@ -136,40 +155,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.KeywordListJdbcRepositoryTest" />
-      <option name="METHOD_NAME" value="findByCardId" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.CardCopyJdbcRepositoryTest" />
+      <option name="METHOD_NAME" value="findAllByUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TypeServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardCopyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mtg" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.mtg.service.*" />
+          <option name="PATTERN" value="com.example.mtg.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.mtg.service" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.service.TypeServiceTest" />
+      <option name="PACKAGE_NAME" value="com.example.mtg.model" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.model.CardCopyTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TypeServiceTest.addInvalidTypeName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mtg" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.mtg.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.mtg.service" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.service.TypeServiceTest" />
-      <option name="METHOD_NAME" value="addInvalidTypeName" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -177,18 +180,18 @@
     <list>
       <item itemvalue="Application.MtgApplication" />
       <item itemvalue="JUnit.All in mtg" />
-      <item itemvalue="JUnit.TypeServiceTest" />
-      <item itemvalue="JUnit.TypeServiceTest.addInvalidTypeName" />
-      <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.findByCardId" />
-      <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.add" />
+      <item itemvalue="JUnit.CardCopyJdbcRepositoryTest" />
+      <item itemvalue="JUnit.CardCopyJdbcRepositoryTest.add" />
+      <item itemvalue="JUnit.CardCopyJdbcRepositoryTest.findAllByUser" />
+      <item itemvalue="JUnit.CardCopyTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CardCopyJdbcRepositoryTest" />
+        <item itemvalue="JUnit.CardCopyJdbcRepositoryTest.add" />
+        <item itemvalue="JUnit.CardCopyJdbcRepositoryTest.findAllByUser" />
+        <item itemvalue="JUnit.CardCopyTest" />
         <item itemvalue="JUnit.All in mtg" />
-        <item itemvalue="JUnit.TypeServiceTest" />
-        <item itemvalue="JUnit.TypeServiceTest.addInvalidTypeName" />
-        <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.add" />
-        <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.findByCardId" />
       </list>
     </recent_temporary>
   </component>
@@ -215,6 +218,15 @@
     </option>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/CardCopyJdbcRepository.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="listeners" />

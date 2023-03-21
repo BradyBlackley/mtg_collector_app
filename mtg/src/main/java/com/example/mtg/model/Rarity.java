@@ -8,7 +8,7 @@ public enum Rarity {
 
     public final String label;
 
-    private Rarity(String label) {
+    Rarity(String label) {
         this.label = label;
     }
 }

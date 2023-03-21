@@ -14,11 +14,9 @@ public class CardCopyMapper implements RowMapper<CardCopy> {
     public CardCopy mapRow(ResultSet rs, int i) throws SQLException {
         CardCopy cardCopy = new CardCopy();
         cardCopy.setCardCopyId(rs.getInt("card_copy_id"));
-        Card card = new Card();
-        card.setCardId(rs.getString("card_id"));
+        Card card = new CardMapper().mapRow(rs,i);
         cardCopy.setCard(card);
-        User user = new User();
-        user.setUserId(rs.getString("user_id"));
+        User user = new UserMapper().mapRow(rs,i);
         cardCopy.setUser(user);
         return cardCopy;
     }
