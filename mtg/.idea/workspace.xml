@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbad1684-f930-45d1-8ac4-3e783e22479a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/model/CardEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../view/src/components/AddType.js" beforeDir="false" afterPath="$PROJECT_DIR$/../view/src/components/AddType.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/mtg/service/TypeServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/mtg/service/TypeServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +21,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -54,14 +55,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/brady/IdeaProjects/mtg_collector_app/mtg",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/brady/IdeaProjects/mtg_collector_app/mtg&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -83,7 +84,7 @@
       <command value="mvn -P dev" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.MtgApplication">
+  <component name="RunManager" selected="JUnit.All in mtg">
     <configuration name="MtgApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <envs>
         <env name="USERNAME" value="root" />
@@ -102,17 +103,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KeywordListJdbcRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in mtg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mtg" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.mtg.repository.jdbcRepositories.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.KeywordListJdbcRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -128,22 +122,6 @@
       <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
       <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.KeywordListJdbcRepositoryTest" />
       <option name="METHOD_NAME" value="add" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="KeywordListJdbcRepositoryTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mtg" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.mtg.repository.jdbcRepositories.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.KeywordListJdbcRepositoryTest" />
-      <option name="METHOD_NAME" value="findAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -165,35 +143,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.example.mtg.repository.jdbcRepositories in mtg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TypeServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mtg" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.mtg.repository.jdbcRepositories.*" />
+          <option name="PATTERN" value="com.example.mtg.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="PACKAGE_NAME" value="com.example.mtg.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.service.TypeServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TypeServiceTest.addInvalidTypeName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mtg" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.mtg.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.mtg.service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.service.TypeServiceTest" />
+      <option name="METHOD_NAME" value="addInvalidTypeName" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.MtgApplication" />
-      <item itemvalue="JUnit.com.example.mtg.repository.jdbcRepositories in mtg" />
-      <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.findAll" />
-      <item itemvalue="JUnit.KeywordListJdbcRepositoryTest" />
+      <item itemvalue="JUnit.All in mtg" />
+      <item itemvalue="JUnit.TypeServiceTest" />
+      <item itemvalue="JUnit.TypeServiceTest.addInvalidTypeName" />
       <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.findByCardId" />
       <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.add" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in mtg" />
+        <item itemvalue="JUnit.TypeServiceTest" />
+        <item itemvalue="JUnit.TypeServiceTest.addInvalidTypeName" />
         <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.add" />
         <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.findByCardId" />
-        <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.findAll" />
-        <item itemvalue="JUnit.KeywordListJdbcRepositoryTest" />
-        <item itemvalue="JUnit.com.example.mtg.repository.jdbcRepositories in mtg" />
       </list>
     </recent_temporary>
   </component>

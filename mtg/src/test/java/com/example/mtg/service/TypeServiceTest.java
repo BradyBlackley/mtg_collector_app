@@ -84,8 +84,6 @@ public class TypeServiceTest {
 
     @Test
     void addInvalidTypeName() {
-        Mockito.when(repository.add(invalidTypeName)).thenReturn(invalidTypeName);
-
         assertFalse(service.add(invalidTypeName).isSuccess());
         assertEquals("The provided type name " + invalidTypeName.getTypeName() + " is " +
                 ResultType.INVALID.label, service.add(invalidTypeName).getMessages().get(0));
@@ -93,7 +91,6 @@ public class TypeServiceTest {
 
     @Test
     void addTypeNameAlreadyInUse() {
-        Mockito.when(repository.add(validType)).thenReturn(validType);
         Mockito.when(repository.findTypeByName(validType.getTypeName())).thenReturn(validType);
 
         assertFalse(service.add(validType).isSuccess());
