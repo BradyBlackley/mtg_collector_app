@@ -18,16 +18,14 @@ public class TypelineMapper implements ResultSetExtractor<Typeline> {
             return null;
         }
         Typeline typeline = new Typeline();
-        List<Type> types = new ArrayList<Type>();
-
-        Card card = new Card();
+        List<Type> types = new ArrayList<>();
+        Card card = new CardMapper().mapRow(rs,0);
 
         do {
             Type type = new Type();
             type.setTypeId(rs.getInt("type_id"));
             type.setTypeName(rs.getString("type_name"));
             types.add(type);
-            card.setCardId(rs.getString("card_id"));
         }while(rs.next());
 
         typeline.setTypes(types);
