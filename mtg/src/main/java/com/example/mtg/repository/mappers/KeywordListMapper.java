@@ -20,15 +20,13 @@ public class KeywordListMapper implements ResultSetExtractor<KeywordList> {
         }
         KeywordList keywordList = new KeywordList();
         List<Keyword> keywords = new ArrayList<>();
-        Card card = new Card();
+        keywordList.setCard(new CardMapper().mapRow(rs,0));
         do {
             Keyword keyword = new Keyword();
             keyword.setKeywordId(rs.getInt("keyword_id"));
             keyword.setKeywordName(rs.getString("keyword_name"));
             keywords.add(keyword);
-            card.setCardId(rs.getString("card_id"));
         } while(rs.next());
-        keywordList.setCard(card);
         keywordList.setKeywords(keywords);
         return keywordList;
     }

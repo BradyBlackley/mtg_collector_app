@@ -1,7 +1,6 @@
 package com.example.mtg.repository.mappers;
 
 import com.example.mtg.model.Card;
-import com.example.mtg.model.Expansion;
 import com.example.mtg.model.Rarity;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -21,9 +20,7 @@ public class CardMapper implements RowMapper<Card> {
         card.setConvertedManaCost(rs.getString("converted_mana_cost"));
         card.setPower(rs.getString("power"));
         card.setToughness(rs.getString("toughness"));
-        Expansion expansion = new Expansion();
-        expansion.setExpansionId(rs.getInt("expansion_id"));
-        card.setExpansion(expansion);
+        card.setExpansion(new ExpansionMapper().mapRow(rs, i));
         card.setTextBox(rs.getString("text_box"));
         return card;
     }

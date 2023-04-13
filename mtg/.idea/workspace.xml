@@ -6,8 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="bbad1684-f930-45d1-8ac4-3e783e22479a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/CardCopyJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/CardCopyJdbcRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/CardJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/CardJdbcRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/ColorIdentityJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/ColorIdentityJdbcRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/ModalJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/ModalJdbcRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/TypelineJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/TypelineJdbcRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/CardCopyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/CardCopyMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/CardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/CardMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/KeywordListMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/KeywordListMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/TypelineMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/TypelineMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/jdbcRepositories/CardCopyJdbcRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/jdbcRepositories/CardCopyJdbcRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/jdbcRepositories/TypelineJdbcRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/jdbcRepositories/TypelineJdbcRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/mappers/CardCopyMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/mappers/CardCopyMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/mappers/TypelineMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/mappers/TypelineMapper.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +100,7 @@
       <command value="mvn -P dev" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TypelineJdbcRepositoryTest">
+  <component name="RunManager" selected="JUnit.KeywordListJdbcRepositoryTest.findByCardId">
     <configuration name="MtgApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <envs>
         <env name="USERNAME" value="root" />
@@ -106,7 +119,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardCopyJdbcRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="KeywordListJdbcRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mtg" />
       <extension name="coverage">
         <pattern>
@@ -115,13 +128,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.CardCopyJdbcRepositoryTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.KeywordListJdbcRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardCopyJdbcRepositoryTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="KeywordListJdbcRepositoryTest.findByCardId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mtg" />
       <extension name="coverage">
         <pattern>
@@ -130,14 +143,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.CardCopyJdbcRepositoryTest" />
-      <option name="METHOD_NAME" value="add" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.KeywordListJdbcRepositoryTest" />
+      <option name="METHOD_NAME" value="findByCardId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardCopyJdbcRepositoryTest.findAllByUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="KeywordListJdbcRepositoryTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mtg" />
       <extension name="coverage">
         <pattern>
@@ -146,23 +159,23 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.CardCopyJdbcRepositoryTest" />
-      <option name="METHOD_NAME" value="findAllByUser" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.KeywordListJdbcRepositoryTest" />
+      <option name="METHOD_NAME" value="update" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardCopyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ModalJdbcRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mtg" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.mtg.model.*" />
+          <option name="PATTERN" value="com.example.mtg.repository.jdbcRepositories.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.mtg.model" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.model.CardCopyTest" />
+      <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.ModalJdbcRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -185,19 +198,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.MtgApplication" />
-      <item itemvalue="JUnit.CardCopyJdbcRepositoryTest" />
-      <item itemvalue="JUnit.CardCopyJdbcRepositoryTest.add" />
-      <item itemvalue="JUnit.CardCopyJdbcRepositoryTest.findAllByUser" />
-      <item itemvalue="JUnit.CardCopyTest" />
+      <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.update" />
+      <item itemvalue="JUnit.ModalJdbcRepositoryTest" />
       <item itemvalue="JUnit.TypelineJdbcRepositoryTest" />
+      <item itemvalue="JUnit.KeywordListJdbcRepositoryTest" />
+      <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.findByCardId" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.findByCardId" />
+        <item itemvalue="JUnit.KeywordListJdbcRepositoryTest" />
+        <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.update" />
+        <item itemvalue="JUnit.ModalJdbcRepositoryTest" />
         <item itemvalue="JUnit.TypelineJdbcRepositoryTest" />
-        <item itemvalue="JUnit.CardCopyJdbcRepositoryTest" />
-        <item itemvalue="JUnit.CardCopyJdbcRepositoryTest.add" />
-        <item itemvalue="JUnit.CardCopyJdbcRepositoryTest.findAllByUser" />
-        <item itemvalue="JUnit.CardCopyTest" />
       </list>
     </recent_temporary>
   </component>

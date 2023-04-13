@@ -24,6 +24,8 @@ public class TypelineJdbcRepository implements TypelineRepository {
                 "on tl.type_id = t.type_id " +
                 "inner join card c " +
                 "on tl.card_id = c.card_id " +
+                "inner join `expansion` e " +
+                "on c.expansion_id = e.expansion_id " +
                 "where tl.card_id = ?;";
         return jdbcTemplate.query(sql, new TypelineMapper(), cardId);
     }

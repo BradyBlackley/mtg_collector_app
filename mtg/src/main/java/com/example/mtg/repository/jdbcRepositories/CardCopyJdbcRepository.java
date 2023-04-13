@@ -30,6 +30,8 @@ public class CardCopyJdbcRepository implements CardCopyRepository {
                 "on cc.card_id = c.card_id " +
                 "inner join `user` usr " +
                 "on cc.user_id = usr.user_id " +
+                "inner join `expansion` e " +
+                "on c.expansion_id = e.expansion_id " +
                 "where cc.user_id = ?;";
         return jdbcTemplate.query(sql, new CardCopyMapper(), userId);
     }
@@ -43,6 +45,8 @@ public class CardCopyJdbcRepository implements CardCopyRepository {
                 "on cc.card_id = c.card_id " +
                 "inner join `user` usr " +
                 "on cc.user_id = usr.user_id " +
+                "inner join `expansion` e " +
+                "on c.expansion_id = e.expansion_id " +
                 "where cc.card_id = ? " +
                 "and cc.user_id = ?;";
         return jdbcTemplate.query(sql, new CardCopyMapper(), cardId, userId);
@@ -57,6 +61,8 @@ public class CardCopyJdbcRepository implements CardCopyRepository {
                 "on cc.card_id = c.card_id " +
                 "inner join `user` usr " +
                 "on cc.user_id = usr.user_id " +
+                "inner join `expansion` e " +
+                "on c.expansion_id = e.expansion_id " +
                 "where card_copy_id = ?;";
         return jdbcTemplate.query(sql, new CardCopyMapper(), cardCopyId).stream().findFirst().orElse(null);
     }

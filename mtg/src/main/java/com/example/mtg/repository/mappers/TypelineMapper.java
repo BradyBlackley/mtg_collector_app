@@ -1,6 +1,5 @@
 package com.example.mtg.repository.mappers;
 
-import com.example.mtg.model.Card;
 import com.example.mtg.model.Type;
 import com.example.mtg.model.Typeline;
 import org.springframework.dao.DataAccessException;
@@ -19,7 +18,7 @@ public class TypelineMapper implements ResultSetExtractor<Typeline> {
         }
         Typeline typeline = new Typeline();
         List<Type> types = new ArrayList<>();
-        Card card = new CardMapper().mapRow(rs,0);
+        typeline.setCard(new CardMapper().mapRow(rs,0));
 
         do {
             Type type = new Type();
@@ -29,7 +28,6 @@ public class TypelineMapper implements ResultSetExtractor<Typeline> {
         }while(rs.next());
 
         typeline.setTypes(types);
-        typeline.setCard(card);
         return typeline;
     }
 }

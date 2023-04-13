@@ -24,6 +24,7 @@ class KeywordListJdbcRepositoryTest extends CommonRepoTest {
 
     @Test
     void findByCardId() {
+        KeywordList keywordList = repository.findByCardId("ZNR150");
         assertEquals( "Double Strike", repository.findByCardId("ZNR150").getKeywords().get(0).getKeywordName());
         assertEquals("Flying", repository.findByCardId("ZNR150").getKeywords().get(1).getKeywordName());
         assertEquals("Vigilance", repository.findByCardId("ZNR150").getKeywords().get(2).getKeywordName());

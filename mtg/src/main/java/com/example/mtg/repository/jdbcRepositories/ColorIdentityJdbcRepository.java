@@ -2,7 +2,6 @@ package com.example.mtg.repository.jdbcRepositories;
 
 import com.example.mtg.model.Color;
 import com.example.mtg.model.ColorIdentity;
-import com.example.mtg.repository.mappers.CardMapper;
 import com.example.mtg.repository.mappers.ColorIdentityMapper;
 import com.example.mtg.repository.repositoryInterfaces.ColorIdentityRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -19,17 +18,17 @@ public class ColorIdentityJdbcRepository implements ColorIdentityRepository {
 
     @Override
     public ColorIdentity findByCardId(String cardId) {
-        final String sql = "select ci.color_identity_id, ci.card_id, c.color_id, c.color_name " +
+        final String sql =
+                "select ci.color_identity_id, ci.card_id, c.color_id, c.color_name " +
                 "from color_identity ci " +
                 "inner join color c " +
                 "on ci.color_id = c.color_id " +
-                "where card_id = ?;";
-        ColorIdentity colorIdentity = jdbcTemplate.query(sql, new ColorIdentityMapper(),
-                cardId);
-        if(colorIdentity != null) {
-            addCard(colorIdentity);
-        }
-        return  colorIdentity;
+                "inner join card ca " +
+                "on ci.card_id = ca.card_id " +
+                "inner join expansion e " +
+                "on ca.expansion_id = e.expansion_id " +
+                "where ci.card_id = ?;";
+        return  jdbcTemplate.query(sql, new ColorIdentityMapper(), cardId);
     }
 
     @Override
@@ -56,11 +55,5 @@ public class ColorIdentityJdbcRepository implements ColorIdentityRepository {
     public boolean delete(ColorIdentity colorIdentity) {
         final String sql = "delete from color_identity where card_id =?;";
         return jdbcTemplate.update(sql, colorIdentity.getCard().getCardId()) > 0;
-    }
-
-    private void addCard(ColorIdentity colorIdentity) {
-        final String sql = "select * from card where card_id = ?;";
-        colorIdentity.setCard(jdbcTemplate.query(sql, new CardMapper(),
-                colorIdentity.getCard().getCardId()).stream().findFirst().orElse(null));
     }
 }

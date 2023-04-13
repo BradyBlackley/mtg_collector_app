@@ -3,7 +3,6 @@ package com.example.mtg.repository.jdbcRepositories;
 import com.example.mtg.model.Card;
 import com.example.mtg.model.Rarity;
 import com.example.mtg.repository.mappers.CardMapper;
-import com.example.mtg.repository.mappers.ExpansionMapper;
 import com.example.mtg.repository.repositoryInterfaces.CardRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -23,105 +22,76 @@ public class CardJdbcRepository implements CardRepository {
     public List<Card> findAllCards() {
         final String sql =
                 "select * " +
-                "from card;";
-        List<Card> cards = jdbcTemplate.query(sql, new CardMapper());
-        for(Card card : cards) {
-            if(card != null){
-                addExpansion(card);
-            }
-        }
-        return cards;
+                "from card c " +
+                "inner join `expansion` e " +
+                "on c.expansion_id = e.expansion_id;";
+        return jdbcTemplate.query(sql, new CardMapper());
     }
 
     @Override
     public List<Card> findCardsByName(String cardName) {
         final String sql =
                 "select * " +
-                "from card " +
+                "from card c " +
+                "inner join `expansion` e " +
+                "on c.expansion_id = e.expansion_id " +
                 "where card_name like ?;";
-
-        List<Card> cards = jdbcTemplate.query(sql, new CardMapper(), "%" + cardName + "%");
-        for(Card card : cards) {
-            if(card != null){
-                addExpansion(card);
-            }
-        }
-        return cards;
+        return jdbcTemplate.query(sql, new CardMapper(), "%" + cardName + "%");
     }
 
     @Override
     public List<Card> findCardsByRarity(Rarity rarity) {
         final String sql =
                 "select * " +
-                "from card " +
+                "from card c " +
+                "inner join `expansion` e " +
+                "on c.expansion_id = e.expansion_id " +
                 "where rarity = ?;";
-        List<Card> cards = jdbcTemplate.query(sql, new CardMapper(), rarity.label);
-        for(Card card : cards) {
-            if(card != null){
-                addExpansion(card);
-            }
-        }
-        return cards;
+        return jdbcTemplate.query(sql, new CardMapper(), rarity.label);
     }
 
     @Override
     public List<Card> findCardsByArtist(String artistName) {
         final String sql =
                 "select * " +
-                "from card " +
+                "from card c " +
+                "inner join `expansion` e " +
+                "on c.expansion_id = e.expansion_id " +
                 "where artist_name = ?;";
-        List<Card> cards = jdbcTemplate.query(sql, new CardMapper(), artistName);
-        for(Card card : cards) {
-            if(card != null){
-                addExpansion(card);
-            }
-        }
-        return cards;
+        return jdbcTemplate.query(sql, new CardMapper(), artistName);
     }
 
     @Override
     public List<Card> findCardsByConvertedManaCost(String convertedManaCost) {
         final String sql =
                 "select * " +
-                "from card " +
+                "from card c " +
+                "inner join `expansion` e " +
+                "on c.expansion_id = e.expansion_id " +
                 "where converted_mana_cost = ?;";
-        List<Card> cards = jdbcTemplate.query(sql, new CardMapper(), convertedManaCost);
-        for(Card card : cards) {
-            if(card != null){
-                addExpansion(card);
-            }
-        }
-        return cards;
+        return jdbcTemplate.query(sql, new CardMapper(), convertedManaCost);
     }
 
     @Override
     public List<Card> findCardsByPower(String power) {
         final String sql =
                 "select * " +
-                "from card " +
+                "from card c " +
+                "inner join `expansion` e " +
+                "on c.expansion_id = e.expansion_id " +
                 "where power = ?;";
-        List<Card> cards = jdbcTemplate.query(sql, new CardMapper(), power);
-        for(Card card : cards) {
-            if(card != null){
-                addExpansion(card);
-            }
-        }
-        return cards;
+        return jdbcTemplate.query(sql, new CardMapper(), power);
     }
 
     @Override
     public List<Card> findCardsByToughness(String toughness) {
         final String sql =
                 "select * " +
-                "from card " +
+                "from card c " +
+                "inner join `expansion` e " +
+                "on c.expansion_id = e.expansion_id " +
                 "where toughness = ?;";
-        List<Card> cards = jdbcTemplate.query(sql, new CardMapper(), toughness);
-        for(Card card : cards) {
-            if(card != null){
-                addExpansion(card);
-            }
-        }
-        return cards;
+        return jdbcTemplate.query(sql, new CardMapper(), toughness);
     }
 
     @Override
@@ -129,44 +99,32 @@ public class CardJdbcRepository implements CardRepository {
         final String sql =
                 "select * " +
                 "from card c " +
-                "inner join expansion e " +
+                "inner join `expansion` e " +
                 "on c.expansion_id = e.expansion_id " +
                 "where e.expansion_code =?;";
-        List<Card> cards = jdbcTemplate.query(sql, new CardMapper(), expansionCode);
-        for(Card card : cards) {
-            if(card != null){
-                addExpansion(card);
-            }
-        }
-        return cards;
+        return jdbcTemplate.query(sql, new CardMapper(), expansionCode);
     }
 
     @Override
     public List<Card> findCardsByTextBox(String text) {
         final String sql =
                 "select * " +
-                "from card " +
+                "from card c " +
+                "inner join `expansion` e " +
+                "on c.expansion_id = e.expansion_id " +
                 "where text_box like ?;";
-        List<Card> cards = jdbcTemplate.query(sql, new CardMapper(), "%" + text + "%");
-        for(Card card : cards) {
-            if(card != null){
-                addExpansion(card);
-            }
-        }
-        return cards;
+        return jdbcTemplate.query(sql, new CardMapper(), "%" + text + "%");
     }
 
     @Override
     public Card findCardById(String cardId) {
         final String sql =
                 "select * " +
-                "from card " +
+                "from card c " +
+                "inner join `expansion` e " +
+                "on c.expansion_id = e.expansion_id " +
                 "where card_id = ?;";
-        Card card = jdbcTemplate.query(sql, new CardMapper(), cardId).stream().findFirst().orElse(null);
-        if(card != null){
-            addExpansion(card);
-        }
-        return card;
+        return jdbcTemplate.query(sql, new CardMapper(), cardId).stream().findFirst().orElse(null);
     }
 
     @Override
@@ -179,7 +137,6 @@ public class CardJdbcRepository implements CardRepository {
         jdbcTemplate.update(sql, card.getCardId(), card.getCardName(), card.getImagePath(), card.getRarity().name(),
                 card.getArtistName(), card.getConvertedManaCost(), card.getPower(), card.getToughness(),
                 card.getExpansion().getExpansionId(), card.getTextBox());
-        addExpansion(card);
         return card;
     }
 
@@ -201,14 +158,5 @@ public class CardJdbcRepository implements CardRepository {
                 "delete from card " +
                 "where card_id = ?;";
         return jdbcTemplate.update(sql, cardId) > 0;
-    }
-
-    private void addExpansion(Card card) {
-        final String sql =
-                "select * " +
-                "from expansion " +
-                "where expansion_id = ?;";
-        card.setExpansion(jdbcTemplate.query(sql, new ExpansionMapper(),
-                card.getExpansion().getExpansionId()).stream().findFirst().orElse(null));
     }
 }
