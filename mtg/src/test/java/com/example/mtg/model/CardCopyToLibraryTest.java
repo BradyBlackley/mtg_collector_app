@@ -283,7 +283,8 @@ class CardCopyToLibraryTest {
                         " \"power\":\"6\", \"toughness\":\"6\", \"expansion\":{\"expansionId\":242," +
                         " \"expansionName\":\"Zendikar Rising\", \"expansionCode\":\"ZNR\"," +
                         " \"releasedDate\":\"2020-09-01\"}," +
-                        " \"textBox\":\"Each creature you control gets +1/+0 for each time it has attacked this turn. Landfall - Whenever a land enters the battlefield under your control, if it''s your main phase, there''s an additional combat phase after this phase. At the beginning of that combat, untap all creatures you control.\"}," +
+                        " \"textBox\":\"Each creature you control gets +1/+0 for each time it has attacked this turn. Landfall - Whenever a land enters the battlefield under your control, if it''s your main phase, there''s an additional combat phase after this phase. At the beginning of that combat, untap all creatures you control.\"," +
+                        " \"backCard\":\"null\"}," +
                         " \"user\":{\"userId\":\"5d209ac0-9102-11ec-b909-0242ac120002\"," +
                         " \"username\":\"TimTheMagicMan\"," +
                         " \"password\":\"928740054\"}}]," +

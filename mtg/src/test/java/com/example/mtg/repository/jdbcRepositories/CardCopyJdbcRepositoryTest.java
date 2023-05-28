@@ -47,7 +47,7 @@ class CardCopyJdbcRepositoryTest extends CommonRepoTest {
                 repository.findAllByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(3).getCardCopyId());
 
         assertEquals(2, repository.findAllByUser("9a219974-9102-11ec-b909-0242ac120002").size());
-        assertEquals("ZNR166F",
+        assertEquals("ZNR166",
                 repository.findAllByUser("9a219974-9102-11ec-b909-0242ac120002").get(0).getCard().getCardId());
         assertEquals("9a219974-9102-11ec-b909-0242ac120002",
                 repository.findAllByUser("9a219974-9102-11ec-b909-0242ac120002").get(0).getUser().getUserId());
@@ -62,7 +62,7 @@ class CardCopyJdbcRepositoryTest extends CommonRepoTest {
         assertEquals(3,
                 repository.findAllByCardId("ZNR134", "5d209ac0-9102-11ec-b909-0242ac120002").size());
         assertEquals(1,
-                repository.findAllByCardId("ZNR166F", "9a219974-9102-11ec-b909-0242ac120002").size());
+                repository.findAllByCardId("ZNR166", "9a219974-9102-11ec-b909-0242ac120002").size());
         assertEquals(1,
                 repository.findAllByCardId("ZNR166B", "9a219974-9102-11ec-b909-0242ac120002").size());
     }
@@ -73,7 +73,7 @@ class CardCopyJdbcRepositoryTest extends CommonRepoTest {
         assertEquals("ZNR134", repository.findByCardCopyId(2).getCard().getCardId());
         assertEquals("ZNR134", repository.findByCardCopyId(3).getCard().getCardId());
         assertEquals("ZNR134", repository.findByCardCopyId(4).getCard().getCardId());
-        assertEquals("ZNR166F", repository.findByCardCopyId(5).getCard().getCardId());
+        assertEquals("ZNR166", repository.findByCardCopyId(5).getCard().getCardId());
         assertEquals("ZNR166B", repository.findByCardCopyId(6).getCard().getCardId());
     }
 

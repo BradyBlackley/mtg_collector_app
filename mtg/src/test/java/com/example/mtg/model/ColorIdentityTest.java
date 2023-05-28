@@ -12,13 +12,6 @@ class ColorIdentityTest {
 
     @Test
     void constructorTests() {
-//        Color green = new Color();
-//        green.setColorId(1);
-//        green.setColorName("green");
-//
-//        Color red = new Color();
-//        red.setColorId(2);
-//        red.setColorName("red");
 
         List<Color> colors = new ArrayList<>();
         colors.add(Color.GREEN);
@@ -88,13 +81,6 @@ class ColorIdentityTest {
 
     @Test
     void getSetColors() {
-//        Color green = new Color();
-//        green.setColorId(1);
-//        green.setColorName("green");
-//
-//        Color red = new Color();
-//        red.setColorId(2);
-//        red.setColorName("red");
 
         List<Color> colors = new ArrayList<>();
         colors.add(Color.GREEN);
@@ -108,25 +94,10 @@ class ColorIdentityTest {
 
     @Test
     void testEquals() {
-//        Color green = new Color();
-//        green.setColorId(1);
-//        green.setColorName("green");
-//
-//        Color red = new Color();
-//        red.setColorId(2);
-//        red.setColorName("red");
 
         List<Color> colors = new ArrayList<>();
         colors.add(Color.GREEN);
         colors.add(Color.RED);
-
-//        Color black = new Color();
-//        black.setColorId(3);
-//        black.setColorName("black");
-//
-//        Color blue = new Color();
-//        blue.setColorId(2);
-//        blue.setColorName("blue");
 
         List<Color> differentColors = new ArrayList<>();
         differentColors.add(Color.BLACK);
@@ -171,13 +142,6 @@ class ColorIdentityTest {
 
     @Test
     void testHashCode() {
-//        Color green = new Color();
-//        green.setColorId(1);
-//        green.setColorName("green");
-//
-//        Color red = new Color();
-//        red.setColorId(2);
-//        red.setColorName("red");
 
         List<Color> colors = new ArrayList<>();
         colors.add(Color.GREEN);
@@ -213,13 +177,6 @@ class ColorIdentityTest {
 
     @Test
     void testToString() {
-//        Color green = new Color();
-//        green.setColorId(1);
-//        green.setColorName("green");
-//
-//        Color red = new Color();
-//        red.setColorId(2);
-//        red.setColorName("red");
 
         List<Color> colors = new ArrayList<>();
         colors.add(Color.GREEN);
@@ -254,8 +211,8 @@ class ColorIdentityTest {
                 " \"imagePath\":\"card_images/zendikar_rising/znr-150-moraug-fury-of-akoum.jpg\", \"rarity\":\"mythic\"," +
                 " \"artistName\":\"Rudy Siswanto\", \"convertedManaCost\":\"6\", \"power\":\"6\", \"toughness\":\"6\"," +
                 " \"expansion\":{\"expansionId\":242, \"expansionName\":\"Zendikar Rising\", \"expansionCode\":\"ZNR\"," +
-                " \"releasedDate\":\"2020-09-01\"}, \"textBox\":\"Each creature you control gets +1/+0 for each time it has attacked this turn. Landfall - Whenever a land enters the battlefield under your control, if it''s your main phase, there''s an additional combat phase after this phase. At the beginning of that combat, untap all creatures you control.\"}," +
-                " \"colors\":[{\"colorId\":6, \"colorName\":\"green\"}, {\"colorId\":5, \"colorName\":\"red\"}]}",
+                " \"releasedDate\":\"2020-09-01\"}, \"textBox\":\"Each creature you control gets +1/+0 for each time it has attacked this turn. Landfall - Whenever a land enters the battlefield under your control, if it''s your main phase, there''s an additional combat phase after this phase. At the beginning of that combat, untap all creatures you control.\"," +
+                " \"backCard\":\"null\"}, \"colors\":[{\"colorId\":6, \"colorName\":\"green\"}, {\"colorId\":5, \"colorName\":\"red\"}]}",
                 colorIdentity.toString());
     }
 }

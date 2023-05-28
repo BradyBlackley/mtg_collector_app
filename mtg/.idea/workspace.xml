@@ -6,12 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="bbad1684-f930-45d1-8ac4-3e783e22479a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/model/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/model/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/CardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/CardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mtg/model/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mtg/model/Card.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/mappers/ModalMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/mtg/repository/jdbcRepositories/ModalJdbcRepositoryTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/schema-h2.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/schema-h2.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/CardCopyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/CardCopyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/CardCopyToLibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/CardCopyToLibraryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/ColorIdentityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/ColorIdentityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/KeywordListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/KeywordListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/TypelineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/TypelineTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/CardCopy.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/CardCopy.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/CardCopyToLibrary.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/CardCopyToLibrary.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +92,7 @@
       <command value="mvn -P dev" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CardTest">
+  <component name="RunManager" selected="JUnit.All in mtg">
     <configuration name="MtgApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <envs>
         <env name="USERNAME" value="root" />
@@ -110,7 +111,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardJdbcRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in mtg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mtg" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardCopyJdbcRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mtg" />
       <extension name="coverage">
         <pattern>
@@ -119,13 +128,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.CardJdbcRepositoryTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.CardCopyJdbcRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardJdbcRepositoryTest.findAllCards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardCopyJdbcRepositoryTest.findAllByCardId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mtg" />
       <extension name="coverage">
         <pattern>
@@ -134,30 +143,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.CardJdbcRepositoryTest" />
-      <option name="METHOD_NAME" value="findAllCards" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.CardCopyJdbcRepositoryTest" />
+      <option name="METHOD_NAME" value="findAllByCardId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardJdbcRepositoryTest.findCardsByRarity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mtg" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.mtg.repository.jdbcRepositories.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.CardJdbcRepositoryTest" />
-      <option name="METHOD_NAME" value="findCardsByRarity" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardCopyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mtg" />
       <extension name="coverage">
         <pattern>
@@ -166,43 +159,42 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.mtg.model" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.model.CardTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.model.CardCopyTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardTest.constructorTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardCopyToLibraryJdbcRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mtg" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.mtg.model.*" />
+          <option name="PATTERN" value="com.example.mtg.repository.jdbcRepositories.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.mtg.model" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.model.CardTest" />
-      <option name="METHOD_NAME" value="constructorTests" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.CardCopyToLibraryJdbcRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.MtgApplication" />
-      <item itemvalue="JUnit.CardJdbcRepositoryTest" />
-      <item itemvalue="JUnit.CardJdbcRepositoryTest.findAllCards" />
-      <item itemvalue="JUnit.CardJdbcRepositoryTest.findCardsByRarity" />
-      <item itemvalue="JUnit.CardTest" />
-      <item itemvalue="JUnit.CardTest.constructorTests" />
+      <item itemvalue="JUnit.All in mtg" />
+      <item itemvalue="JUnit.CardCopyJdbcRepositoryTest" />
+      <item itemvalue="JUnit.CardCopyJdbcRepositoryTest.findAllByCardId" />
+      <item itemvalue="JUnit.CardCopyTest" />
+      <item itemvalue="JUnit.CardCopyToLibraryJdbcRepositoryTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CardTest" />
-        <item itemvalue="JUnit.CardTest.constructorTests" />
-        <item itemvalue="JUnit.CardJdbcRepositoryTest" />
-        <item itemvalue="JUnit.CardJdbcRepositoryTest.findCardsByRarity" />
-        <item itemvalue="JUnit.CardJdbcRepositoryTest.findAllCards" />
+        <item itemvalue="JUnit.All in mtg" />
+        <item itemvalue="JUnit.CardCopyJdbcRepositoryTest" />
+        <item itemvalue="JUnit.CardCopyJdbcRepositoryTest.findAllByCardId" />
+        <item itemvalue="JUnit.CardCopyToLibraryJdbcRepositoryTest" />
+        <item itemvalue="JUnit.CardCopyTest" />
       </list>
     </recent_temporary>
   </component>
