@@ -44,6 +44,13 @@ class CardTest {
                         "Whenever a land enters the battlefield under your control, if it''s your main phase, there''s " +
                         "an additional combat phase after this phase. At the beginning of that combat, untap all " +
                         "creatures you control.");
+        Card card11 = new Card("ZNR150", "Moraug, Fury of Akoum",
+                "card_images/zendikar_rising/znr-150-moraug-fury-of-akoum.jpg", Rarity.MYTHIC,
+                "Rudy Siswanto", "6", "6", "6", expansion,
+                "Each creature you control gets +1/+0 for each time it has attacked this turn. Landfall - " +
+                        "Whenever a land enters the battlefield under your control, if it''s your main phase, there''s " +
+                        "an additional combat phase after this phase. At the beginning of that combat, untap all " +
+                        "creatures you control.", null);
 
         assertNull(card.getCardId());
 
@@ -203,6 +210,13 @@ class CardTest {
     }
 
     @Test
+    void setGetBackCardId() {
+        Card card = new Card();
+//        card.setBackCard();
+//        assertEquals(, card.getTextBox());
+    }
+
+    @Test
     void testEquals() {
         Card card = new Card();
         Card card2 = new Card();
@@ -312,7 +326,7 @@ class CardTest {
                 "\"releasedDate\":\"2020-09-01\"}, \"textBox\":\"Each creature you control gets +1/+0 for each time it " +
                 "has attacked this turn. Landfall - Whenever a land enters the battlefield under your control, if it''s " +
                 "your main phase, there''s an additional combat phase after this phase. At the beginning of that combat, " +
-                "untap all creatures you control.\"}", card.toString());
+                "untap all creatures you control.\", \"backCard\":\"null\"}", card.toString());
 
     }
 }

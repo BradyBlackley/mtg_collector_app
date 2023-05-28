@@ -7,10 +7,11 @@
     <list default="true" id="bbad1684-f930-45d1-8ac4-3e783e22479a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/model/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/model/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/CardJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/CardJdbcRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/CardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/CardMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/Card.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/Card.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/schema-h2.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/schema-h2.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/CardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/CardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mtg/model/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mtg/model/Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/mappers/ModalMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/mtg/repository/jdbcRepositories/ModalJdbcRepositoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/schema-h2.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/schema-h2.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +91,7 @@
       <command value="mvn -P dev" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CardJdbcRepositoryTest">
+  <component name="RunManager" selected="JUnit.CardTest">
     <configuration name="MtgApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <envs>
         <env name="USERNAME" value="root" />
@@ -156,32 +157,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ModalJdbcRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mtg" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.mtg.repository.jdbcRepositories.*" />
+          <option name="PATTERN" value="com.example.mtg.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.ModalJdbcRepositoryTest" />
+      <option name="PACKAGE_NAME" value="com.example.mtg.model" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.model.CardTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ModalJdbcRepositoryTest.findByFrontCardId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardTest.constructorTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mtg" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.mtg.repository.jdbcRepositories.*" />
+          <option name="PATTERN" value="com.example.mtg.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.ModalJdbcRepositoryTest" />
-      <option name="METHOD_NAME" value="findByFrontCardId" />
+      <option name="PACKAGE_NAME" value="com.example.mtg.model" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.model.CardTest" />
+      <option name="METHOD_NAME" value="constructorTests" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -192,16 +193,16 @@
       <item itemvalue="JUnit.CardJdbcRepositoryTest" />
       <item itemvalue="JUnit.CardJdbcRepositoryTest.findAllCards" />
       <item itemvalue="JUnit.CardJdbcRepositoryTest.findCardsByRarity" />
-      <item itemvalue="JUnit.ModalJdbcRepositoryTest.findByFrontCardId" />
-      <item itemvalue="JUnit.ModalJdbcRepositoryTest" />
+      <item itemvalue="JUnit.CardTest" />
+      <item itemvalue="JUnit.CardTest.constructorTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CardTest" />
+        <item itemvalue="JUnit.CardTest.constructorTests" />
         <item itemvalue="JUnit.CardJdbcRepositoryTest" />
         <item itemvalue="JUnit.CardJdbcRepositoryTest.findCardsByRarity" />
         <item itemvalue="JUnit.CardJdbcRepositoryTest.findAllCards" />
-        <item itemvalue="JUnit.ModalJdbcRepositoryTest" />
-        <item itemvalue="JUnit.ModalJdbcRepositoryTest.findByFrontCardId" />
       </list>
     </recent_temporary>
   </component>
@@ -226,17 +227,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/ModalMapper.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/mtg$com_example_mtg_repository_in_mtg.ic" NAME="com.example.mtg.repository in mtg Coverage Results" MODIFIED="1655396516472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

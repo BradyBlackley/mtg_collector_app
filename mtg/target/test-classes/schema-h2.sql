@@ -80,19 +80,6 @@ CREATE TABLE typeline (
         ON DELETE CASCADE
 );
 
-CREATE TABLE modal (
-	modal_id varchar(255) NOT NULL,
-    front_card_id varchar(255),
-    back_card_id varchar(255),
-    PRIMARY KEY (modal_id),
-    FOREIGN KEY (front_card_id)
-		REFERENCES card(card_id)
-        ON DELETE CASCADE,
-    FOREIGN KEY (back_card_id)
-		REFERENCES card(card_id)
-        ON DELETE CASCADE
-);
-
 CREATE TABLE card_copy (
 	card_copy_id int NOT NULL AUTO_INCREMENT,
     card_id varchar(255),

@@ -220,14 +220,13 @@ public class Card {
         return cardId.equals(card.cardId) && cardName.equals(card.cardName) && imagePath.equals(card.imagePath)
                 && rarity == card.rarity && artistName.equals(card.artistName)
                 && convertedManaCost.equals(card.convertedManaCost) && power.equals(card.power)
-                && toughness.equals(card.toughness) && expansion.equals(card.expansion) && textBox.equals(card.textBox)
-                && backCard.equals(card.backCard);
+                && toughness.equals(card.toughness) && expansion.equals(card.expansion) && textBox.equals(card.textBox);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(cardId, cardName, imagePath, rarity, artistName, convertedManaCost, power, toughness,
-                expansion, textBox, backCard);
+                expansion, textBox);
     }
 
     @Override
