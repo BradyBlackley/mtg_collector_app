@@ -30,14 +30,27 @@ INSERT INTO KEYWORD (KEYWORD_NAME)
 VALUES ('Vigilance');
 
 INSERT INTO CARD (card_id, card_name, image_path, rarity, artist_name, converted_mana_cost, power, toughness,
- expansion_id, text_box)
+ expansion_id, text_box, back_card_id)
 VALUES ('ZNR150', 'Moraug, Fury of Akoum', 'card_images/zendikar_rising/znr-150-moraug-fury-of-akoum.jpg', 'mythic',
- 'Rudy Siswanto', '6', '6', '6', 1, 'Each creature you control gets +1/+0 for each time it has attacked this turn. Landfall - Whenever a land enters the battlefield under your control, if it''s your main phase, there''s an additional combat phase after this phase. At the beginning of that combat, untap all creatures you control.');
+ 'Rudy Siswanto', '6', '6', '6', 1, 'Each creature you control gets +1/+0 for each time it has attacked this turn. Landfall - Whenever a land enters the battlefield under your control, if it''s your main phase, there''s an additional combat phase after this phase. At the beginning of that combat, untap all creatures you control.',
+ null);
 
 INSERT INTO CARD (card_id, card_name, image_path, rarity, artist_name, converted_mana_cost, power, toughness,
- expansion_id, text_box)
+ expansion_id, text_box, back_card_id)
 VALUES ('ZNR134', 'Akoum Warrior', 'card_images/zendikar_rising/znr-134-akoum-warrior.jpg', 'uncommon',
- 'Karl Kopinski', '6', '4', '5', 1, 'Trample');
+ 'Karl Kopinski', '6', '4', '5', 1, 'Trample', null);
+
+INSERT INTO CARD (card_id, card_name, image_path, rarity, artist_name, converted_mana_cost, power, toughness,
+expansion_id, text_box, back_card_id)
+VALUES ('ZNR037', 'Sejiri Shelter', 'card_images/zendikar_rising/znr-37-sejiri-shelter.jpg', 'uncommon',
+'Darek Zabrocki', '2', null, null, 1, 'Target creature you control gains protection from the color of your choice until end of turn.',
+ 'ZNR037B');
+
+INSERT INTO CARD (card_id, card_name, image_path, rarity, artist_name, converted_mana_cost, power, toughness,
+expansion_id, text_box, back_card_id)
+VALUES ('ZNR037B', 'Sejiri Glacier', 'card_images/zendikar_rising/znr-37-sejiri-glacier.jpg', 'uncommon',
+'Darek Zabrocki', null, null, null, 1, 'Sejiri Glacier enters the battlefield tapped. [tap]: Add [white].',
+ null);
 
 INSERT INTO COLOR_IDENTITY
 (COLOR_ID, CARD_ID)

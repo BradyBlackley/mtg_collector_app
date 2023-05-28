@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbad1684-f930-45d1-8ac4-3e783e22479a" name="Changes" comment="" />
+    <list default="true" id="bbad1684-f930-45d1-8ac4-3e783e22479a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/model/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/model/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/CardJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/CardJdbcRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/CardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/CardMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/Card.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/Card.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/schema-h2.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/schema-h2.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,7 +90,7 @@
       <command value="mvn -P dev" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ModalJdbcRepositoryTest">
+  <component name="RunManager" selected="JUnit.CardJdbcRepositoryTest">
     <configuration name="MtgApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <envs>
         <env name="USERNAME" value="root" />
@@ -102,7 +109,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KeywordListJdbcRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardJdbcRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mtg" />
       <extension name="coverage">
         <pattern>
@@ -111,13 +118,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.KeywordListJdbcRepositoryTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.CardJdbcRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KeywordListJdbcRepositoryTest.findByCardId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardJdbcRepositoryTest.findAllCards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mtg" />
       <extension name="coverage">
         <pattern>
@@ -126,14 +133,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.KeywordListJdbcRepositoryTest" />
-      <option name="METHOD_NAME" value="findByCardId" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.CardJdbcRepositoryTest" />
+      <option name="METHOD_NAME" value="findAllCards" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KeywordListJdbcRepositoryTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardJdbcRepositoryTest.findCardsByRarity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mtg" />
       <extension name="coverage">
         <pattern>
@@ -142,8 +149,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.KeywordListJdbcRepositoryTest" />
-      <option name="METHOD_NAME" value="update" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.CardJdbcRepositoryTest" />
+      <option name="METHOD_NAME" value="findCardsByRarity" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -182,19 +189,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.MtgApplication" />
+      <item itemvalue="JUnit.CardJdbcRepositoryTest" />
+      <item itemvalue="JUnit.CardJdbcRepositoryTest.findAllCards" />
+      <item itemvalue="JUnit.CardJdbcRepositoryTest.findCardsByRarity" />
       <item itemvalue="JUnit.ModalJdbcRepositoryTest.findByFrontCardId" />
-      <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.update" />
       <item itemvalue="JUnit.ModalJdbcRepositoryTest" />
-      <item itemvalue="JUnit.KeywordListJdbcRepositoryTest" />
-      <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.findByCardId" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CardJdbcRepositoryTest" />
+        <item itemvalue="JUnit.CardJdbcRepositoryTest.findCardsByRarity" />
+        <item itemvalue="JUnit.CardJdbcRepositoryTest.findAllCards" />
         <item itemvalue="JUnit.ModalJdbcRepositoryTest" />
         <item itemvalue="JUnit.ModalJdbcRepositoryTest.findByFrontCardId" />
-        <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.findByCardId" />
-        <item itemvalue="JUnit.KeywordListJdbcRepositoryTest" />
-        <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.update" />
       </list>
     </recent_temporary>
   </component>
@@ -230,12 +237,6 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="JUnit">
-        <watch expression="listeners" />
-        <watch expression="((JdbcResultSet)rs).trace" custom="org.h2.jdbc.JdbcResultSet" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/mtg$com_example_mtg_repository_in_mtg.ic" NAME="com.example.mtg.repository in mtg Coverage Results" MODIFIED="1655396516472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

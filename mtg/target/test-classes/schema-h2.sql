@@ -47,6 +47,7 @@ CREATE TABLE card (
     toughness varchar(255),
     expansion_id int,
     text_box longtext,
+    back_card_id varchar(255),
     PRIMARY KEY (card_id),
     FOREIGN KEY (expansion_id)
 		REFERENCES `expansion`(expansion_id)

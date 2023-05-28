@@ -204,11 +204,11 @@ public class Card {
         this.textBox = textBox;
     }
 
-    public Card getBackCardId() {
+    public Card getBackCard() {
         return backCard;
     }
 
-    public void setBackCardId(Card backCard) {
+    public void setBackCard(Card backCard) {
         this.backCard = backCard;
     }
 

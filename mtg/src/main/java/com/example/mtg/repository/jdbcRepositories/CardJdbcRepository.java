@@ -8,6 +8,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class CardJdbcRepository implements CardRepository {
@@ -25,7 +26,13 @@ public class CardJdbcRepository implements CardRepository {
                 "from card c " +
                 "inner join `expansion` e " +
                 "on c.expansion_id = e.expansion_id;";
-        return jdbcTemplate.query(sql, new CardMapper());
+        List<Card> cards = jdbcTemplate.query(sql, new CardMapper());
+        for(Card card : cards) {
+            if(card != null && card.getBackCard() != null){
+                getBackCard(card);
+            }
+        }
+        return cards;
     }
 
     @Override
@@ -36,7 +43,13 @@ public class CardJdbcRepository implements CardRepository {
                 "inner join `expansion` e " +
                 "on c.expansion_id = e.expansion_id " +
                 "where card_name like ?;";
-        return jdbcTemplate.query(sql, new CardMapper(), "%" + cardName + "%");
+        List<Card> cards = jdbcTemplate.query(sql, new CardMapper(), "%" + cardName + "%");
+        for(Card card : cards) {
+            if(card.getBackCard() != null){
+                getBackCard(card);
+            }
+        }
+        return cards;
     }
 
     @Override
@@ -47,7 +60,13 @@ public class CardJdbcRepository implements CardRepository {
                 "inner join `expansion` e " +
                 "on c.expansion_id = e.expansion_id " +
                 "where rarity = ?;";
-        return jdbcTemplate.query(sql, new CardMapper(), rarity.label);
+        List<Card> cards = jdbcTemplate.query(sql, new CardMapper(), rarity.label);
+        for(Card card : cards) {
+            if(card.getBackCard() != null){
+                getBackCard(card);
+            }
+        }
+        return cards;
     }
 
     @Override
@@ -58,7 +77,13 @@ public class CardJdbcRepository implements CardRepository {
                 "inner join `expansion` e " +
                 "on c.expansion_id = e.expansion_id " +
                 "where artist_name = ?;";
-        return jdbcTemplate.query(sql, new CardMapper(), artistName);
+        List<Card> cards = jdbcTemplate.query(sql, new CardMapper(), artistName);
+        for(Card card : cards) {
+            if(card.getBackCard() != null){
+                getBackCard(card);
+            }
+        }
+        return cards;
     }
 
     @Override
@@ -69,7 +94,13 @@ public class CardJdbcRepository implements CardRepository {
                 "inner join `expansion` e " +
                 "on c.expansion_id = e.expansion_id " +
                 "where converted_mana_cost = ?;";
-        return jdbcTemplate.query(sql, new CardMapper(), convertedManaCost);
+        List<Card> cards = jdbcTemplate.query(sql, new CardMapper(), convertedManaCost);
+        for(Card card : cards) {
+            if(card.getBackCard() != null){
+                getBackCard(card);
+            }
+        }
+        return cards;
     }
 
     @Override
@@ -80,7 +111,13 @@ public class CardJdbcRepository implements CardRepository {
                 "inner join `expansion` e " +
                 "on c.expansion_id = e.expansion_id " +
                 "where power = ?;";
-        return jdbcTemplate.query(sql, new CardMapper(), power);
+        List<Card> cards = jdbcTemplate.query(sql, new CardMapper(), power);
+        for(Card card : cards) {
+            if(card.getBackCard() != null){
+                getBackCard(card);
+            }
+        }
+        return cards;
     }
 
     @Override
@@ -91,7 +128,13 @@ public class CardJdbcRepository implements CardRepository {
                 "inner join `expansion` e " +
                 "on c.expansion_id = e.expansion_id " +
                 "where toughness = ?;";
-        return jdbcTemplate.query(sql, new CardMapper(), toughness);
+        List<Card> cards = jdbcTemplate.query(sql, new CardMapper(), toughness);
+        for(Card card : cards) {
+            if(card.getBackCard() != null){
+                getBackCard(card);
+            }
+        }
+        return cards;
     }
 
     @Override
@@ -102,7 +145,13 @@ public class CardJdbcRepository implements CardRepository {
                 "inner join `expansion` e " +
                 "on c.expansion_id = e.expansion_id " +
                 "where e.expansion_code =?;";
-        return jdbcTemplate.query(sql, new CardMapper(), expansionCode);
+        List<Card> cards = jdbcTemplate.query(sql, new CardMapper(), expansionCode);
+        for(Card card : cards) {
+            if(card.getBackCard() != null){
+                getBackCard(card);
+            }
+        }
+        return cards;
     }
 
     @Override
@@ -113,7 +162,13 @@ public class CardJdbcRepository implements CardRepository {
                 "inner join `expansion` e " +
                 "on c.expansion_id = e.expansion_id " +
                 "where text_box like ?;";
-        return jdbcTemplate.query(sql, new CardMapper(), "%" + text + "%");
+        List<Card> cards = jdbcTemplate.query(sql, new CardMapper(), "%" + text + "%");
+        for(Card card : cards) {
+            if(card.getBackCard() != null){
+                getBackCard(card);
+            }
+        }
+        return cards;
     }
 
     @Override
@@ -124,7 +179,11 @@ public class CardJdbcRepository implements CardRepository {
                 "inner join `expansion` e " +
                 "on c.expansion_id = e.expansion_id " +
                 "where card_id = ?;";
-        return jdbcTemplate.query(sql, new CardMapper(), cardId).stream().findFirst().orElse(null);
+        Card card = jdbcTemplate.query(sql, new CardMapper(), cardId).stream().findFirst().orElse(null);
+        if(card.getBackCard() != null){
+            getBackCard(card);
+        }
+        return card;
     }
 
     @Override
@@ -132,11 +191,11 @@ public class CardJdbcRepository implements CardRepository {
         final String sql =
                 "insert into card " +
                 "(card_id, card_name, image_path, rarity, artist_name, converted_mana_cost, power, toughness, " +
-                "expansion_id, text_box) " +
-                "values (?,?,?,?,?,?,?,?,?,?);";
+                "expansion_id, text_box, back_card_id) " +
+                "values (?,?,?,?,?,?,?,?,?,?,?);";
         jdbcTemplate.update(sql, card.getCardId(), card.getCardName(), card.getImagePath(), card.getRarity().name(),
                 card.getArtistName(), card.getConvertedManaCost(), card.getPower(), card.getToughness(),
-                card.getExpansion().getExpansionId(), card.getTextBox());
+                card.getExpansion().getExpansionId(), card.getTextBox(), card.getBackCard() == null ? null : card.getBackCard().getCardId());
         return card;
     }
 
@@ -145,11 +204,12 @@ public class CardJdbcRepository implements CardRepository {
         final String sql =
                 "update card " +
                 "set card_id = ?, card_name = ?, image_path = ?, rarity = ?, artist_name = ?, converted_mana_cost = ?, " +
-                "power = ?, toughness = ?, expansion_id = ?, text_box = ? " +
+                "power = ?, toughness = ?, expansion_id = ?, text_box = ?, back_card_id = ? " +
                 "where card_id = ?;";
         return jdbcTemplate.update(sql, card.getCardId(), card.getCardName(), card.getImagePath(), card.getRarity().name(),
                 card.getArtistName(), card.getConvertedManaCost(), card.getPower(), card.getToughness(),
-                card.getExpansion().getExpansionId(), card.getTextBox(), card.getCardId()) > 0;
+                card.getExpansion().getExpansionId(), card.getTextBox(), card.getBackCard() == null ? null : card.getBackCard().getCardId(),
+                card.getCardId()) > 0;
     }
 
     @Override
@@ -158,5 +218,14 @@ public class CardJdbcRepository implements CardRepository {
                 "delete from card " +
                 "where card_id = ?;";
         return jdbcTemplate.update(sql, cardId) > 0;
+    }
+
+    private Card getBackCard(Card card) {
+
+        if(card.getBackCard() != null) {
+            card.setBackCard(findCardById(card.getBackCard().getCardId()));
+        }
+
+        return card;
     }
 }

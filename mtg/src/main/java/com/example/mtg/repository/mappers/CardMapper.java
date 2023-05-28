@@ -12,6 +12,7 @@ public class CardMapper implements RowMapper<Card> {
     @Override
     public Card mapRow(ResultSet rs, int i) throws SQLException {
         Card card = new Card();
+        Card backCard = new Card();
         card.setCardId(rs.getString("card_id"));
         card.setCardName(rs.getString("card_name"));
         card.setImagePath(rs.getString("image_path"));
@@ -22,6 +23,11 @@ public class CardMapper implements RowMapper<Card> {
         card.setToughness(rs.getString("toughness"));
         card.setExpansion(new ExpansionMapper().mapRow(rs, i));
         card.setTextBox(rs.getString("text_box"));
+        String backCardId = rs.getString("back_card_id");
+        if(backCardId != null) {
+            backCard.setCardId(rs.getString("back_card_id"));
+            card.setBackCard(backCard);
+        }
         return card;
     }
 }

@@ -24,7 +24,7 @@ class CardJdbcRepositoryTest extends CommonRepoTest {
 
     @Test
     void findAllCards() {
-        assertEquals(2, repository.findAllCards().size());
+        assertEquals(4, repository.findAllCards().size());
         assertEquals("ZNR150", repository.findAllCards().get(0).getCardId());
         assertEquals("Moraug, Fury of Akoum", repository.findAllCards().get(0).getCardName());
         assertEquals("card_images/zendikar_rising/znr-150-moraug-fury-of-akoum.jpg",
@@ -104,7 +104,7 @@ class CardJdbcRepositoryTest extends CommonRepoTest {
     @Test
     void findCardsByRarity() {
         assertEquals(0, repository.findCardsByRarity(Rarity.COMMON).size());
-        assertEquals(1, repository.findCardsByRarity(Rarity.UNCOMMON).size());
+        assertEquals(3, repository.findCardsByRarity(Rarity.UNCOMMON).size());
         assertEquals("ZNR134", repository.findCardsByRarity(Rarity.UNCOMMON).get(0).getCardId());
         assertEquals(0, repository.findCardsByRarity(Rarity.RARE).size());
         assertEquals(1, repository.findCardsByRarity(Rarity.MYTHIC).size());
@@ -152,7 +152,7 @@ class CardJdbcRepositoryTest extends CommonRepoTest {
 
     @Test
     void findCardsByExpansionCode() {
-        assertEquals(2, repository.findCardsByExpansionCode("ZNR").size());
+        assertEquals(4, repository.findCardsByExpansionCode("ZNR").size());
     }
 
     @Test
