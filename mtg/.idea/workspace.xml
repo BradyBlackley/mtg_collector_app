@@ -6,21 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bbad1684-f930-45d1-8ac4-3e783e22479a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/CardCopyJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/CardCopyJdbcRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/CardJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/CardJdbcRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/ColorIdentityJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/ColorIdentityJdbcRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/ModalJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/ModalJdbcRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/TypelineJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/jdbcRepositories/TypelineJdbcRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/CardCopyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/CardCopyMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/CardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/CardMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/KeywordListMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/KeywordListMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/TypelineMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/TypelineMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/mtg/repository/jdbcRepositories/KeywordListJdbcRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/jdbcRepositories/CardCopyJdbcRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/jdbcRepositories/CardCopyJdbcRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/jdbcRepositories/TypelineJdbcRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/jdbcRepositories/TypelineJdbcRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/mappers/CardCopyMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/mappers/CardCopyMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/mappers/TypelineMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mtg/repository/mappers/TypelineMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/ModalMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/ModalMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,17 +54,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/brady/IdeaProjects/mtg_collector_app/mtg",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/brady/IdeaProjects/mtg_collector_app/mtg&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -100,7 +86,7 @@
       <command value="mvn -P dev" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.KeywordListJdbcRepositoryTest.findByCardId">
+  <component name="RunManager" selected="JUnit.ModalJdbcRepositoryTest">
     <configuration name="MtgApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <envs>
         <env name="USERNAME" value="root" />
@@ -181,7 +167,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TypelineJdbcRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ModalJdbcRepositoryTest.findByFrontCardId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mtg" />
       <extension name="coverage">
         <pattern>
@@ -190,27 +176,28 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.mtg.repository.jdbcRepositories" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.TypelineJdbcRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mtg.repository.jdbcRepositories.ModalJdbcRepositoryTest" />
+      <option name="METHOD_NAME" value="findByFrontCardId" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.MtgApplication" />
+      <item itemvalue="JUnit.ModalJdbcRepositoryTest.findByFrontCardId" />
       <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.update" />
       <item itemvalue="JUnit.ModalJdbcRepositoryTest" />
-      <item itemvalue="JUnit.TypelineJdbcRepositoryTest" />
       <item itemvalue="JUnit.KeywordListJdbcRepositoryTest" />
       <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.findByCardId" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ModalJdbcRepositoryTest" />
+        <item itemvalue="JUnit.ModalJdbcRepositoryTest.findByFrontCardId" />
         <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.findByCardId" />
         <item itemvalue="JUnit.KeywordListJdbcRepositoryTest" />
         <item itemvalue="JUnit.KeywordListJdbcRepositoryTest.update" />
-        <item itemvalue="JUnit.ModalJdbcRepositoryTest" />
-        <item itemvalue="JUnit.TypelineJdbcRepositoryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -237,6 +224,15 @@
     </option>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/mtg/repository/mappers/ModalMapper.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="listeners" />
