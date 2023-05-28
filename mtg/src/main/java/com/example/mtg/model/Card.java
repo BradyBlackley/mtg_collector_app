@@ -13,6 +13,7 @@ public class Card {
     private String toughness;
     private Expansion expansion;
     private String textBox;
+    private String backCardId;
 
     public Card() {
 
@@ -108,6 +109,21 @@ public class Card {
         this.textBox = textBox;
     }
 
+    public Card(String cardId, String cardName, String imagePath, Rarity rarity, String artistName,
+                String convertedManaCost, String power, String toughness, Expansion expansion, String textBox, String backCardId) {
+        this.cardId = cardId;
+        this.cardName = cardName;
+        this.imagePath = imagePath;
+        this.rarity = rarity;
+        this.artistName = artistName;
+        this.convertedManaCost = convertedManaCost;
+        this.power = power;
+        this.toughness = toughness;
+        this.expansion = expansion;
+        this.textBox = textBox;
+        this.backCardId = backCardId;
+    }
+
     public String getCardId() {
         return cardId;
     }
@@ -188,6 +204,14 @@ public class Card {
         this.textBox = textBox;
     }
 
+    public String getBackCardId() {
+        return backCardId;
+    }
+
+    public void setBackCardId(String backCardId) {
+        this.backCardId = backCardId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -196,13 +220,14 @@ public class Card {
         return cardId.equals(card.cardId) && cardName.equals(card.cardName) && imagePath.equals(card.imagePath)
                 && rarity == card.rarity && artistName.equals(card.artistName)
                 && convertedManaCost.equals(card.convertedManaCost) && power.equals(card.power)
-                && toughness.equals(card.toughness) && expansion.equals(card.expansion) && textBox.equals(card.textBox);
+                && toughness.equals(card.toughness) && expansion.equals(card.expansion) && textBox.equals(card.textBox)
+                && backCardId.equals(card.backCardId);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(cardId, cardName, imagePath, rarity, artistName, convertedManaCost, power, toughness,
-                expansion, textBox);
+                expansion, textBox, backCardId);
     }
 
     @Override
@@ -218,6 +243,7 @@ public class Card {
                 ", \"toughness\":\"" + toughness + '\"' +
                 ", \"expansion\":" + expansion +
                 ", \"textBox\":\"" + textBox + '\"' +
+                ", \"backCardId\":\"" + backCardId + '\"' +
                 '}';
     }
 }
