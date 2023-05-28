@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbad1684-f930-45d1-8ac4-3e783e22479a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/CardCopyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/CardCopyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/CardCopyToLibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/CardCopyToLibraryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/ColorIdentityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/ColorIdentityTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/KeywordListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/KeywordListTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/TypelineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/mtg/model/TypelineTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/CardCopy.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/CardCopy.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/CardCopyToLibrary.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/CardCopyToLibrary.sql" afterDir="false" />
-    </list>
+    <list default="true" id="bbad1684-f930-45d1-8ac4-3e783e22479a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
