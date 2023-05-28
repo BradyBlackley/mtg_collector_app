@@ -13,7 +13,7 @@ public class Card {
     private String toughness;
     private Expansion expansion;
     private String textBox;
-    private String backCardId;
+    private Card backCard;
 
     public Card() {
 
@@ -121,7 +121,7 @@ public class Card {
         this.toughness = toughness;
         this.expansion = expansion;
         this.textBox = textBox;
-        this.backCardId = backCardId;
+        this.backCard = backCard;
     }
 
     public String getCardId() {
@@ -204,12 +204,12 @@ public class Card {
         this.textBox = textBox;
     }
 
-    public String getBackCardId() {
-        return backCardId;
+    public Card getBackCardId() {
+        return backCard;
     }
 
-    public void setBackCardId(String backCardId) {
-        this.backCardId = backCardId;
+    public void setBackCardId(Card backCard) {
+        this.backCard = backCard;
     }
 
     @Override
@@ -221,13 +221,13 @@ public class Card {
                 && rarity == card.rarity && artistName.equals(card.artistName)
                 && convertedManaCost.equals(card.convertedManaCost) && power.equals(card.power)
                 && toughness.equals(card.toughness) && expansion.equals(card.expansion) && textBox.equals(card.textBox)
-                && backCardId.equals(card.backCardId);
+                && backCard.equals(card.backCard);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(cardId, cardName, imagePath, rarity, artistName, convertedManaCost, power, toughness,
-                expansion, textBox, backCardId);
+                expansion, textBox, backCard);
     }
 
     @Override
@@ -243,7 +243,7 @@ public class Card {
                 ", \"toughness\":\"" + toughness + '\"' +
                 ", \"expansion\":" + expansion +
                 ", \"textBox\":\"" + textBox + '\"' +
-                ", \"backCardId\":\"" + backCardId + '\"' +
+                ", \"backCard\":\"" + backCard + '\"' +
                 '}';
     }
 }
