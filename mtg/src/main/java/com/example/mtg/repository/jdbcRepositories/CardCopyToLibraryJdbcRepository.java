@@ -28,11 +28,11 @@ public class CardCopyToLibraryJdbcRepository implements CardCopyToLibraryReposit
                 "on cctl.card_copy_id = cc.card_copy_id " +
                 "inner join library l " +
                 "on l.library_id = cctl.library_id " +
-                "inner join user u " +
+                "inner join `user` u " +
                 "on l.user_id = u.user_id " +
                 "inner join card c " +
                 "on c.card_id = cc.card_id " +
-                "inner join expansion e " +
+                "inner join `expansion` e " +
                 "on c.expansion_id = e.expansion_id " +
                 "where cctl.library_id = ?;";
 

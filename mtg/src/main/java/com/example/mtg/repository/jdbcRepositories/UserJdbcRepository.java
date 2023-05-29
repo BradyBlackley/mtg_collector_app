@@ -56,7 +56,7 @@ public class UserJdbcRepository implements UserRepository {
 
         user.setPassword(String.valueOf(user.getPassword().hashCode()));
 
-        final String sql = "update user set " +
+        final String sql = "update `user` set " +
                 "username = ?, " +
                 "`password` = ? " +
                 "where user_id = ?;";

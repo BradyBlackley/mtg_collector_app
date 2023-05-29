@@ -25,7 +25,7 @@ public class ColorIdentityJdbcRepository implements ColorIdentityRepository {
                 "on ci.color_id = c.color_id " +
                 "inner join card ca " +
                 "on ci.card_id = ca.card_id " +
-                "inner join expansion e " +
+                "inner join `expansion` e " +
                 "on ca.expansion_id = e.expansion_id " +
                 "where ci.card_id = ?;";
         return  jdbcTemplate.query(sql, new ColorIdentityMapper(), cardId);

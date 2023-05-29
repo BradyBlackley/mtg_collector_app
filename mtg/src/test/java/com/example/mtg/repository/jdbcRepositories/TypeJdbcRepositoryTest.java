@@ -4,15 +4,11 @@ import com.example.mtg.model.Type;
 import com.example.mtg.repository.CommonRepoTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.jdbc.Sql;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@Sql({"classpath:data/Type.sql"})
-@ContextConfiguration(
-        classes = {TypeJdbcRepository.class}
-)
+@Sql({"classpath:schema-h2.sql", "classpath:data/Type.sql"})
 class TypeJdbcRepositoryTest extends CommonRepoTest {
 
     @Autowired

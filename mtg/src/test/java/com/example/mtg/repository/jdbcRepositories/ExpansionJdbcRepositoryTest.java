@@ -4,17 +4,13 @@ import com.example.mtg.model.Expansion;
 import com.example.mtg.repository.CommonRepoTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.jdbc.Sql;
 
 import java.sql.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@Sql({"classpath:data/Expansion.sql"})
-@ContextConfiguration(
-        classes = {ExpansionJdbcRepository.class}
-)
+@Sql({"classpath:schema-h2.sql", "classpath:data/Expansion.sql"})
 class ExpansionJdbcRepositoryTest extends CommonRepoTest {
 
     @Autowired

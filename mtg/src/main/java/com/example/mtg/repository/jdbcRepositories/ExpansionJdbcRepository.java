@@ -19,31 +19,31 @@ public class ExpansionJdbcRepository implements ExpansionRepository {
 
     @Override
     public List<Expansion> findAllExpansions() {
-        final String sql = "select * from expansion;";
+        final String sql = "select * from `expansion`;";
         return jdbcTemplate.query(sql, new ExpansionMapper());
     }
 
     @Override
     public Expansion findExpansionById(int expansionId) {
-        final String sql = "select * from expansion where expansion_id = ?;";
+        final String sql = "select * from `expansion` where expansion_id = ?;";
         return jdbcTemplate.query(sql, new ExpansionMapper(), expansionId).stream().findFirst().orElse(null);
     }
 
     @Override
     public Expansion findExpansionByName(String expansionName) {
-        final String sql = "select * from expansion where expansion_name = ?;";
+        final String sql = "select * from `expansion` where expansion_name = ?;";
         return jdbcTemplate.query(sql, new ExpansionMapper(), expansionName).stream().findFirst().orElse(null);
     }
 
     @Override
     public Expansion findExpansionByCode(String expansionCode) {
-        final String sql = "select * from expansion where expansion_code = ?;";
+        final String sql = "select * from `expansion` where expansion_code = ?;";
         return jdbcTemplate.query(sql, new ExpansionMapper(), expansionCode).stream().findFirst().orElse(null);
     }
 
     @Override
     public Expansion add(Expansion expansion) {
-        final String sql = "insert into expansion (expansion_name, expansion_code, released_date) values (?,?,?);";
+        final String sql = "insert into `expansion` (expansion_name, expansion_code, released_date) values (?,?,?);";
         jdbcTemplate.update(sql, expansion.getExpansionName(), expansion.getExpansionCode(),
                 expansion.getReleasedDate());
         return expansion;
@@ -51,7 +51,7 @@ public class ExpansionJdbcRepository implements ExpansionRepository {
 
     @Override
     public boolean update(Expansion expansion) {
-        final String sql = "update expansion set expansion_name = ?, expansion_code = ?, released_date =? " +
+        final String sql = "update `expansion` set expansion_name = ?, expansion_code = ?, released_date =? " +
                 "where expansion_id = ?";
         return jdbcTemplate.update(sql, expansion.getExpansionName(), expansion.getExpansionCode(),
                 expansion.getReleasedDate(), expansion.getExpansionId()) > 0;
@@ -59,7 +59,7 @@ public class ExpansionJdbcRepository implements ExpansionRepository {
 
     @Override
     public boolean delete(Expansion expansion) {
-        final String sql = "delete from expansion where expansion_id = ?";
+        final String sql = "delete from `expansion` where expansion_id = ?";
         return jdbcTemplate.update(sql, expansion.getExpansionId()) > 0;
     }
 }

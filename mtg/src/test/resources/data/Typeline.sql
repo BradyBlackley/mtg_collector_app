@@ -1,19 +1,19 @@
-INSERT INTO TYPE (TYPE_NAME)
+INSERT INTO `TYPE` (TYPE_NAME)
 VALUES ('Legendary');
 
-INSERT INTO TYPE (TYPE_NAME)
+INSERT INTO `TYPE` (TYPE_NAME)
 VALUES ('Creature');
 
-INSERT INTO TYPE (TYPE_NAME)
+INSERT INTO `TYPE` (TYPE_NAME)
 VALUES ('Minotaur');
 
-INSERT INTO TYPE (TYPE_NAME)
+INSERT INTO `TYPE` (TYPE_NAME)
 VALUES ('Warrior');
 
-INSERT INTO TYPE (TYPE_NAME)
+INSERT INTO `TYPE` (TYPE_NAME)
 VALUES ('Wizard');
 
-INSERT INTO EXPANSION (expansion_name, expansion_code, released_date)
+INSERT INTO `EXPANSION` (expansion_name, expansion_code, released_date)
 VALUES('Zendikar Rising','ZNR','2020-09-01');
 
 INSERT INTO CARD (card_id, card_name, image_path, rarity, artist_name, converted_mana_cost, power, toughness,

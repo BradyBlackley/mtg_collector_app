@@ -2,18 +2,13 @@ package com.example.mtg.repository.jdbcRepositories;
 
 import com.example.mtg.model.User;
 import com.example.mtg.repository.CommonRepoTest;
-import com.example.mtg.repository.jdbcRepositories.UserJdbcRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.jdbc.Sql;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@Sql({"classpath:data/User.sql"})
-@ContextConfiguration(
-        classes = {UserJdbcRepository.class}
-)
+@Sql({"classpath:schema-h2.sql", "classpath:data/User.sql"})
 class UserJdbcRepositoryTest extends CommonRepoTest {
 
     @Autowired

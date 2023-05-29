@@ -13,10 +13,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@Sql({"classpath:data/ColorIdentity.sql"})
-@ContextConfiguration(
-        classes = {ColorIdentityJdbcRepository.class}
-)
+@Sql({"classpath:schema-h2.sql", "classpath:data/ColorIdentity.sql"})
 class ColorIdentityJdbcRepositoryTest extends CommonRepoTest {
 
     @Autowired
@@ -31,7 +28,7 @@ class ColorIdentityJdbcRepositoryTest extends CommonRepoTest {
 
     @Test
     void add() {
-        List<Color> colors = new ArrayList();
+        List<Color> colors = new ArrayList<>();
         colors.add(Color.RED);
         colors.add(Color.WHITE);
         colors.add(Color.BLUE);
