@@ -3,7 +3,12 @@ In run configurations add -Dspring.profiles.active=dev to VM options to activate
 
 Set two environment variables {USERNAME}, {PASSWORD}
 
+Open API docs: 
+
+    http://localhost:9191/swagger-ui/index.html
+
 Business Rules:
+
     User
     - UserId must be unique
     - Username must not already exist and must be less than 16 characters and must be greater than 2 characters
