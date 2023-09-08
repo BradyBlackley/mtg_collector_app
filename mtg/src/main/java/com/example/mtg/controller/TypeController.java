@@ -21,7 +21,7 @@ public class TypeController {
         return service.findAllTypes();
     }
 
-    @GetMapping("/type/{name}")
+    @GetMapping("/{name}")
     public Result<Type> findTypeByName(@PathVariable String name) {
         return service.findTypeByName(name);
     }
