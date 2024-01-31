@@ -1,4 +1,4 @@
-import Banner from "./banner";
+import Banner from "./banner/banner";
 
 const App = () => {
     return (
