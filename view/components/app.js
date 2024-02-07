@@ -2,7 +2,7 @@ import Banner from "./banner/banner";
 
 const App = () => {
     return (
-        <Banner />
+        <Banner headerText = "Magic The Gathering Collector&apos;s App"/>
     );
 };
 

@@ -1,15 +1,15 @@
 import Image from "next/image";
-import logoFilePath from "./ShittyLogo.png"
+import logoFilePath from "./tempLogo.png"
 import styles from "./banner.module.css"
 
-const Banner = () => {
+const Banner = ({headerText}) => {
     return (
         <header className="row mb-4">
             <div className="col-5">
                 <Image src={logoFilePath} alt="logo" className={styles.logo} />
             </div>
             <div className="col-7 mt-5">
-                Magic The Gathering Collector&apos;s App
+                {headerText}
             </div>
         </header>
     );
