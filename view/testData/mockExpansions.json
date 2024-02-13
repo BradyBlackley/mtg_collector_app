@@ -1,0 +1,22 @@
+{
+  "expansions": [
+      {
+          "expansion_id": 253,
+          "expansion_name": "Kaldheim",
+          "expansion_code": "KHM",
+          "released_date": "2021-02-01"
+      },
+      {
+        "expansion_id": 257,
+        "expansion_name": "Time Spiral Remastered",
+        "expansion_code": "TSR",
+        "released_date": "2021-03-01"
+      },
+      {
+        "expansion_id": 259,
+        "expansion_name": "Strixhaven: School of Mages",
+        "expansion_code": "STX",
+        "released_date": "2021-04-01"
+      }
+  ]
+}

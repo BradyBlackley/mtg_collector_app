@@ -15,7 +15,11 @@ const TypeList = ({types}) => {
         </thead>
         <tbody>
             {types.map((t) => (
-              <TypeListItem key={t.type_id} typeId={t.type_id} typeName={t.type_name}/>
+              <TypeListItem 
+                key={t.type_id} 
+                typeId={t.type_id} 
+                typeName={t.type_name}
+              />
             ))}
         </tbody>
       </table>
