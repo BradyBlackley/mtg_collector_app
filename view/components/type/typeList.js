@@ -1,3 +1,5 @@
+import TypeListItem from "./typeListItem";
+
 const TypeList = ({types}) => {
   return(
     <>
@@ -13,10 +15,7 @@ const TypeList = ({types}) => {
         </thead>
         <tbody>
             {types.map((t) => (
-                <tr key={t.type_id}>
-                    <td>{t.type_id}</td>
-                    <td>{t.type_name}</td>
-                </tr>
+              <TypeListItem key={t.type_id} typeId={t.type_id} typeName={t.type_name}/>
             ))}
         </tbody>
       </table>
