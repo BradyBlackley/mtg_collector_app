@@ -4,7 +4,7 @@ import styles from "./banner.module.css"
 
 const Banner = ({headerText}) => {
     return (
-        <header className="row mb-4">
+        <header className={"row mb-4 " + styles.banner}>
             <div className="col-5">
                 <Image src={logoFilePath} alt="logo" className={styles.logo} />
             </div>

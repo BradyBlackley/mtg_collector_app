@@ -1,18 +1,12 @@
-.banner {
+.navigationBar {
     border: solid;
     border-color: black;
     border-radius: 20px;
     width: auto;
-    background-color: #222831;
+    background-color: #0092ca;
     color: #eeeeee;
     justify-content: center;
-}
-
-.logo {
-    height: 150px;
-    width: auto;
-    margin: 5px;
-    border-radius: 2px;
+    margin-bottom: 5px;
 }
 
 /* Color Palette

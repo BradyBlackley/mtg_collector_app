@@ -1,0 +1,16 @@
+{
+    "types": [
+        {
+            "type_id": 1,
+            "type_name": "Artifact"
+        },
+        {
+            "type_id": 2,
+            "type_name": "Creature"
+        },
+        {
+            "type_id": 3,
+            "type_name": "Sorcery"
+        }
+    ]
+}

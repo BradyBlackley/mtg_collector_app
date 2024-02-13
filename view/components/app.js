@@ -1,8 +1,16 @@
 import Banner from "./banner/banner";
+import Navigation from "./navigation/navigation";
+import Main from "./main/main";
+import Footer from "./footer/footer";
 
 const App = () => {
     return (
-        <Banner headerText = "Magic The Gathering Collector&apos;s App"/>
+        <div>
+            <Banner headerText = "Magic The Gathering Collector&apos;s App"/>
+            <Navigation />
+            <Main />
+            <Footer />
+        </div>
     );
 };
 

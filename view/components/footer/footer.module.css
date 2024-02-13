@@ -1,18 +1,11 @@
-.banner {
+.footer {
     border: solid;
     border-color: black;
     border-radius: 20px;
     width: auto;
-    background-color: #222831;
+    background-color: #393e46;
     color: #eeeeee;
     justify-content: center;
-}
-
-.logo {
-    height: 150px;
-    width: auto;
-    margin: 5px;
-    border-radius: 2px;
 }
 
 /* Color Palette
