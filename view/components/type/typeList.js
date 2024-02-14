@@ -9,16 +9,16 @@ const TypeList = ({types}) => {
       <table className="table table-hover">
         <thead>
           <tr>
-            <th>type_id</th>
-            <th>type_name</th>
+            <th>type id</th>
+            <th>type name</th>
           </tr>
         </thead>
         <tbody>
             {types.map((t) => (
               <TypeListItem 
-                key={t.type_id} 
-                typeId={t.type_id} 
-                typeName={t.type_name}
+                key={t.typeId} 
+                typeId={t.typeId} 
+                typeName={t.typeName}
               />
             ))}
         </tbody>

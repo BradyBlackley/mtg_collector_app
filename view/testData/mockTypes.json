@@ -1,16 +1,16 @@
 {
   "types": [
       {
-          "type_id": 1,
-          "type_name": "Artifact"
+          "typeId": 1,
+          "typeName": "Artifact"
       },
       {
-          "type_id": 2,
-          "type_name": "Creature"
+          "typeId": 2,
+          "typeName": "Creature"
       },
       {
-          "type_id": 3,
-          "type_name": "Sorcery"
+          "typeId": 3,
+          "typeName": "Sorcery"
       }
   ]
 }

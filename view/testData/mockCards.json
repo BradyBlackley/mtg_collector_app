@@ -1,79 +1,79 @@
 {
     "cards": [
         {
-            "card_id": "ZNR008",
-            "card_name": "Cliffhaven Sell-Sword",
-            "image_path": "card_images/zendikar_rising/znr-8-cliffhaven-sell-sword.jpg",
+            "cardId": "ZNR008",
+            "cardName": "Cliffhaven Sell-Sword",
+            "imagePath": "card_images/zendikar_rising/znr-8-cliffhaven-sell-sword.jpg",
             "rarity": "common",
-            "artist_name": "Jason Rainville",
-            "converted_mana_cost": "2",
+            "artistName": "Jason Rainville",
+            "convertedManaCost": "2",
             "power": 3,
             "toughness": 1,
             "expansion":
             {
-                "expansion_id": 242,
-                "expansion_name": "Zendikar Rising",
-                "expansion_code": "ZNR",
-                "released_date": "2020-09-01"
+                "expansionId": 242,
+                "expansionName": "Zendikar Rising",
+                "expansionCode": "ZNR",
+                "releasedDate": "2020-09-01"
             },
-            "text_box": null,
-            "back_card_id": null
+            "textBox": null,
+            "backCard": null
         },
         {
-            "card_id": "ZNR001",
-            "card_name": "Allied Assault",
-            "image_path": "card_images/zendikar_rising/znr-1-allied-assault.jpg",
+            "cardId": "ZNR001",
+            "cardName": "Allied Assault",
+            "imagePath": "card_images/zendikar_rising/znr-1-allied-assault.jpg",
             "rarity": "uncommon",
-            "artist_name": "Josh Hass",
-            "converted_mana_cost": "3",
+            "artistName": "Josh Hass",
+            "convertedManaCost": "3",
             "power": null,
             "toughness": null,
             "expansion":
             {
-                "expansion_id": 242,
-                "expansion_name": "Zendikar Rising",
-                "expansion_code": "ZNR",
-                "released_date": "2020-09-01"
+                "expansionId": 242,
+                "expansionName": "Zendikar Rising",
+                "expansionCode": "ZNR",
+                "releasedDate": "2020-09-01"
             },
-            "text_box": "Up to two target creatures each get +X/+X until end of turn, where X is the number of creatures in your party. (Your party consists of up to one each of Cleric, Rogue, Warrior, and Wizard.)",
-            "back_card_id": null
+            "textBox": "Up to two target creatures each get +X/+X until end of turn, where X is the number of creatures in your party. (Your party consists of up to one each of Cleric, Rogue, Warrior, and Wizard.)",
+            "backCard": null
         },
         {
-            "card_id": "ZNR090",
-            "card_name": "Agadeem's Awakening",
-            "image_path": "card_images/zendikar_rising/znr-90-agadeem-s-awakening.jpg",
+            "cardId": "ZNR090",
+            "cardName": "Agadeem's Awakening",
+            "imagePath": "card_images/zendikar_rising/znr-90-agadeem-s-awakening.jpg",
             "rarity": "mythic",
-            "artist_name": "Dmitry Burmak",
-            "converted_mana_cost": "3X",
+            "artistName": "Dmitry Burmak",
+            "convertedManaCost": "3X",
             "power": null,
             "toughness": null,
             "expansion":
             {
-                "expansion_id": 242,
-                "expansion_name": "Zendikar Rising",
-                "expansion_code": "ZNR",
-                "released_date": "2020-09-01"
+                "expansionId": 242,
+                "expansionName": "Zendikar Rising",
+                "expansionCode": "ZNR",
+                "releasedDate": "2020-09-01"
             },
-            "text_box": "Return from your graveyard to the battlefield any number of target creature cards that each have a different converted mana cost X or less.",
-            "back_card":
+            "textBox": "Return from your graveyard to the battlefield any number of target creature cards that each have a different converted mana cost X or less.",
+            "backCard":
             {
-                "card_id": "ZNR090B",
-                "card_name": "Agadeem, the Undercrypt",
-                "image_path": "card_images/zendikar_rising/znr-90-agadeem-the-undercrypt.jpg",
+                "cardId": "ZNR090B",
+                "cardName": "Agadeem, the Undercrypt",
+                "imagePath": "card_images/zendikar_rising/znr-90-agadeem-the-undercrypt.jpg",
                 "rarity": "mythic",
-                "artist_name": "Dmitry Burmak",
-                "converted_mana_cost": null,
+                "artistName": "Dmitry Burmak",
+                "convertedManaCost": null,
                 "power": null,
                 "toughness": null,
                 "expansion":
                 {
-                    "expansion_id": 242,
-                    "expansion_name": "Zendikar Rising",
-                    "expansion_code": "ZNR",
-                    "released_date": "2020-09-01"
+                    "expansionId": 242,
+                    "expansionName": "Zendikar Rising",
+                    "expansionCode": "ZNR",
+                    "releasedDate": "2020-09-01"
                 },
-                "text_box": "As Agadeem, the Undercrypt enters the battlefield, you may pay 3 life. If you don't, it enters the battlefield tapped.[tap]:Add [black].",
-                "back_card_id": null
+                "textBox": "As Agadeem, the Undercrypt enters the battlefield, you may pay 3 life. If you don't, it enters the battlefield tapped.[tap]:Add [black].",
+                "backCard": null
             }
         }
     ]

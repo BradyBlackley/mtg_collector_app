@@ -9,20 +9,20 @@ const ExpansionList = ({expansions}) => {
       <table className="table table-hover">
         <thead>
             <tr>
-                <th>expansion_id</th>
-                <th>expansion_name</th>
-                <th>expansion_code</th>
-                <th>released_date</th>
+                <th>expansion id</th>
+                <th>expansion name</th>
+                <th>expansion code</th>
+                <th>released date</th>
             </tr>
         </thead>
         <tbody>
             {expansions.map((e) => (
                 <ExpansionListItem 
-                    key={e.expansion_id}
-                    expansionId={e.expansion_id}
-                    expansionName={e.expansion_name}
-                    expansionCode={e.expansion_code}
-                    releasedDate={e.released_date}
+                    key={e.expansionId}
+                    expansionId={e.expansionId}
+                    expansionName={e.expansionName}
+                    expansionCode={e.expansionCode}
+                    releasedDate={e.releasedDate}
                 />
             ))}
         </tbody>
