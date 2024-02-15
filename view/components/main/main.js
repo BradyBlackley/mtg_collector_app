@@ -9,7 +9,7 @@ const Main = ({headerText}) => {
     return (
         <div className={"row " + styles.main}>
             <TypeList types={mockTypes.types}/>
-            {/* <ExpansionList expansions={mockExpansions.expansions}/> */}
+            <ExpansionList expansions={mockExpansions.expansions}/>
         </div>
     );
 };

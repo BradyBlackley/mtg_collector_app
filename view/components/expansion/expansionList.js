@@ -19,10 +19,7 @@ const ExpansionList = ({expansions}) => {
             {expansions.map((e) => (
                 <ExpansionListItem 
                     key={e.expansionId}
-                    expansionId={e.expansionId}
-                    expansionName={e.expansionName}
-                    expansionCode={e.expansionCode}
-                    releasedDate={e.releasedDate}
+                    expansion={e}
                 />
             ))}
         </tbody>

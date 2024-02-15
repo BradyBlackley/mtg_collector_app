@@ -17,8 +17,7 @@ const TypeList = ({types}) => {
             {types.map((t) => (
               <TypeListItem 
                 key={t.typeId} 
-                typeId={t.typeId} 
-                typeName={t.typeName}
+                types={t}
               />
             ))}
         </tbody>
