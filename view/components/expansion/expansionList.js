@@ -19,7 +19,7 @@ const ExpansionList = ({expansions}) => {
             {expansions.map((e) => (
                 <ExpansionListItem 
                     key={e.expansionId}
-                    expansion={e}
+                    {...e}
                 />
             ))}
         </tbody>

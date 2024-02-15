@@ -1,8 +1,8 @@
-const TypeListItem = ({types}) => {
+const TypeListItem = ({typeId, typeName}) => {
   return(
     <tr>
-      <td>{types.typeId}</td>
-      <td>{types.typeName}</td>
+      <td>{typeId}</td>
+      <td>{typeName}</td>
     </tr>
   )
 }

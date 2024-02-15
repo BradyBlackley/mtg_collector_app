@@ -1,10 +1,10 @@
-const ExpansionListItem = ({expansion}) => {
+const ExpansionListItem = ({ expansionId, expansionName, expansionCode, releasedDate }) => {
     return(
         <tr>
-            <td>{expansion.expansionId}</td>
-            <td>{expansion.expansionName}</td>
-            <td>{expansion.expansionCode}</td>
-            <td>{expansion.releasedDate}</td>
+            <td>{expansionId}</td>
+            <td>{expansionName}</td>
+            <td>{expansionCode}</td>
+            <td>{releasedDate}</td>
         </tr>
     );
 };
