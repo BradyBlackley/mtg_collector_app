@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import ExpansionListItem from "./expansionListItem";
 
-const ExpansionList = ({expansions}) => {
+const ExpansionList = ({expansionsArr}) => {
+  const [expansions, setExpansions] = useState(expansionsArr);
   return(
     <>
       <div className="row mb-2">

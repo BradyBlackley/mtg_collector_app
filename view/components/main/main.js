@@ -8,8 +8,8 @@ import ExpansionList from "../expansion/expansionList";
 const Main = ({headerText}) => {
     return (
         <div className={"row " + styles.main}>
-            <TypeList types={mockTypes.types}/>
-            <ExpansionList expansions={mockExpansions.expansions}/>
+            <TypeList typesArr={mockTypes.types}/>
+            <ExpansionList expansionsArr={mockExpansions.expansions}/>
         </div>
     );
 };

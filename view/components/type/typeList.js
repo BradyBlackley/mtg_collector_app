@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import TypeListItem from "./typeListItem";
 
-const TypeList = ({types}) => {
+const TypeList = ({typesArr}) => {
+  const [types, setTypes] = useState(typesArr);
   return(
     <>
       <div className="row mb-2">
