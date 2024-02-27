@@ -1,4 +1,4 @@
-import dateFormatter from "@/helpers/dateFormatter";
+import dateFormatter from "/helpers/dateFormatter";
 
 const ExpansionListItem = ({ expansionId, expansionName, expansionCode, releasedDate }) => {
     return(

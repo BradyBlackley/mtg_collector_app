@@ -8,6 +8,10 @@
     justify-content: center;
 }
 
+.footerBtn {
+    color: #eeeeee;
+}
+
 /* Color Palette
 .first-color { 
 	background: #222831; 
