@@ -1,7 +1,7 @@
-import TypeList from "./typeList";
+import ExpansionList from "./expansionList";
 
 export default async function Page() {
-  const url = "http://localhost:9191/api/types"; 
+  const url = "http://localhost:9191/api/expansions"; 
   const init = {
       method: "GET",
       headers: {
@@ -10,12 +10,12 @@ export default async function Page() {
       }
   };
     
-  let res = await fetch(`${url}/allTypes`, init)
+  let res = await fetch(`${url}/allExpansions`, init)
   let data = await res.json()
 
   return(
     <div>
-      <TypeList typesArr={data.payload}/>
+      <ExpansionList expansionsArr={data.payload}/>
     </div>
   );
 }

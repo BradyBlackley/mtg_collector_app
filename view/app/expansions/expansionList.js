@@ -1,8 +1,11 @@
+'use client';
+
 import { useState } from 'react';
 import ExpansionListItem from "./expansionListItem";
 
-const ExpansionList = ({expansionsArr}) => {
+export default function ExpansionList({expansionsArr}) {
   const [expansions, setExpansions] = useState(expansionsArr);
+  
   return(
     <>
       <div className="row mb-2">
@@ -29,5 +32,3 @@ const ExpansionList = ({expansionsArr}) => {
     </>
   );
 };
-
-export default ExpansionList;
