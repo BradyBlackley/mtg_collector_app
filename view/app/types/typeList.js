@@ -1,23 +1,14 @@
+'use client';
+
 import { useEffect, useState, useRef } from 'react';
 import TypeListItem from "./typeListItem";
 
-const TypeList = () => {
-  const [types, setTypes] = useState([]);
+export default function TypeList({typesArr}) {
+  const [types, setTypes] = useState(typesArr);
   const inputEl = useRef(null);
-  const onButtonClick = () => inputEl.current.focus();
-
-  useEffect(()=>{
-    const fetchTypes = async () => {
-      try {
-      const response = await fetch('/api/allTypes');
-      const data = await response.json();
-      setTypes(data.payload);
-      } catch (error) {
-        console.error('Error fetching types:', error);
-      }
-    }
-    fetchTypes();
-  }, []);
+  const onButtonClick = () => {
+    inputEl.current.focus();
+  }
 
   return(
     <div className="container">
@@ -47,5 +38,3 @@ const TypeList = () => {
     </div>
   );
 }
-
-export default TypeList;
