@@ -6,7 +6,7 @@ const Navigation = () => {
         <div className={"row " + styles.navigationBar}>
             <div>
                 <Link href="/">Home</Link>
-                <Link href="/card-search">Card Search</Link>
+                <Link href="/card">Card Search</Link>
                 <Link href="/types">Types</Link>
                 <Link href="/expansions">Expansions</Link>
                 <Link href="/keywords">Keywords</Link>
