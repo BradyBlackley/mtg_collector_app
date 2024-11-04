@@ -99,7 +99,7 @@ class LibraryServiceTest {
         Mockito.when(userService.findById(validUser.getUserId())).thenReturn(getValidUserResult());
         Mockito.when(repository.add(validLibrary)).thenReturn(validLibrary);
 
-        Result<Library> result = service.add(validLibrary);
+        Result<Library> result = service.add(validLibrary, validUser.getUserId());
 
         assertTrue(result.isSuccess());
         assertEquals("success", result.getMessages().get(0));
@@ -107,7 +107,8 @@ class LibraryServiceTest {
 
     @Test
     void addInvalidCharacterLibraryName() {
-        Result<Library> result = service.add(invalidLibraryName);
+        Mockito.when(userService.findById(validUser.getUserId())).thenReturn(getValidUserResult());
+        Result<Library> result = service.add(invalidLibraryName, validUser.getUserId());
 
         assertFalse(result.isSuccess());
         assertEquals("The provided library name " + invalidLibraryName.getLibraryName() +
@@ -117,7 +118,8 @@ class LibraryServiceTest {
 
     @Test
     void addInvalidLibraryNameTooLong() {
-        Result<Library> result = service.add(invalidLibraryTooLong);
+        Mockito.when(userService.findById(validUser.getUserId())).thenReturn(getValidUserResult());
+        Result<Library> result = service.add(invalidLibraryTooLong, validUser.getUserId());
 
         assertFalse(result.isSuccess());
         assertEquals("The provided library name " + invalidLibraryTooLong.getLibraryName() +
@@ -127,7 +129,8 @@ class LibraryServiceTest {
 
     @Test
     void addInvalidLibraryNameTooShort() {
-        Result<Library> result = service.add(invalidLibraryTooShort);
+        Mockito.when(userService.findById(validUser.getUserId())).thenReturn(getValidUserResult());
+        Result<Library> result = service.add(invalidLibraryTooShort, validUser.getUserId());
 
         assertFalse(result.isSuccess());
         assertEquals("The provided library name " + invalidLibraryTooShort.getLibraryName() +
@@ -137,10 +140,11 @@ class LibraryServiceTest {
 
     @Test
     void addLibraryNameAlreadyInUse() {
+        Mockito.when(userService.findById(validUser.getUserId())).thenReturn(getValidUserResult());
         Mockito.when(repository.findLibraryByName(validLibrary.getLibraryName(),
                 validLibrary.getUser().getUserId())).thenReturn(validLibrary);
 
-        Result<Library> result = service.add(validLibrary);
+        Result<Library> result = service.add(validLibrary, validUser.getUserId());
 
         assertFalse(result.isSuccess());
         assertEquals("The provided library name " + validLibrary.getLibraryName() + " is already in use",
@@ -153,10 +157,10 @@ class LibraryServiceTest {
                 validLibrary.getUser().getUserId())).thenReturn(null);
         Mockito.when(userService.findById(validLibrary.getUser().getUserId())).thenReturn(null);
 
-        Result<Library> result = service.add(validLibrary);
+        Result<Library> result = service.add(validLibrary, validUser.getUserId());
 
         assertFalse(result.isSuccess());
-        assertEquals("User " + validLibrary.getUser().getUserId() + " associated with the provided library is "
+        assertEquals("The provided userId " + validLibrary.getUser().getUserId() + " associated with the provided library is "
                 + ResultType.NOT_FOUND.label, result.getMessages().get(0));
     }
 

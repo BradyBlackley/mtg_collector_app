@@ -16,7 +16,7 @@ public class LibraryController {
     @Autowired
     private LibraryService service;
 
-    @GetMapping("/allLibrariesByUser")
+    @GetMapping("/allLibrariesByUser/{userId}")
     private Result<List<Library>> findAllLibrariesByUser(@PathVariable String userId) {
         return service.findAllLibrariesByUser(userId);
     }
@@ -27,8 +27,8 @@ public class LibraryController {
     }
 
     @PostMapping("/addLibrary")
-    private Result<Library> add(@RequestBody Library library) {
-        return service.add(library);
+    private Result<Library> add(@RequestBody Library library, @PathVariable String userId) {
+        return service.add(library, userId);
     }
 
     @PutMapping("/updateLibrary")

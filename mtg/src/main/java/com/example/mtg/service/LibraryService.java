@@ -1,6 +1,7 @@
 package com.example.mtg.service;
 
 import com.example.mtg.model.Library;
+import com.example.mtg.model.User;
 import com.example.mtg.repository.repositoryInterfaces.LibraryRepository;
 import com.example.mtg.service.result.Result;
 import com.example.mtg.service.result.ResultType;
@@ -46,9 +47,10 @@ public class LibraryService {
         return result;
     }
 
-    public Result<Library> add(Library library) {
+    public Result<Library> add(Library library, String userId) {
         Result<Library> result = new Result<>();
         result.setPayload(library);
+        Result<User> user = userService.findById(userId);
 
         if (!validateLibraryName(library.getLibraryName())){
             result.addMessage("The provided library name " + library.getLibraryName() + " is invalid. Library " +
@@ -57,10 +59,11 @@ public class LibraryService {
         } else if (libraryRepository.findLibraryByName(library.getLibraryName(), library.getUser().getUserId()) != null) {
             result.addMessage("The provided library name " + library.getLibraryName() + " is already in use",
                     ResultType.ERROR);
-        } else if (userService.findById(library.getUser().getUserId()) == null) {
-            result.addMessage("User " + library.getUser().getUserId() + " associated with the provided library is "
+        } else if (user == null) {
+            result.addMessage("The provided userId " + userId + " associated with the provided library is "
                             + ResultType.NOT_FOUND.label, ResultType.NOT_FOUND);
         } else {
+            library.setUser(user.getPayload());
             libraryRepository.add(library);
             result.addMessage(ResultType.SUCCESS.label, ResultType.SUCCESS);
         }
