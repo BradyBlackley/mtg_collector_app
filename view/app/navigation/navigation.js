@@ -6,7 +6,8 @@ const Navigation = () => {
         <div className={"row " + styles.navigationBar}>
             <div>
                 <Link href="/" className={"btn " + styles.footerBtn}>Home</Link>
-                <Link href="/card" className={"btn " + styles.footerBtn}>Card Search</Link>
+                <Link href="/card-search" className={"btn " + styles.footerBtn}>Card Search</Link>
+                <Link href="/collection" className={"btn " + styles.footerBtn}>Collection</Link>
                 <Link href="/types" className={"btn " + styles.footerBtn}>Types</Link>
                 <Link href="/expansions" className={"btn " + styles.footerBtn}>Expansions</Link>
                 <Link href="/keywords" className={"btn " + styles.footerBtn}>Keywords</Link>
