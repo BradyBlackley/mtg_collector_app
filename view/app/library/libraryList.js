@@ -18,12 +18,12 @@ export default function LibraryList({librariesArr}) {
       <div className="row mb-2">
             <h5>{`${username}'s Libraries`}</h5>
       </div>
-      <div class="row">
-        <div class="input-group">
+      <div className="row">
+        <div className="input-group">
           <div className="justify-content-md-center input-group-prepend">
             <button className="btn btn-outline-secondary" type="button" id="button-addon1" onClick={onButtonClick}>Search</button>
           </div>
-          <input ref={inputEl} type="text" class="form-control" placeholder="Library name"/>
+          <input ref={inputEl} type="text" className="form-control" placeholder="Library name"/>
         </div>
       </div>
       <table className="table table-hover">
@@ -31,7 +31,7 @@ export default function LibraryList({librariesArr}) {
             <tr>
               <td>Library Id</td>
               <td>Library Name</td>
-              <td>User</td>
+              <td>User Id</td>
             </tr>
         </thead>
         <tbody>
@@ -40,7 +40,7 @@ export default function LibraryList({librariesArr}) {
                     key={l.libraryId} 
                     libraryId={l.libraryId} 
                     libraryName={l.libraryName} 
-                    user={l.user} 
+                    userId={l.userId} 
                 />
             ))}
         </tbody>

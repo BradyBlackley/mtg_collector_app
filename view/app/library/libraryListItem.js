@@ -1,11 +1,11 @@
 import UserListItem from "../user/userListItem.js";
 
-const LibraryListItem = ({ libraryId, libraryName, user }) => {
+const LibraryListItem = ({ libraryId, libraryName, userId }) => {
     return(
         <tr>
             <td>{libraryId}</td>
             <td>{libraryName}</td>
-            <td><UserListItem key={user.userId} {...user}/></td>
+            <td>{userId}</td>
         </tr>
     );
 };

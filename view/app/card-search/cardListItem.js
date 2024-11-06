@@ -23,7 +23,7 @@ const CardListItem = (
             <td>{convertedManaCost}</td>
             <td>{power}</td>
             <td>{toughness}</td>
-            <td><ExpansionListItem key={expansion.expansionId} {...expansion}/></td>
+            <ExpansionListItem key={expansion.expansionId} {...expansion}/>
             <td>{textBox}</td>
             <td>{backCard}</td>
         </tr>

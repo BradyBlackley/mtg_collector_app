@@ -30,10 +30,12 @@ export default function ExpansionList({expansionsArr}) {
         </thead>
         <tbody>
             {expansions.map((e) => (
-                <ExpansionListItem 
-                    key={e.expansionId}
-                    {...e}
-                />
+              <tr key={e.expansionId}>
+                  <ExpansionListItem 
+                      key={e.expansionId}
+                      {...e}
+                  />
+              </tr>
             ))}
         </tbody>
       </table>

@@ -10,19 +10,21 @@ export default function AddLibrary() {
     const inputEl = useRef(null);
 
     const handleSubmit = () => {
-        createLibrary(library);
+        const fetchData = async () => {
+          const response = await fetch('app/library/addLibrary')
+        }
     }
 
     return(
-        <div class="row">
+        <div className="row">
           <div className="row mb-2">
             <h5>Add Library</h5>
           </div>
-        <form class="input-group" onSubmit={handleSubmit}>
+        <form className="input-group" onSubmit={handleSubmit}>
           <div className="justify-content-md-center input-group-prepend">
             <button className="btn btn-outline-secondary" type="submit" id="button-addon1">Create</button>
           </div>
-          <input ref={inputEl} type="text" class="form-control" placeholder="Library name"/>
+          <input ref={inputEl} type="text" className="form-control" placeholder="Library name"/>
         </form>
       </div>
     )

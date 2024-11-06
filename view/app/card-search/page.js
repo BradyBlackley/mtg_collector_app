@@ -1,7 +1,8 @@
 import CardList from "./cardList";
 
-export default async function Page() {
+export default async function Page(request) {
   const url = "http://localhost:9191/api/cards"; 
+  revalidatePath('/card-search', 'page');
   const init = {
       method: "GET",
       headers: {

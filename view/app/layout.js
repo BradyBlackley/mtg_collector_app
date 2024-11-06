@@ -8,7 +8,7 @@ import { useState } from 'react';
 import UserContext from './context';
 
 export default function RootLayout({ children }) {
-    const [user, setUser] = useState({userId: "f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454", username: "Guest", authenticated: false});
+    const [user, setUser] = useState({userId: "f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454", username: "Guest", authenticated: false, isAdmin: false});
 
     return (
         <html lang="en">
