@@ -65,7 +65,7 @@ public class LibraryJdbcRepository implements LibraryRepository {
     }
 
     private void addUser(Library library) {
-        final String sql = "select user_id, username, password from `user` where user_id = ?;";
+        final String sql = "select user_id, username, password, is_admin from `user` where user_id = ?;";
         library.setUser(jdbcTemplate.query(sql, new UserMapper(),
                 library.getUser().getUserId()).stream().findFirst().orElse(null));
     }

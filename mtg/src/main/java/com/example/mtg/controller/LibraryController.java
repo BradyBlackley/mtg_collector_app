@@ -27,8 +27,8 @@ public class LibraryController {
     }
 
     @PostMapping("/addLibrary")
-    private Result<Library> add(@RequestBody Library library, @PathVariable String userId) {
-        return service.add(library, userId);
+    private Result<Library> add(@RequestBody Library library) {
+        return service.add(library);
     }
 
     @PutMapping("/updateLibrary")

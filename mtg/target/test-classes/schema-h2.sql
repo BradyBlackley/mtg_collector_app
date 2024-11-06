@@ -27,6 +27,7 @@ CREATE TABLE `user` (
 	user_id varchar(255) NOT NULL,
     username varchar(255),
     `password` varchar(255),
+    is_admin char(1),
     PRIMARY KEY (user_id)
 );
 

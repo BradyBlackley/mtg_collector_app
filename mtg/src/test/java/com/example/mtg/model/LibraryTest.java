@@ -113,7 +113,7 @@ class LibraryTest {
         library.setLibraryName("Zombie Deck");
         library.setUser(user);
 
-        assertEquals("{\"libraryId\":1, \"libraryName\":\"Zombie Deck\", \"user\":{\"userId\":\"5d209ac0-9102-11ec-b909-0242ac120002\", \"username\":\"TimTheMagicMan\", \"password\":\"928740054\"}}",
+        assertEquals("{\"libraryId\":1, \"libraryName\":\"Zombie Deck\", \"user\":{\"userId\":\"5d209ac0-9102-11ec-b909-0242ac120002\", \"username\":\"TimTheMagicMan\", \"isAdmin\":\"false\"}}",
                 library.toString());
     }
 }

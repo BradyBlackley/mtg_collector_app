@@ -287,10 +287,10 @@ class CardCopyToLibraryTest {
                         " \"backCard\":\"null\"}," +
                         " \"user\":{\"userId\":\"5d209ac0-9102-11ec-b909-0242ac120002\"," +
                         " \"username\":\"TimTheMagicMan\"," +
-                        " \"password\":\"928740054\"}}]," +
+                        " \"isAdmin\":\"false\"}}]," +
                         " library:{\"libraryId\":1, \"libraryName\":\"Zombie Deck\"," +
                         " \"user\":{\"userId\":\"5d209ac0-9102-11ec-b909-0242ac120002\", \"username\":\"TimTheMagicMan\"," +
-                        " \"password\":\"928740054\"}}}",
+                        " \"isAdmin\":\"false\"}}}",
                 cardCopyToLibrary.toString());
     }
 }

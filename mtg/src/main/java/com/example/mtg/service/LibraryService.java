@@ -47,10 +47,10 @@ public class LibraryService {
         return result;
     }
 
-    public Result<Library> add(Library library, String userId) {
+    public Result<Library> add(Library library) {
         Result<Library> result = new Result<>();
         result.setPayload(library);
-        Result<User> user = userService.findById(userId);
+        Result<User> user = userService.findById(library.getUser().getUserId());
 
         if (!validateLibraryName(library.getLibraryName())){
             result.addMessage("The provided library name " + library.getLibraryName() + " is invalid. Library " +
@@ -60,7 +60,7 @@ public class LibraryService {
             result.addMessage("The provided library name " + library.getLibraryName() + " is already in use",
                     ResultType.ERROR);
         } else if (user == null) {
-            result.addMessage("The provided userId " + userId + " associated with the provided library is "
+            result.addMessage("The provided userId " + library.getUser().getUserId() + " associated with the provided library is "
                             + ResultType.NOT_FOUND.label, ResultType.NOT_FOUND);
         } else {
             library.setUser(user.getPayload());

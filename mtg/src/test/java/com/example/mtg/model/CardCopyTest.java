@@ -233,7 +233,7 @@ class CardCopyTest {
                         "At the beginning of that combat, untap all creatures you control.\"," +
                         " \"backCard\":\"null\"}, " +
                         "\"user\":{\"userId\":\"5d209ac0-9102-11ec-b909-0242ac120002\", \"username\":\"TimTheMagicMan\", " +
-                        "\"password\":\"928740054\"}}",
+                        "\"isAdmin\":\"false\"}}",
                 cardCopy.toString());
     }
 }
