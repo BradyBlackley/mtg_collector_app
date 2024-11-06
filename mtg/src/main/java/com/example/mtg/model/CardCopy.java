@@ -6,7 +6,7 @@ public class CardCopy {
 
     private int cardCopyId;
     private Card card;
-    private User user;
+    private String userId;
 
     public CardCopy() {
 
@@ -21,10 +21,10 @@ public class CardCopy {
         this.card = card;
     }
 
-    public CardCopy(int cardCopyId, Card card, User user) {
+    public CardCopy(int cardCopyId, Card card, String userId) {
         this.cardCopyId = cardCopyId;
         this.card = card;
-        this.user = user;
+        this.userId = userId;
     }
 
     public int getCardCopyId() {
@@ -43,12 +43,12 @@ public class CardCopy {
         this.card = card;
     }
 
-    public User getUser() {
-        return user;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     @Override
@@ -56,12 +56,12 @@ public class CardCopy {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CardCopy cardCopy = (CardCopy) o;
-        return cardCopyId == cardCopy.cardCopyId && card.equals(cardCopy.card) && user.equals(cardCopy.user);
+        return cardCopyId == cardCopy.cardCopyId && card.equals(cardCopy.card) && userId.equals(cardCopy.userId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(cardCopyId, card, user);
+        return Objects.hash(cardCopyId, card, userId);
     }
 
     @Override
@@ -69,7 +69,7 @@ public class CardCopy {
         return "{" +
                 "\"cardCopyId\":" + cardCopyId +
                 ", \"card\":" + card +
-                ", \"user\":" + user +
+                ", \"userId\":\"" + userId + "\"" +
                 '}';
     }
 }

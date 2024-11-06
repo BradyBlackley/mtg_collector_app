@@ -33,14 +33,11 @@ class CardCopyTest {
 
         User user = new User();
         user.setUserId("5d209ac0-9102-11ec-b909-0242ac120002");
-        user.setUsername("TimTheMagicMan");
-        user.setPassword("5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8");
-
 
         CardCopy cardCopy = new CardCopy();
         CardCopy cardCopy1 = new CardCopy(1);
         CardCopy cardCopy2 = new CardCopy(1, card);
-        CardCopy cardCopy3 = new CardCopy(1, card, user);
+        CardCopy cardCopy3 = new CardCopy(1, card, user.getUserId());
 
         assertNull(cardCopy.getCard());
 
@@ -51,7 +48,7 @@ class CardCopyTest {
 
         assertEquals(1, cardCopy3.getCardCopyId());
         assertEquals(card, cardCopy3.getCard());
-        assertEquals(user, cardCopy3.getUser());
+        assertEquals(user.getUserId(), cardCopy3.getUserId());
     }
 
     @Test
@@ -97,12 +94,10 @@ class CardCopyTest {
 
         User user = new User();
         user.setUserId("5d209ac0-9102-11ec-b909-0242ac120002");
-        user.setUsername("TimTheMagicMan");
-        user.setPassword("5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8");
 
-        cardCopy.setUser(user);
+        cardCopy.setUserId(user.getUserId());
 
-        assertEquals(user, cardCopy.getUser());
+        assertEquals(user.getUserId(), cardCopy.getUserId());
     }
 
     @Test
@@ -134,20 +129,18 @@ class CardCopyTest {
 
         User user = new User();
         user.setUserId("5d209ac0-9102-11ec-b909-0242ac120002");
-        user.setUsername("TimTheMagicMan");
-        user.setPassword("5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8");
 
         cardCopy.setCardCopyId(1);
         cardCopy.setCard(card);
-        cardCopy.setUser(user);
+        cardCopy.setUserId(user.getUserId());
 
         cardCopy1.setCardCopyId(1);
         cardCopy1.setCard(card);
-        cardCopy1.setUser(user);
+        cardCopy1.setUserId(user.getUserId());
 
         different.setCardCopyId(2);
         different.setCard(card);
-        different.setUser(user);
+        different.setUserId(user.getUserId());
 
         assertFalse(different.equals(cardCopy));
         assertTrue(cardCopy.equals(cardCopy1));
@@ -179,12 +172,10 @@ class CardCopyTest {
 
         User user = new User();
         user.setUserId("5d209ac0-9102-11ec-b909-0242ac120002");
-        user.setUsername("TimTheMagicMan");
-        user.setPassword("5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8");
 
         cardCopy.setCardCopyId(1);
         cardCopy.setCard(card);
-        cardCopy.setUser(user);
+        cardCopy.setUserId(user.getUserId());
 
         assertNotNull(cardCopy.hashCode());
     }
@@ -215,12 +206,10 @@ class CardCopyTest {
 
         User user = new User();
         user.setUserId("5d209ac0-9102-11ec-b909-0242ac120002");
-        user.setUsername("TimTheMagicMan");
-        user.setPassword("5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8");
 
         cardCopy.setCardCopyId(1);
         cardCopy.setCard(card);
-        cardCopy.setUser(user);
+        cardCopy.setUserId(user.getUserId());
 
         assertEquals("{\"cardCopyId\":1, \"card\":{\"cardId\":\"ZNR150\", \"cardName\":\"Moraug, Fury of Akoum\", " +
                         "\"imagePath\":\"card_images/zendikar_rising/znr-150-moraug-fury-of-akoum.jpg\", " +
@@ -232,8 +221,7 @@ class CardCopyTest {
                         "your control, if it''s your main phase, there''s an additional combat phase after this phase. " +
                         "At the beginning of that combat, untap all creatures you control.\"," +
                         " \"backCard\":\"null\"}, " +
-                        "\"user\":{\"userId\":\"5d209ac0-9102-11ec-b909-0242ac120002\", \"username\":\"TimTheMagicMan\", " +
-                        "\"isAdmin\":\"false\"}}",
+                        "\"userId\":\"5d209ac0-9102-11ec-b909-0242ac120002\"}",
                 cardCopy.toString());
     }
 }

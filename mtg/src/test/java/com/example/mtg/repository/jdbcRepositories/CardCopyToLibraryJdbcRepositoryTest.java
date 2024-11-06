@@ -26,14 +26,11 @@ class CardCopyToLibraryJdbcRepositoryTest extends CommonRepoTest {
     void add() {
         User user = new User();
         user.setUserId("5d209ac0-9102-11ec-b909-0242ac120002");
-        user.setUsername("TimTheMagicMan");
-        user.setPassword("5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8");
 
         Library library = new Library();
         library.setLibraryId(2);
         library.setLibraryName("Zombie Deck");
-        library.setUser(user);
-
+        library.setUserId(user.getUserId());
 
         List<CardCopy> cardCopies = repository.findByLibraryId(2).getCardCopies();
 

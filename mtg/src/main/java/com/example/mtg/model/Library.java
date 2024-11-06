@@ -6,7 +6,7 @@ public class Library {
 
     private int libraryId;
     private String libraryName;
-    private User user;
+    private String userId;
 
     public Library() {
 
@@ -16,15 +16,15 @@ public class Library {
         this.libraryId = libraryId;
     }
 
-    public Library(String libraryName, User user) {
+    public Library(String libraryName, String userId) {
         this.libraryName = libraryName;
-        this.user = user;
+        this.userId = userId;
     }
 
-    public Library(int libraryId, String libraryName, User user) {
+    public Library(int libraryId, String libraryName, String userId) {
         this.libraryId = libraryId;
         this.libraryName = libraryName;
-        this.user = user;
+        this.userId = userId;
     }
 
 
@@ -44,12 +44,12 @@ public class Library {
         this.libraryName = libraryName;
     }
 
-    public User getUser() {
-        return user;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     @Override
@@ -57,12 +57,12 @@ public class Library {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Library library = (Library) o;
-        return libraryId == library.libraryId && libraryName.equals(library.libraryName) && user.equals(library.user);
+        return libraryId == library.libraryId && libraryName.equals(library.libraryName) && userId.equals(library.userId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(libraryId, libraryName, user);
+        return Objects.hash(libraryId, libraryName, userId);
     }
 
     @Override
@@ -70,7 +70,7 @@ public class Library {
         return "{" +
                 "\"libraryId\":" + libraryId +
                 ", \"libraryName\":\"" + libraryName + '\"' +
-                ", \"user\":" + user +
+                ", \"userId\":\"" + userId + "\"" +
                 '}';
     }
 }

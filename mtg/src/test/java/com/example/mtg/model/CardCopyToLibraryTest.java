@@ -37,19 +37,17 @@ class CardCopyToLibraryTest {
 
         User user = new User();
         user.setUserId("5d209ac0-9102-11ec-b909-0242ac120002");
-        user.setUsername("TimTheMagicMan");
-        user.setPassword("5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8");
 
         CardCopy cardCopy = new CardCopy();
         cardCopy.setCard(card);
-        cardCopy.setUser(user);
+        cardCopy.setUserId(user.getUserId());
 
         cardCopies.add(cardCopy);
 
         Library library = new Library();
         library.setLibraryId(1);
         library.setLibraryName("Zombie Deck");
-        library.setUser(user);
+        library.setUserId(user.getUserId());
 
         CardCopyToLibrary cardCopyToLibrary = new CardCopyToLibrary();
         CardCopyToLibrary cardCopyToLibrary1 = new CardCopyToLibrary(cardCopies);
@@ -95,7 +93,7 @@ class CardCopyToLibraryTest {
 
         CardCopy cardCopy = new CardCopy();
         cardCopy.setCard(card);
-        cardCopy.setUser(user);
+        cardCopy.setUserId(user.getUserId());
 
         cardCopies.add(cardCopy);
 
@@ -109,16 +107,16 @@ class CardCopyToLibraryTest {
     void getSetLibrary() {
         User user = new User();
         user.setUserId("5d209ac0-9102-11ec-b909-0242ac120002");
-        user.setUsername("TimTheMagicMan");
-        user.setPassword("5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8");
 
         Library library = new Library();
         library.setLibraryId(1);
         library.setLibraryName("Zombie Deck");
-        library.setUser(user);
+        library.setUserId(user.getUserId());
 
         CardCopyToLibrary cardCopyToLibrary = new CardCopyToLibrary();
         cardCopyToLibrary.setLibrary(library);
+
+        assertEquals(library, cardCopyToLibrary.getLibrary());
     }
 
     @Test
@@ -148,24 +146,22 @@ class CardCopyToLibraryTest {
 
         User user = new User();
         user.setUserId("5d209ac0-9102-11ec-b909-0242ac120002");
-        user.setUsername("TimTheMagicMan");
-        user.setPassword("5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8");
 
         CardCopy cardCopy = new CardCopy();
         cardCopy.setCard(card);
-        cardCopy.setUser(user);
+        cardCopy.setUserId(user.getUserId());
 
         cardCopies.add(cardCopy);
 
         Library library = new Library();
         library.setLibraryId(1);
         library.setLibraryName("Zombie Deck");
-        library.setUser(user);
+        library.setUserId(user.getUserId());
 
         Library library1 = new Library();
         library.setLibraryId(1);
         library.setLibraryName("Dragon Deck");
-        library.setUser(user);
+        library.setUserId(user.getUserId());
 
         CardCopyToLibrary cardCopyToLibrary = new CardCopyToLibrary();
         cardCopyToLibrary.setCardCopies(cardCopies);
@@ -210,19 +206,17 @@ class CardCopyToLibraryTest {
 
         User user = new User();
         user.setUserId("5d209ac0-9102-11ec-b909-0242ac120002");
-        user.setUsername("TimTheMagicMan");
-        user.setPassword("5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8");
 
         CardCopy cardCopy = new CardCopy();
         cardCopy.setCard(card);
-        cardCopy.setUser(user);
+        cardCopy.setUserId(user.getUserId());
 
         cardCopies.add(cardCopy);
 
         Library library = new Library();
         library.setLibraryId(1);
         library.setLibraryName("Zombie Deck");
-        library.setUser(user);
+        library.setUserId(user.getUserId());
 
         CardCopyToLibrary cardCopyToLibrary = new CardCopyToLibrary();
         cardCopyToLibrary.setCardCopies(cardCopies);
@@ -258,19 +252,17 @@ class CardCopyToLibraryTest {
 
         User user = new User();
         user.setUserId("5d209ac0-9102-11ec-b909-0242ac120002");
-        user.setUsername("TimTheMagicMan");
-        user.setPassword("5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8");
 
         CardCopy cardCopy = new CardCopy();
         cardCopy.setCard(card);
-        cardCopy.setUser(user);
+        cardCopy.setUserId(user.getUserId());
 
         cardCopies.add(cardCopy);
 
         Library library = new Library();
         library.setLibraryId(1);
         library.setLibraryName("Zombie Deck");
-        library.setUser(user);
+        library.setUserId(user.getUserId());
 
         CardCopyToLibrary cardCopyToLibrary = new CardCopyToLibrary();
         cardCopyToLibrary.setCardCopies(cardCopies);
@@ -285,12 +277,9 @@ class CardCopyToLibraryTest {
                         " \"releasedDate\":\"2020-09-01\"}," +
                         " \"textBox\":\"Each creature you control gets +1/+0 for each time it has attacked this turn. Landfall - Whenever a land enters the battlefield under your control, if it''s your main phase, there''s an additional combat phase after this phase. At the beginning of that combat, untap all creatures you control.\"," +
                         " \"backCard\":\"null\"}," +
-                        " \"user\":{\"userId\":\"5d209ac0-9102-11ec-b909-0242ac120002\"," +
-                        " \"username\":\"TimTheMagicMan\"," +
-                        " \"isAdmin\":\"false\"}}]," +
+                        " \"userId\":\"5d209ac0-9102-11ec-b909-0242ac120002\"}]," +
                         " library:{\"libraryId\":1, \"libraryName\":\"Zombie Deck\"," +
-                        " \"user\":{\"userId\":\"5d209ac0-9102-11ec-b909-0242ac120002\", \"username\":\"TimTheMagicMan\"," +
-                        " \"isAdmin\":\"false\"}}}",
+                        " \"userId\":\"5d209ac0-9102-11ec-b909-0242ac120002\"}}",
                 cardCopyToLibrary.toString());
     }
 }

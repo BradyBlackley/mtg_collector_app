@@ -59,11 +59,11 @@ class CardCopyServiceTest {
     public User validUser = new User("965db958-18ed-11ed-861d-0242ac120002", "Bob",
             "Money$M4n");
 
-    public CardCopy validCardCopy = new CardCopy(1, validCard, validUser);
+    public CardCopy validCardCopy = new CardCopy(1, validCard, validUser.getUserId());
 
-    public CardCopy validCardCopy1 = new CardCopy(2, validCard1, validUser);
+    public CardCopy validCardCopy1 = new CardCopy(2, validCard1, validUser.getUserId());
 
-    public CardCopy invalidCardCopy = new CardCopy(3, invalidCard, validUser);
+    public CardCopy invalidCardCopy = new CardCopy(3, invalidCard, validUser.getUserId());
 
     public List<CardCopy> getCardsList() {
         List<CardCopy> cardCopyList = new ArrayList<>();
@@ -104,38 +104,38 @@ class CardCopyServiceTest {
 
     @Test
     void findAllByUser() {
-        Mockito.when(repository.findAllByUser(validCardCopy.getUser().getUserId())).thenReturn(getCardsList());
+        Mockito.when(repository.findAllByUser(validCardCopy.getUserId())).thenReturn(getCardsList());
         assertTrue(service.findAllByUser(validUser.getUserId()).isSuccess());
         assertEquals("success", service.findAllByUser(validUser.getUserId()).getMessages().get(0));
     }
 
     @Test
     void findAllByUserNoneFound() {
-        Mockito.when(repository.findAllByUser(validCardCopy.getUser().getUserId())).thenReturn(null);
-        assertFalse(service.findAllByUser(validCardCopy.getUser().getUserId()).isSuccess());
-        assertEquals("No card copies found associated with given user " + validCardCopy.getUser().getUserId(),
+        Mockito.when(repository.findAllByUser(validCardCopy.getUserId())).thenReturn(null);
+        assertFalse(service.findAllByUser(validCardCopy.getUserId()).isSuccess());
+        assertEquals("No card copies found associated with given user " + validCardCopy.getUserId(),
                 service.findAllByUser(validUser.getUserId()).getMessages().get(0));
     }
 
     @Test
     void findAllByCardId() {
         Mockito.when(repository.findAllByCardId(validCardCopy.getCard().getCardId(),
-                validCardCopy.getUser().getUserId())).thenReturn(getCardsList());
+                validCardCopy.getUserId())).thenReturn(getCardsList());
         assertTrue(service.findAllByCardId(validCardCopy.getCard().getCardId(),
-                validCardCopy.getUser().getUserId()).isSuccess());
+                validCardCopy.getUserId()).isSuccess());
         assertEquals("success", service.findAllByCardId(validCardCopy.getCard().getCardId(),
-                validCardCopy.getUser().getUserId()).getMessages().get(0));
+                validCardCopy.getUserId()).getMessages().get(0));
     }
 
     @Test
     void findAllByCardIdNoneFound() {
         Mockito.when(repository.findAllByCardId(validCardCopy.getCard().getCardId(),
-                validCardCopy.getUser().getUserId())).thenReturn(null);
+                validCardCopy.getUserId())).thenReturn(null);
         assertFalse(service.findAllByCardId(validCardCopy.getCard().getCardId(),
-                validCardCopy.getUser().getUserId()).isSuccess());
+                validCardCopy.getUserId()).isSuccess());
         assertEquals("No card copies found associated with given card id " + validCardCopy.getCard().getCardId(),
                 service.findAllByCardId(validCardCopy.getCard().getCardId(),
-                validCardCopy.getUser().getUserId()).getMessages().get(0));
+                validCardCopy.getUserId()).getMessages().get(0));
     }
 
     @Test
@@ -156,7 +156,7 @@ class CardCopyServiceTest {
     @Test
     void add() {
         Mockito.when(cardService.findCardById(validCardCopy.getCard().getCardId())).thenReturn(getValidCardResult());
-        Mockito.when(userService.findById(validCardCopy.getUser().getUserId())).thenReturn(getValidUserResult());
+        Mockito.when(userService.findById(validCardCopy.getUserId())).thenReturn(getValidUserResult());
         Mockito.when(repository.add(validCardCopy)).thenReturn(validCardCopy);
         assertTrue(service.add(validCardCopy).isSuccess());
         assertEquals("success", service.add(validCardCopy).getMessages().get(0));
@@ -167,7 +167,7 @@ class CardCopyServiceTest {
         CardCopy temp = validCardCopy;
         temp.setCardCopyId(-1);
         Mockito.when(cardService.findCardById(validCardCopy.getCard().getCardId())).thenReturn(getValidCardResult());
-        Mockito.when(userService.findById(validCardCopy.getUser().getUserId())).thenReturn(getValidUserResult());
+        Mockito.when(userService.findById(validCardCopy.getUserId())).thenReturn(getValidUserResult());
         assertFalse(service.add(validCardCopy).isSuccess());
         assertEquals("The given card copy id " + validCardCopy.getCardCopyId() + " is invalid",
                 service.add(validCardCopy).getMessages().get(0));
@@ -176,7 +176,7 @@ class CardCopyServiceTest {
     @Test
     void addCardCopyIdAlreadyExists() {
         Mockito.when(cardService.findCardById(validCardCopy.getCard().getCardId())).thenReturn(getValidCardResult());
-        Mockito.when(userService.findById(validCardCopy.getUser().getUserId())).thenReturn(getValidUserResult());
+        Mockito.when(userService.findById(validCardCopy.getUserId())).thenReturn(getValidUserResult());
         Mockito.when(repository.findByCardCopyId(validCardCopy.getCardCopyId())).thenReturn(validCardCopy);
         assertFalse(service.add(validCardCopy).isSuccess());
         assertEquals("The given card copy id " + validCardCopy.getCardCopyId() + " already exists",
@@ -186,10 +186,10 @@ class CardCopyServiceTest {
     @Test
     void addCardCopyCardIsInvalid() {
         Mockito.when(cardService.findCardById(validCardCopy.getCard().getCardId())).thenReturn(getValidCardResult());
-        Mockito.when(userService.findById(validCardCopy.getUser().getUserId())).thenReturn(getInvalidUserResult());
+        Mockito.when(userService.findById(validCardCopy.getUserId())).thenReturn(getInvalidUserResult());
         Mockito.when(repository.findByCardCopyId(validCardCopy.getCardCopyId())).thenReturn(null);
         assertFalse(service.add(validCardCopy).isSuccess());
-        assertEquals("The given user " + validCardCopy.getUser() + " associated with card copy "
+        assertEquals("The given user " + validCardCopy.getUserId() + " associated with card copy "
                         + validCardCopy + " is invalid",
                 service.add(validCardCopy).getMessages().get(1));
     }
@@ -197,7 +197,7 @@ class CardCopyServiceTest {
     @Test
     void addCardCopyUserIsInvalid() {
         Mockito.when(cardService.findCardById(invalidCardCopy.getCard().getCardId())).thenReturn(getInvalidCardResult());
-        Mockito.when(userService.findById(invalidCardCopy.getUser().getUserId())).thenReturn(null);
+        Mockito.when(userService.findById(invalidCardCopy.getUserId())).thenReturn(null);
         Mockito.when(repository.findByCardCopyId(invalidCardCopy.getCardCopyId())).thenReturn(null);
         assertFalse(service.add(invalidCardCopy).isSuccess());
         assertEquals("The given card " + invalidCardCopy.getCard() + " associated with card copy "
@@ -208,7 +208,7 @@ class CardCopyServiceTest {
     @Test
     void addFailed() {
         Mockito.when(cardService.findCardById(validCardCopy.getCard().getCardId())).thenReturn(getValidCardResult());
-        Mockito.when(userService.findById(validCardCopy.getUser().getUserId())).thenReturn(getValidUserResult());
+        Mockito.when(userService.findById(validCardCopy.getUserId())).thenReturn(getValidUserResult());
         assertFalse(service.add(validCardCopy).isSuccess());
         assertEquals("Failed to add given card copy " + validCardCopy,
                 service.add(validCardCopy).getMessages().get(0));
@@ -217,7 +217,7 @@ class CardCopyServiceTest {
     @Test
     void update() {
         Mockito.when(cardService.findCardById(validCardCopy.getCard().getCardId())).thenReturn(getValidCardResult());
-        Mockito.when(userService.findById(validCardCopy.getUser().getUserId())).thenReturn(getValidUserResult());
+        Mockito.when(userService.findById(validCardCopy.getUserId())).thenReturn(getValidUserResult());
         Mockito.when(repository.findByCardCopyId(validCardCopy.getCardCopyId())).thenReturn(validCardCopy);
         Mockito.when(repository.update(validCardCopy)).thenReturn(true);
         assertTrue(service.update(validCardCopy).isSuccess());
@@ -229,7 +229,7 @@ class CardCopyServiceTest {
         CardCopy temp = validCardCopy;
         temp.setCardCopyId(-1);
         Mockito.when(cardService.findCardById(validCardCopy.getCard().getCardId())).thenReturn(getValidCardResult());
-        Mockito.when(userService.findById(validCardCopy.getUser().getUserId())).thenReturn(getValidUserResult());
+        Mockito.when(userService.findById(validCardCopy.getUserId())).thenReturn(getValidUserResult());
         assertFalse(service.update(validCardCopy).isSuccess());
         assertEquals("The given card copy id " + validCardCopy.getCardCopyId() + " is invalid",
                 service.update(validCardCopy).getMessages().get(0));
@@ -238,7 +238,7 @@ class CardCopyServiceTest {
     @Test
     void updateCardCopyIdDoesNotExist() {
         Mockito.when(cardService.findCardById(validCardCopy.getCard().getCardId())).thenReturn(getValidCardResult());
-        Mockito.when(userService.findById(validCardCopy.getUser().getUserId())).thenReturn(getValidUserResult());
+        Mockito.when(userService.findById(validCardCopy.getUserId())).thenReturn(getValidUserResult());
         Mockito.when(repository.findByCardCopyId(validCardCopy.getCardCopyId())).thenReturn(null);
         assertFalse(service.update(validCardCopy).isSuccess());
         assertEquals("The given card copy id " + validCardCopy.getCardCopyId() + " is not found",
@@ -248,10 +248,10 @@ class CardCopyServiceTest {
     @Test
     void updateCardCopyUserIsInvalid() {
         Mockito.when(cardService.findCardById(validCardCopy.getCard().getCardId())).thenReturn(getValidCardResult());
-        Mockito.when(userService.findById(validCardCopy.getUser().getUserId())).thenReturn(getInvalidUserResult());
+        Mockito.when(userService.findById(validCardCopy.getUserId())).thenReturn(getInvalidUserResult());
         Mockito.when(repository.findByCardCopyId(validCardCopy.getCardCopyId())).thenReturn(validCardCopy);
         assertFalse(service.update(validCardCopy).isSuccess());
-        assertEquals("The given user " + validCardCopy.getUser() + " associated with card copy "
+        assertEquals("The given user " + validCardCopy.getUserId() + " associated with card copy "
                         + validCardCopy + " is invalid",
                 service.update(validCardCopy).getMessages().get(1));
     }
@@ -259,7 +259,7 @@ class CardCopyServiceTest {
     @Test
     void updateCardCopyCardIsInvalid() {
         Mockito.when(cardService.findCardById(invalidCardCopy.getCard().getCardId())).thenReturn(getInvalidCardResult());
-        Mockito.when(userService.findById(invalidCardCopy.getUser().getUserId())).thenReturn(getValidUserResult());
+        Mockito.when(userService.findById(invalidCardCopy.getUserId())).thenReturn(getValidUserResult());
         Mockito.when(repository.findByCardCopyId(invalidCardCopy.getCardCopyId())).thenReturn(validCardCopy);
         assertFalse(service.update(invalidCardCopy).isSuccess());
         assertEquals("The given card " + invalidCardCopy.getCard() + " associated with card copy "
@@ -270,7 +270,7 @@ class CardCopyServiceTest {
     @Test
     void updateFailed() {
         Mockito.when(cardService.findCardById(validCardCopy.getCard().getCardId())).thenReturn(getValidCardResult());
-        Mockito.when(userService.findById(validCardCopy.getUser().getUserId())).thenReturn(getValidUserResult());
+        Mockito.when(userService.findById(validCardCopy.getUserId())).thenReturn(getValidUserResult());
         Mockito.when(repository.findByCardCopyId(validCardCopy.getCardCopyId())).thenReturn(validCardCopy);
         Mockito.when(repository.update(validCardCopy)).thenReturn(false);
         assertFalse(service.update(validCardCopy).isSuccess());
@@ -281,7 +281,7 @@ class CardCopyServiceTest {
     @Test
     void delete() {
         Mockito.when(cardService.findCardById(validCardCopy.getCard().getCardId())).thenReturn(getValidCardResult());
-        Mockito.when(userService.findById(validCardCopy.getUser().getUserId())).thenReturn(getValidUserResult());
+        Mockito.when(userService.findById(validCardCopy.getUserId())).thenReturn(getValidUserResult());
         Mockito.when(repository.findByCardCopyId(validCardCopy.getCardCopyId())).thenReturn(validCardCopy);
         Mockito.when(repository.delete(validCardCopy.getCardCopyId())).thenReturn(true);
         assertTrue(service.delete(validCardCopy).isSuccess());
@@ -293,7 +293,7 @@ class CardCopyServiceTest {
         CardCopy temp = validCardCopy;
         temp.setCardCopyId(-1);
         Mockito.when(cardService.findCardById(validCardCopy.getCard().getCardId())).thenReturn(getValidCardResult());
-        Mockito.when(userService.findById(validCardCopy.getUser().getUserId())).thenReturn(getValidUserResult());
+        Mockito.when(userService.findById(validCardCopy.getUserId())).thenReturn(getValidUserResult());
         assertFalse(service.delete(validCardCopy).isSuccess());
         assertEquals("The given card copy id " + validCardCopy.getCardCopyId() + " is invalid",
                 service.delete(validCardCopy).getMessages().get(0));
@@ -302,7 +302,7 @@ class CardCopyServiceTest {
     @Test
     void deleteCardCopyIdDoesNotExist() {
         Mockito.when(cardService.findCardById(validCardCopy.getCard().getCardId())).thenReturn(getValidCardResult());
-        Mockito.when(userService.findById(validCardCopy.getUser().getUserId())).thenReturn(getValidUserResult());
+        Mockito.when(userService.findById(validCardCopy.getUserId())).thenReturn(getValidUserResult());
         Mockito.when(repository.findByCardCopyId(validCardCopy.getCardCopyId())).thenReturn(null);
         assertFalse(service.delete(validCardCopy).isSuccess());
         assertEquals("The given card copy id " + validCardCopy.getCardCopyId() + " is not found",
@@ -312,10 +312,10 @@ class CardCopyServiceTest {
     @Test
     void deleteCardCopyUserIsInvalid() {
         Mockito.when(cardService.findCardById(validCardCopy.getCard().getCardId())).thenReturn(getValidCardResult());
-        Mockito.when(userService.findById(validCardCopy.getUser().getUserId())).thenReturn(getInvalidUserResult());
+        Mockito.when(userService.findById(validCardCopy.getUserId())).thenReturn(getInvalidUserResult());
         Mockito.when(repository.findByCardCopyId(validCardCopy.getCardCopyId())).thenReturn(validCardCopy);
         assertFalse(service.delete(validCardCopy).isSuccess());
-        assertEquals("The given user " + validCardCopy.getUser() + " associated with card copy "
+        assertEquals("The given user " + validCardCopy.getUserId() + " associated with card copy "
                         + validCardCopy + " is invalid",
                 service.delete(validCardCopy).getMessages().get(1));
     }
@@ -323,7 +323,7 @@ class CardCopyServiceTest {
     @Test
     void deleteCardCopyCardIsInvalid() {
         Mockito.when(cardService.findCardById(invalidCardCopy.getCard().getCardId())).thenReturn(getInvalidCardResult());
-        Mockito.when(userService.findById(invalidCardCopy.getUser().getUserId())).thenReturn(getValidUserResult());
+        Mockito.when(userService.findById(invalidCardCopy.getUserId())).thenReturn(getValidUserResult());
         Mockito.when(repository.findByCardCopyId(invalidCardCopy.getCardCopyId())).thenReturn(validCardCopy);
         assertFalse(service.delete(invalidCardCopy).isSuccess());
         assertEquals("The given card " + invalidCardCopy.getCard() + " associated with card copy "
@@ -334,7 +334,7 @@ class CardCopyServiceTest {
     @Test
     void deleteFailed() {
         Mockito.when(cardService.findCardById(validCardCopy.getCard().getCardId())).thenReturn(getValidCardResult());
-        Mockito.when(userService.findById(validCardCopy.getUser().getUserId())).thenReturn(getValidUserResult());
+        Mockito.when(userService.findById(validCardCopy.getUserId())).thenReturn(getValidUserResult());
         Mockito.when(repository.findByCardCopyId(validCardCopy.getCardCopyId())).thenReturn(validCardCopy);
         Mockito.when(repository.delete(validCardCopy.getCardCopyId())).thenReturn(false);
         assertFalse(service.delete(validCardCopy).isSuccess());
@@ -345,7 +345,6 @@ class CardCopyServiceTest {
     @Test
     void validateCardCopy() {
         Mockito.when(cardService.validateCard(validCardCopy.getCard())).thenReturn(true);
-        Mockito.when(userService.validateUser(validCardCopy.getUser())).thenReturn(true);
         assertTrue(service.validateCardCopy(validCardCopy));
         assertFalse(service.validateCardCopy(invalidCardCopy));
     }

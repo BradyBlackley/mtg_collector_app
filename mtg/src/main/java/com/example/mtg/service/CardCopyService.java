@@ -57,7 +57,7 @@ public class CardCopyService {
     Result<CardCopy> add(CardCopy cardCopy) {
         Result<CardCopy> result = new Result<>();
         Result<Card> cardResult = cardService.findCardById(cardCopy.getCard().getCardId());
-        Result<User> userResult = userService.findById(cardCopy.getUser().getUserId());
+        Result<User> userResult = userService.findById(cardCopy.getUserId());
 
         if(cardCopy.getCardCopyId() < 0) {
             result.addMessage("The given card copy id " + cardCopy.getCardCopyId() + " is invalid",
@@ -71,7 +71,7 @@ public class CardCopyService {
                     + cardCopy + " is invalid", ResultType.INVALID);
         } else if (!userResult.isSuccess()) {
             result.addMessage(userResult.getMessages().get(0), userResult.getType());
-            result.addMessage("The given user " + cardCopy.getUser() + " associated with card copy "
+            result.addMessage("The given user " + cardCopy.getUserId() + " associated with card copy "
                     + cardCopy + " is invalid", ResultType.INVALID);
         } else {
             result.setPayload(repository.add(cardCopy));
@@ -87,7 +87,7 @@ public class CardCopyService {
     Result<Boolean> update(CardCopy cardCopy) {
         Result<Boolean> result = new Result<>();
         Result<Card> cardResult = cardService.findCardById(cardCopy.getCard().getCardId());
-        Result<User> userResult = userService.findById(cardCopy.getUser().getUserId());
+        Result<User> userResult = userService.findById(cardCopy.getUserId());
 
         if(cardCopy.getCardCopyId() < 0) {
             result.addMessage("The given card copy id " + cardCopy.getCardCopyId() + " is invalid",
@@ -101,7 +101,7 @@ public class CardCopyService {
                     + cardCopy + " is invalid", ResultType.INVALID);
         } else if (userResult.getPayload() == null || !userResult.isSuccess()) {
             result.addMessage(userResult.getMessages().get(0), userResult.getType());
-            result.addMessage("The given user " + cardCopy.getUser() + " associated with card copy "
+            result.addMessage("The given user " + cardCopy.getUserId() + " associated with card copy "
                     + cardCopy + " is invalid", ResultType.INVALID);
         } else {
             result.setPayload(repository.update(cardCopy));
@@ -117,7 +117,7 @@ public class CardCopyService {
     Result<Boolean> delete(CardCopy cardCopy) {
         Result<Boolean> result = new Result<>();
         Result<Card> cardResult = cardService.findCardById(cardCopy.getCard().getCardId());
-        Result<User> userResult = userService.findById(cardCopy.getUser().getUserId());
+        Result<User> userResult = userService.findById(cardCopy.getUserId());
 
         if(cardCopy.getCardCopyId() < 0) {
             result.addMessage("The given card copy id " + cardCopy.getCardCopyId() + " is invalid",
@@ -131,7 +131,7 @@ public class CardCopyService {
                     + cardCopy + " is invalid", ResultType.INVALID);
         } else if (userResult.getPayload() == null || !userResult.isSuccess()) {
             result.addMessage(userResult.getMessages().get(0), userResult.getType());
-            result.addMessage("The given user " + cardCopy.getUser() + " associated with card copy "
+            result.addMessage("The given user " + cardCopy.getUserId() + " associated with card copy "
                     + cardCopy + " is invalid", ResultType.INVALID);
         } else {
             result.setPayload(repository.delete(cardCopy.getCardCopyId()));
@@ -145,8 +145,7 @@ public class CardCopyService {
     }
 
     public boolean validateCardCopy(CardCopy cardCopy) {
-        return cardService.validateCard(cardCopy.getCard())
-            && userService.validateUser(cardCopy.getUser());
+        return cardService.validateCard(cardCopy.getCard());
     }
 
 }
