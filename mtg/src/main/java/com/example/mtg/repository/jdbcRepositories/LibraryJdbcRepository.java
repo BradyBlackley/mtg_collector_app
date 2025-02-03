@@ -4,6 +4,7 @@ import com.example.mtg.model.Library;
 import com.example.mtg.repository.mappers.LibraryMapper;
 import com.example.mtg.repository.repositoryInterfaces.LibraryRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.List;
 public class LibraryJdbcRepository implements LibraryRepository {
 
     private final JdbcTemplate jdbcTemplate;
+    private final GeneratedKeyHolder generatedKeyHolder = new GeneratedKeyHolder();
 
     public LibraryJdbcRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
@@ -20,8 +22,7 @@ public class LibraryJdbcRepository implements LibraryRepository {
     @Override
     public List<Library> findAllLibrariesByUser(String userId) {
         final String sql = "select library_id, library_name, user_id from library where user_id = ?;";
-        List<Library> libraries = jdbcTemplate.query(sql, new LibraryMapper(), userId);
-        return libraries;
+        return jdbcTemplate.query(sql, new LibraryMapper(), userId);
     }
 
     @Override
