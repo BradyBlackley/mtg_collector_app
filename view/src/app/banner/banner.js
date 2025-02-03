@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logoFilePath from "../banner/tempLogo.png"
+import logoFilePath from "./tempLogo.png"
 import styles from "./banner.module.css"
 
 const Banner = ({headerText}) => {

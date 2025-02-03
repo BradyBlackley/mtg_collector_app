@@ -2,6 +2,7 @@
 
 import { useRef, useState, useContext } from 'react';
 import LibraryListItem from "./libraryListItem";
+import AddLibrary from './addLibrary';
 import UserContext from '../context';
 
 export default function LibraryList({librariesArr}) {
@@ -45,6 +46,7 @@ export default function LibraryList({librariesArr}) {
             ))}
         </tbody>
       </table>
+      <AddLibrary libraries={libraries} setLibraries={setLibraries}/>
     </>
   );
 };

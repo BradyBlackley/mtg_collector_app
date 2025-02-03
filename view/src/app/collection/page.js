@@ -21,9 +21,7 @@ export default async function Page(request) {
     <div>
       <div>TODO: list of cards</div>
       <div>TODO: make userId changeable when user logs in</div>
-      {console.log(libraryData.payload)}
       <LibraryList librariesArr={libraryData.payload}/>
-      <AddLibrary />
     </div>
   );
 }

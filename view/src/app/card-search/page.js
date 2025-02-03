@@ -1,4 +1,5 @@
 import CardList from "./cardList";
+import { revalidatePath } from 'next/cache';
 
 export default async function Page(request) {
   const url = "http://localhost:9191/api/cards"; 
