@@ -77,7 +77,7 @@ public class CardCopyJdbcRepository implements CardCopyRepository {
             PreparedStatement ps = connection
                     .prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, cardCopy.getCard().getCardId());
-            ps.setString(2, cardCopy.getUser().getUserId());
+            ps.setString(2, cardCopy.getUserId());
             return ps;
         }, keyHolder);
 
@@ -94,7 +94,7 @@ public class CardCopyJdbcRepository implements CardCopyRepository {
                 "update card_copy " +
                 "set card_id = ?, user_id = ? " +
                 "where card_copy_id = ?;";
-        return jdbcTemplate.update(sql, cardCopy.getCard().getCardId(), cardCopy.getUser().getUserId(),
+        return jdbcTemplate.update(sql, cardCopy.getCard().getCardId(), cardCopy.getUserId(),
                 cardCopy.getCardCopyId()) > 0;
     }
 

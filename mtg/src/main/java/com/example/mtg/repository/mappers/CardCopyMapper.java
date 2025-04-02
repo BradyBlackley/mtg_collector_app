@@ -1,9 +1,6 @@
 package com.example.mtg.repository.mappers;
 
-
-import com.example.mtg.model.Card;
 import com.example.mtg.model.CardCopy;
-import com.example.mtg.model.User;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
@@ -15,7 +12,7 @@ public class CardCopyMapper implements RowMapper<CardCopy> {
         CardCopy cardCopy = new CardCopy();
         cardCopy.setCardCopyId(rs.getInt("card_copy_id"));
         cardCopy.setCard(new CardMapper().mapRow(rs,i));
-        cardCopy.setUser(new UserMapper().mapRow(rs,i));
+        cardCopy.setUserId(rs.getString("user_id"));
         return cardCopy;
     }
 }

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/mtg/mtg.iml" filepath="$PROJECT_DIR$/mtg/mtg.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/mtg_collector_app.iml" filepath="$PROJECT_DIR$/.idea/mtg_collector_app.iml" />
     </modules>
   </component>

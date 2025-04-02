@@ -4,6 +4,7 @@ import com.example.mtg.model.Library;
 import com.example.mtg.service.LibraryService;
 import com.example.mtg.service.result.Result;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,7 +17,7 @@ public class LibraryController {
     @Autowired
     private LibraryService service;
 
-    @GetMapping("/allLibrariesByUser")
+    @GetMapping("/allLibrariesByUser/{userId}")
     private Result<List<Library>> findAllLibrariesByUser(@PathVariable String userId) {
         return service.findAllLibrariesByUser(userId);
     }

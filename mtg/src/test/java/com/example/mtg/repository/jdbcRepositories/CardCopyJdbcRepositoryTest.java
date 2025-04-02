@@ -20,25 +20,25 @@ class CardCopyJdbcRepositoryTest extends CommonRepoTest {
         assertEquals("ZNR150",
                 repository.findAllByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(0).getCard().getCardId());
         assertEquals("5d209ac0-9102-11ec-b909-0242ac120002",
-                repository.findAllByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(0).getUser().getUserId());
+                repository.findAllByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(0).getUserId());
         assertEquals(1,
                 repository.findAllByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(0).getCardCopyId());
         assertEquals("ZNR134",
                 repository.findAllByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(1).getCard().getCardId());
         assertEquals("5d209ac0-9102-11ec-b909-0242ac120002",
-                repository.findAllByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(1).getUser().getUserId());
+                repository.findAllByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(1).getUserId());
         assertEquals(2,
                 repository.findAllByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(1).getCardCopyId());
         assertEquals("ZNR134",
                 repository.findAllByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(2).getCard().getCardId());
         assertEquals("5d209ac0-9102-11ec-b909-0242ac120002",
-                repository.findAllByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(2).getUser().getUserId());
+                repository.findAllByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(2).getUserId());
         assertEquals(3,
                 repository.findAllByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(2).getCardCopyId());
         assertEquals("ZNR134",
                 repository.findAllByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(3).getCard().getCardId());
         assertEquals("5d209ac0-9102-11ec-b909-0242ac120002",
-                repository.findAllByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(3).getUser().getUserId());
+                repository.findAllByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(3).getUserId());
         assertEquals(4,
                 repository.findAllByUser("5d209ac0-9102-11ec-b909-0242ac120002").get(3).getCardCopyId());
 
@@ -46,11 +46,11 @@ class CardCopyJdbcRepositoryTest extends CommonRepoTest {
         assertEquals("ZNR166",
                 repository.findAllByUser("9a219974-9102-11ec-b909-0242ac120002").get(0).getCard().getCardId());
         assertEquals("9a219974-9102-11ec-b909-0242ac120002",
-                repository.findAllByUser("9a219974-9102-11ec-b909-0242ac120002").get(0).getUser().getUserId());
+                repository.findAllByUser("9a219974-9102-11ec-b909-0242ac120002").get(0).getUserId());
         assertEquals("ZNR166B",
                 repository.findAllByUser("9a219974-9102-11ec-b909-0242ac120002").get(1).getCard().getCardId());
         assertEquals("9a219974-9102-11ec-b909-0242ac120002",
-                repository.findAllByUser("9a219974-9102-11ec-b909-0242ac120002").get(1).getUser().getUserId());
+                repository.findAllByUser("9a219974-9102-11ec-b909-0242ac120002").get(1).getUserId());
     }
 
     @Test
@@ -85,12 +85,12 @@ class CardCopyJdbcRepositoryTest extends CommonRepoTest {
     @Test
     void update() {
         assertEquals("5d209ac0-9102-11ec-b909-0242ac120002",
-                repository.findByCardCopyId(1).getUser().getUserId());
+                repository.findByCardCopyId(1).getUserId());
         CardCopy cardCopy = repository.findByCardCopyId(1);
-        cardCopy.setUser(new User("9a219974-9102-11ec-b909-0242ac120002"));
+        cardCopy.setUserId("9a219974-9102-11ec-b909-0242ac120002");
         assertTrue(repository.update(cardCopy));
         assertEquals("9a219974-9102-11ec-b909-0242ac120002",
-                repository.findByCardCopyId(1).getUser().getUserId());
+                repository.findByCardCopyId(1).getUserId());
     }
 
     @Test
@@ -103,7 +103,7 @@ class CardCopyJdbcRepositoryTest extends CommonRepoTest {
         CardCopy cardCopy = new CardCopy();
         cardCopy.setCardCopyId(-1);
         cardCopy.setCard(new Card("ZNR150"));
-        cardCopy.setUser(new User("9a219974-9102-11ec-b909-0242ac120002"));
+        cardCopy.setUserId("9a219974-9102-11ec-b909-0242ac120002");
         return cardCopy;
     }
 }

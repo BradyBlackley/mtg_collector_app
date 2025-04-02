@@ -24,7 +24,7 @@ public class CardCopyToLibraryMapper implements ResultSetExtractor<CardCopyToLib
         user.setUserId(rs.getString("user_id"));
         user.setUsername(rs.getString("username"));
         user.setPassword(rs.getString("password"));
-        library.setUser(user);
+        library.setUserId(user.getUserId());
         List<CardCopy> cardCopies = new ArrayList<>();
         do {
             Expansion expansion = new Expansion();
@@ -50,7 +50,7 @@ public class CardCopyToLibraryMapper implements ResultSetExtractor<CardCopyToLib
             user1.setUserId(rs.getString("user_id"));
             user1.setUsername(rs.getString("username"));
             user1.setPassword(rs.getString("password"));
-            cardCopy.setUser(user1);
+            cardCopy.setUserId(user1.getUserId());
             cardCopies.add(cardCopy);
         }while(rs.next());
 

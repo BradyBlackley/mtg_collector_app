@@ -7,6 +7,7 @@ import com.example.mtg.service.result.ResultType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -20,7 +21,7 @@ public class UserService {
         Result<List<User>> result = new Result<>();
         List<User> users = repository.findAll();
 
-        result.setPayload(users);
+        result.setPayload(maskUsersPii(users));
 
         if (users.size() <= 0) {
             result.addMessage("Error: users " + ResultType.NOT_FOUND.label, ResultType.NOT_FOUND);
@@ -35,7 +36,7 @@ public class UserService {
         Result<User> result = new Result<>();
         User user = repository.findById(id);
 
-        result.setPayload(user);
+        result.setPayload(maskUserPii(user));
 
         if (!validateUserId(id)) {
             result.addMessage("The provided user id " + id + " is " + ResultType.INVALID.label,
@@ -53,7 +54,7 @@ public class UserService {
         Result<User> result = new Result<>();
         User user = repository.findByUsername(username);
 
-        result.setPayload(user);
+        result.setPayload(maskUserPii(user));
 
         if (!validateUsername(username)) {
             result.addMessage("The provided username " + username + " is " + ResultType.INVALID.label +
@@ -70,7 +71,7 @@ public class UserService {
 
     public Result<User> add(User user){
         Result<User> result = new Result<>();
-        result.setPayload(user);
+        result.setPayload(maskUserPii(user));
 
           if (!validateUsername(user.getUsername())) {
             result.addMessage("The provided username " + user.getUsername() + " is " + ResultType.INVALID.label +
@@ -84,7 +85,7 @@ public class UserService {
         } else if (repository.findById(user.getUserId()) != null) {
             result.addMessage("User with id " + user.getUserId() + " already exists", ResultType.INVALID);
         } else {
-            result.setPayload(repository.add(user));
+            result.setPayload(maskUserPii(repository.add(user)));
             result.addMessage(ResultType.SUCCESS.label, ResultType.SUCCESS);
         }
 
@@ -93,7 +94,7 @@ public class UserService {
 
     public Result<User> update(User user){
         Result<User> result = new Result<>();
-        result.setPayload(user);
+        result.setPayload(maskUserPii(user));
 
         if (!validateUserId(user.getUserId())) {
             result.addMessage("The provided user id " + user.getUserId() + " is " + ResultType.INVALID.label,
@@ -160,6 +161,20 @@ public class UserService {
         Pattern pattern = Pattern.compile("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$");
         Matcher matcher = pattern.matcher(password);
         return matcher.matches();
+    }
+
+    private User maskUserPii(User user) {
+        User maskedUser = new User(user);
+        maskedUser.setPassword(null);
+        return maskedUser;
+    }
+
+    private List<User> maskUsersPii(List<User> users) {
+        List<User> maskedUsers = new ArrayList<>();
+        for(User u : users) {
+            maskedUsers.add(maskUserPii(u));
+        }
+        return maskedUsers;
     }
 
 }

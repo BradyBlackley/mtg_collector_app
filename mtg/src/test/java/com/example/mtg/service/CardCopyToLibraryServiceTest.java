@@ -47,14 +47,13 @@ class CardCopyToLibraryServiceTest {
                     "[+1 Loyalty]: Scry 2. [+0 Loyalty]: Draw a card and reveal it. Remove a number of loyalty counters " +
                     "equal to that card's converted mana cost from Jace, Mirror Mage.");
 
-    public User validUser = new User("965db958-18ed-11ed-861d-0242ac120002", "Bob",
-            "Money$M4n");
+    public String validUserId = "965db958-18ed-11ed-861d-0242ac120002";
 
-    public CardCopy validCardCopy = new CardCopy(1, validCard, validUser);
+    public CardCopy validCardCopy = new CardCopy(1, validCard, validUserId);
 
-    public CardCopy validCardCopy1 = new CardCopy(1, validCard1, validUser);
+    public CardCopy validCardCopy1 = new CardCopy(1, validCard1, validUserId);
 
-    public Library validLibrary = new Library(1, "Dragons", validUser);
+    public Library validLibrary = new Library(1, "Dragons", validUserId);
 
     public List<CardCopy> getCardCopies() {
         List<CardCopy> cardCopies = new ArrayList<>();

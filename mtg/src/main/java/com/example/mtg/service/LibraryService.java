@@ -1,6 +1,7 @@
 package com.example.mtg.service;
 
 import com.example.mtg.model.Library;
+import com.example.mtg.model.User;
 import com.example.mtg.repository.repositoryInterfaces.LibraryRepository;
 import com.example.mtg.service.result.Result;
 import com.example.mtg.service.result.ResultType;
@@ -49,16 +50,17 @@ public class LibraryService {
     public Result<Library> add(Library library) {
         Result<Library> result = new Result<>();
         result.setPayload(library);
+        Result<User> user = userService.findById(library.getUserId());
 
         if (!validateLibraryName(library.getLibraryName())){
             result.addMessage("The provided library name " + library.getLibraryName() + " is invalid. Library " +
                     "names must be between 2 to 25 characters and may only contain alphanumeric characters and spaces",
                     ResultType.INVALID);
-        } else if (libraryRepository.findLibraryByName(library.getLibraryName(), library.getUser().getUserId()) != null) {
+        } else if (libraryRepository.findLibraryByName(library.getLibraryName(), library.getUserId()) != null) {
             result.addMessage("The provided library name " + library.getLibraryName() + " is already in use",
                     ResultType.ERROR);
-        } else if (userService.findById(library.getUser().getUserId()) == null) {
-            result.addMessage("User " + library.getUser().getUserId() + " associated with the provided library is "
+        } else if (user == null) {
+            result.addMessage("The provided userId " + library.getUserId() + " associated with the provided library is "
                             + ResultType.NOT_FOUND.label, ResultType.NOT_FOUND);
         } else {
             libraryRepository.add(library);
@@ -72,7 +74,7 @@ public class LibraryService {
         Result<Boolean> result = new Result<>();
         result.setPayload(false);
 
-        Library library1 = libraryRepository.findLibraryByName(library.getLibraryName(), library.getUser().getUserId());
+        Library library1 = libraryRepository.findLibraryByName(library.getLibraryName(), library.getUserId());
 
         if (!validateLibraryName(library.getLibraryName())){
             result.addMessage("The provided library name " + library.getLibraryName() + " is invalid. Library " +
@@ -83,7 +85,7 @@ public class LibraryService {
                     " is already in use", ResultType.ERROR);
         } else if (!libraryRepository.update(library)){
             result.addMessage("Failed to update library " + library.getLibraryId() + " associated with user "
-                    + library.getUser().getUserId(), ResultType.ERROR);
+                    + library.getUserId(), ResultType.ERROR);
         } else {
             result.addMessage(ResultType.SUCCESS.label, ResultType.SUCCESS);
             result.setPayload(true);
@@ -95,15 +97,11 @@ public class LibraryService {
         Result<Boolean> result = new Result<>();
         result.setPayload(false);
 
-        if (!validateLibraryName(library.getLibraryName())) {
-            result.addMessage("The provided library name " + library.getLibraryName() + " is invalid. Library " +
-                            "names must be between 2 to 25 characters and may only contain alphanumeric characters and spaces",
-                    ResultType.INVALID);
-        } else if (libraryRepository.findLibraryByName(library.getLibraryName(), library.getUser().getUserId()) == null) {
+        if (libraryRepository.findLibraryByName(library.getLibraryName(), library.getUserId()) == null) {
             result.addMessage("The provided library " + library.getLibraryName() + " is " + ResultType.NOT_FOUND.label,
                     ResultType.NOT_FOUND);
-        } else if (userService.findById(library.getUser().getUserId()) == null) {
-            result.addMessage("User " + library.getUser().getUserId() + " associated with the provided library is "
+        } else if (userService.findById(library.getUserId()) == null) {
+            result.addMessage("User " + library.getUserId() + " associated with the provided library is "
                     + ResultType.NOT_FOUND.label, ResultType.NOT_FOUND);
         } else if (!libraryRepository.delete(library)) {
             result.addMessage("Failed to delete provided library " + library.getLibraryId() + " "
@@ -117,8 +115,7 @@ public class LibraryService {
     }
 
     public boolean validateLibrary(Library library) {
-        return validateLibraryName(library.getLibraryName())
-            && userService.validateUser(library.getUser());
+        return validateLibraryName(library.getLibraryName());
     }
 
     private boolean validateLibraryName(String libraryName) {
