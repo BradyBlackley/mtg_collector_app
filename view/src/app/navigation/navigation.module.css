@@ -1,0 +1,28 @@
+.navigationBar {
+    border: solid;
+    border-color: black;
+    border-radius: 20px;
+    width: auto;
+    background-color: #0092ca;
+    color: #eeeeee;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+/* Color Palette
+.first-color { 
+	background: #222831; 
+}
+	
+.second-color { 
+	background: #393e46; 
+}
+
+.third-color { 
+	background: #0092ca; 
+}
+
+.fourth-color { 
+	background: #eeeeee; 
+}
+*/
