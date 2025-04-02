@@ -97,11 +97,7 @@ public class LibraryService {
         Result<Boolean> result = new Result<>();
         result.setPayload(false);
 
-        if (!validateLibraryName(library.getLibraryName())) {
-            result.addMessage("The provided library name " + library.getLibraryName() + " is invalid. Library " +
-                            "names must be between 2 to 25 characters and may only contain alphanumeric characters and spaces",
-                    ResultType.INVALID);
-        } else if (libraryRepository.findLibraryByName(library.getLibraryName(), library.getUserId()) == null) {
+        if (libraryRepository.findLibraryByName(library.getLibraryName(), library.getUserId()) == null) {
             result.addMessage("The provided library " + library.getLibraryName() + " is " + ResultType.NOT_FOUND.label,
                     ResultType.NOT_FOUND);
         } else if (userService.findById(library.getUserId()) == null) {
