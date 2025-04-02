@@ -42,6 +42,8 @@ export default function LibraryList({librariesArr}) {
                     libraryId={l.libraryId} 
                     libraryName={l.libraryName} 
                     userId={l.userId} 
+                    libraries={libraries}
+                    setLibraries={setLibraries}
                 />
             ))}
         </tbody>

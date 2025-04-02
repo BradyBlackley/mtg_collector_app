@@ -2,31 +2,30 @@
 
 import React, { useState } from 'react';
 
-async function postData(libraryName, userId) {
-  const res = await fetch('http://localhost:9191/api/libraries/addLibrary', {
+async function postData(typeName) {
+  const res = await fetch('http://localhost:9191/api/types/addType', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({libraryName, userId}),
+    body: JSON.stringify({typeName}),
     });
     return await res.json();
 }
 
 
-export default function AddLibrary({libraries, setLibraries}) {
-    const [libraryName, setLibraryName] = useState("");
-    const [userId, setUserId] = useState("f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454")
+export default function AddType({types, setTypes}) {
+    const [typeName, setTypeName] = useState("");
 
     const handleSubmit = async (event) => {
-        const data = await postData(libraryName, userId);
-        setLibraries([...libraries, data.payload]);
+        const data = await postData(typeName);
+        setTypes([...types, data.payload]);
     };
 
     return(
         <div className="row">
           <div className="row mb-2">
-            <h5>Add Library</h5>
+            <h5>Add Type</h5>
           </div>
         <form className="input-group" action={handleSubmit}>
           <div className="justify-content-md-center input-group-prepend">
@@ -34,10 +33,10 @@ export default function AddLibrary({libraries, setLibraries}) {
           </div>
           <input 
             type="text" 
-            value={libraryName} 
-            onChange={(e) => setLibraryName(e.target.value)} 
+            value={typeName} 
+            onChange={(e) => setTypeName(e.target.value)} 
             className="form-control" 
-            placeholder="Library name"/>
+            placeholder="Type name"/>
         </form>
       </div>
     )

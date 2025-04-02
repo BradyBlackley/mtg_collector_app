@@ -1,5 +1,4 @@
 import LibraryList from "../library/libraryList";
-import AddLibrary from "../library/addLibrary";
 import { revalidatePath } from 'next/cache';
 
 export default async function Page(request) {
@@ -19,8 +18,6 @@ export default async function Page(request) {
   
   return(
     <div>
-      <div>TODO: list of cards</div>
-      <div>TODO: make userId changeable when user logs in</div>
       <LibraryList librariesArr={libraryData.payload}/>
     </div>
   );

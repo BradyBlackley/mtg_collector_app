@@ -1,7 +1,8 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import TypeListItem from "./typeListItem";
+import AddType from "./addType";
 
 export default function TypeList({typesArr}) {
   const [types, setTypes] = useState(typesArr);
@@ -35,6 +36,7 @@ export default function TypeList({typesArr}) {
             ))}
         </tbody>
       </table>
+      <AddType types={types} setTypes={setTypes}/>
     </div>
   );
 }
