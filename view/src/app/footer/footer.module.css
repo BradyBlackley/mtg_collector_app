@@ -1,0 +1,31 @@
+.footer {
+    border: solid;
+    border-color: black;
+    border-radius: 20px;
+    width: auto;
+    background-color: #393e46;
+    color: #eeeeee;
+    justify-content: center;
+}
+
+.footerBtn {
+    color: #eeeeee;
+}
+
+/* Color Palette
+.first-color { 
+	background: #222831; 
+}
+	
+.second-color { 
+	background: #393e46; 
+}
+
+.third-color { 
+	background: #0092ca; 
+}
+
+.fourth-color { 
+	background: #eeeeee; 
+}
+*/
