@@ -229,9 +229,8 @@ class LibraryServiceTest {
         Result<Boolean> result = service.delete(invalidLibraryName);
 
         assertFalse(result.isSuccess());
-        assertEquals("The provided library name " + invalidLibraryName.getLibraryName() +
-                " is invalid. Library names must be between 2 to 25 characters and may only contain alphanumeric" +
-                " characters and spaces", result.getMessages().get(0));
+        assertEquals("The provided library " + invalidLibraryName.getLibraryName() +
+                " is not found", result.getMessages().get(0));
     }
 
     @Test

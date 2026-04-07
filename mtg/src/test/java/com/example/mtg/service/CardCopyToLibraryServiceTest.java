@@ -75,18 +75,18 @@ class CardCopyToLibraryServiceTest {
     void findByLibraryId() {
         Mockito.when(repository.findByLibraryId(validCardCopyToLibrary.getLibrary().getLibraryId()))
                 .thenReturn(validCardCopyToLibrary);
-        assertTrue(service.findByLibraryId(validCardCopyToLibrary).isSuccess());
-        assertEquals("success", service.findByLibraryId(validCardCopyToLibrary).getMessages().get(0));
+        assertTrue(service.findByLibraryId(validLibrary.getLibraryId()).isSuccess());
+        assertEquals("success", service.findByLibraryId(validLibrary.getLibraryId()).getMessages().get(0));
     }
 
     @Test
     void findByLibraryIdNoCardCopiesFound() {
         Mockito.when(repository.findByLibraryId(validCardCopyToLibrary.getLibrary().getLibraryId()))
                 .thenReturn(null);
-        assertFalse(service.findByLibraryId(validCardCopyToLibrary).isSuccess());
-        assertEquals("No card copies found associated with given library "
-                + validCardCopyToLibrary.getLibrary(),
-                service.findByLibraryId(validCardCopyToLibrary).getMessages().get(0));
+        assertFalse(service.findByLibraryId(validLibrary.getLibraryId()).isSuccess());
+        assertEquals("No card copies found associated with given libraryId "
+                + validCardCopyToLibrary.getLibrary().getLibraryId(),
+                service.findByLibraryId(validLibrary.getLibraryId()).getMessages().get(0));
     }
 
     @Test

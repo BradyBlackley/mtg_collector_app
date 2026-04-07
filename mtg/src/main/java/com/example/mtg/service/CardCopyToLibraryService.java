@@ -2,6 +2,7 @@ package com.example.mtg.service;
 
 import com.example.mtg.model.CardCopy;
 import com.example.mtg.model.CardCopyToLibrary;
+import com.example.mtg.model.Library;
 import com.example.mtg.repository.repositoryInterfaces.CardCopyToLibraryRepository;
 import com.example.mtg.service.result.Result;
 import com.example.mtg.service.result.ResultType;
@@ -17,19 +18,19 @@ public class CardCopyToLibraryService {
     @Autowired
     LibraryService libraryService;
 
-    Result<CardCopyToLibrary> findByLibraryId(CardCopyToLibrary cardCopyToLibrary) {
+    public Result<CardCopyToLibrary> findByLibraryId(int libraryId) {
         Result<CardCopyToLibrary> result = new Result<>();
-        result.setPayload(repository.findByLibraryId(cardCopyToLibrary.getLibrary().getLibraryId()));
+        result.setPayload(repository.findByLibraryId(libraryId));
         if(result.getPayload() == null) {
-            result.addMessage("No card copies found associated with given library "
-                    + cardCopyToLibrary.getLibrary(), ResultType.NOT_FOUND);
+            result.addMessage("No card copies found associated with given libraryId "
+                    + libraryId, ResultType.NOT_FOUND);
         } else {
             result.addMessage(ResultType.SUCCESS.label, ResultType.SUCCESS);
         }
         return result;
     }
 
-    Result<CardCopyToLibrary> add(CardCopyToLibrary cardCopyToLibrary) {
+    public Result<CardCopyToLibrary> add(CardCopyToLibrary cardCopyToLibrary) {
         Result<CardCopyToLibrary> result = new Result<>();
         if(!validateCardCopyToLibrary(cardCopyToLibrary)) {
             result.addMessage("Card copy or library associated with given card copy to library is not valid",
@@ -49,7 +50,7 @@ public class CardCopyToLibraryService {
         return result;
     }
 
-    Result<Boolean> update(CardCopyToLibrary cardCopyToLibrary) {
+    public Result<Boolean> update(CardCopyToLibrary cardCopyToLibrary) {
         Result<Boolean> result = new Result<>();
         if(!validateCardCopyToLibrary(cardCopyToLibrary)) {
             result.addMessage("Card copy or library associated with given card copy to library is not valid",
@@ -69,7 +70,7 @@ public class CardCopyToLibraryService {
         return result;
     }
 
-    Result<Boolean> delete(CardCopyToLibrary cardCopyToLibrary) {
+    public Result<Boolean> delete(CardCopyToLibrary cardCopyToLibrary) {
         Result<Boolean> result = new Result<>();
         if(!validateCardCopyToLibrary(cardCopyToLibrary)) {
             result.addMessage("Card copy or library associated with given card copy to library is not valid",

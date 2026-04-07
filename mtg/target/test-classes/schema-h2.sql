@@ -3,19 +3,19 @@ SET MODE MYSQL;
 CREATE SCHEMA IF NOT EXISTS TESTDB;
 
 --App Tables
-CREATE TABLE keyword (
+CREATE TABLE IF NOT EXISTS keyword (
 	keyword_id int NOT NULL AUTO_INCREMENT,
     keyword_name varchar(255),
     PRIMARY KEY (keyword_id)
 );
 
-CREATE TABLE `type` (
+CREATE TABLE IF NOT EXISTS `type` (
 	type_id int NOT NULL AUTO_INCREMENT,
     type_name varchar(255),
     PRIMARY KEY (type_id)
 );
 
-CREATE TABLE `expansion` (
+CREATE TABLE IF NOT EXISTS `expansion` (
 	expansion_id int NOT NULL AUTO_INCREMENT,
     expansion_name varchar(255),
     expansion_code varchar(255),
@@ -23,7 +23,7 @@ CREATE TABLE `expansion` (
     PRIMARY KEY (expansion_id)
 );
 
-CREATE TABLE `user` (
+CREATE TABLE IF NOT EXISTS `user` (
 	user_id varchar(255) NOT NULL,
     username varchar(255),
     `password` varchar(255),
@@ -31,13 +31,13 @@ CREATE TABLE `user` (
     PRIMARY KEY (user_id)
 );
 
-CREATE TABLE color (
+CREATE TABLE IF NOT EXISTS color (
 	color_id int NOT NULL AUTO_INCREMENT,
     color_name varchar(255),
     PRIMARY KEY (color_id)
 );
 
-CREATE TABLE card (
+CREATE TABLE IF NOT EXISTS card (
 	card_id varchar(255) NOT NULL,
     card_name varchar(255),
     image_path varchar(255),
@@ -55,7 +55,7 @@ CREATE TABLE card (
         ON DELETE CASCADE
 );
 
-CREATE TABLE keyword_list (
+CREATE TABLE IF NOT EXISTS keyword_list (
 	keyword_list_id int NOT NULL AUTO_INCREMENT,
     keyword_id int,
     card_id varchar(255),
@@ -68,7 +68,7 @@ CREATE TABLE keyword_list (
         ON DELETE CASCADE
 );
 
-CREATE TABLE typeline (
+CREATE TABLE IF NOT EXISTS typeline (
 	typeline_id int NOT NULL AUTO_INCREMENT,
     type_id int,
     card_id varchar(255),
@@ -81,7 +81,7 @@ CREATE TABLE typeline (
         ON DELETE CASCADE
 );
 
-CREATE TABLE card_copy (
+CREATE TABLE IF NOT EXISTS card_copy (
 	card_copy_id int NOT NULL AUTO_INCREMENT,
     card_id varchar(255),
     user_id varchar(255),
@@ -94,7 +94,7 @@ CREATE TABLE card_copy (
         ON DELETE CASCADE
 );
 
-CREATE TABLE library (
+CREATE TABLE IF NOT EXISTS library (
 	library_id int NOT NULL AUTO_INCREMENT,
     library_name varchar(255),
     user_id varchar(255),
@@ -104,7 +104,7 @@ CREATE TABLE library (
         ON DELETE CASCADE
 );
 
-CREATE TABLE color_identity (
+CREATE TABLE IF NOT EXISTS color_identity (
 	color_identity_id int NOT NULL AUTO_INCREMENT,
     card_id varchar(255),
     color_id int,
@@ -117,7 +117,7 @@ CREATE TABLE color_identity (
         ON DELETE CASCADE
 );
 
-CREATE TABLE card_copy_to_library (
+CREATE TABLE IF NOT EXISTS card_copy_to_library (
 	card_copy_to_library_id int NOT NULL AUTO_INCREMENT,
     card_copy_id int,
     library_id int,

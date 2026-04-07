@@ -28,6 +28,7 @@ CREATE TABLE `user` (
 	user_id varchar(255) NOT NULL,
     username varchar(255),
     `password` varchar(255),
+    is_admin char(1),
     PRIMARY KEY (user_id)
 );
 
@@ -178,7 +179,7 @@ END$$
 
 DELIMITER ;
 ########################################data inserts########################################
-INSERT INTO `user` VALUES('f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454', 'Test', 'Test');
+INSERT INTO `user` VALUES('f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454', 'Test', 'Test', 'N');
 INSERT INTO library VALUES(1,'Test Library', 'f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454');
 ###Color
 CALL InsertColor('colorless');
