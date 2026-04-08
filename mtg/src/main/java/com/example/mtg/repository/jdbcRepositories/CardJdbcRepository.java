@@ -180,7 +180,7 @@ public class CardJdbcRepository implements CardRepository {
                 "on c.expansion_id = e.expansion_id " +
                 "where card_id = ?;";
         Card card = jdbcTemplate.query(sql, new CardMapper(), cardId).stream().findFirst().orElse(null);
-        if(card.getBackCard() != null){
+        if(card != null && card.getBackCard() != null) {
             getBackCard(card);
         }
         return card;

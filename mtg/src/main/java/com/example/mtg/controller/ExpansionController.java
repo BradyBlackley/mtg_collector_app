@@ -4,10 +4,7 @@ import com.example.mtg.model.Expansion;
 import com.example.mtg.service.ExpansionService;
 import com.example.mtg.service.result.Result;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,6 +19,11 @@ public class ExpansionController {
     @GetMapping("/allExpansions")
     public Result<List<Expansion>> findAll(){
         return service.findAllExpansions();
+    }
+
+    @PostMapping("/addExpansion")
+    public Result<Expansion> addExpansion(@RequestBody Expansion expansion) {
+        return service.add(expansion);
     }
 
 }

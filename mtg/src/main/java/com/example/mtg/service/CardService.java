@@ -256,7 +256,7 @@ public class CardService {
     }
 
     private boolean validateCardImagePath(String imagePath) {
-        Pattern pattern = Pattern.compile("^card_images\\\\[a-z-_]*\\\\[a-z\\d-_]*\\.jpg$");
+        Pattern pattern = Pattern.compile("^card_images/[a-z-_]*/[a-z\\d-_]*\\.jpg$");
         Matcher matcher = pattern.matcher(imagePath);
         return matcher.matches();
     }

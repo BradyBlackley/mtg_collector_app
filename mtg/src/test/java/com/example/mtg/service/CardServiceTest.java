@@ -30,7 +30,7 @@ class CardServiceTest {
     ExpansionService expansionService;
 
     public Card validCard = new Card("ZNR150", "Moraug, Fury of Akoum",
-            "card_images\\zendikar_rising\\znr-150-moraug-fury-of-akoum.jpg", Rarity.MYTHIC,
+            "card_images/zendikar_rising/znr-150-moraug-fury-of-akoum.jpg", Rarity.MYTHIC,
             "Rudy Siswanto", "6", "6", "6", new Expansion(1,
             "Zendikar Rising", "ZNR", Date.valueOf("2020-09-01")),
             "Each creature you control gets +1/+0 for each time it has attacked this turn. Landfall -" +
@@ -38,7 +38,7 @@ class CardServiceTest {
                     " additional combat phase after this phase. At the beginning of that combat, untap all creatures" +
                     " you control.");
     public Card validCard1 = new Card("ZNR063", "Jace, Mirror Mage",
-            "card_images\\zendikar_rising\\znr-63-jace-mirror-mage.jpg", Rarity.MYTHIC,
+            "card_images/zendikar_rising/znr-63-jace-mirror-mage.jpg", Rarity.MYTHIC,
             "Tyler Jacobson", "3", null, null, new Expansion(1,
             "Zendikar Rising", "ZNR", Date.valueOf("2020-09-01")),
             "Kicker [2 colorless] When Jace, Mirror Mage enters the battlefield, if Jace was kicked, create " +
@@ -47,7 +47,7 @@ class CardServiceTest {
                     "equal to that card's converted mana cost from Jace, Mirror Mage.");
 
     public Card invalidCard = new Card("ZNR1", "Jace, M1rror M4ge$",
-            "card_images\\zendikar_rising\\znr-63-jace-mirror-mage.jpg", Rarity.MYTHIC,
+            "card_images/zendikar_rising/znr-63-jace-mirror-mage.jpg", Rarity.MYTHIC,
             "Tyler Jacobson", "3", null, null, new Expansion(1,
             "Zendikar Rising", "ZNR", Date.valueOf("2020-09-01")),
             "Kicker [2 colorless] When Jace, Mirror Mage enters the battlefield, if Jace was kicked, create " +
