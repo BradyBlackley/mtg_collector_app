@@ -25,7 +25,7 @@ public class ColorIdentityMapper implements ResultSetExtractor<ColorIdentity> {
             card.setCardId(rs.getString("card_id"));
         }while(rs.next());
         colorIdentity.setColors(colors);
-        colorIdentity.setCard(card);
+        colorIdentity.setCardId(card.getCardId());
         return colorIdentity;
     }
 }

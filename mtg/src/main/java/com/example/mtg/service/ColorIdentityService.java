@@ -28,15 +28,11 @@ public class ColorIdentityService {
 
     public Result<ColorIdentity> add(ColorIdentity colorIdentity) {
         Result<ColorIdentity> result = new Result<>();
-        if(!validateColorIdentity(colorIdentity)) {
-            result.addMessage("The card " + colorIdentity.getCard() +
-                            " associated with given color identity " + colorIdentity + " is not valid",
-                    ResultType.INVALID);
-        } else if (repository.findByCardId(colorIdentity.getCard().getCardId()) != null) {
+        if (repository.findByCardId(colorIdentity.getCardId()) != null) {
             result.addMessage("The given color identity " + colorIdentity + " already exists",
                     ResultType.INVALID);
-        } else if (!cardService.findCardById(colorIdentity.getCard().getCardId()).isSuccess()) {
-            result.addMessage("The card " + colorIdentity.getCard() + " associated with given color identity "
+        } else if (!cardService.findCardById(colorIdentity.getCardId()).isSuccess()) {
+            result.addMessage("The card " + colorIdentity.getCardId() + " associated with given color identity "
                     + colorIdentity + " is not found ", ResultType.NOT_FOUND);
         } else {
             result.setPayload(repository.add(colorIdentity));
@@ -52,15 +48,11 @@ public class ColorIdentityService {
 
     public Result<Boolean> update(ColorIdentity colorIdentity) {
         Result<Boolean> result = new Result<>();
-        if(!validateColorIdentity(colorIdentity)) {
-            result.addMessage("The card " + colorIdentity.getCard() +
-                            " associated with given color identity " + colorIdentity + " is not valid",
-                    ResultType.INVALID);
-        } else if (repository.findByCardId(colorIdentity.getCard().getCardId()) == null) {
+        if (repository.findByCardId(colorIdentity.getCardId()) == null) {
             result.addMessage("The given color identity " + colorIdentity + " is not found",
                     ResultType.INVALID);
-        } else if (!cardService.findCardById(colorIdentity.getCard().getCardId()).isSuccess()) {
-            result.addMessage("The card " + colorIdentity.getCard() + " associated with given color identity "
+        } else if (!cardService.findCardById(colorIdentity.getCardId()).isSuccess()) {
+            result.addMessage("The card " + colorIdentity.getCardId() + " associated with given color identity "
                     + colorIdentity + " is not found ", ResultType.NOT_FOUND);
         } else {
             result.setPayload(repository.update(colorIdentity));
@@ -76,15 +68,11 @@ public class ColorIdentityService {
 
     public Result<Boolean> delete(ColorIdentity colorIdentity) {
         Result<Boolean> result = new Result<>();
-        if(!validateColorIdentity(colorIdentity)) {
-            result.addMessage("The card " + colorIdentity.getCard() +
-                            " associated with given color identity " + colorIdentity + " is not valid",
-                    ResultType.INVALID);
-        } else if (repository.findByCardId(colorIdentity.getCard().getCardId()) == null) {
+        if (repository.findByCardId(colorIdentity.getCardId()) == null) {
             result.addMessage("The given color identity " + colorIdentity + " is not found",
                     ResultType.INVALID);
-        } else if (!cardService.findCardById(colorIdentity.getCard().getCardId()).isSuccess()) {
-            result.addMessage("The card " + colorIdentity.getCard() + " associated with given color identity "
+        } else if (!cardService.findCardById(colorIdentity.getCardId()).isSuccess()) {
+            result.addMessage("The card " + colorIdentity.getCardId() + " associated with given color identity "
                     + colorIdentity + " is not found ", ResultType.NOT_FOUND);
         } else {
             result.setPayload(repository.delete(colorIdentity));
@@ -96,9 +84,5 @@ public class ColorIdentityService {
         }
 
         return result;
-    }
-
-    public boolean validateColorIdentity(ColorIdentity colorIdentity) {
-        return cardService.validateCard(colorIdentity.getCard());
     }
 }

@@ -14,6 +14,7 @@ public class Card {
     private Expansion expansion;
     private String textBox;
     private Card backCard;
+    private ColorIdentity colorIdentity;
 
     public Card() {
 

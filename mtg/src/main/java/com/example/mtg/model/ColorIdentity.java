@@ -4,28 +4,32 @@ import java.util.List;
 import java.util.Objects;
 
 public class ColorIdentity {
-    private Card card;
+    private String cardId;
     private List<Color> colors;
 
-    public ColorIdentity() {
+    public ColorIdentity(){
 
     }
 
-    public ColorIdentity(Card card) {
-        this.card = card;
+    public ColorIdentity(String cardId) {
+        this.cardId = cardId;
     }
 
-    public ColorIdentity(Card card, List<Color> colors) {
-        this.card = card;
+    public ColorIdentity(List<Color> colors) {
         this.colors = colors;
     }
 
-    public Card getCard() {
-        return card;
+    public ColorIdentity(String cardId, List<Color> colors) {
+        this.cardId = cardId;
+        this.colors = colors;
     }
 
-    public void setCard(Card card) {
-        this.card = card;
+    public String getCardId() {
+        return cardId;
+    }
+
+    public void setCardId(String cardId) {
+        this.cardId = cardId;
     }
 
     public List<Color> getColors() {
@@ -38,21 +42,20 @@ public class ColorIdentity {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ColorIdentity that = (ColorIdentity) o;
-        return card.equals(that.card) && colors.equals(that.colors);
+        return Objects.equals(cardId, that.cardId) && Objects.equals(colors, that.colors);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(card, colors);
+        return Objects.hash(cardId, colors);
     }
 
     @Override
     public String toString() {
         return "{" +
-                "\"card\":" + card +
+                "\"cardId\":" + "\"" + cardId + "\"" +
                 ", \"colors\":" + colors +
                 '}';
     }

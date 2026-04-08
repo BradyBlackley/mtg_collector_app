@@ -5,7 +5,6 @@ import com.example.mtg.model.ColorIdentity;
 import com.example.mtg.repository.CommonRepoTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.jdbc.Sql;
 
 import java.util.ArrayList;
@@ -34,7 +33,7 @@ class ColorIdentityJdbcRepositoryTest extends CommonRepoTest {
         colors.add(Color.BLUE);
         ColorIdentity colorIdentity = new ColorIdentity();
         colorIdentity.setColors(colors);
-        colorIdentity.setCard(repository.findByCardId("ZNR150").getCard());
+        colorIdentity.setCardId("ZNR150");
 
         assertNotNull(repository.add(colorIdentity));
     }

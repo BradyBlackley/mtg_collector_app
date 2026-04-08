@@ -35,7 +35,7 @@ public class ColorIdentityJdbcRepository implements ColorIdentityRepository {
     public ColorIdentity add(ColorIdentity colorIdentity) {
         final String sql = "insert into color_identity (card_id, color_id) values (?,?);";
         for (Color color : colorIdentity.getColors()){
-            jdbcTemplate.update(sql, colorIdentity.getCard().getCardId(), color.id);
+            jdbcTemplate.update(sql, colorIdentity.getCardId(), color.id);
         }
         return colorIdentity;
     }
@@ -45,8 +45,8 @@ public class ColorIdentityJdbcRepository implements ColorIdentityRepository {
         final String sql = "update color_identity set card_id = ?, color_id = ? where card_id = ? and color_id = ?;";
         int rowsAffected = 0;
         for (Color color : colorIdentity.getColors()){
-            rowsAffected += jdbcTemplate.update(sql, colorIdentity.getCard().getCardId(), color.id,
-                    colorIdentity.getCard().getCardId(), color.id);
+            rowsAffected += jdbcTemplate.update(sql, colorIdentity.getCardId(), color.id,
+                    colorIdentity.getCardId(), color.id);
         }
         return rowsAffected > 0;
     }
@@ -54,6 +54,6 @@ public class ColorIdentityJdbcRepository implements ColorIdentityRepository {
     @Override
     public boolean delete(ColorIdentity colorIdentity) {
         final String sql = "delete from color_identity where card_id =?;";
-        return jdbcTemplate.update(sql, colorIdentity.getCard().getCardId()) > 0;
+        return jdbcTemplate.update(sql, colorIdentity.getCardId()) > 0;
     }
 }
