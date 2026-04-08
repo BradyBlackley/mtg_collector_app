@@ -11,7 +11,7 @@ const Navigation = () => {
                 <Link href="/types" className={"btn " + styles.footerBtn}>Types</Link>
                 <Link href="/expansions" className={"btn " + styles.footerBtn}>Expansions</Link>
                 <Link href="/keywords" className={"btn " + styles.footerBtn}>Keywords</Link>
-                <Link href="admin" className={"btn " + styles.footerBtn}>Admin</Link>
+                <Link href="/admin" className={"btn " + styles.footerBtn}>Admin</Link>
             </div>
         </div>
     );

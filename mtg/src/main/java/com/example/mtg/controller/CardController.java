@@ -4,10 +4,7 @@ import com.example.mtg.model.Card;
 import com.example.mtg.service.CardService;
 import com.example.mtg.service.result.Result;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,5 +19,10 @@ public class CardController {
     @GetMapping("/allCards")
     public Result<List<Card>> findAll(){
         return service.findAllCards();
+    }
+
+    @PostMapping("/addCard")
+    public Result<Card> addCard(@RequestBody Card card) {
+        return service.add(card);
     }
 }

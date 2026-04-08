@@ -38,10 +38,10 @@ class LibraryControllerTest {
 
         when(mockLibraryService.add(argThat(library1 -> library1.getLibraryName().startsWith("Dragons")))).thenReturn(result);
 
-        mockMvc.perform(post("http://localhost:3000/api/libraries/addLibrary")
+        mockMvc.perform(post("/api/libraries/addLibrary")
                         .content(
                                 """
-                                         {"libraryName": "Dragons","userId": "f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454"}
+                                     {"libraryName": "Dragons","userId": "f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454"}
                                 """
                         ).header("Content-Type", "application/json"))
                 .andExpect(status().is(200))

@@ -70,7 +70,7 @@ class CardCopyToLibraryControllerTest {
         when(service.findByLibraryId(library.getLibraryId())).thenReturn(result);
 
         mockMvc.perform(
-                    get("http://localhost:3000/api/cardCopies/allCardsByLibrary")
+                    get("/api/cardCopies/allCardsByLibrary")
                         .header("Content-Type", "application/json")
                         .param("libraryId", "1")
                 )
