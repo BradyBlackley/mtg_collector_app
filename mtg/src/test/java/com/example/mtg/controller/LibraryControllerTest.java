@@ -42,7 +42,7 @@ class LibraryControllerTest {
                         .content(
                                 """
                                          {"libraryName": "Dragons","userId": "f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454"}
-                                        """
+                                """
                         ).header("Content-Type", "application/json"))
                 .andExpect(status().is(200))
                 .andExpect(content().json(

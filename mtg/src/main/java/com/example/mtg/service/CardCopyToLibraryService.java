@@ -2,7 +2,6 @@ package com.example.mtg.service;
 
 import com.example.mtg.model.CardCopy;
 import com.example.mtg.model.CardCopyToLibrary;
-import com.example.mtg.model.Library;
 import com.example.mtg.repository.repositoryInterfaces.CardCopyToLibraryRepository;
 import com.example.mtg.service.result.Result;
 import com.example.mtg.service.result.ResultType;
